@@ -1,6 +1,9 @@
 import 'dotenv/config';
 import express from 'express'; import cors from 'cors'; import mongoose from 'mongoose'; import bcrypt from 'bcryptjs'; import jwt from 'jsonwebtoken'; import { z } from 'zod'; import fs from 'node:fs'; import path from 'node:path'; import { User,Question,TestSession,UserProgress } from './models.js'; import { calculateScore,weakAreas,checkAnswer } from './scoring.js';
-const app=express(); app.use(cors({origin:process.env.CLIENT_ORIGIN||'http://localhost:3001',credentials:true})); app.use(express.json());
+const app=express();
+const clientOrigins=(process.env.CLIENT_ORIGIN||'http://localhost:3001').split(',').map(origin=>origin.trim()).filter(Boolean);
+app.use(cors({origin:(origin,callback)=>callback(null,!origin||clientOrigins.includes(origin)),credentials:true}));
+app.use(express.json());
 const JWT_SECRET=process.env.JWT_SECRET||'dev-only-change-me';
 if(process.env.NODE_ENV==='production'&&(!process.env.JWT_SECRET||JWT_SECRET.length<32)){throw new Error('Set JWT_SECRET to a random value of at least 32 characters in production.')}
 const cookieOpts={httpOnly:true,sameSite:'lax' as const,secure:process.env.NODE_ENV==='production',path:'/'};
