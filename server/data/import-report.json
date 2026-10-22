@@ -1,0 +1,896 @@
+{
+  "sourceFile": "LDC.pdf",
+  "pdfPages": 207,
+  "papersListed": 50,
+  "questionsFound": 4694,
+  "answersFound": 4160,
+  "needsReview": 2086,
+  "topicCounts": {
+    "Geography": 343,
+    "Chemistry": 38,
+    "Physics": 36,
+    "Economics": 75,
+    "Arts, Literature, Culture and Sports": 335,
+    "History": 93,
+    "Biology and Public Health": 97,
+    "Kerala – Governance and System of Administration": 27,
+    "Current Affairs": 1856,
+    "Indian Constitution": 121,
+    "General English": 1225,
+    "Regional Language: Malayalam": 61,
+    "Simple Arithmetic, Mental Ability and Reasoning": 372,
+    "Basics of Computer": 15
+  },
+  "papers": [
+    {
+      "paperIndex": 1,
+      "startPage": 9,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 2,
+      "startPage": 13,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 3,
+      "startPage": 17,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 4,
+      "startPage": 21,
+      "questionsFound": 103,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 5,
+      "startPage": 25,
+      "questionsFound": 103,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 6,
+      "startPage": 29,
+      "questionsFound": 103,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 7,
+      "startPage": 33,
+      "questionsFound": 104,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 8,
+      "startPage": 37,
+      "questionsFound": 105,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 9,
+      "startPage": 41,
+      "questionsFound": 106,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 10,
+      "startPage": 45,
+      "questionsFound": 104,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 11,
+      "startPage": 49,
+      "questionsFound": 99,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 12,
+      "startPage": 53,
+      "questionsFound": 103,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 13,
+      "startPage": 57,
+      "questionsFound": 86,
+      "answerKeyEntries": 82
+    },
+    {
+      "paperIndex": 14,
+      "startPage": 61,
+      "questionsFound": 90,
+      "answerKeyEntries": 84
+    },
+    {
+      "paperIndex": 15,
+      "startPage": 65,
+      "questionsFound": 102,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 16,
+      "startPage": 69,
+      "questionsFound": 104,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 17,
+      "startPage": 73,
+      "questionsFound": 103,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 18,
+      "startPage": 77,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 19,
+      "startPage": 82,
+      "questionsFound": 60,
+      "answerKeyEntries": 60
+    },
+    {
+      "paperIndex": 20,
+      "startPage": 85,
+      "questionsFound": 101,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 21,
+      "startPage": 89,
+      "questionsFound": 60,
+      "answerKeyEntries": 60
+    },
+    {
+      "paperIndex": 22,
+      "startPage": 91,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 23,
+      "startPage": 95,
+      "questionsFound": 60,
+      "answerKeyEntries": 60
+    },
+    {
+      "paperIndex": 24,
+      "startPage": 97,
+      "questionsFound": 107,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 25,
+      "startPage": 101,
+      "questionsFound": 60,
+      "answerKeyEntries": 60
+    },
+    {
+      "paperIndex": 26,
+      "startPage": 104,
+      "questionsFound": 60,
+      "answerKeyEntries": 60
+    },
+    {
+      "paperIndex": 27,
+      "startPage": 106,
+      "questionsFound": 103,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 28,
+      "startPage": 110,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 29,
+      "startPage": 115,
+      "questionsFound": 99,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 30,
+      "startPage": 119,
+      "questionsFound": 102,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 31,
+      "startPage": 123,
+      "questionsFound": 103,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 32,
+      "startPage": 127,
+      "questionsFound": 102,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 33,
+      "startPage": 131,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 34,
+      "startPage": 135,
+      "questionsFound": 101,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 35,
+      "startPage": 139,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 36,
+      "startPage": 143,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 37,
+      "startPage": 147,
+      "questionsFound": 103,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 38,
+      "startPage": 151,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 39,
+      "startPage": 155,
+      "questionsFound": 60,
+      "answerKeyEntries": 60
+    },
+    {
+      "paperIndex": 40,
+      "startPage": 157,
+      "questionsFound": 104,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 41,
+      "startPage": 162,
+      "questionsFound": 104,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 42,
+      "startPage": 167,
+      "questionsFound": 60,
+      "answerKeyEntries": 60
+    },
+    {
+      "paperIndex": 43,
+      "startPage": 170,
+      "questionsFound": 103,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 44,
+      "startPage": 176,
+      "questionsFound": 60,
+      "answerKeyEntries": 60
+    },
+    {
+      "paperIndex": 45,
+      "startPage": 178,
+      "questionsFound": 100,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 46,
+      "startPage": 182,
+      "questionsFound": 103,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 47,
+      "startPage": 189,
+      "questionsFound": 101,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 48,
+      "startPage": 194,
+      "questionsFound": 101,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 49,
+      "startPage": 199,
+      "questionsFound": 102,
+      "answerKeyEntries": 100
+    },
+    {
+      "paperIndex": 50,
+      "startPage": 205,
+      "questionsFound": 60,
+      "answerKeyEntries": 60
+    }
+  ],
+  "unparsed": [
+    {
+      "questionNumber": 8,
+      "sourcePage": 64,
+      "reason": "fewer than two options detected",
+      "text": "സാഹിത്യത്തിനുള്ള 2023-െല െനാേബൽ പുരസ് കാരം േനടിയ വ്യക്തി: േജാൺ േഫാസ് 65"
+    },
+    {
+      "questionNumber": 1,
+      "sourcePage": 97,
+      "reason": "fewer than two options detected",
+      "text": "2023 ൽ േക\u0000ന്ദ സാഹിത്യ അക്കാദമി അവാർഡ് േനടിയ E V രാമകൃഷ്ണെ\u0000 കൃതി ഏതാണ് ? മലയാള േനാവലിെന്റ േദശ കാലങ്ങൾ"
+    },
+    {
+      "questionNumber": 2,
+      "sourcePage": 97,
+      "reason": "fewer than two options detected",
+      "text": "2022 ൽ വയലാർ അവാർഡ് േനടിയത് : എസ്. ഹരീഷ് (മീശ)"
+    }
+  ],
+  "optionSetsUpdated": 2842,
+  "transcriptionReconciliation": {
+    "textFile": "LDC.txt",
+    "textPages": 72,
+    "ocr": "Tesseract 5.5.1 using eng+mal, page segmentation mode 3",
+    "ocrPages": 162,
+    "matchedToPageAndNumber": 4604,
+    "promptsUpdated": 2936,
+    "optionSetsUpdated": 2842,
+    "answersModified": 0,
+    "unmatchedExistingRecords": 90
+  },
+  "eligibleForPractice": 2608,
+  "needsReviewBreakdown": {
+    "countsOverlap": true,
+    "clearedByTextOcrAgreement": 0,
+    "totalComparablePairs": 319,
+    "totalNormalizedAgreements": 91,
+    "agreedButStillReview": [
+      {
+        "paper": 4,
+        "questionNumber": 78,
+        "reasons": [
+          "missing_answer_key"
+        ]
+      },
+      {
+        "paper": 11,
+        "questionNumber": 76,
+        "reasons": [
+          "missing_answer_key"
+        ]
+      }
+    ],
+    "reasons": {
+      "garbled_or_suspicious_text": 1680,
+      "no_comparable_dual_source": 2028,
+      "text_ocr_disagreement": 56,
+      "missing_answer_key": 534,
+      "missing_or_incomplete_options": 193
+    },
+    "papers": [
+      {
+        "paper": 1,
+        "needsReview": 57,
+        "reasons": {
+          "garbled_or_suspicious_text": 52,
+          "no_comparable_dual_source": 55,
+          "text_ocr_disagreement": 2,
+          "missing_answer_key": 6,
+          "missing_or_incomplete_options": 1
+        }
+      },
+      {
+        "paper": 2,
+        "needsReview": 63,
+        "reasons": {
+          "garbled_or_suspicious_text": 59,
+          "no_comparable_dual_source": 63,
+          "missing_answer_key": 11
+        }
+      },
+      {
+        "paper": 3,
+        "needsReview": 38,
+        "reasons": {
+          "missing_answer_key": 15,
+          "no_comparable_dual_source": 32,
+          "garbled_or_suspicious_text": 28,
+          "text_ocr_disagreement": 6,
+          "missing_or_incomplete_options": 1
+        }
+      },
+      {
+        "paper": 4,
+        "needsReview": 39,
+        "reasons": {
+          "missing_answer_key": 16,
+          "no_comparable_dual_source": 35,
+          "garbled_or_suspicious_text": 28,
+          "missing_or_incomplete_options": 1,
+          "text_ocr_disagreement": 3
+        }
+      },
+      {
+        "paper": 5,
+        "needsReview": 65,
+        "reasons": {
+          "missing_answer_key": 16,
+          "no_comparable_dual_source": 65,
+          "missing_or_incomplete_options": 3,
+          "garbled_or_suspicious_text": 50
+        }
+      },
+      {
+        "paper": 6,
+        "needsReview": 41,
+        "reasons": {
+          "missing_answer_key": 17,
+          "no_comparable_dual_source": 39,
+          "garbled_or_suspicious_text": 29,
+          "text_ocr_disagreement": 2,
+          "missing_or_incomplete_options": 1
+        }
+      },
+      {
+        "paper": 7,
+        "needsReview": 43,
+        "reasons": {
+          "missing_answer_key": 15,
+          "garbled_or_suspicious_text": 35,
+          "no_comparable_dual_source": 39,
+          "text_ocr_disagreement": 4
+        }
+      },
+      {
+        "paper": 8,
+        "needsReview": 61,
+        "reasons": {
+          "missing_answer_key": 17,
+          "text_ocr_disagreement": 10,
+          "no_comparable_dual_source": 51,
+          "garbled_or_suspicious_text": 51
+        }
+      },
+      {
+        "paper": 9,
+        "needsReview": 45,
+        "reasons": {
+          "missing_answer_key": 19,
+          "text_ocr_disagreement": 11,
+          "no_comparable_dual_source": 34,
+          "garbled_or_suspicious_text": 27
+        }
+      },
+      {
+        "paper": 10,
+        "needsReview": 48,
+        "reasons": {
+          "missing_answer_key": 14,
+          "text_ocr_disagreement": 6,
+          "garbled_or_suspicious_text": 37,
+          "no_comparable_dual_source": 42,
+          "missing_or_incomplete_options": 1
+        }
+      },
+      {
+        "paper": 11,
+        "needsReview": 36,
+        "reasons": {
+          "garbled_or_suspicious_text": 27,
+          "no_comparable_dual_source": 31,
+          "missing_answer_key": 10,
+          "text_ocr_disagreement": 4,
+          "missing_or_incomplete_options": 2
+        }
+      },
+      {
+        "paper": 12,
+        "needsReview": 36,
+        "reasons": {
+          "missing_answer_key": 13,
+          "no_comparable_dual_source": 32,
+          "text_ocr_disagreement": 4,
+          "garbled_or_suspicious_text": 28
+        }
+      },
+      {
+        "paper": 13,
+        "needsReview": 58,
+        "reasons": {
+          "missing_answer_key": 12,
+          "no_comparable_dual_source": 57,
+          "missing_or_incomplete_options": 6,
+          "text_ocr_disagreement": 1,
+          "garbled_or_suspicious_text": 53
+        }
+      },
+      {
+        "paper": 14,
+        "needsReview": 55,
+        "reasons": {
+          "missing_answer_key": 17,
+          "garbled_or_suspicious_text": 50,
+          "no_comparable_dual_source": 55,
+          "missing_or_incomplete_options": 6
+        }
+      },
+      {
+        "paper": 15,
+        "needsReview": 64,
+        "reasons": {
+          "missing_answer_key": 22,
+          "garbled_or_suspicious_text": 57,
+          "no_comparable_dual_source": 63,
+          "missing_or_incomplete_options": 7,
+          "text_ocr_disagreement": 1
+        }
+      },
+      {
+        "paper": 16,
+        "needsReview": 69,
+        "reasons": {
+          "missing_answer_key": 14,
+          "no_comparable_dual_source": 69,
+          "garbled_or_suspicious_text": 55,
+          "missing_or_incomplete_options": 4
+        }
+      },
+      {
+        "paper": 17,
+        "needsReview": 61,
+        "reasons": {
+          "missing_answer_key": 11,
+          "garbled_or_suspicious_text": 56,
+          "no_comparable_dual_source": 61,
+          "missing_or_incomplete_options": 1
+        }
+      },
+      {
+        "paper": 18,
+        "needsReview": 30,
+        "reasons": {
+          "garbled_or_suspicious_text": 26,
+          "no_comparable_dual_source": 28,
+          "text_ocr_disagreement": 2,
+          "missing_or_incomplete_options": 5,
+          "missing_answer_key": 5
+        }
+      },
+      {
+        "paper": 19,
+        "needsReview": 25,
+        "reasons": {
+          "garbled_or_suspicious_text": 22,
+          "no_comparable_dual_source": 25,
+          "missing_or_incomplete_options": 2,
+          "missing_answer_key": 3
+        }
+      },
+      {
+        "paper": 20,
+        "needsReview": 42,
+        "reasons": {
+          "missing_answer_key": 20,
+          "no_comparable_dual_source": 42,
+          "missing_or_incomplete_options": 9,
+          "garbled_or_suspicious_text": 25
+        }
+      },
+      {
+        "paper": 21,
+        "needsReview": 27,
+        "reasons": {
+          "garbled_or_suspicious_text": 26,
+          "no_comparable_dual_source": 27,
+          "missing_or_incomplete_options": 1,
+          "missing_answer_key": 1
+        }
+      },
+      {
+        "paper": 22,
+        "needsReview": 52,
+        "reasons": {
+          "garbled_or_suspicious_text": 44,
+          "no_comparable_dual_source": 52,
+          "missing_or_incomplete_options": 6,
+          "missing_answer_key": 7
+        }
+      },
+      {
+        "paper": 23,
+        "needsReview": 20,
+        "reasons": {
+          "garbled_or_suspicious_text": 18,
+          "no_comparable_dual_source": 20,
+          "missing_or_incomplete_options": 2,
+          "missing_answer_key": 3
+        }
+      },
+      {
+        "paper": 24,
+        "needsReview": 49,
+        "reasons": {
+          "missing_answer_key": 18,
+          "no_comparable_dual_source": 49,
+          "missing_or_incomplete_options": 10,
+          "garbled_or_suspicious_text": 32
+        }
+      },
+      {
+        "paper": 25,
+        "needsReview": 17,
+        "reasons": {
+          "garbled_or_suspicious_text": 12,
+          "no_comparable_dual_source": 17,
+          "missing_answer_key": 5
+        }
+      },
+      {
+        "paper": 26,
+        "needsReview": 27,
+        "reasons": {
+          "garbled_or_suspicious_text": 22,
+          "no_comparable_dual_source": 27,
+          "missing_or_incomplete_options": 2,
+          "missing_answer_key": 7
+        }
+      },
+      {
+        "paper": 27,
+        "needsReview": 52,
+        "reasons": {
+          "missing_answer_key": 16,
+          "garbled_or_suspicious_text": 39,
+          "no_comparable_dual_source": 52,
+          "missing_or_incomplete_options": 6
+        }
+      },
+      {
+        "paper": 28,
+        "needsReview": 42,
+        "reasons": {
+          "garbled_or_suspicious_text": 38,
+          "no_comparable_dual_source": 42,
+          "missing_answer_key": 6,
+          "missing_or_incomplete_options": 3
+        }
+      },
+      {
+        "paper": 29,
+        "needsReview": 36,
+        "reasons": {
+          "garbled_or_suspicious_text": 29,
+          "no_comparable_dual_source": 36,
+          "missing_or_incomplete_options": 8,
+          "missing_answer_key": 7
+        }
+      },
+      {
+        "paper": 30,
+        "needsReview": 51,
+        "reasons": {
+          "missing_answer_key": 17,
+          "garbled_or_suspicious_text": 37,
+          "no_comparable_dual_source": 51,
+          "missing_or_incomplete_options": 10
+        }
+      },
+      {
+        "paper": 31,
+        "needsReview": 47,
+        "reasons": {
+          "missing_answer_key": 16,
+          "garbled_or_suspicious_text": 34,
+          "no_comparable_dual_source": 47,
+          "missing_or_incomplete_options": 10
+        }
+      },
+      {
+        "paper": 32,
+        "needsReview": 48,
+        "reasons": {
+          "missing_answer_key": 15,
+          "no_comparable_dual_source": 48,
+          "missing_or_incomplete_options": 7,
+          "garbled_or_suspicious_text": 34
+        }
+      },
+      {
+        "paper": 33,
+        "needsReview": 47,
+        "reasons": {
+          "garbled_or_suspicious_text": 37,
+          "no_comparable_dual_source": 47,
+          "missing_answer_key": 11,
+          "missing_or_incomplete_options": 5
+        }
+      },
+      {
+        "paper": 34,
+        "needsReview": 41,
+        "reasons": {
+          "missing_answer_key": 10,
+          "no_comparable_dual_source": 41,
+          "missing_or_incomplete_options": 5,
+          "garbled_or_suspicious_text": 33
+        }
+      },
+      {
+        "paper": 35,
+        "needsReview": 38,
+        "reasons": {
+          "garbled_or_suspicious_text": 29,
+          "no_comparable_dual_source": 38,
+          "missing_or_incomplete_options": 7,
+          "missing_answer_key": 6
+        }
+      },
+      {
+        "paper": 36,
+        "needsReview": 4,
+        "reasons": {
+          "missing_answer_key": 4,
+          "no_comparable_dual_source": 4,
+          "missing_or_incomplete_options": 1
+        }
+      },
+      {
+        "paper": 37,
+        "needsReview": 46,
+        "reasons": {
+          "missing_answer_key": 15,
+          "garbled_or_suspicious_text": 35,
+          "no_comparable_dual_source": 46,
+          "missing_or_incomplete_options": 4
+        }
+      },
+      {
+        "paper": 38,
+        "needsReview": 12,
+        "reasons": {
+          "missing_or_incomplete_options": 3,
+          "missing_answer_key": 7,
+          "no_comparable_dual_source": 12,
+          "garbled_or_suspicious_text": 5
+        }
+      },
+      {
+        "paper": 39,
+        "needsReview": 25,
+        "reasons": {
+          "garbled_or_suspicious_text": 23,
+          "no_comparable_dual_source": 25,
+          "missing_or_incomplete_options": 3,
+          "missing_answer_key": 3
+        }
+      },
+      {
+        "paper": 40,
+        "needsReview": 46,
+        "reasons": {
+          "missing_answer_key": 11,
+          "no_comparable_dual_source": 46,
+          "missing_or_incomplete_options": 9,
+          "garbled_or_suspicious_text": 36
+        }
+      },
+      {
+        "paper": 41,
+        "needsReview": 53,
+        "reasons": {
+          "missing_answer_key": 12,
+          "no_comparable_dual_source": 53,
+          "missing_or_incomplete_options": 8,
+          "garbled_or_suspicious_text": 43
+        }
+      },
+      {
+        "paper": 42,
+        "needsReview": 20,
+        "reasons": {
+          "garbled_or_suspicious_text": 19,
+          "no_comparable_dual_source": 20,
+          "missing_answer_key": 3,
+          "missing_or_incomplete_options": 1
+        }
+      },
+      {
+        "paper": 43,
+        "needsReview": 49,
+        "reasons": {
+          "missing_answer_key": 11,
+          "no_comparable_dual_source": 49,
+          "missing_or_incomplete_options": 7,
+          "garbled_or_suspicious_text": 40
+        }
+      },
+      {
+        "paper": 44,
+        "needsReview": 24,
+        "reasons": {
+          "missing_answer_key": 4,
+          "no_comparable_dual_source": 24,
+          "garbled_or_suspicious_text": 19,
+          "missing_or_incomplete_options": 3
+        }
+      },
+      {
+        "paper": 45,
+        "needsReview": 5,
+        "reasons": {
+          "missing_answer_key": 3,
+          "no_comparable_dual_source": 5,
+          "missing_or_incomplete_options": 1,
+          "garbled_or_suspicious_text": 1
+        }
+      },
+      {
+        "paper": 46,
+        "needsReview": 63,
+        "reasons": {
+          "missing_answer_key": 16,
+          "garbled_or_suspicious_text": 51,
+          "no_comparable_dual_source": 63,
+          "missing_or_incomplete_options": 8
+        }
+      },
+      {
+        "paper": 47,
+        "needsReview": 41,
+        "reasons": {
+          "missing_answer_key": 3,
+          "garbled_or_suspicious_text": 40,
+          "no_comparable_dual_source": 41,
+          "missing_or_incomplete_options": 2
+        }
+      },
+      {
+        "paper": 48,
+        "needsReview": 52,
+        "reasons": {
+          "missing_answer_key": 11,
+          "garbled_or_suspicious_text": 44,
+          "no_comparable_dual_source": 52,
+          "missing_or_incomplete_options": 4
+        }
+      },
+      {
+        "paper": 49,
+        "needsReview": 52,
+        "reasons": {
+          "missing_answer_key": 10,
+          "no_comparable_dual_source": 52,
+          "missing_or_incomplete_options": 5,
+          "garbled_or_suspicious_text": 43
+        }
+      },
+      {
+        "paper": 50,
+        "needsReview": 24,
+        "reasons": {
+          "garbled_or_suspicious_text": 22,
+          "no_comparable_dual_source": 24,
+          "missing_or_incomplete_options": 2,
+          "missing_answer_key": 3
+        }
+      }
+    ]
+  }
+}

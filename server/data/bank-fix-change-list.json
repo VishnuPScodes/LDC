@@ -1,0 +1,5115 @@
+{
+  "summary": {
+    "records": 4632,
+    "needsReview": 403,
+    "eligibleForPractice": 4118,
+    "reviewByReason": {
+      "garbled_or_placeholder_text": 22,
+      "missing_options": 92,
+      "missing_answer_key": 334,
+      "sanity_check_failure": 0
+    },
+    "layoutJoinOccurrences": {
+      "questionText": 331,
+      "optionText": 5,
+      "total": 336
+    },
+    "optionChangedRecordCount": 186,
+    "optionChangeEvents": 347,
+    "cancelledQuestionCount": 116,
+    "sidebarExcludedCount": 21,
+    "unprovenPriorCleanupReversions": 5
+  },
+  "optionChangedRecords": [
+    {
+      "paper": 1,
+      "question": 20,
+      "page": 9,
+      "changes": [
+        {
+          "option": "B",
+          "before": "ബാങ്കോക്ക് 2013 റിസർവ്വ് ബാങ്ക് ഓഫ് ഇന്ത്യയുടെ ഇപ്പോഴത്തെ ഗവർണർ: ശക്തികാന്ത ദാസ്",
+          "after": "ബാങ്കോക്ക്",
+          "reason": "layout_verified_sidebar_line_trim"
+        }
+      ]
+    },
+    {
+      "paper": 3,
+      "question": 42,
+      "page": 18,
+      "changes": [
+        {
+          "option": "B",
+          "before": "ചട്ടമ്പിസ്വാമികൾ 2020 ൽ വേൾഡ് ബയോസ്ഫിയർ റിസർവായി പ്രഖ്യാപിക്കപ്പെട്ടത്: പന്ന ബയോസ്ഫിയർ റിസർവ് (മധ്യപ്രദേശ്) 2017 ൽ ഇംഗ്ലണ്ടിൽ വച്ച് നടന്ന ICC ചാമ്പ്യൻസ് ട്രോഫി നേടിയത്: പാക്കിസ്ഥാൻ 2021 ൽ 69 മത് ദാദാസാഹേബ് ഫാൽക്കെ അവാർഡ് നേടിയത്: വഹീദ റഹ്മാൻ",
+          "after": "ചട്ടമ്പിസ്വാമികൾ",
+          "reason": "layout_verified_sidebar_line_trim"
+        }
+      ]
+    },
+    {
+      "paper": 9,
+      "question": 84,
+      "page": 44,
+      "changes": [
+        {
+          "option": "C",
+          "before": "unpersuadeD) dissuade",
+          "after": "unpersuade",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 10,
+      "question": 54,
+      "page": 47,
+      "changes": [
+        {
+          "option": "B",
+          "before": "നിർദ്ദേശക തത്വങ്ങൾ",
+          "after": "നിർദ്ദേശകതത്വങ്ങൾ",
+          "reason": "layout_line_wrap_join"
+        }
+      ]
+    },
+    {
+      "paper": 11,
+      "question": 30,
+      "page": 50,
+      "changes": [
+        {
+          "option": "B",
+          "before": "മുംബൈ പ്യൂർട്ടോ റികോയിൽ നടന്ന മിസ് വേൾഡ് 2023 മത്സരത്തിൽ കിരീടം ചൂടിയത്: കരോലിന ബിലാവ്സ്ക",
+          "after": "മുംബൈ",
+          "reason": "layout_verified_sidebar_line_trim"
+        }
+      ]
+    },
+    {
+      "paper": 11,
+      "question": 37,
+      "page": 51,
+      "changes": [
+        {
+          "option": "B",
+          "before": "BC) AB",
+          "after": "B",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 11,
+      "question": 85,
+      "page": 52,
+      "changes": [
+        {
+          "option": "C",
+          "before": "The project was completed by them ദേശീയ മനുഷ്യാവകാശ കമ്മീഷന്റെ ഇപ്പോഴത്തെ അദ്ധ്യക്ഷൻ ജസ്റ്റിസ് അരുൺ കുമാർ മിശ്ര",
+          "after": "The project was completed by them",
+          "reason": "layout_verified_sidebar_line_trim"
+        }
+      ]
+    },
+    {
+      "paper": 13,
+      "question": 44,
+      "page": 58,
+      "changes": [
+        {
+          "option": "C",
+          "before": "273 ഡിഗ്രി സെൽഷ്യസ്",
+          "after": "-273 ഡിഗ്രി സെൽഷ്യസ്",
+          "reason": "add_missing_minus_to_fixed_pdf_option"
+        }
+      ]
+    },
+    {
+      "paper": 15,
+      "question": 9,
+      "page": 65,
+      "changes": [
+        {
+          "option": "A",
+          "before": "2√5 cmB) 5√2 cm",
+          "after": "2√5 cm",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 18,
+      "question": 40,
+      "page": 79,
+      "changes": [
+        {
+          "option": "A",
+          "before": "ഇറാൻ ലോകത്തിലെ ഏറ്റവും വലിയ ധനവാനായി 2023 ൽ തെര ഞ്ഞെടുക്കപ്പെട്ടത് ബെർണാഡ് അർനോൾട്ടും കുടുംബവും",
+          "after": "ഇറാൻ",
+          "reason": "layout_verified_sidebar_line_trim"
+        }
+      ]
+    },
+    {
+      "paper": 21,
+      "question": 90,
+      "page": 90,
+      "changes": [
+        {
+          "option": "D",
+          "before": "put by 2023 ലെ എഴുത്തച്ഛൻ പുരസ്കാരം നേടിയത് : S K വസന്തൻ",
+          "after": "put by",
+          "reason": "layout_verified_sidebar_line_trim"
+        }
+      ]
+    },
+    {
+      "paper": 21,
+      "question": 93,
+      "page": 91,
+      "changes": [
+        {
+          "option": "C",
+          "before": "herdD) flock",
+          "after": "herd",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 22,
+      "question": 40,
+      "page": 92,
+      "changes": [
+        {
+          "option": "C",
+          "before": null,
+          "after": "വീർഭൂമി",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "D",
+          "before": null,
+          "after": "വിജയ് ഘട്ട്",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 22,
+      "question": 96,
+      "page": 94,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "(x-a)",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "0",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "C",
+          "before": null,
+          "after": "1",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "D",
+          "before": null,
+          "after": "(x-a)²⁶",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 24,
+      "question": 4,
+      "page": 97,
+      "changes": [
+        {
+          "option": "C",
+          "before": null,
+          "after": "കോൺവാലീസ്",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "D",
+          "before": null,
+          "after": "വെല്ലസ്ലി",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 24,
+      "question": 7,
+      "page": 101,
+      "changes": [
+        {
+          "option": "A",
+          "before": "പ്രകീ൪ണ്ണനം",
+          "after": null,
+          "reason": "boxed_sidebar_excluded"
+        },
+        {
+          "option": "B",
+          "before": "പ്രതിഥലനം",
+          "after": null,
+          "reason": "boxed_sidebar_excluded"
+        },
+        {
+          "option": "C",
+          "before": "വിസരണം",
+          "after": null,
+          "reason": "boxed_sidebar_excluded"
+        },
+        {
+          "option": "D",
+          "before": "അപവര്ത്തനം",
+          "after": null,
+          "reason": "boxed_sidebar_excluded"
+        }
+      ]
+    },
+    {
+      "paper": 24,
+      "question": 58,
+      "page": 99,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "2",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "3",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 24,
+      "question": 97,
+      "page": 101,
+      "changes": [
+        {
+          "option": "C",
+          "before": "22 km/hrD) 24 km/hr",
+          "after": "22 km/hr",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 25,
+      "question": 96,
+      "page": 103,
+      "changes": [
+        {
+          "option": "D",
+          "before": "extinguish 2019 ലെ വള്ളത്തോൾ പുരസ്കാരം നേടിയത് പോൾ സക്കറിയ",
+          "after": "extinguish",
+          "reason": "layout_verified_sidebar_line_trim"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 34,
+      "page": 112,
+      "changes": [
+        {
+          "option": "A",
+          "before": "0°CB) 100°C",
+          "after": "0°C",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "120°CD) 4°C",
+          "after": "120°C",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 49,
+      "page": 112,
+      "changes": [
+        {
+          "option": "A",
+          "before": "9-11 mg/100 mlB) 90-110 mg/100 ml",
+          "after": "9-11 mg/100 ml",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "80-100 mg/100 mlD) 15-17 mg/100 ml",
+          "after": "80-100 mg/100 ml",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 53,
+      "page": 112,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "102",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "104",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 66,
+      "page": 113,
+      "changes": [
+        {
+          "option": "A",
+          "before": "BMFSLB) BKDQJ",
+          "after": "BMFSL",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "ENGTMD) JQDKB",
+          "after": "ENGTM",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 69,
+      "page": 113,
+      "changes": [
+        {
+          "option": "A",
+          "before": "30 km/hrB) 45 km/hr",
+          "after": "30 km/hr",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "40 km/hrD) 18 km/hr",
+          "after": "40 km/hr",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 71,
+      "page": 113,
+      "changes": [
+        {
+          "option": "A",
+          "before": "fromB) till",
+          "after": "from",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "sinceD) before",
+          "after": "since",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 72,
+      "page": 113,
+      "changes": [
+        {
+          "option": "A",
+          "before": "my sisterB) to my sister",
+          "after": "my sister",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "with my sisterD) none of these",
+          "after": "with my sister",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 73,
+      "page": 113,
+      "changes": [
+        {
+          "option": "A",
+          "before": "I amB) can’t",
+          "after": "I am",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "can ID) I could",
+          "after": "can I",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 74,
+      "page": 113,
+      "changes": [
+        {
+          "option": "A",
+          "before": "You do not work hardB) You work hard",
+          "after": "You do not work hard",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "You will work hardD) You will not work hard",
+          "after": "You will work hard",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 75,
+      "page": 113,
+      "changes": [
+        {
+          "option": "A",
+          "before": "so thatB) in case",
+          "after": "so that",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "as ifD) as long as",
+          "after": "as if",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 77,
+      "page": 114,
+      "changes": [
+        {
+          "option": "A",
+          "before": "ThoughB) Although",
+          "after": "Though",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "In caseD) In spite of",
+          "after": "In case",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 79,
+      "page": 114,
+      "changes": [
+        {
+          "option": "A",
+          "before": "FriendlyB) Helpful",
+          "after": "Friendly",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "CheerfulD) Disgusting",
+          "after": "Cheerful",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 80,
+      "page": 114,
+      "changes": [
+        {
+          "option": "A",
+          "before": "BroadcastB) Withhold",
+          "after": "Broadcast",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "ConveyD) Agree",
+          "after": "Convey",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 81,
+      "page": 114,
+      "changes": [
+        {
+          "option": "A",
+          "before": "GeniusB) Veteran",
+          "after": "Genius",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "MediocreD) Meticulous",
+          "after": "Mediocre",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 83,
+      "page": 114,
+      "changes": [
+        {
+          "option": "A",
+          "before": "A paperB) The sword",
+          "after": "A paper",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "WealthD) A speech",
+          "after": "Wealth",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 84,
+      "page": 114,
+      "changes": [
+        {
+          "option": "A",
+          "before": "put downB) get down",
+          "after": "put down",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "bring downD) pull down",
+          "after": "bring down",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 85,
+      "page": 114,
+      "changes": [
+        {
+          "option": "A",
+          "before": "brought aboutB) brought round",
+          "after": "brought about",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "brought upD) brought off",
+          "after": "brought up",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 87,
+      "page": 114,
+      "changes": [
+        {
+          "option": "A",
+          "before": "ContagiousB) Contaieus",
+          "after": "Contagious",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "ContegiousD) Contagiaus",
+          "after": "Contegious",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 89,
+      "page": 114,
+      "changes": [
+        {
+          "option": "A",
+          "before": "DevastateB) Raze",
+          "after": "Devastate",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "ErectD) Ruin",
+          "after": "Erect",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 90,
+      "page": 114,
+      "changes": [
+        {
+          "option": "A",
+          "before": "hasB) had",
+          "after": "has",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "beingD) having",
+          "after": "being",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "question": 100,
+      "page": 114,
+      "changes": [
+        {
+          "option": "D",
+          "before": "A good friend shortens the longest road. 2015 -ലെ വയലാർ അവാർഡ് നേടിയതാര് ? ശ്രീകുമാരൻ തമ്പി",
+          "after": "A good friend shortens the longest road.",
+          "reason": "layout_verified_sidebar_line_trim"
+        }
+      ]
+    },
+    {
+      "paper": 29,
+      "question": 24,
+      "page": 115,
+      "changes": [
+        {
+          "option": "C",
+          "before": null,
+          "after": "എട്ടാം പഞ്ചവത്സര പദ്ധതി",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "D",
+          "before": null,
+          "after": "ഒൻപതാം പഞ്ചവത്സര പദ്ധതി",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 29,
+      "question": 52,
+      "page": 116,
+      "changes": [
+        {
+          "option": "C",
+          "before": null,
+          "after": "8",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "D",
+          "before": null,
+          "after": "9",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 31,
+      "question": 68,
+      "page": 125,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "A",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "B",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "C",
+          "before": null,
+          "after": "C",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "D",
+          "before": "have",
+          "after": "D",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 32,
+      "question": 78,
+      "page": 130,
+      "changes": [
+        {
+          "option": "C",
+          "before": "bifurcateD) bilingual",
+          "after": "bifurcate",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 32,
+      "question": 87,
+      "page": 130,
+      "changes": [
+        {
+          "option": "C",
+          "before": "fairlyD) slightly",
+          "after": "fairly",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 33,
+      "question": 55,
+      "page": 133,
+      "changes": [
+        {
+          "option": "A",
+          "before": "FB) MC) KD) Z",
+          "after": "F",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 33,
+      "question": 88,
+      "page": 134,
+      "changes": [
+        {
+          "option": "C",
+          "before": "To cat some part of an itemD) To criticize some one",
+          "after": "To cat some part of an item",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 33,
+      "question": 100,
+      "page": 134,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "മിണ്ടാപ്പൂച്ച കലമുടയ്ക്കും",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "ഒഴുക്കുള്ള വെള്ളത്തിലഴുക്കില്ല",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 33,
+      "page": 136,
+      "changes": [
+        {
+          "option": "C",
+          "before": "34 mD) 17 nm ൽ കൂടുതൽ",
+          "after": "34 m",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "D",
+          "before": null,
+          "after": "േ\u0000പാട്ടോസോവ",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 40,
+      "page": 136,
+      "changes": [
+        {
+          "option": "A",
+          "before": "LPGB) കൽക്കരി",
+          "after": "LPG",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 41,
+      "page": 136,
+      "changes": [
+        {
+          "option": "A",
+          "before": "80 mm HgB) 120 mm Hg",
+          "after": "80 mm Hg",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "102 mm HgD) 60 mm Hg",
+          "after": "102 mm Hg",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 44,
+      "page": 136,
+      "changes": [
+        {
+          "option": "A",
+          "before": "1 mlB) 127 ml",
+          "after": "1 ml",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "126 mlD) 3 ml",
+          "after": "126 ml",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 49,
+      "page": 137,
+      "changes": [
+        {
+          "option": "A",
+          "before": "ജീവകം DB) ജീവകം K",
+          "after": "ജീവകം D",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "ജീവകം AD) ജീവകം B12",
+          "after": "ജീവകം A",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 63,
+      "page": 137,
+      "changes": [
+        {
+          "option": "A",
+          "before": "RVFFQB) RUFFN",
+          "after": "RVFFQ",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "RVFFPD) PTDDM",
+          "after": "RVFFP",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 67,
+      "page": 137,
+      "changes": [
+        {
+          "option": "A",
+          "before": "70 mB) 50 m",
+          "after": "70 m",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "35 mD) 60 m",
+          "after": "35 m",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 72,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "areB) has",
+          "after": "are",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "isD) have",
+          "after": "is",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 73,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "hadB) was",
+          "after": "had",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "isD) has",
+          "after": "is",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 74,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "TheB) A",
+          "after": "The",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "AnD) No article",
+          "after": "An",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 75,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "canB) ought to",
+          "after": "can",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "willD) could",
+          "after": "will",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 77,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "WalkingB) To walk",
+          "after": "Walking",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "WalkD) None of these",
+          "after": "Walk",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 78,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "wouldB) would have",
+          "after": "would",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "willD) will have",
+          "after": "will",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 81,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "stallionB) gander",
+          "after": "stallion",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "buckD) none of these",
+          "after": "buck",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 82,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "BrainwashB) Overlook",
+          "after": "Brainwash",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Send offD) Homesick",
+          "after": "Send off",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 83,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Very confidentB) Centre of attraction",
+          "after": "Very confident",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "PessimistD) Doubtful",
+          "after": "Pessimist",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 84,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "RetainB) Retreat",
+          "after": "Retain",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "AdoreD) Aggravate",
+          "after": "Adore",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 85,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "pull outB) pull up",
+          "after": "pull out",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "pull downD) pull off",
+          "after": "pull down",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 86,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "advaloremB) adrem",
+          "after": "advalorem",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "adnauseamD) adhoc",
+          "after": "adnauseam",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 87,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "commiserateB) unite",
+          "after": "commiserate",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "communicateD) none of these",
+          "after": "communicate",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 88,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "flareB) flair",
+          "after": "flare",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "fairD) fare",
+          "after": "fair",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 89,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "obsessionB) discussion",
+          "after": "obsession",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "percussionD) concession",
+          "after": "percussion",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "question": 90,
+      "page": 138,
+      "changes": [
+        {
+          "option": "A",
+          "before": "over hearB) hear from a distance",
+          "after": "over hear",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "hear from a nearby placeD) spread rumours",
+          "after": "hear from a nearby place",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 35,
+      "question": 51,
+      "page": 140,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "672",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "336",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "C",
+          "before": null,
+          "after": "280",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "D",
+          "before": null,
+          "after": "51",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 35,
+      "question": 77,
+      "page": 142,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Lend me any rupeesB) Borrow me a few rupees",
+          "after": "Lend me any rupees",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Lend me a rupeesD) Lend me a few rupees",
+          "after": "Lend me a rupees",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 36,
+      "question": 40,
+      "page": 145,
+      "changes": [
+        {
+          "option": "C",
+          "before": "ICAD) RBI",
+          "after": "ICA",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 12,
+      "page": 148,
+      "changes": [
+        {
+          "option": "C",
+          "before": "ചന്ദ്രഗുപ്തൻ IID) അശോകൻ",
+          "after": "ചന്ദ്രഗുപ്തൻ II",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 65,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "WUSB) ZXV",
+          "after": "WUS",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "NLJD) TSR",
+          "after": "NLJ",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 71,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "LessB) More little",
+          "after": "Less",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Most littleD) Least",
+          "after": "Most little",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 72,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "TieB) Pull",
+          "after": "Tie",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "FreeD) Hurt",
+          "after": "Free",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 73,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "inagurationB) deterent",
+          "after": "inaguration",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "ambiguityD) ureka",
+          "after": "ambiguity",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 74,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "put up withB) put out",
+          "after": "put up with",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "put onD) put aside",
+          "after": "put on",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 75,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "FleetB) Swarm",
+          "after": "Fleet",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "TeamD) Herd",
+          "after": "Team",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 77,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "they would have wonB) they would win",
+          "after": "they would have won",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "they will have winD) they will win",
+          "after": "they will have win",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 78,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "onB) of",
+          "after": "on",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "inD) for",
+          "after": "in",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 81,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "A handsome manB) A beautiful bird",
+          "after": "A handsome man",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "A pretty womanD) A cute boy",
+          "after": "A pretty woman",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 82,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "EmpathyB) Antipathy",
+          "after": "Empathy",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "AllopathyD) Apathy",
+          "after": "Allopathy",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 83,
+      "page": 150,
+      "changes": [
+        {
+          "option": "C",
+          "before": "CrownedD) Decorated",
+          "after": "Crowned",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 84,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Die togetherB) Live together",
+          "after": "Die together",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Work in unionD) Work alone",
+          "after": "Work in union",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 85,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "IntelligentB) Benevolent",
+          "after": "Intelligent",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "RegretD) Angry",
+          "after": "Regret",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 87,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "areB) were",
+          "after": "are",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "isD) have",
+          "after": "is",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 89,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "consulted a doctorB) consulting a doctor",
+          "after": "consulted a doctor",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "consult a doctorD) to consult a doctor",
+          "after": "consult a doctor",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 90,
+      "page": 150,
+      "changes": [
+        {
+          "option": "A",
+          "before": "been waitingB) have been waiting",
+          "after": "been waiting",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "waitsD) have waiting",
+          "after": "waits",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 99,
+      "page": 151,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Give quarterB) Give the go by",
+          "after": "Give quarter",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Give the slipD) Give into",
+          "after": "Give the slip",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "question": 100,
+      "page": 151,
+      "changes": [
+        {
+          "option": "A",
+          "before": "The beginningB) The end",
+          "after": "The beginning",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Excellent verseD) Best comment",
+          "after": "Excellent verse",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 38,
+      "question": 51,
+      "page": 153,
+      "changes": [
+        {
+          "option": "C",
+          "before": "PambarD) Thirur",
+          "after": "Pambar",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 39,
+      "question": 79,
+      "page": 156,
+      "changes": [
+        {
+          "option": "D",
+          "before": "സൂര്യതാപത്തെ ഉൾക്കൊള്ളുക. 2018-ൽ എഴുത്തച്ഛൻ പുരസ്കാരം ലഭിച്ച സാഹിത്യ കാരൻ S K വസന്തൻ",
+          "after": "സൂര്യതാപത്തെ ഉൾക്കൊള്ളുക",
+          "reason": "layout_verified_sidebar_line_trim"
+        }
+      ]
+    },
+    {
+      "paper": 40,
+      "question": 26,
+      "page": 158,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "യാഥാർത്ഥം, തല തിരിഞ്ഞത്",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 40,
+      "question": 49,
+      "page": 159,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "\u0000പഗ്യാൻ",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "വി\u0000കം",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "C",
+          "before": null,
+          "after": "എക്",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 40,
+      "question": 80,
+      "page": 160,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "150°",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "100°",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "C",
+          "before": null,
+          "after": "90°",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "D",
+          "before": null,
+          "after": "120°",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 17,
+      "page": 162,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "1, 2, 4 എന്നിവ",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "1, 2, 3 എന്നിവ",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "C",
+          "before": null,
+          "after": "1, 4 എന്നിവ",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "D",
+          "before": null,
+          "after": "2, 4 എന്നിവ",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 39,
+      "page": 164,
+      "changes": [
+        {
+          "option": "A",
+          "before": "120/80 mm of HgB) 140/80 mm of Hg",
+          "after": "120/80 mm of Hg",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "120/100 mm of HgD) 140/90 mm of Hg",
+          "after": "120/100 mm of Hg",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 47,
+      "page": 164,
+      "changes": [
+        {
+          "option": "A",
+          "before": "6 cmB) 12 cm",
+          "after": "6 cm",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "24 cmD) 36 cm",
+          "after": "24 cm",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 61,
+      "page": 165,
+      "changes": [
+        {
+          "option": "C",
+          "before": "DVDD) ഹാർഡ്ഡിസ്ക്",
+          "after": "DVD",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 78,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "AB) BC) CD) E",
+          "after": "A",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 81,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "AB) An",
+          "after": "A",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "TheD) With",
+          "after": "The",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 82,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "areB) is",
+          "after": "are",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "wereD) our",
+          "after": "were",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 83,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "am drinkingB) drinks",
+          "after": "am drinking",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "drinkD) is drinking",
+          "after": "drink",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 84,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "as big asB) bigger",
+          "after": "as big as",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "the bigD) the biggest",
+          "after": "the big",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 85,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "onB) into",
+          "after": "on",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "inD) with",
+          "after": "in",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 86,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "sonB) sons",
+          "after": "son",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "son'sD) sunny",
+          "after": "son's",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 87,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "fastB) fastly",
+          "after": "fast",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "hardlyD) swift",
+          "after": "hardly",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 88,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "happinessB) sadness",
+          "after": "happiness",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "completeD) agreement",
+          "after": "complete",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 89,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "give upB) catch",
+          "after": "give up",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "returnD) leave",
+          "after": "return",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 90,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": "stopB) discontinue",
+          "after": "stop",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "beginD) quit",
+          "after": "begin",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 93,
+      "page": 166,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "എനിക്ക് പത്തു തേങ്ങകൾ വേണം",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "എനിക്ക് പത്തു തേങ്ങ വേണം",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "question": 96,
+      "page": 167,
+      "changes": [
+        {
+          "option": "D",
+          "before": "നിങ്ങൾക്ക് ഒരു സൂര്യനെപ്പോലെ തിളങ്ങണമെങ്കിൽ ആദ്യം സൂര്യ നെപ്പോലെ കത്തിജ്വലിക്കുക",
+          "after": "നിങ്ങൾക്ക് ഒരു സൂര്യനെപ്പോലെ തിളങ്ങണമെങ്കിൽ ആദ്യം സൂര്യനെപ്പോലെ കത്തിജ്വലിക്കുക",
+          "reason": "layout_line_wrap_join"
+        }
+      ]
+    },
+    {
+      "paper": 42,
+      "question": 73,
+      "page": 168,
+      "changes": [
+        {
+          "option": "D",
+          "before": null,
+          "after": "ദ്വന്ദ്വസമാസം",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 40,
+      "page": 172,
+      "changes": [
+        {
+          "option": "A",
+          "before": "BlindnessB) Deafness",
+          "after": "Blindness",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Mental illnessD) Covid-19",
+          "after": "Mental illness",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 45,
+      "page": 172,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Doudna) എന്നിവർക്കാണ് ല ഭിച്ചത്. ഇവർക്ക് ഈ പുരസ്കാരം ലഭിക്കാൻ സഹാ യിച്ച കണ്ടെത്തൽ/നേട്ടം എന്താണ് ?",
+          "after": "Doudna) എന്നിവർക്കാണ് ലഭിച്ചത്. ഇവർക്ക് ഈ പുരസ്കാരം ലഭിക്കാൻ സഹാ യിച്ച കണ്ടെത്തൽ/നേട്ടം എന്താണ് ?",
+          "reason": "layout_line_wrap_join"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 59,
+      "page": 173,
+      "changes": [
+        {
+          "option": "A",
+          "before": "URLB) സ്പൈഡർ",
+          "after": "URL",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 60,
+      "page": 173,
+      "changes": [
+        {
+          "option": "A",
+          "before": "66BB) 66DC) 66ED) 66F",
+          "after": "66B",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 81,
+      "page": 174,
+      "changes": [
+        {
+          "option": "A",
+          "before": "citeB) sight",
+          "after": "cite",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "siteD) cight",
+          "after": "site",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 82,
+      "page": 174,
+      "changes": [
+        {
+          "option": "A",
+          "before": "infanticideB) genocide",
+          "after": "infanticide",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "filicideD) matricide",
+          "after": "filicide",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 83,
+      "page": 174,
+      "changes": [
+        {
+          "option": "A",
+          "before": "criterionB) criteria",
+          "after": "criterion",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "criteriasD) criterium",
+          "after": "criterias",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 84,
+      "page": 174,
+      "changes": [
+        {
+          "option": "A",
+          "before": "don't theyB) does she",
+          "after": "don't they",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "didn't theyD) didn't she",
+          "after": "didn't they",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 85,
+      "page": 174,
+      "changes": [
+        {
+          "option": "A",
+          "before": "called atB) called out",
+          "after": "called at",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "called offD) called on",
+          "after": "called off",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 86,
+      "page": 174,
+      "changes": [
+        {
+          "option": "A",
+          "before": "metB) have met",
+          "after": "met",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "had metD) meet",
+          "after": "had met",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 88,
+      "page": 174,
+      "changes": [
+        {
+          "option": "A",
+          "before": "No sooner had hisB) father come home",
+          "after": "No sooner had his",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "then he started readingD) No error",
+          "after": "then he started reading",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 90,
+      "page": 175,
+      "changes": [
+        {
+          "option": "A",
+          "before": "a boring dayB) a sad day",
+          "after": "a boring day",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "a dangerous dayD) a happy day",
+          "after": "a dangerous day",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 99,
+      "page": 175,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Crocodile tearsB) Crocodile tales",
+          "after": "Crocodile tears",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Crocodile tailsD) Crocodile teeth",
+          "after": "Crocodile tails",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "question": 100,
+      "page": 175,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Achilles' kneesB) Achilles' footprint",
+          "after": "Achilles' knees",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Achilles' toesD) Achilles' heel",
+          "after": "Achilles' toes",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 2,
+      "page": 178,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Chattampi SwamikalB) Sri Narayana Guru",
+          "after": "Chattampi Swamikal",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Swami VagbhatanandaD) Vaikunta Swami",
+          "after": "Swami Vagbhatananda",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 4,
+      "page": 178,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Jawaharlal NehruB) Morarji Desai",
+          "after": "Jawaharlal Nehru",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Indira GandhiD) Lal Bahadur Shastri",
+          "after": "Indira Gandhi",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 6,
+      "page": 178,
+      "changes": [
+        {
+          "option": "A",
+          "before": "VallatholB) Raman Pillai",
+          "after": "Vallathol",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Maharaja Swathi ThirunalD) Parthi Subha",
+          "after": "Maharaja Swathi Thirunal",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 7,
+      "page": 178,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Abhinav BindraB) Neeraj Chopra",
+          "after": "Abhinav Bindra",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "P.V. SindhuD) Mirabai Chanu",
+          "after": "P.V. Sindhu",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 10,
+      "page": 178,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Volodymyr ZelenskyyB) Petro Poroshenko",
+          "after": "Volodymyr Zelenskyy",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Viktor YanukovychD) Viktor Yushchenko",
+          "after": "Viktor Yanukovych",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 11,
+      "page": 178,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Metamorphic rockB) Igneous rock",
+          "after": "Metamorphic rock",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Sedimentary rockD) None of the above",
+          "after": "Sedimentary rock",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 12,
+      "page": 178,
+      "changes": [
+        {
+          "option": "A",
+          "before": "KalladaB) Idamalayar",
+          "after": "Kallada",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "KuttiyadiD) Thenmala",
+          "after": "Kuttiyadi",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 14,
+      "page": 179,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Running waterB) Underground water",
+          "after": "Running water",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Sea wavesD) Glaciers",
+          "after": "Sea waves",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 16,
+      "page": 179,
+      "changes": [
+        {
+          "option": "A",
+          "before": "RussiaB) Ukraine",
+          "after": "Russia",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "JapanD) China",
+          "after": "Japan",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 21,
+      "page": 179,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Tarapore committeeB) Tiwari committee",
+          "after": "Tarapore committee",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Chellaiah committeeD) Narasimham committee",
+          "after": "Chellaiah committee",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "B",
+          "before": "Tiwari committee , , 19-6, 16-8, 20-8 17-6, 179",
+          "after": "Tiwari committee",
+          "reason": "layout_verified_sidebar_line_trim"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 22,
+      "page": 179,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Dr. Rajiv KumarB) Dr. K. Rajeswara Rao",
+          "after": "Dr. Rajiv Kumar",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Rao Inderjit SinghD) Amitabh Kant",
+          "after": "Rao Inderjit Singh",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 23,
+      "page": 179,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Vice President of IndiaB) Prime Minister of India",
+          "after": "Vice President of India",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Finance Minister of IndiaD) Speaker of Loksabha",
+          "after": "Finance Minister of India",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "D",
+          "before": "Speaker of Loksabha 24, “Article-32 is the heart and soul of the Indian Constitution”",
+          "after": "Speaker of Loksabha",
+          "reason": "remove_layout_proven_next_question_text"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 25,
+      "page": 179,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Article 21 AB) Article 51 A",
+          "after": "Article 21 A",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Article 300 AD) Article 370 A",
+          "after": "Article 300 A",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 29,
+      "page": 179,
+      "changes": [
+        {
+          "option": "A",
+          "before": "44thB) 42nd",
+          "after": "44th",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "62ndD) 73rd",
+          "after": "62nd",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 30,
+      "page": 179,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Part IVB) Part V",
+          "after": "Part IV",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Part IIID) Part VI",
+          "after": "Part III",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 35,
+      "page": 179,
+      "changes": [
+        {
+          "option": "A",
+          "before": "43rdB) 53rd",
+          "after": "43rd",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 37,
+      "page": 180,
+      "changes": [
+        {
+          "option": "C",
+          "before": "AustinD) Montesquieu",
+          "after": "Austin",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 39,
+      "page": 180,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Acetic acidB) Hydrochloric acid",
+          "after": "Acetic acid",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Lactic acidD) Citric acid",
+          "after": "Lactic acid",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 40,
+      "page": 180,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Kyoto ProtocolB) Cartagena Protocol",
+          "after": "Kyoto Protocol",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Stockholm ConventionD) Montreal Protocol",
+          "after": "Stockholm Convention",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 41,
+      "page": 180,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Minamata diseaseB) Itai-Itai disease",
+          "after": "Minamata disease",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "DisplexiaD) Skin cancer",
+          "after": "Displexia",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 42,
+      "page": 180,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Gobar – Dhan YojanaB) Nikshay Poshan Yojana",
+          "after": "Gobar – Dhan Yojana",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Janani Suraksha YojanaD) Jan Dhan Yojana",
+          "after": "Janani Suraksha Yojana",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 45,
+      "page": 180,
+      "changes": [
+        {
+          "option": "A",
+          "before": "√2 ν m/sB) ν m/s",
+          "after": "√2 ν m/s",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "2 ν m/sD) 4 ν m/s",
+          "after": "2 ν m/s",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 47,
+      "page": 180,
+      "changes": [
+        {
+          "option": "A",
+          "before": "OxygenB) Sodium",
+          "after": "Oxygen",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "ChlorineD) Fluorine",
+          "after": "Chlorine",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 48,
+      "page": 180,
+      "changes": [
+        {
+          "option": "A",
+          "before": "NeutralB) Slightly alkaline",
+          "after": "Neutral",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Slightly acidicD) None of the above",
+          "after": "Slightly acidic",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 57,
+      "page": 180,
+      "changes": [
+        {
+          "option": "A",
+          "before": "IronB) Sodium",
+          "after": "Iron",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "PotassiumD) Chlorine",
+          "after": "Potassium",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 59,
+      "page": 180,
+      "changes": [
+        {
+          "option": "A",
+          "before": "SundayB) Tuesday",
+          "after": "Sunday",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "WednesdayD) Monday",
+          "after": "Wednesday",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 60,
+      "page": 180,
+      "changes": [
+        {
+          "option": "A",
+          "before": "3 km/hrB) 5 km/hr",
+          "after": "3 km/hr",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 62,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "haveB) having",
+          "after": "have",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "hasD) have not",
+          "after": "has",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 63,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "manyB) much",
+          "after": "many",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "fewD) little",
+          "after": "few",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 64,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "aB) an",
+          "after": "a",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "theD) no article",
+          "after": "the",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 65,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "doesB) did",
+          "after": "does",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "doD) had",
+          "after": "do",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 67,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "happinessB) sadness",
+          "after": "happiness",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "angerD) zeal",
+          "after": "anger",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 68,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "will helpB) helped",
+          "after": "will help",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "helpingD) would help",
+          "after": "helping",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 69,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "fromB) to",
+          "after": "from",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "atD) between",
+          "after": "at",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 70,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "looked upB) looked on",
+          "after": "looked up",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "looked atD) looked into",
+          "after": "looked at",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 81,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "ProcessorB) Computer",
+          "after": "Processor",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Character setD) Memory",
+          "after": "Character set",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 84,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "POSTB) GET",
+          "after": "POST",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "PUTD) HEADER",
+          "after": "PUT",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 85,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "InterpreterB) Linker",
+          "after": "Interpreter",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "CompilerD) Debugger",
+          "after": "Compiler",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 86,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Compact DiscB) Hard Disk",
+          "after": "Compact Disc",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Tape DriveD) All of these",
+          "after": "Tape Drive",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 88,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "FTPB) HTML",
+          "after": "FTP",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "SMTPD) HTTP",
+          "after": "SMTP",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 89,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "ChromeB) Opera",
+          "after": "Chrome",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "SafariD) All the above",
+          "after": "Safari",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 90,
+      "page": 181,
+      "changes": [
+        {
+          "option": "A",
+          "before": "MacrosB) Template",
+          "after": "Macros",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 91,
+      "page": 182,
+      "changes": [
+        {
+          "option": "A",
+          "before": "AddressB) Cell",
+          "after": "Address",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "ColumnD) Value",
+          "after": "Column",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 92,
+      "page": 182,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Word processingB) Database",
+          "after": "Word processing",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Spread SheetD) All the above",
+          "after": "Spread Sheet",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 93,
+      "page": 182,
+      "changes": [
+        {
+          "option": "A",
+          "before": "Animation objectsB) Animation scheme",
+          "after": "Animation objects",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "Slide designD) Slide transition",
+          "after": "Slide design",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 95,
+      "page": 182,
+      "changes": [
+        {
+          "option": "A",
+          "before": "AbstractionB) Encapsulation",
+          "after": "Abstraction",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "InheritanceD) Polymorphism",
+          "after": "Inheritance",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 96,
+      "page": 182,
+      "changes": [
+        {
+          "option": "A",
+          "before": "PrivateB) Public",
+          "after": "Private",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "ProtectedD) All the above",
+          "after": "Protected",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 98,
+      "page": 182,
+      "changes": [
+        {
+          "option": "A",
+          "before": "DeleteB) Drop",
+          "after": "Delete",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "EraseD) All the above",
+          "after": "Erase",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "question": 99,
+      "page": 182,
+      "changes": [
+        {
+          "option": "A",
+          "before": "ADD COLUMNB) ALTER TABLE",
+          "after": "ADD COLUMN",
+          "reason": "cut_at_actual_option_label"
+        },
+        {
+          "option": "C",
+          "before": "INSERT COLUMND) All the above",
+          "after": "INSERT COLUMN",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    },
+    {
+      "paper": 46,
+      "question": 29,
+      "page": 184,
+      "changes": [
+        {
+          "option": "D",
+          "before": "കേരള ഇൻഡസ്ട്രിയൽ ഇൻഫ്രാസ്ട്രക്ചർ ഡവലപ്മെന്റ് കോർപ്പ റേഷൻ",
+          "after": "കേരള ഇൻഡസ്ട്രിയൽ ഇൻഫ്രാസ്ട്രക്ചർ ഡവലപ്മെന്റ് കോർപ്പറേഷൻ",
+          "reason": "layout_line_wrap_join"
+        }
+      ]
+    },
+    {
+      "paper": 46,
+      "question": 79,
+      "page": 187,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "10 മ. 50 മി.",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "10 മ. 40 മി.",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 46,
+      "question": 96,
+      "page": 188,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "കൊച്ചിയുടെ മാഹാത്മ്യം",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "കൊല്ലത്തിന്റെ വൈശിഷ് ട്യം",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 47,
+      "question": 43,
+      "page": 191,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "കോക്ക് ",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "\u0000ഗാഫൈറ്റ്",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 48,
+      "question": 71,
+      "page": 197,
+      "changes": [
+        {
+          "option": "A",
+          "before": null,
+          "after": "1,000",
+          "reason": "continued_from_next_page"
+        },
+        {
+          "option": "B",
+          "before": null,
+          "after": "1,100",
+          "reason": "continued_from_next_page"
+        }
+      ]
+    },
+    {
+      "paper": 49,
+      "question": 65,
+      "page": 203,
+      "changes": [
+        {
+          "option": "A",
+          "before": "അപകടകരമായ ചരക്കുകൾ ഉൽപന്നങ്ങൾ അല്ലെങ്കിൽ സേവന ങ്ങൾ എന്നിവയിൽ നിന്ന് സംരക്ഷിക്കപ്പെടാനുള്ള അവകാശം",
+          "after": "അപകടകരമായ ചരക്കുകൾ ഉൽപന്നങ്ങൾ അല്ലെങ്കിൽ സേവനങ്ങൾ എന്നിവയിൽ നിന്ന് സംരക്ഷിക്കപ്പെടാനുള്ള അവകാശം",
+          "reason": "layout_line_wrap_join"
+        }
+      ]
+    },
+    {
+      "paper": 49,
+      "question": 81,
+      "page": 204,
+      "changes": [
+        {
+          "option": "C",
+          "before": "atD) with",
+          "after": "at",
+          "reason": "cut_at_actual_option_label"
+        }
+      ]
+    }
+  ],
+  "priorCleanupChangesRevertedForReview": [
+    {
+      "option": "A",
+      "before": "S ഉം R ഉം ശരിയാണ്, S ന് ഉള്ള ശരിയായ വിശദീകരണമാണ് R",
+      "after": "S ഉം R ഉം ശരിയാണ്",
+      "reason": "physical_option_line_cleanup",
+      "paper": 41,
+      "question": 49,
+      "page": 165,
+      "removedPart": ", S ന് ഉള്ള ശരിയായ വിശദീകരണമാണ് R",
+      "reverted": true,
+      "layoutProof": "prior cleanup used a text heuristic without retained option-label or box-region proof"
+    },
+    {
+      "option": "C",
+      "before": "S ശരിയാണ്, R തെറ്റാണ്",
+      "after": "S ശരിയാണ്",
+      "reason": "physical_option_line_cleanup",
+      "paper": 41,
+      "question": 49,
+      "page": 165,
+      "removedPart": ", R തെറ്റാണ്",
+      "reverted": true,
+      "layoutProof": "prior cleanup used a text heuristic without retained option-label or box-region proof"
+    },
+    {
+      "option": "A",
+      "before": "നിർമ്മാതാവിനു 'Y' ക്കു നഷ്ടപരിഹാരം നൽകാൻ ബാധ്യത ഉണ്ട്",
+      "after": "നിർമ്മാതാവിനു 'Y' ക്കു നഷ്",
+      "reason": "physical_option_line_cleanup",
+      "paper": 46,
+      "question": 65,
+      "page": 187,
+      "removedPart": "ടപരിഹാരം നൽകാൻ ബാധ്യത ഉണ്ട്",
+      "reverted": true,
+      "layoutProof": "prior cleanup used a text heuristic without retained option-label or box-region proof"
+    },
+    {
+      "option": "A",
+      "before": "[A] യും [R] ഉം ശരിയാണ് [R], [A] യുടെ ശരിയായ വിശദീകരണ വുമാണ്",
+      "after": "[A] യും [R] ഉം ശരിയാണ്",
+      "reason": "physical_option_line_cleanup",
+      "paper": 46,
+      "question": 67,
+      "page": 187,
+      "removedPart": " [R], [A] യുടെ ശരിയായ വിശദീകരണ വുമാണ്",
+      "reverted": true,
+      "layoutProof": "prior cleanup used a text heuristic without retained option-label or box-region proof"
+    },
+    {
+      "option": "C",
+      "before": "DNA ഫിങ്ഗർ പ്രിന്റിങ്ങ്",
+      "after": "DNA ഫിങ്",
+      "reason": "physical_option_line_cleanup",
+      "paper": 47,
+      "question": 35,
+      "page": 191,
+      "removedPart": "ഗർ പ്രിന്റിങ്ങ്",
+      "reverted": true,
+      "layoutProof": "prior cleanup used a text heuristic without retained option-label or box-region proof"
+    }
+  ],
+  "cancelledQuestionsByPaper": {
+    "1": [
+      {
+        "question": 15,
+        "keyPage": 9,
+        "snippet": "15-X"
+      },
+      {
+        "question": 79,
+        "keyPage": 12,
+        "snippet": "79-X"
+      },
+      {
+        "question": 81,
+        "keyPage": 12,
+        "snippet": "81-X"
+      },
+      {
+        "question": 89,
+        "keyPage": 12,
+        "snippet": "89-X"
+      },
+      {
+        "question": 93,
+        "keyPage": 12,
+        "snippet": "93-X"
+      }
+    ],
+    "2": [
+      {
+        "question": 13,
+        "keyPage": 13,
+        "snippet": "13-X"
+      },
+      {
+        "question": 44,
+        "keyPage": 14,
+        "snippet": "44-X"
+      },
+      {
+        "question": 94,
+        "keyPage": 16,
+        "snippet": "94-X"
+      }
+    ],
+    "3": [
+      {
+        "question": 1,
+        "keyPage": 17,
+        "snippet": "1-X"
+      },
+      {
+        "question": 39,
+        "keyPage": 18,
+        "snippet": "39-X"
+      },
+      {
+        "question": 93,
+        "keyPage": 20,
+        "snippet": "93-X"
+      }
+    ],
+    "4": [
+      {
+        "question": 18,
+        "keyPage": 22,
+        "snippet": "18-X"
+      },
+      {
+        "question": 31,
+        "keyPage": 22,
+        "snippet": "31-X"
+      },
+      {
+        "question": 40,
+        "keyPage": 22,
+        "snippet": "40-X"
+      },
+      {
+        "question": 49,
+        "keyPage": 23,
+        "snippet": "49-X"
+      },
+      {
+        "question": 56,
+        "keyPage": 23,
+        "snippet": "56-X"
+      },
+      {
+        "question": 78,
+        "keyPage": 24,
+        "snippet": "78-X"
+      }
+    ],
+    "5": [
+      {
+        "question": 7,
+        "keyPage": 25,
+        "snippet": "7-X"
+      },
+      {
+        "question": 25,
+        "keyPage": 26,
+        "snippet": "25-X"
+      }
+    ],
+    "6": [
+      {
+        "question": 46,
+        "keyPage": 31,
+        "snippet": "46-X"
+      },
+      {
+        "question": 50,
+        "keyPage": 31,
+        "snippet": "50-X"
+      },
+      {
+        "question": 52,
+        "keyPage": 31,
+        "snippet": "52-X"
+      },
+      {
+        "question": 61,
+        "keyPage": 31,
+        "snippet": "61-X"
+      },
+      {
+        "question": 86,
+        "keyPage": 32,
+        "snippet": "86-X"
+      }
+    ],
+    "7": [
+      {
+        "question": 7,
+        "keyPage": 33,
+        "snippet": "7-X"
+      },
+      {
+        "question": 26,
+        "keyPage": 34,
+        "snippet": "26-X"
+      },
+      {
+        "question": 28,
+        "keyPage": 34,
+        "snippet": "28-X"
+      }
+    ],
+    "8": [
+      {
+        "question": 8,
+        "keyPage": 38,
+        "snippet": "8-X"
+      },
+      {
+        "question": 21,
+        "keyPage": 38,
+        "snippet": "21-X"
+      },
+      {
+        "question": 66,
+        "keyPage": 40,
+        "snippet": "66-X"
+      }
+    ],
+    "9": [
+      {
+        "question": 36,
+        "keyPage": 43,
+        "snippet": "36-X"
+      },
+      {
+        "question": 38,
+        "keyPage": 43,
+        "snippet": "38-X"
+      }
+    ],
+    "10": [
+      {
+        "question": 49,
+        "keyPage": 47,
+        "snippet": "49-X"
+      }
+    ],
+    "11": [
+      {
+        "question": 60,
+        "keyPage": 52,
+        "snippet": "60-X"
+      },
+      {
+        "question": 64,
+        "keyPage": 52,
+        "snippet": "64-X"
+      },
+      {
+        "question": 76,
+        "keyPage": 52,
+        "snippet": "76-X"
+      }
+    ],
+    "12": [
+      {
+        "question": 2,
+        "keyPage": 53,
+        "snippet": "2-X"
+      },
+      {
+        "question": 31,
+        "keyPage": 54,
+        "snippet": "31-X"
+      },
+      {
+        "question": 55,
+        "keyPage": 55,
+        "snippet": "55-X"
+      }
+    ],
+    "14": [
+      {
+        "question": 46,
+        "keyPage": 62,
+        "snippet": "46-X"
+      },
+      {
+        "question": 97,
+        "keyPage": 64,
+        "snippet": "97-X"
+      }
+    ],
+    "15": [
+      {
+        "question": 7,
+        "keyPage": 65,
+        "snippet": "7-X"
+      },
+      {
+        "question": 11,
+        "keyPage": 65,
+        "snippet": "11-X"
+      },
+      {
+        "question": 14,
+        "keyPage": 65,
+        "snippet": "14-X"
+      },
+      {
+        "question": 62,
+        "keyPage": 67,
+        "snippet": "62-X"
+      },
+      {
+        "question": 69,
+        "keyPage": 68,
+        "snippet": "69-X"
+      },
+      {
+        "question": 85,
+        "keyPage": 68,
+        "snippet": "85-X"
+      }
+    ],
+    "16": [
+      {
+        "question": 87,
+        "keyPage": 72,
+        "snippet": "87-X"
+      }
+    ],
+    "20": [
+      {
+        "question": 6,
+        "keyPage": 85,
+        "snippet": "6-X"
+      },
+      {
+        "question": 22,
+        "keyPage": 86,
+        "snippet": "22-X"
+      },
+      {
+        "question": 34,
+        "keyPage": 86,
+        "snippet": "34-X"
+      },
+      {
+        "question": 39,
+        "keyPage": 86,
+        "snippet": "39-X"
+      },
+      {
+        "question": 42,
+        "keyPage": 86,
+        "snippet": "42-X"
+      },
+      {
+        "question": 71,
+        "keyPage": 87,
+        "snippet": "71-X"
+      }
+    ],
+    "22": [
+      {
+        "question": 23,
+        "keyPage": 92,
+        "snippet": "23-X"
+      },
+      {
+        "question": 32,
+        "keyPage": 92,
+        "snippet": "32-X"
+      },
+      {
+        "question": 41,
+        "keyPage": 93,
+        "snippet": "41-X"
+      },
+      {
+        "question": 50,
+        "keyPage": 93,
+        "snippet": "50-X"
+      }
+    ],
+    "24": [
+      {
+        "question": 13,
+        "keyPage": 98,
+        "snippet": "13-X"
+      }
+    ],
+    "27": [
+      {
+        "question": 36,
+        "keyPage": 108,
+        "snippet": "36-X"
+      },
+      {
+        "question": 72,
+        "keyPage": 109,
+        "snippet": "72-X"
+      },
+      {
+        "question": 74,
+        "keyPage": 109,
+        "snippet": "74-X"
+      }
+    ],
+    "28": [
+      {
+        "question": 4,
+        "keyPage": 111,
+        "snippet": "4-X"
+      },
+      {
+        "question": 5,
+        "keyPage": 111,
+        "snippet": "5-X"
+      },
+      {
+        "question": 9,
+        "keyPage": 111,
+        "snippet": "9-X"
+      },
+      {
+        "question": 77,
+        "keyPage": 114,
+        "snippet": "77-X"
+      },
+      {
+        "question": 93,
+        "keyPage": 114,
+        "snippet": "93-X"
+      }
+    ],
+    "29": [
+      {
+        "question": 22,
+        "keyPage": 115,
+        "snippet": "22-X"
+      }
+    ],
+    "30": [
+      {
+        "question": 15,
+        "keyPage": 119,
+        "snippet": "15-X"
+      },
+      {
+        "question": 24,
+        "keyPage": 119,
+        "snippet": "24-X"
+      },
+      {
+        "question": 28,
+        "keyPage": 120,
+        "snippet": "28-X"
+      }
+    ],
+    "31": [
+      {
+        "question": 26,
+        "keyPage": 124,
+        "snippet": "26-X"
+      },
+      {
+        "question": 62,
+        "keyPage": 125,
+        "snippet": "62-X"
+      },
+      {
+        "question": 65,
+        "keyPage": 125,
+        "snippet": "65-X"
+      },
+      {
+        "question": 67,
+        "keyPage": 125,
+        "snippet": "67-X"
+      },
+      {
+        "question": 91,
+        "keyPage": 126,
+        "snippet": "91-X"
+      }
+    ],
+    "32": [
+      {
+        "question": 41,
+        "keyPage": 128,
+        "snippet": "41-X"
+      },
+      {
+        "question": 82,
+        "keyPage": 130,
+        "snippet": "82-X"
+      },
+      {
+        "question": 83,
+        "keyPage": 130,
+        "snippet": "83-X"
+      }
+    ],
+    "33": [
+      {
+        "question": 5,
+        "keyPage": 131,
+        "snippet": "5-X"
+      },
+      {
+        "question": 12,
+        "keyPage": 131,
+        "snippet": "12-X"
+      },
+      {
+        "question": 13,
+        "keyPage": 131,
+        "snippet": "13-X"
+      },
+      {
+        "question": 20,
+        "keyPage": 131,
+        "snippet": "20-X"
+      },
+      {
+        "question": 93,
+        "keyPage": 134,
+        "snippet": "93-X"
+      }
+    ],
+    "34": [
+      {
+        "question": 4,
+        "keyPage": 135,
+        "snippet": "4-X"
+      },
+      {
+        "question": 58,
+        "keyPage": 137,
+        "snippet": "58-X"
+      }
+    ],
+    "35": [
+      {
+        "question": 60,
+        "keyPage": 141,
+        "snippet": "60-X"
+      }
+    ],
+    "36": [
+      {
+        "question": 25,
+        "keyPage": 144,
+        "snippet": "25-X"
+      }
+    ],
+    "37": [
+      {
+        "question": 9,
+        "keyPage": 147,
+        "snippet": "9-X"
+      },
+      {
+        "question": 42,
+        "keyPage": 149,
+        "snippet": "42-X"
+      },
+      {
+        "question": 59,
+        "keyPage": 149,
+        "snippet": "59-X"
+      }
+    ],
+    "38": [
+      {
+        "question": 13,
+        "keyPage": 152,
+        "snippet": "13-X"
+      },
+      {
+        "question": 31,
+        "keyPage": 152,
+        "snippet": "31-X"
+      },
+      {
+        "question": 53,
+        "keyPage": 153,
+        "snippet": "53-X"
+      }
+    ],
+    "39": [
+      {
+        "question": 68,
+        "keyPage": 156,
+        "snippet": "68-X"
+      },
+      {
+        "question": 70,
+        "keyPage": 156,
+        "snippet": "70-X"
+      }
+    ],
+    "42": [
+      {
+        "question": 71,
+        "keyPage": 168,
+        "snippet": "71-X"
+      }
+    ],
+    "44": [
+      {
+        "question": 41,
+        "keyPage": 176,
+        "snippet": "41-X"
+      },
+      {
+        "question": 83,
+        "keyPage": 177,
+        "snippet": "83-X"
+      }
+    ],
+    "45": [
+      {
+        "question": 22,
+        "keyPage": 179,
+        "snippet": "22-X"
+      },
+      {
+        "question": 85,
+        "keyPage": 181,
+        "snippet": "85-X"
+      }
+    ],
+    "46": [
+      {
+        "question": 5,
+        "keyPage": 183,
+        "snippet": "5-X"
+      },
+      {
+        "question": 13,
+        "keyPage": 183,
+        "snippet": "13-X"
+      },
+      {
+        "question": 56,
+        "keyPage": 186,
+        "snippet": "56-X"
+      },
+      {
+        "question": 59,
+        "keyPage": 186,
+        "snippet": "59-X"
+      },
+      {
+        "question": 76,
+        "keyPage": 187,
+        "snippet": "76-X"
+      },
+      {
+        "question": 90,
+        "keyPage": 188,
+        "snippet": "90-X"
+      }
+    ],
+    "48": [
+      {
+        "question": 4,
+        "keyPage": 194,
+        "snippet": "4-X"
+      },
+      {
+        "question": 10,
+        "keyPage": 195,
+        "snippet": "10-X"
+      },
+      {
+        "question": 32,
+        "keyPage": 196,
+        "snippet": "32-X"
+      },
+      {
+        "question": 75,
+        "keyPage": 198,
+        "snippet": "75-X"
+      }
+    ],
+    "49": [
+      {
+        "question": 58,
+        "keyPage": 203,
+        "snippet": "58-X"
+      },
+      {
+        "question": 73,
+        "keyPage": 204,
+        "snippet": "73-X"
+      },
+      {
+        "question": 77,
+        "keyPage": 204,
+        "snippet": "77-X"
+      },
+      {
+        "question": 80,
+        "keyPage": 204,
+        "snippet": "80-X"
+      }
+    ],
+    "50": [
+      {
+        "question": 45,
+        "keyPage": 205,
+        "snippet": "45-X"
+      }
+    ]
+  },
+  "cancelledQuestionCount": 116,
+  "continuationOptions": [
+    {
+      "paper": 22,
+      "question": 40,
+      "page": 92,
+      "continuedFrom": 93,
+      "key": "C",
+      "text": "വീർഭൂമി"
+    },
+    {
+      "paper": 22,
+      "question": 40,
+      "page": 92,
+      "continuedFrom": 93,
+      "key": "D",
+      "text": "വിജയ് ഘട്ട്"
+    },
+    {
+      "paper": 22,
+      "question": 96,
+      "page": 94,
+      "continuedFrom": 95,
+      "key": "A",
+      "text": "(x-a)"
+    },
+    {
+      "paper": 22,
+      "question": 96,
+      "page": 94,
+      "continuedFrom": 95,
+      "key": "B",
+      "text": "0"
+    },
+    {
+      "paper": 22,
+      "question": 96,
+      "page": 94,
+      "continuedFrom": 95,
+      "key": "C",
+      "text": "1"
+    },
+    {
+      "paper": 22,
+      "question": 96,
+      "page": 94,
+      "continuedFrom": 95,
+      "key": "D",
+      "text": "(x-a)²⁶"
+    },
+    {
+      "paper": 24,
+      "question": 4,
+      "page": 97,
+      "continuedFrom": 98,
+      "key": "C",
+      "text": "കോൺവാലീസ്"
+    },
+    {
+      "paper": 24,
+      "question": 4,
+      "page": 97,
+      "continuedFrom": 98,
+      "key": "D",
+      "text": "വെല്ലസ്ലി"
+    },
+    {
+      "paper": 24,
+      "question": 58,
+      "page": 99,
+      "continuedFrom": 100,
+      "key": "A",
+      "text": "2"
+    },
+    {
+      "paper": 24,
+      "question": 58,
+      "page": 99,
+      "continuedFrom": 100,
+      "key": "B",
+      "text": "3"
+    },
+    {
+      "paper": 28,
+      "question": 53,
+      "page": 112,
+      "continuedFrom": 113,
+      "key": "A",
+      "text": "102"
+    },
+    {
+      "paper": 28,
+      "question": 53,
+      "page": 112,
+      "continuedFrom": 113,
+      "key": "B",
+      "text": "104"
+    },
+    {
+      "paper": 29,
+      "question": 24,
+      "page": 115,
+      "continuedFrom": 116,
+      "key": "C",
+      "text": "എട്ടാം പഞ്ചവത്സര പദ്ധതി"
+    },
+    {
+      "paper": 29,
+      "question": 24,
+      "page": 115,
+      "continuedFrom": 116,
+      "key": "D",
+      "text": "ഒൻപതാം പഞ്ചവത്സര പദ്ധതി"
+    },
+    {
+      "paper": 29,
+      "question": 52,
+      "page": 116,
+      "continuedFrom": 117,
+      "key": "C",
+      "text": "8"
+    },
+    {
+      "paper": 29,
+      "question": 52,
+      "page": 116,
+      "continuedFrom": 117,
+      "key": "D",
+      "text": "9"
+    },
+    {
+      "paper": 31,
+      "question": 68,
+      "page": 125,
+      "continuedFrom": 126,
+      "key": "A",
+      "text": "A"
+    },
+    {
+      "paper": 31,
+      "question": 68,
+      "page": 125,
+      "continuedFrom": 126,
+      "key": "B",
+      "text": "B"
+    },
+    {
+      "paper": 31,
+      "question": 68,
+      "page": 125,
+      "continuedFrom": 126,
+      "key": "C",
+      "text": "C"
+    },
+    {
+      "paper": 31,
+      "question": 68,
+      "page": 125,
+      "continuedFrom": 126,
+      "key": "D",
+      "text": "D"
+    },
+    {
+      "paper": 33,
+      "question": 100,
+      "page": 134,
+      "continuedFrom": 135,
+      "key": "A",
+      "text": "മിണ്ടാപ്പൂച്ച കലമുടയ്ക്കും"
+    },
+    {
+      "paper": 33,
+      "question": 100,
+      "page": 134,
+      "continuedFrom": 135,
+      "key": "B",
+      "text": "ഒഴുക്കുള്ള വെള്ളത്തിലഴുക്കില്ല"
+    },
+    {
+      "paper": 34,
+      "question": 33,
+      "page": 136,
+      "continuedFrom": 137,
+      "key": "D",
+      "text": "േ\u0000പാട്ടോസോവ"
+    },
+    {
+      "paper": 35,
+      "question": 51,
+      "page": 140,
+      "continuedFrom": 141,
+      "key": "A",
+      "text": "672"
+    },
+    {
+      "paper": 35,
+      "question": 51,
+      "page": 140,
+      "continuedFrom": 141,
+      "key": "B",
+      "text": "336"
+    },
+    {
+      "paper": 35,
+      "question": 51,
+      "page": 140,
+      "continuedFrom": 141,
+      "key": "C",
+      "text": "280"
+    },
+    {
+      "paper": 35,
+      "question": 51,
+      "page": 140,
+      "continuedFrom": 141,
+      "key": "D",
+      "text": "51"
+    },
+    {
+      "paper": 40,
+      "question": 26,
+      "page": 158,
+      "continuedFrom": 159,
+      "key": "A",
+      "text": "യാഥാർത്ഥം, തല തിരിഞ്ഞത്"
+    },
+    {
+      "paper": 40,
+      "question": 49,
+      "page": 159,
+      "continuedFrom": 160,
+      "key": "A",
+      "text": "\u0000പഗ്യാൻ"
+    },
+    {
+      "paper": 40,
+      "question": 49,
+      "page": 159,
+      "continuedFrom": 160,
+      "key": "B",
+      "text": "വി\u0000കം"
+    },
+    {
+      "paper": 40,
+      "question": 49,
+      "page": 159,
+      "continuedFrom": 160,
+      "key": "C",
+      "text": "എക്"
+    },
+    {
+      "paper": 40,
+      "question": 80,
+      "page": 160,
+      "continuedFrom": 161,
+      "key": "A",
+      "text": "150°"
+    },
+    {
+      "paper": 40,
+      "question": 80,
+      "page": 160,
+      "continuedFrom": 161,
+      "key": "B",
+      "text": "100°"
+    },
+    {
+      "paper": 40,
+      "question": 80,
+      "page": 160,
+      "continuedFrom": 161,
+      "key": "C",
+      "text": "90°"
+    },
+    {
+      "paper": 40,
+      "question": 80,
+      "page": 160,
+      "continuedFrom": 161,
+      "key": "D",
+      "text": "120°"
+    },
+    {
+      "paper": 41,
+      "question": 17,
+      "page": 162,
+      "continuedFrom": 163,
+      "key": "A",
+      "text": "1, 2, 4 എന്നിവ"
+    },
+    {
+      "paper": 41,
+      "question": 17,
+      "page": 162,
+      "continuedFrom": 163,
+      "key": "B",
+      "text": "1, 2, 3 എന്നിവ"
+    },
+    {
+      "paper": 41,
+      "question": 17,
+      "page": 162,
+      "continuedFrom": 163,
+      "key": "C",
+      "text": "1, 4 എന്നിവ"
+    },
+    {
+      "paper": 41,
+      "question": 17,
+      "page": 162,
+      "continuedFrom": 163,
+      "key": "D",
+      "text": "2, 4 എന്നിവ"
+    },
+    {
+      "paper": 41,
+      "question": 93,
+      "page": 166,
+      "continuedFrom": 167,
+      "key": "A",
+      "text": "എനിക്ക് പത്തു തേങ്ങകൾ വേണം"
+    },
+    {
+      "paper": 41,
+      "question": 93,
+      "page": 166,
+      "continuedFrom": 167,
+      "key": "B",
+      "text": "എനിക്ക് പത്തു തേങ്ങ വേണം"
+    },
+    {
+      "paper": 42,
+      "question": 73,
+      "page": 168,
+      "continuedFrom": 169,
+      "key": "D",
+      "text": "ദ്വന്ദ്വസമാസം"
+    },
+    {
+      "paper": 46,
+      "question": 79,
+      "page": 187,
+      "continuedFrom": 188,
+      "key": "A",
+      "text": "10 മ. 50 മി."
+    },
+    {
+      "paper": 46,
+      "question": 79,
+      "page": 187,
+      "continuedFrom": 188,
+      "key": "B",
+      "text": "10 മ. 40 മി."
+    },
+    {
+      "paper": 46,
+      "question": 96,
+      "page": 188,
+      "continuedFrom": 189,
+      "key": "A",
+      "text": "കൊച്ചിയുടെ മാഹാത്മ്യം"
+    },
+    {
+      "paper": 46,
+      "question": 96,
+      "page": 188,
+      "continuedFrom": 189,
+      "key": "B",
+      "text": "കൊല്ലത്തിന്റെ വൈശിഷ് ട്യം"
+    },
+    {
+      "paper": 47,
+      "question": 43,
+      "page": 191,
+      "continuedFrom": 192,
+      "key": "A",
+      "text": "കോക്ക് "
+    },
+    {
+      "paper": 47,
+      "question": 43,
+      "page": 191,
+      "continuedFrom": 192,
+      "key": "B",
+      "text": "\u0000ഗാഫൈറ്റ്"
+    },
+    {
+      "paper": 48,
+      "question": 71,
+      "page": 197,
+      "continuedFrom": 198,
+      "key": "A",
+      "text": "1,000"
+    },
+    {
+      "paper": 48,
+      "question": 71,
+      "page": 197,
+      "continuedFrom": 198,
+      "key": "B",
+      "text": "1,100"
+    }
+  ],
+  "sidebarExcluded": [
+    {
+      "paper": 14,
+      "question": 1,
+      "page": 64
+    },
+    {
+      "paper": 14,
+      "question": 2,
+      "page": 64
+    },
+    {
+      "paper": 14,
+      "question": 4,
+      "page": 64
+    },
+    {
+      "paper": 14,
+      "question": 5,
+      "page": 64
+    },
+    {
+      "paper": 14,
+      "question": 6,
+      "page": 64
+    },
+    {
+      "paper": 14,
+      "question": 7,
+      "page": 64
+    },
+    {
+      "paper": 15,
+      "question": 1,
+      "page": 67
+    },
+    {
+      "paper": 15,
+      "question": 2,
+      "page": 67
+    },
+    {
+      "paper": 15,
+      "question": 3,
+      "page": 67
+    },
+    {
+      "paper": 15,
+      "question": 4,
+      "page": 67
+    },
+    {
+      "paper": 24,
+      "question": 1,
+      "page": 101
+    },
+    {
+      "paper": 24,
+      "question": 2,
+      "page": 101
+    },
+    {
+      "paper": 24,
+      "question": 3,
+      "page": 101
+    },
+    {
+      "paper": 24,
+      "question": 4,
+      "page": 101
+    },
+    {
+      "paper": 24,
+      "question": 5,
+      "page": 101
+    },
+    {
+      "paper": 24,
+      "question": 6,
+      "page": 101
+    },
+    {
+      "paper": 24,
+      "question": 7,
+      "page": 101
+    },
+    {
+      "paper": 41,
+      "question": 1,
+      "page": 167
+    },
+    {
+      "paper": 41,
+      "question": 2,
+      "page": 167
+    },
+    {
+      "paper": 41,
+      "question": 3,
+      "page": 167
+    },
+    {
+      "paper": 41,
+      "question": 4,
+      "page": 167
+    }
+  ],
+  "sanityChecks": {
+    "optionsFewerThan4": [
+      {
+        "paper": 1,
+        "question": 100,
+        "page": 13,
+        "count": 0
+      },
+      {
+        "paper": 4,
+        "question": 49,
+        "page": 23,
+        "count": 3
+      },
+      {
+        "paper": 5,
+        "question": 56,
+        "page": 27,
+        "count": 3
+      },
+      {
+        "paper": 11,
+        "question": 44,
+        "page": 51,
+        "count": 3
+      },
+      {
+        "paper": 13,
+        "question": 1,
+        "page": 60,
+        "count": 0
+      },
+      {
+        "paper": 13,
+        "question": 2,
+        "page": 60,
+        "count": 0
+      },
+      {
+        "paper": 13,
+        "question": 3,
+        "page": 60,
+        "count": 0
+      },
+      {
+        "paper": 13,
+        "question": 4,
+        "page": 60,
+        "count": 0
+      },
+      {
+        "paper": 13,
+        "question": 55,
+        "page": 59,
+        "count": 3
+      },
+      {
+        "paper": 14,
+        "question": 1,
+        "page": 64,
+        "count": 0
+      },
+      {
+        "paper": 14,
+        "question": 2,
+        "page": 64,
+        "count": 0
+      },
+      {
+        "paper": 14,
+        "question": 4,
+        "page": 64,
+        "count": 0
+      },
+      {
+        "paper": 14,
+        "question": 5,
+        "page": 64,
+        "count": 0
+      },
+      {
+        "paper": 14,
+        "question": 6,
+        "page": 64,
+        "count": 0
+      },
+      {
+        "paper": 14,
+        "question": 7,
+        "page": 64,
+        "count": 0
+      },
+      {
+        "paper": 15,
+        "question": 1,
+        "page": 67,
+        "count": 0
+      },
+      {
+        "paper": 15,
+        "question": 2,
+        "page": 67,
+        "count": 0
+      },
+      {
+        "paper": 15,
+        "question": 3,
+        "page": 67,
+        "count": 0
+      },
+      {
+        "paper": 15,
+        "question": 4,
+        "page": 67,
+        "count": 0
+      },
+      {
+        "paper": 15,
+        "question": 25,
+        "page": 66,
+        "count": 3
+      },
+      {
+        "paper": 15,
+        "question": 29,
+        "page": 66,
+        "count": 3
+      },
+      {
+        "paper": 15,
+        "question": 38,
+        "page": 66,
+        "count": 3
+      },
+      {
+        "paper": 16,
+        "question": 75,
+        "page": 72,
+        "count": 2
+      },
+      {
+        "paper": 16,
+        "question": 76,
+        "page": 72,
+        "count": 2
+      },
+      {
+        "paper": 16,
+        "question": 77,
+        "page": 72,
+        "count": 2
+      },
+      {
+        "paper": 16,
+        "question": 78,
+        "page": 72,
+        "count": 2
+      },
+      {
+        "paper": 17,
+        "question": 42,
+        "page": 75,
+        "count": 3
+      },
+      {
+        "paper": 18,
+        "question": 28,
+        "page": 79,
+        "count": 3
+      },
+      {
+        "paper": 18,
+        "question": 82,
+        "page": 81,
+        "count": 0
+      },
+      {
+        "paper": 20,
+        "question": 1,
+        "page": 86,
+        "count": 0
+      },
+      {
+        "paper": 20,
+        "question": 2,
+        "page": 86,
+        "count": 0
+      },
+      {
+        "paper": 22,
+        "question": 12,
+        "page": 91,
+        "count": 3
+      },
+      {
+        "paper": 24,
+        "question": 1,
+        "page": 101,
+        "count": 0
+      },
+      {
+        "paper": 24,
+        "question": 2,
+        "page": 101,
+        "count": 0
+      },
+      {
+        "paper": 24,
+        "question": 3,
+        "page": 101,
+        "count": 0
+      },
+      {
+        "paper": 24,
+        "question": 4,
+        "page": 101,
+        "count": 0
+      },
+      {
+        "paper": 24,
+        "question": 5,
+        "page": 101,
+        "count": 0
+      },
+      {
+        "paper": 24,
+        "question": 6,
+        "page": 101,
+        "count": 0
+      },
+      {
+        "paper": 24,
+        "question": 7,
+        "page": 101,
+        "count": 0
+      },
+      {
+        "paper": 26,
+        "question": 43,
+        "page": 104,
+        "count": 3
+      },
+      {
+        "paper": 30,
+        "question": 1,
+        "page": 122,
+        "count": 0
+      },
+      {
+        "paper": 30,
+        "question": 2,
+        "page": 122,
+        "count": 0
+      },
+      {
+        "paper": 30,
+        "question": 3,
+        "page": 122,
+        "count": 0
+      },
+      {
+        "paper": 30,
+        "question": 7,
+        "page": 119,
+        "count": 3
+      },
+      {
+        "paper": 30,
+        "question": 10,
+        "page": 119,
+        "count": 3
+      },
+      {
+        "paper": 31,
+        "question": 1,
+        "page": 125,
+        "count": 0
+      },
+      {
+        "paper": 31,
+        "question": 2,
+        "page": 125,
+        "count": 0
+      },
+      {
+        "paper": 31,
+        "question": 3,
+        "page": 125,
+        "count": 0
+      },
+      {
+        "paper": 32,
+        "question": 1,
+        "page": 130,
+        "count": 0
+      },
+      {
+        "paper": 32,
+        "question": 2,
+        "page": 130,
+        "count": 0
+      },
+      {
+        "paper": 32,
+        "question": 3,
+        "page": 130,
+        "count": 0
+      },
+      {
+        "paper": 34,
+        "question": 1,
+        "page": 136,
+        "count": 0
+      },
+      {
+        "paper": 34,
+        "question": 2,
+        "page": 136,
+        "count": 0
+      },
+      {
+        "paper": 39,
+        "question": 70,
+        "page": 156,
+        "count": 0
+      },
+      {
+        "paper": 40,
+        "question": 1,
+        "page": 161,
+        "count": 0
+      },
+      {
+        "paper": 40,
+        "question": 2,
+        "page": 161,
+        "count": 0
+      },
+      {
+        "paper": 40,
+        "question": 3,
+        "page": 161,
+        "count": 0
+      },
+      {
+        "paper": 40,
+        "question": 4,
+        "page": 161,
+        "count": 0
+      },
+      {
+        "paper": 41,
+        "question": 1,
+        "page": 167,
+        "count": 0
+      },
+      {
+        "paper": 41,
+        "question": 2,
+        "page": 167,
+        "count": 0
+      },
+      {
+        "paper": 41,
+        "question": 3,
+        "page": 167,
+        "count": 0
+      },
+      {
+        "paper": 41,
+        "question": 4,
+        "page": 167,
+        "count": 0
+      },
+      {
+        "paper": 41,
+        "question": 93,
+        "page": 166,
+        "count": 2
+      },
+      {
+        "paper": 43,
+        "question": 1,
+        "page": 175,
+        "count": 0
+      },
+      {
+        "paper": 43,
+        "question": 2,
+        "page": 175,
+        "count": 0
+      },
+      {
+        "paper": 43,
+        "question": 3,
+        "page": 175,
+        "count": 0
+      },
+      {
+        "paper": 43,
+        "question": 4,
+        "page": 175,
+        "count": 0
+      },
+      {
+        "paper": 43,
+        "question": 59,
+        "page": 173,
+        "count": 3
+      },
+      {
+        "paper": 46,
+        "question": 1,
+        "page": 188,
+        "count": 0
+      },
+      {
+        "paper": 46,
+        "question": 2,
+        "page": 188,
+        "count": 0
+      },
+      {
+        "paper": 46,
+        "question": 3,
+        "page": 188,
+        "count": 0
+      },
+      {
+        "paper": 46,
+        "question": 47,
+        "page": 185,
+        "count": 2
+      },
+      {
+        "paper": 46,
+        "question": 79,
+        "page": 187,
+        "count": 2
+      },
+      {
+        "paper": 48,
+        "question": 71,
+        "page": 197,
+        "count": 2
+      },
+      {
+        "paper": 49,
+        "question": 1,
+        "page": 205,
+        "count": 0
+      },
+      {
+        "paper": 49,
+        "question": 2,
+        "page": 205,
+        "count": 0
+      },
+      {
+        "paper": 49,
+        "question": 56,
+        "page": 202,
+        "count": 3
+      },
+      {
+        "paper": 50,
+        "question": 45,
+        "page": 205,
+        "count": 0
+      }
+    ],
+    "optionsWithAnswerKeyText": [],
+    "optionsWithPageNumber": [],
+    "optionsContainingOtherQuestionText": []
+  },
+  "checksum": "eaf19a0e20e2f6cc3c84d7c6b50f0e3e810321c536f0665a0e708c9f1ef5682f"
+}

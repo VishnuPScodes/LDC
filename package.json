@@ -1,0 +1,17 @@
+{
+  "name": "ldc-practice-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @ldc/client --filter @ldc/server dev",
+    "build": "pnpm --filter @ldc/server build && pnpm --filter @ldc/client build",
+    "seed": "pnpm --filter @ldc/server seed",
+    "test": "pnpm --filter @ldc/server test",
+    "import:pdf": "tsx scripts/import-pdf.ts"
+  },
+  "devDependencies": {
+    "pdf-parse": "^1.1.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,2966 @@
+{
+  "checksum": "eaf19a0e20e2f6cc3c84d7c6b50f0e3e810321c536f0665a0e708c9f1ef5682f",
+  "sample": [
+    {
+      "paperNumber": 1,
+      "questionNumber": 1,
+      "sourcePage": 9,
+      "text": "താഴെപ്പറയുന്നവയിൽ സൈലന്റ് വാലിയിലൂടെ ഒഴുകുന്ന നദി ഏത് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "പെരിയാർ"
+        },
+        {
+          "key": "B",
+          "text": "പമ്പാനദി"
+        },
+        {
+          "key": "C",
+          "text": "കുന്തിപ്പുഴ"
+        },
+        {
+          "key": "D",
+          "text": "മഹാനദി"
+        }
+      ],
+      "existingText": "താഴെപ്പറയുന്നവയില് സൈലന്റ് വാലിയിലൂടെ ഒഴു കുന്ന നദി ഏത് ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "െപരിയാർ"
+        },
+        {
+          "key": "B",
+          "text": "പമ്പാനദി"
+        },
+        {
+          "key": "C",
+          "text": "കുന്തിപ്പുഴ"
+        },
+        {
+          "key": "D",
+          "text": "മഹാനദി"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ഒഴു",
+            "കുന്ന"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 655.75611
+      }
+    },
+    {
+      "paperNumber": 2,
+      "questionNumber": 1,
+      "sourcePage": 13,
+      "text": "32124 എന്ന സംഖ്യയെ 9999 എന്ന സംഖ്യകൊണ്ട് ഗുണിച്ചാൽ എത്ര കിട്ടും ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "321207875"
+        },
+        {
+          "key": "B",
+          "text": "321207876"
+        },
+        {
+          "key": "C",
+          "text": "321207856"
+        },
+        {
+          "key": "D",
+          "text": "321207866"
+        }
+      ],
+      "existingText": "32124 എന്ന സംഖ്യെയ 9999 എന്ന സംഖ്യെകാണ്ട് ഗുണിാൽ എത കിട്ടും ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "321207875"
+        },
+        {
+          "key": "B",
+          "text": "321207876"
+        },
+        {
+          "key": "C",
+          "text": "321207856"
+        },
+        {
+          "key": "D",
+          "text": "321207866"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 597.00353
+      }
+    },
+    {
+      "paperNumber": 3,
+      "questionNumber": 2,
+      "sourcePage": 17,
+      "text": "ചുവടെ കൊടുത്തിരിക്കുന്നവയിൽ ഒറ്റയാൻ ഏത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "24"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "9"
+        },
+        {
+          "key": "D",
+          "text": "16"
+        }
+      ],
+      "existingText": "ചുവെട െകാടുത്തിരിക്കുന്നവയിൽ ഒറ്റയാൻ ഏത്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "24"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "9"
+        },
+        {
+          "key": "D",
+          "text": "16"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 515.48384
+      }
+    },
+    {
+      "paperNumber": 4,
+      "questionNumber": 2,
+      "sourcePage": 21,
+      "text": "(3X²)³ ന് സമാനമായത് ഏത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3X⁶"
+        },
+        {
+          "key": "B",
+          "text": "3X⁸"
+        },
+        {
+          "key": "C",
+          "text": "27X⁸"
+        },
+        {
+          "key": "D",
+          "text": "27X⁶"
+        }
+      ],
+      "existingText": "സ്വര്ണത്തിന് വര്ഷം തോറും 10% എന്ന തോതില് മാത്രം വില വര്ധിക്കുന്നു. ഇപ്പോഴത്തെ വില 20,000 രൂപ എങ്കില് 2 വര്ഷത്തിനുശേഷം എത്ര രൂപ ആ കും ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "24,000"
+        },
+        {
+          "key": "B",
+          "text": "24,020"
+        },
+        {
+          "key": "C",
+          "text": "24,200"
+        },
+        {
+          "key": "D",
+          "text": "22,000"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ആ",
+            "കും"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 468.46810000000005
+      },
+      "recordMatch": {
+        "paperNumber": 4,
+        "questionNumber": 2,
+        "sourcePage": 21
+      }
+    },
+    {
+      "paperNumber": 5,
+      "questionNumber": 2,
+      "sourcePage": 25,
+      "text": "സ്വർണത്തിന് വർഷം തോറും 10% എന്ന തോതിൽ മാത്രം വില വർധിക്കുന്നു. ഇപ്പോഴത്തെ വില 20,000 രൂപ എങ്കിൽ 2 വർഷത്തിനുശേഷം എത്ര രൂപ ആകും ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "24,000"
+        },
+        {
+          "key": "B",
+          "text": "24,020"
+        },
+        {
+          "key": "C",
+          "text": "24,200"
+        },
+        {
+          "key": "D",
+          "text": "22,000"
+        }
+      ],
+      "existingText": "സ്വര്ണത്തിന് വര്ഷം തോറും 10% എന്ന തോതില് മാത്രം വില വര്ധിക്കുന്നു. ഇപ്പോഴത്തെ വില 20,000 രൂപ എങ്കില് 2 വര്ഷത്തിനുശേഷം എത്ര രൂപ ആ കും ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "24,000"
+        },
+        {
+          "key": "B",
+          "text": "24,020"
+        },
+        {
+          "key": "C",
+          "text": "24,200"
+        },
+        {
+          "key": "D",
+          "text": "22,000"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ആ",
+            "കും"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 404.64591
+      }
+    },
+    {
+      "paperNumber": 6,
+      "questionNumber": 1,
+      "sourcePage": 29,
+      "text": "2ᵐ = 16 ആയാൽ 3ᵐ⁻¹ എത്ര ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "81"
+        },
+        {
+          "key": "B",
+          "text": "27"
+        },
+        {
+          "key": "C",
+          "text": "9"
+        },
+        {
+          "key": "D",
+          "text": "15"
+        }
+      ],
+      "existingText": "5, 9, 4, 8, 3, 7 ...... എന്ന േശണിയിെല അടുത്തസം ഖ്യ ഏത്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "3"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "സം",
+            "ഖ്യ"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 373.4681
+      },
+      "recordMatch": {
+        "paperNumber": 6,
+        "questionNumber": 1,
+        "sourcePage": 29
+      }
+    },
+    {
+      "paperNumber": 7,
+      "questionNumber": 1,
+      "sourcePage": 33,
+      "text": "5, 9, 4, 8, 3, 7 ...... എന്ന ശ്രേണിയിലെ അടുത്ത സംഖ്യ ഏത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "3"
+        }
+      ],
+      "existingText": "5, 9, 4, 8, 3, 7 ...... എന്ന േശണിയിെല അടുത്തസം ഖ്യ ഏത്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "3"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "സം",
+            "ഖ്യ"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 263.18585
+      }
+    },
+    {
+      "paperNumber": 8,
+      "questionNumber": 1,
+      "sourcePage": 37,
+      "text": "ഒരു സ്ത്രീയെ ചൂണ്ടിക്കാണിച്ചു കൊണ്ട് ബാബു പറഞ്ഞു, 'എന്റെ അമ്മയുടെ മകളുടെ അച്ഛന്റെ സഹോദരിയാണ് അവർ' ആ സ്ത്രീ ബാബുവിന്റെ ആരാണ്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "സഹോദരി"
+        },
+        {
+          "key": "B",
+          "text": "മരുമകൾ"
+        },
+        {
+          "key": "C",
+          "text": "അമ്മായി"
+        },
+        {
+          "key": "D",
+          "text": "അമ്മ"
+        }
+      ],
+      "existingText": "ഒരു സ്ത്രീയെ ചൂണ്ടിക്കാണിച്ചു oa Ions ബാബു പ റഞ്ഞു, nV OAR അമ്മയുടെ മകളുടെ അച്ഛന്റെ സഹോ ദരിയാണ് അവര്‘ ആ സ്ത്രീ ബാബുവിന്റെ ആരാണ്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "സേഹാദരി"
+        },
+        {
+          "key": "B",
+          "text": "മരുമകൾ"
+        },
+        {
+          "key": "C",
+          "text": "അമ്മായി"
+        },
+        {
+          "key": "D",
+          "text": "അമ്മ"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "പ",
+            "റഞ്ഞു"
+          ],
+          [
+            "സഹോ",
+            "ദരിയാണ്"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 210.16101
+      }
+    },
+    {
+      "paperNumber": 9,
+      "questionNumber": 1,
+      "sourcePage": 41,
+      "text": "താഴെ തന്നിരിക്കുന്ന പദങ്ങളിൽ 'ഭൂമി' എന്നർത്ഥം വരാത്ത പദം ഏത് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ധര"
+        },
+        {
+          "key": "B",
+          "text": "ക്ഷോണി"
+        },
+        {
+          "key": "C",
+          "text": "വാരിധി"
+        },
+        {
+          "key": "D",
+          "text": "ക്ഷിതി"
+        }
+      ],
+      "existingText": "താെഴ തന്നിരിക്കുന്ന പദങ്ങളിൽ 'ഭൂമി' എന്നർത്ഥം വരാത്ത പദം ഏത് ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "we"
+        },
+        {
+          "key": "B",
+          "text": "ക്ഷോണി"
+        },
+        {
+          "key": "C",
+          "text": "വാരിധി"
+        },
+        {
+          "key": "D",
+          "text": "ക്ഷിതി"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 299.16101
+      }
+    },
+    {
+      "paperNumber": 10,
+      "questionNumber": 1,
+      "sourcePage": 45,
+      "text": "ഒരു കാർ ഓടിയ ദൂരത്തിന്റെ പകുതി 44 കി.മീ. വേഗതയിലും ബാക്കി ദൂരം 60 കി.മീ. വേഗതയിലുമാണ് ഓടിയത്. വാഹനത്തിന്റെ ശരാശരി വേഗത മണിക്കൂറിൽ എത്ര ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "48 കി.മീ"
+        },
+        {
+          "key": "B",
+          "text": "50 കി.മീ"
+        },
+        {
+          "key": "C",
+          "text": "55 കി.മീ"
+        },
+        {
+          "key": "D",
+          "text": "49 കി.മീ"
+        }
+      ],
+      "existingText": "ഒരു കാര് ഓടിയ ദൂരത്തിന്റെ പകുതി 44 കി.മീ. വേ റച്ചതിന്റെ പകുതി എട്ടാണ്. എങ്കില് സംഖ്യ ഏത് ? ഗതയിലും ബാക്കി ദൂരം 60 കി.മീ. വേഗതയിലുമാണ് /)8",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "48 കി.മീ"
+        },
+        {
+          "key": "B",
+          "text": "50 കി.മീ"
+        },
+        {
+          "key": "C",
+          "text": "55 കി.മീ"
+        },
+        {
+          "key": "D",
+          "text": "49 കി.മീ"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "വേ",
+            "ഗതയിലും"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 368.16101
+      }
+    },
+    {
+      "paperNumber": 11,
+      "questionNumber": 1,
+      "sourcePage": 49,
+      "text": "താഴെപ്പറയുന്നവയിൽ ഒറ്റയാൻ ഏത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4"
+        },
+        {
+          "key": "B",
+          "text": "125"
+        },
+        {
+          "key": "C",
+          "text": "27"
+        },
+        {
+          "key": "D",
+          "text": "64"
+        }
+      ],
+      "existingText": "2023-െല ഇന്ദിരാഗാന്ധി സമാധാന പുരസ്കാരം ലഭി അലി അബു അവാദും ഡാനിയൽ ബാെരൽ േബായിം ഏത്രാജ്യക്കാരാണ്? പാലസ്തീൻ & അർജൻറ്റീന",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "4"
+        },
+        {
+          "key": "B",
+          "text": "125"
+        },
+        {
+          "key": "C",
+          "text": "27"
+        },
+        {
+          "key": "D",
+          "text": "64"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 239.23975
+      }
+    },
+    {
+      "paperNumber": 12,
+      "questionNumber": 1,
+      "sourcePage": 53,
+      "text": "ഒരു ജോലി ചെയ്തു തീർക്കാൻ A യ്ക്ക് രണ്ട് ദിവസം B യ്ക്ക് മൂന്നു ദിവസം C യ്ക്ക് ആറ് ദിവസം എന്നിങ്ങനെ വേണം. അതേ ജോലി അവർ മൂന്ന് പേരും കൂടി ഒരുമിച്ച് ചെയ്താൽ എത്ര ദിവസം കൊണ്ട് തീരും?",
+      "options": [
+        {
+          "key": "A",
+          "text": "11"
+        },
+        {
+          "key": "B",
+          "text": "1"
+        },
+        {
+          "key": "C",
+          "text": "10"
+        },
+        {
+          "key": "D",
+          "text": "5"
+        }
+      ],
+      "existingText": "ഒരു ജോലി ചെയ്തു തീര്ക്കാന് & യ്ക്ക് രണ്ട് ദിവ സം 18 യ്ക്ക് മൂന്നു ദിവസം € യീക്ക് ആറ് ദിവസം എ നിങ്ങനെ വേണം. അതേ ജോലി അവര് മൂന്ന് പേരും കൂടി ഒരുമിച്ച് ചെയ്താല് എത്ര ദിവസം കൊണ്ട് തീ രും? #) 11 81 01 05",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "11"
+        },
+        {
+          "key": "B",
+          "text": "1"
+        },
+        {
+          "key": "C",
+          "text": "10"
+        },
+        {
+          "key": "D",
+          "text": "5"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ദിവ",
+            "സം"
+          ],
+          [
+            "എ",
+            "ന്നിങ്ങനെ"
+          ],
+          [
+            "തീ",
+            "രും"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 269.32636
+      }
+    },
+    {
+      "paperNumber": 13,
+      "questionNumber": 1,
+      "sourcePage": 57,
+      "text": "അവന്റെ സാമർത്ഥ്യം ഏവരേയും അതിശയിപ്പിച്ചു. സാമർത്ഥ്യം എന്ന പദം ഏത് വിഭാഗത്തിൽ പെടുന്നു ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "നാമം"
+        },
+        {
+          "key": "B",
+          "text": "ക്രിയ"
+        },
+        {
+          "key": "C",
+          "text": "കൃത്ത്"
+        },
+        {
+          "key": "D",
+          "text": "തദ്ധിതം"
+        }
+      ],
+      "existingText": "അവന്റെ സാമര്ത്ഥ്യം ഏവരേയും അതിശയിപ്പിച്ചു. സാമര്ത്ഥ്യം എന്ന പദം ഏത് വിഭാഗത്തില് പെടുന്നു ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "നാമം"
+        },
+        {
+          "key": "B",
+          "text": "കിയ"
+        },
+        {
+          "key": "C",
+          "text": "കൃത്ത്"
+        },
+        {
+          "key": "D",
+          "text": "തദ്ധിതം"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 246.16100999999998
+      }
+    },
+    {
+      "paperNumber": 14,
+      "questionNumber": 1,
+      "sourcePage": 61,
+      "text": "ഒരു ഭാഷയിൽ COCHIN എന്ന വാക്കിന് BNBGHM എന്ന് കോഡ് ആണ് കൊടുത്തിരിക്കുന്നതെങ്കിൽ ആ ഭാഷയിൽ THRISSUR എന്ന വാക്കിന്റെ കോഡ് എന്തായിരിക്കും ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "SGQHRRT"
+        },
+        {
+          "key": "B",
+          "text": "UGSHTTVSC"
+        },
+        {
+          "key": "C",
+          "text": "SGQHRRTS"
+        },
+        {
+          "key": "D",
+          "text": "PGRHQQAR"
+        }
+      ],
+      "existingText": "ഒരു ഭാഷയിൽ COCHIN എന്ന വാക്കിന്BNBGHM എന്ന്േകാഡ്ആണ്െകാടുത്തിരിക്കുന്നെതങ്കിൽ ആഭാഷയിൽ THRISSUR എന്ന വാക്കിെ േകാഡ് എന്തായിരിക്കും ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "SGQHRRT"
+        },
+        {
+          "key": "B",
+          "text": "UGSHTTVSC"
+        },
+        {
+          "key": "C",
+          "text": "SGQHRRTS"
+        },
+        {
+          "key": "D",
+          "text": "PGRHQQAR"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 579.16101
+      }
+    },
+    {
+      "paperNumber": 15,
+      "questionNumber": 1,
+      "sourcePage": 65,
+      "text": "ഒരു സമാന്തരശ്രേണിയിലെ ആദ്യത്തെ 25 പദങ്ങളുടെ തുക 2200 ആയാൽ മദ്ധ്യപദം ഏത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "0"
+        },
+        {
+          "key": "B",
+          "text": "88"
+        },
+        {
+          "key": "C",
+          "text": "176"
+        },
+        {
+          "key": "D",
+          "text": "1100"
+        }
+      ],
+      "existingText": "ഒരു സമാന്തരേശണിയിെലആദ്യെത്ത25 പദങ്ങളു െട തുക 2200ആയാൽ മദ്ധ്യപദം ഏത്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "0"
+        },
+        {
+          "key": "B",
+          "text": "88"
+        },
+        {
+          "key": "C",
+          "text": "176"
+        },
+        {
+          "key": "D",
+          "text": "1100"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "പദങ്ങളു",
+            "ടെ"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 698.05077
+      }
+    },
+    {
+      "paperNumber": 16,
+      "questionNumber": 1,
+      "sourcePage": 69,
+      "text": "11 x 8 - 54 ÷ 6 = ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "6"
+        },
+        {
+          "key": "B",
+          "text": "34"
+        },
+        {
+          "key": "C",
+          "text": "79"
+        },
+        {
+          "key": "D",
+          "text": "90"
+        }
+      ],
+      "existingText": "7/2, 23/6, 25/6, 27/6, ------- എന്ന സമാന്തര േശണി യുെട െപാതു വ്യത്യാസം എത ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "⅓"
+        },
+        {
+          "key": "B",
+          "text": "4/6"
+        },
+        {
+          "key": "C",
+          "text": "½"
+        },
+        {
+          "key": "D",
+          "text": "⅛"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ശ്രേണി",
+            "യുടെ"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 577.53896
+      },
+      "recordMatch": {
+        "paperNumber": 16,
+        "questionNumber": 1,
+        "sourcePage": 69
+      }
+    },
+    {
+      "paperNumber": 17,
+      "questionNumber": 1,
+      "sourcePage": 73,
+      "text": "7/2, 23/6, 25/6, 27/6, ------- എന്ന സമാന്തര ശ്രേണിയുടെ പൊതു വ്യത്യാസം എത്ര ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "⅓"
+        },
+        {
+          "key": "B",
+          "text": "4/6"
+        },
+        {
+          "key": "C",
+          "text": "½"
+        },
+        {
+          "key": "D",
+          "text": "⅛"
+        }
+      ],
+      "existingText": "7/2, 23/6, 25/6, 27/6, ------- എന്ന സമാന്തര േശണി യുെട െപാതു വ്യത്യാസം എത ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "⅓"
+        },
+        {
+          "key": "B",
+          "text": "4/6"
+        },
+        {
+          "key": "C",
+          "text": "½"
+        },
+        {
+          "key": "D",
+          "text": "⅛"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ശ്രേണി",
+            "യുടെ"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 383.16101
+      }
+    },
+    {
+      "paperNumber": 18,
+      "questionNumber": 1,
+      "sourcePage": 77,
+      "text": "കേരളത്തിന്റെ സംസ്ഥാന മത്സ്യം എന്ന പദവി ലഭിച്ച കരിമീൻ ഇന്ത്യയിലല്ലാതെ ലോകത്ത് വേറെ ഏതു രാജ്യത്താണ് കാണപ്പെടുന്നത് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "പാകിസ്ഥാൻ"
+        },
+        {
+          "key": "B",
+          "text": "ശ്രീലങ്ക"
+        },
+        {
+          "key": "C",
+          "text": "പെറു"
+        },
+        {
+          "key": "D",
+          "text": "നെതർലാന്റ്"
+        }
+      ],
+      "existingText": "ഈവർഷെത്ത(2023 - 95th) മിക ചിതത്തിനു ള്ള ഓസ്കർ പുരസ്കാരം േനടിയത്: എവരിത്തിംഗ്എവരിെവയർആൾ അറ്റ്വൺസ്",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "പാകിസ്ഥാൻ"
+        },
+        {
+          "key": "B",
+          "text": "ശീലങ്ക"
+        },
+        {
+          "key": "C",
+          "text": "െപറു"
+        },
+        {
+          "key": "D",
+          "text": "െനതർലാന്റ ്"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ലഭി",
+            "ച്ച"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 230.65707
+      }
+    },
+    {
+      "paperNumber": 19,
+      "questionNumber": 41,
+      "sourcePage": 82,
+      "text": "ഹൃദയസ്പന്ദനം നിയന്ത്രിക്കുന്ന തലച്ചോറിന്റെ ഭാഗം",
+      "options": [
+        {
+          "key": "A",
+          "text": "സെറിബ്രം"
+        },
+        {
+          "key": "B",
+          "text": "മെഡുല്ല ഒബ്ലോംഗേറ്റ"
+        },
+        {
+          "key": "C",
+          "text": "സെറിബെല്ലം"
+        },
+        {
+          "key": "D",
+          "text": "തലാമസ്"
+        }
+      ],
+      "existingText": "ഹൃദയസ്പന്ദനം നിയന്ത്രിക്കുന്ന തലച്ചോറിന്റെ ഭാ ഗം : NCA/ Various",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "െസറി\u0000ബം"
+        },
+        {
+          "key": "B",
+          "text": "െമഡുല്ല ഒേ\u0000ാംേഗറ്റ"
+        },
+        {
+          "key": "C",
+          "text": "െസറിെബല്ലം"
+        },
+        {
+          "key": "D",
+          "text": "തലാമസ്"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ഭാ",
+            "ഗം"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 232.16101
+      }
+    },
+    {
+      "paperNumber": 20,
+      "questionNumber": 1,
+      "sourcePage": 85,
+      "text": "ദേശീയ യുവജന ദിനമായി ആചരിക്കുന്നത് ആരുടെ ജന്മദിനമാണ്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "സ്വാമി വിവേകാനന്ദൻ"
+        },
+        {
+          "key": "B",
+          "text": "സുഭാഷ് ചന്ദ്രബോസ്"
+        },
+        {
+          "key": "C",
+          "text": "രാജാറാം മോഹൻ റായ്"
+        },
+        {
+          "key": "D",
+          "text": "ഭഗത്സിംഗ്"
+        }
+      ],
+      "existingText": "ദേശീയ യുവജന ദിനമായി ആചരിക്കുന്നത് ആരു ടെ ജന്മദിനമാണ്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "സ്വാമി വിവേകാനന്ദന്"
+        },
+        {
+          "key": "B",
+          "text": "സുഭാഷ് ചന്ദ്രബോസ്"
+        },
+        {
+          "key": "C",
+          "text": "രാജാറാം മോഹന് റായ്"
+        },
+        {
+          "key": "D",
+          "text": "ഭഗത്സിംഗ്"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ആരു",
+            "ടെ"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 581.16101
+      }
+    },
+    {
+      "paperNumber": 21,
+      "questionNumber": 41,
+      "sourcePage": 89,
+      "text": "പാരമ്പര്യശാസ്ത്രത്തിന്റെ പിതാവ്",
+      "options": [
+        {
+          "key": "A",
+          "text": "എഡ്വേർഡ് ജന്നർ"
+        },
+        {
+          "key": "B",
+          "text": "ഗ്രിഗർ ജോൺ മെൻഡൽ"
+        },
+        {
+          "key": "C",
+          "text": "ഹ്യൂഗോ ഡീവ്രീസ്"
+        },
+        {
+          "key": "D",
+          "text": "കാൾ കോറൻസ്"
+        }
+      ],
+      "existingText": "പാരമ്പര്യശാസ്ത്രത്തിന്റെ പിതാവ്",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "എഡ്വേര്ഡ് ജന്ന൪"
+        },
+        {
+          "key": "B",
+          "text": "ഗ്രിഗര് ജോണ് മെന്ഡല്"
+        },
+        {
+          "key": "C",
+          "text": "ഹ്യൂഗോ ഡീവ്രീസ്"
+        },
+        {
+          "key": "D",
+          "text": "കാള് കോറന്സ്"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 698.05077
+      }
+    },
+    {
+      "paperNumber": 22,
+      "questionNumber": 1,
+      "sourcePage": 91,
+      "text": "കേരളത്തിലെ നൃത്തകലയുടെ പരിണാമത്തിൽ ഏറ്റവും പ്രാധാന്യമർഹിക്കുന്ന കലാരൂപം ഏത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "കളരിപ്പയറ്റ്"
+        },
+        {
+          "key": "B",
+          "text": "യക്ഷഗാനം"
+        },
+        {
+          "key": "C",
+          "text": "കൂടിയാട്ടം"
+        },
+        {
+          "key": "D",
+          "text": "കഥകളി"
+        }
+      ],
+      "existingText": "കേരളത്തിലെ നൃത്തകലയുടെ പരിണാമത്തില് ഏ ററവും പ്രാധാന്യമര്ഹിക്കുന്ന കലാരൂപം ഏത്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "കളരിപ്ലയറ്റ്"
+        },
+        {
+          "key": "B",
+          "text": "യക്ഷഥാനം"
+        },
+        {
+          "key": "C",
+          "text": "കൂടിയാട്ടം"
+        },
+        {
+          "key": "D",
+          "text": "കഥകളി"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ഏ",
+            "റ്റവും"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 409.27125
+      }
+    },
+    {
+      "paperNumber": 23,
+      "questionNumber": 41,
+      "sourcePage": 95,
+      "text": "കൂട്ടത്തിൽ പെടാത്തത് കണ്ടുപിടിക്കുക",
+      "options": [
+        {
+          "key": "A",
+          "text": "ചുവപ്പ്"
+        },
+        {
+          "key": "B",
+          "text": "നീല"
+        },
+        {
+          "key": "C",
+          "text": "പച്ച"
+        },
+        {
+          "key": "D",
+          "text": "മഞ്ഞ"
+        }
+      ],
+      "existingText": "കുട്ടത്തില് പെടാത്തത് കണ്ടുപിടിക്കുക",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "ചുവപ്പ്"
+        },
+        {
+          "key": "B",
+          "text": "നീല"
+        },
+        {
+          "key": "C",
+          "text": "പച്ച"
+        },
+        {
+          "key": "D",
+          "text": "മഞ്ഞ"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 532.16101
+      }
+    },
+    {
+      "paperNumber": 24,
+      "questionNumber": 1,
+      "sourcePage": 97,
+      "text": "കേരളത്തിന്റെ തീരദേശത്തിന്റെ ദൈർഘ്യം എത്ര?",
+      "options": [
+        {
+          "key": "A",
+          "text": "560 കി.മീ"
+        },
+        {
+          "key": "B",
+          "text": "570 കി.മീ"
+        },
+        {
+          "key": "C",
+          "text": "580 കി.മീ"
+        },
+        {
+          "key": "D",
+          "text": "590 കി.മീ"
+        }
+      ],
+      "existingText": "2023 ത് കേന്ദ്ര സാഹിത്യ അക്കാദമി അവാര്ഡ് നേടിയ 15 V രാമകൃഷ്ണന്റെ കൃതി ഏതാണ് ? മലയാള നോവലിന്റെ ദേശ കാലങ്ങള്",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "560 കി.മീ."
+        },
+        {
+          "key": "B",
+          "text": "570 കി.മീ."
+        },
+        {
+          "key": "C",
+          "text": "580 കി.മീ."
+        },
+        {
+          "key": "D",
+          "text": "590 കി.മീ."
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": "D",
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 167.70099
+      }
+    },
+    {
+      "paperNumber": 25,
+      "questionNumber": 42,
+      "sourcePage": 102,
+      "text": "ഏറ്റവും ചെറിയ ആറ്റമുള്ള മൂലകം ഏതാണ്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "നൈട്രജൻ"
+        },
+        {
+          "key": "B",
+          "text": "ഹീലിയം"
+        },
+        {
+          "key": "C",
+          "text": "ഓക്സിജൻ"
+        },
+        {
+          "key": "D",
+          "text": "ഹൈഡ്രജൻ"
+        }
+      ],
+      "existingText": "ഏറ്റവും ചെറിയ ആറ്റമുള്ള മൂലകം ഏതാണ്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "ൈന\u0000ടജൻ"
+        },
+        {
+          "key": "B",
+          "text": "ഹീലിയം"
+        },
+        {
+          "key": "C",
+          "text": "ഓക്സിജൻ"
+        },
+        {
+          "key": "D",
+          "text": "ൈഹ\u0000ഡജൻ"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 745.75156
+      }
+    },
+    {
+      "paperNumber": 26,
+      "questionNumber": 41,
+      "sourcePage": 104,
+      "text": "മനുഷ്യ ശരീരത്തിലെ രക്തചംക്രമണം കണ്ടുപിടിച്ചത്",
+      "options": [
+        {
+          "key": "A",
+          "text": "എഡ്വേർഡ് ജന്നർ"
+        },
+        {
+          "key": "B",
+          "text": "വില്യം ഹാർവി"
+        },
+        {
+          "key": "C",
+          "text": "ലൂയിസ് പാസ്റ്റർ"
+        },
+        {
+          "key": "D",
+          "text": "ഹർഗോവിന്ദ് ഖൊരാന"
+        }
+      ],
+      "existingText": "മനുഷ്യ ശരീരത്തിലെ രക്തചംക്രമണം കണ്ടുപിടി ചത്",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "എഡ്വേ൪ഡ് ജന്നര്"
+        },
+        {
+          "key": "B",
+          "text": "വില്യം ഹാ൪വി"
+        },
+        {
+          "key": "C",
+          "text": "ലൂയിസ്ചാസ്പ്ര്"
+        },
+        {
+          "key": "D",
+          "text": "ഹ൪ഗോവിന് ലൊരാന"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "കണ്ടുപിടി",
+            "ച്ചത്"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 559.05077
+      }
+    },
+    {
+      "paperNumber": 27,
+      "questionNumber": 1,
+      "sourcePage": 106,
+      "text": "ഇന്ത്യയിൽ സൈക്കിൾ സിറ്റി എന്നറിയപ്പെടുന്ന സ്ഥലം",
+      "options": [
+        {
+          "key": "A",
+          "text": "അമൃതസർ"
+        },
+        {
+          "key": "B",
+          "text": "ലുധിയാന"
+        },
+        {
+          "key": "C",
+          "text": "ഭോപ്പാൽ"
+        },
+        {
+          "key": "D",
+          "text": "അഹമ്മദാബാദ്"
+        }
+      ],
+      "existingText": "ഇന്ത്യയില് സൈക്കിള് സിറ്റി എന്നറിയപ്പെടുന്ന സ്ഥലം",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "അമൃതസർ"
+        },
+        {
+          "key": "B",
+          "text": "ലുധിയാന"
+        },
+        {
+          "key": "C",
+          "text": "േഭാപ്പാൽ"
+        },
+        {
+          "key": "D",
+          "text": "അഹമ്മദാബാദ്"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 176.05077
+      }
+    },
+    {
+      "paperNumber": 28,
+      "questionNumber": 1,
+      "sourcePage": 110,
+      "text": "കേരളത്തിൽ പടിഞ്ഞാറുനിന്നും കിഴക്കോട്ടൊഴു കുന്ന നദി ഏത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "കബനി"
+        },
+        {
+          "key": "B",
+          "text": "പെരിയാർ"
+        },
+        {
+          "key": "C",
+          "text": "ഭാരതപ്പുഴ"
+        },
+        {
+          "key": "D",
+          "text": "മൂവ്വാറ്റുപുഴ"
+        }
+      ],
+      "existingText": "കേരളത്തില് പടിഞ്ഞാറുനിന്നും കിഴക്കോട്ടൊഴു കുന്ന നദി ഏത്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "മലനാട്"
+        },
+        {
+          "key": "B",
+          "text": "ഇടനാട്"
+        },
+        {
+          "key": "C",
+          "text": "പീഠഭൂമി"
+        },
+        {
+          "key": "D",
+          "text": "തീര\u0000പേദശങ്ങൾ"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ഒഴു",
+            "കുന്ന"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 121.75958
+      }
+    },
+    {
+      "paperNumber": 29,
+      "questionNumber": 1,
+      "sourcePage": 115,
+      "text": "കേരളത്തിന്റെ ഏറ്റവും തെക്കേയറ്റത്തുള്ള നദി",
+      "options": [
+        {
+          "key": "A",
+          "text": "നെയ്യാർ"
+        },
+        {
+          "key": "B",
+          "text": "കരമനയാർ"
+        },
+        {
+          "key": "C",
+          "text": "പെരിയാർ"
+        },
+        {
+          "key": "D",
+          "text": "ചാലിയാർ"
+        }
+      ],
+      "existingText": "കേരളത്തിന്റെ ഏറ്റവും തെക്കേയറ്റത്തുള്ള നദി",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "െനയ്യാർ"
+        },
+        {
+          "key": "B",
+          "text": "കരമനയാർ"
+        },
+        {
+          "key": "C",
+          "text": "െപരിയാർ"
+        },
+        {
+          "key": "D",
+          "text": "ചാലിയാർ"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 698.05077
+      }
+    },
+    {
+      "paperNumber": 30,
+      "questionNumber": 1,
+      "sourcePage": 119,
+      "text": "കേരളത്തിലെ ആദ്യ ജല വൈദ്യുത പദ്ധതി",
+      "options": [
+        {
+          "key": "A",
+          "text": "കുറ്റ്യാടി"
+        },
+        {
+          "key": "B",
+          "text": "ശബരിഗിരി"
+        },
+        {
+          "key": "C",
+          "text": "ബ്രഹ്മപുരം"
+        },
+        {
+          "key": "D",
+          "text": "പള്ളിവാസൽ"
+        }
+      ],
+      "existingText": "കേരളത്തിലെ ആദ്യ ജല വൈദ്യുത പദ്ധതി",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "കുറ്റ്യാടി"
+        },
+        {
+          "key": "B",
+          "text": "ശബരിഗിരി"
+        },
+        {
+          "key": "C",
+          "text": "\u0000ബഹ്മപുരം"
+        },
+        {
+          "key": "D",
+          "text": "പള്ളിവാസൽ"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 698.05077
+      }
+    },
+    {
+      "paperNumber": 31,
+      "questionNumber": 1,
+      "sourcePage": 123,
+      "text": "കേരള സംസ്ഥാനം രൂപീകൃതമായപ്പോൾ കർണ്ണാടക ജില്ലയുടെ ഭാഗമായിരുന്ന ഏത് താലൂക്കാണ് കൂട്ടിച്ചേർത്തത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "തോവാള"
+        },
+        {
+          "key": "B",
+          "text": "അഗസ്തീശ്വരം"
+        },
+        {
+          "key": "C",
+          "text": "ഹോസ് ദുർഗ്"
+        },
+        {
+          "key": "D",
+          "text": "വിളവൻകോട്"
+        }
+      ],
+      "existingText": "കേരള സംസ്ഥാനം രൂപീക്യതമായപ്പോള് ക൪ണ്ണാട A ജില്ലയുടെ ഭാഗമായിരുന്ന ഏത് താലൂക്കാണ് 2S] ച്ചേര്ത്തത്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "േതാവാള"
+        },
+        {
+          "key": "B",
+          "text": "അഗസ്തീശ്വരം"
+        },
+        {
+          "key": "C",
+          "text": "േഹാസ് ദുർഗ്"
+        },
+        {
+          "key": "D",
+          "text": "വിളവൻേകാട്"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "കർണ്ണാട",
+            "ക"
+          ],
+          [
+            "കൂട്ടി",
+            "ച്ചേർത്തത്"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 698.05077
+      }
+    },
+    {
+      "paperNumber": 32,
+      "questionNumber": 1,
+      "sourcePage": 127,
+      "text": "കേരളത്തിന്റെ ഔദ്യോഗിക മരം",
+      "options": [
+        {
+          "key": "A",
+          "text": "മാവ്"
+        },
+        {
+          "key": "B",
+          "text": "തെങ്ങ്"
+        },
+        {
+          "key": "C",
+          "text": "പ്ലാവ്"
+        },
+        {
+          "key": "D",
+          "text": "പേരാൽ"
+        }
+      ],
+      "existingText": "കേരളത്തിന്റെ ഔദ്യോഗിക മരം : മ്പുരുക്ക് വ്യവസായശാല",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "മാവ്"
+        },
+        {
+          "key": "B",
+          "text": "തെങ്ങ്"
+        },
+        {
+          "key": "C",
+          "text": "goat"
+        },
+        {
+          "key": "D",
+          "text": "പേരാല് ©) റൂര൪ക്കല"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 591.32636
+      }
+    },
+    {
+      "paperNumber": 33,
+      "questionNumber": 1,
+      "sourcePage": 131,
+      "text": "സാമ്രാജ്യത്വത്തിന്റെ ഏറ്റവും പ്രകടമായ പ്രത്യേകത",
+      "options": [
+        {
+          "key": "A",
+          "text": "ചൂഷണം"
+        },
+        {
+          "key": "B",
+          "text": "വർണ്ണവിവേചനം"
+        },
+        {
+          "key": "C",
+          "text": "ദേശീയത"
+        },
+        {
+          "key": "D",
+          "text": "വികസനം"
+        }
+      ],
+      "existingText": "സാമ്രാജ്യത്വത്തിന്റെ ഏറ്റവും പ്രകടമായ പ്രത്യേകത",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "ചൂഷണം"
+        },
+        {
+          "key": "B",
+          "text": "വർണ്ണവിേവചനം"
+        },
+        {
+          "key": "C",
+          "text": "േദശീയത"
+        },
+        {
+          "key": "D",
+          "text": "വികസനം"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 698.05077
+      }
+    },
+    {
+      "paperNumber": 34,
+      "questionNumber": 1,
+      "sourcePage": 135,
+      "text": "നാട്ടുരാജ്യങ്ങളായ തിരുവിതാംകൂർ, കൊച്ചി എന്നിവ ലയിച്ച് തിരുക്കൊച്ചി സംസ്ഥാനം രൂപം കൊണ്ട വർഷം",
+      "options": [
+        {
+          "key": "A",
+          "text": "1948"
+        },
+        {
+          "key": "B",
+          "text": "1949"
+        },
+        {
+          "key": "C",
+          "text": "1939"
+        },
+        {
+          "key": "D",
+          "text": "1936"
+        }
+      ],
+      "existingText": "നാട്ടുരാജ്യങ്ങളായ തിരുവിതാംകൂര്, കൊച്ചി എന്നി വ ലയിച്ച് തിരുക്കൊച്ചി സംസ്ഥാനം രൂപം കൊണ്ട വര് ഷം",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "1948"
+        },
+        {
+          "key": "B",
+          "text": "1949"
+        },
+        {
+          "key": "C",
+          "text": "1939"
+        },
+        {
+          "key": "D",
+          "text": "1936"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "എന്നി",
+            "വ"
+          ],
+          [
+            "വർ",
+            "ഷം"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 610.23975
+      }
+    },
+    {
+      "paperNumber": 35,
+      "questionNumber": 1,
+      "sourcePage": 139,
+      "text": "ഷൈനി ജേക്കബ് ബെഞ്ചമിൻ സംവിധാനം ചെയ്ത 'ഒറ്റയാൾ' എന്ന ഡോക്യുമെന്ററി ആരെക്കുറിച്ചുള്ളതാണ് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ദയാബായി"
+        },
+        {
+          "key": "B",
+          "text": "മയിലമ്മ"
+        },
+        {
+          "key": "C",
+          "text": "സി. കെ. ജാനു"
+        },
+        {
+          "key": "D",
+          "text": "ജയലക്ഷ്മി"
+        }
+      ],
+      "existingText": "ooona ജേക്കബ് ബെഞ്ച്മിന൯ സംവിധാനം ചെയ് ത ‘ഒറ്റയാള്‘ എന്ന ഡോക്യുമെന്ററി ആരെക്കുറിച്ചു ഭഒളതാണ് ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "ദയാബായി"
+        },
+        {
+          "key": "B",
+          "text": "മയിലമ്മ"
+        },
+        {
+          "key": "C",
+          "text": "സി. കെ. ജാനു"
+        },
+        {
+          "key": "D",
+          "text": "ജയലക്ഷിമി"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ചെയ്",
+            "ത"
+          ],
+          [
+            "ആരെക്കുറിച്ചു",
+            "ള്ളതാണ്"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 698.05077
+      }
+    },
+    {
+      "paperNumber": 37,
+      "questionNumber": 1,
+      "sourcePage": 147,
+      "text": "കേരളത്തിലെ ഏറ്റവും നീളം കൂടിയ നദി",
+      "options": [
+        {
+          "key": "A",
+          "text": "പമ്പ"
+        },
+        {
+          "key": "B",
+          "text": "പെരിയാർ"
+        },
+        {
+          "key": "C",
+          "text": "ഭാരതപ്പുഴ"
+        },
+        {
+          "key": "D",
+          "text": "കബനി"
+        }
+      ],
+      "existingText": "കേരളത്തിലെ ഏറ്റവും നീളം കൂടിയ നദി",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "പമ്പ"
+        },
+        {
+          "key": "B",
+          "text": "െപരിയാർ"
+        },
+        {
+          "key": "C",
+          "text": "ഭാരതപ്പുഴ"
+        },
+        {
+          "key": "D",
+          "text": "കബനി"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 271.53563
+      }
+    },
+    {
+      "paperNumber": 38,
+      "questionNumber": 81,
+      "sourcePage": 154,
+      "text": "ശരിയായ പദമേത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "അധരപുഡം"
+        },
+        {
+          "key": "B",
+          "text": "അധരപുഠം"
+        },
+        {
+          "key": "C",
+          "text": "അധരപുടം"
+        },
+        {
+          "key": "D",
+          "text": "അദരപുടം"
+        }
+      ],
+      "existingText": "ശരിയായ പദേമത്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "അധരപുഡം"
+        },
+        {
+          "key": "B",
+          "text": "അധരപുഠം"
+        },
+        {
+          "key": "C",
+          "text": "അധരപുടം"
+        },
+        {
+          "key": "D",
+          "text": "അദരപുടം"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 296.22047000000003,
+        "y": 746.3275600000001
+      }
+    },
+    {
+      "paperNumber": 39,
+      "questionNumber": 41,
+      "sourcePage": 155,
+      "text": "ജലത്തിന്റെ സ്ഥിര കാഠിന്യത്തിനു കാരണമാകുന്ന ലവണം ഏത് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "സോഡിയം ക്ലോറൈഡ്"
+        },
+        {
+          "key": "B",
+          "text": "പൊട്ടാസ്യം ക്ലോറൈഡ്"
+        },
+        {
+          "key": "C",
+          "text": "കാൽസ്യം ക്ലോറൈഡ്"
+        },
+        {
+          "key": "D",
+          "text": "സിങ്ക് ക്ലോറൈഡ്"
+        }
+      ],
+      "existingText": "ജലത്തിന്റെ സ്ഥിര കാഠിനൃത്തിനു കാരണമാകു ൬ ലവണം ഏത് ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "സോഡിയം ക്ലോറൈഡ്"
+        },
+        {
+          "key": "B",
+          "text": "പൊട്ടാസ്യം ക്ലോറൈഡ്"
+        },
+        {
+          "key": "C",
+          "text": "കാല്സ്യം ക്ലോറൈഡ്"
+        },
+        {
+          "key": "D",
+          "text": "miles ക്ലോറൈഡ്"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "കാരണമാകു",
+            "ന്ന"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 443.16101
+      }
+    },
+    {
+      "paperNumber": 40,
+      "questionNumber": 1,
+      "sourcePage": 158,
+      "text": "ഏതു നദിയിലാണ് \"കുറുവ ദ്വീപ്\" സ്ഥിതി ചെയ്യുന്നത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ഭവാനി"
+        },
+        {
+          "key": "B",
+          "text": "പാമ്പാർ"
+        },
+        {
+          "key": "C",
+          "text": "കബനി"
+        },
+        {
+          "key": "D",
+          "text": "കുന്തിപ്പുഴ"
+        }
+      ],
+      "existingText": "ഏതു നദിയിലാണ് ”കുറുവ ദ്വീപ്” സ്ഥിതി ചെയ്യുന്ന ത്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "ഭവാനി"
+        },
+        {
+          "key": "B",
+          "text": "പാമ്പാർ"
+        },
+        {
+          "key": "C",
+          "text": "കബനി"
+        },
+        {
+          "key": "D",
+          "text": "കുന്തിപ്പുഴ"
+        }
+      ],
+      "agrees": true,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "ചെയ്യുന്ന",
+            "ത്"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 771.75156
+      }
+    },
+    {
+      "paperNumber": 41,
+      "questionNumber": 1,
+      "sourcePage": 162,
+      "text": "ഭാഷ അടിസ്ഥാനത്തിൽ സംസ്ഥാനങ്ങളെ പുനസ്സംഘടിപ്പിക്കുന്നതിനായി രൂപീകരിച്ച സംസ്ഥാന പുനസ്സംഘടനാ കമ്മീഷന്റെ അധ്യക്ഷൻ ആരായിരുന്നു ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "സലിം അലി"
+        },
+        {
+          "key": "B",
+          "text": "എച്ച്. എൻ. കുൻസ്രു"
+        },
+        {
+          "key": "C",
+          "text": "ഫസൽ അലി"
+        },
+        {
+          "key": "D",
+          "text": "കെ. എം. പണിക്കർ"
+        }
+      ],
+      "existingText": "ഭാഷ അടിസ്ഥാനത്തില് സംസ്ഥാനങ്ങളെ പുനസ്സം ഘടിപ്പിക്കുന്നതിനായി രൂപീകരിച്ച സംസ്ഥാന പുനസ്സം ഘടനാ കമ്മീഷന്റെ അധ്യക്ഷന് ആരായിരുന്നു ?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "സലിം അലി"
+        },
+        {
+          "key": "B",
+          "text": "എച്ച്. എ൯. കുന്ദ്രു"
+        },
+        {
+          "key": "C",
+          "text": "ഫസല് അലി"
+        },
+        {
+          "key": "D",
+          "text": "കെ. ago. പണിക്ക൪"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": true,
+        "layoutJoins": [
+          [
+            "പുനസ്സം",
+            "ഘടിപ്പിക്കുന്നതിനായി"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 658.59075
+      }
+    },
+    {
+      "paperNumber": 42,
+      "questionNumber": 41,
+      "sourcePage": 167,
+      "text": "പ്രഷർ കുക്കറിൽ പാചകം വേഗത്തിലാകാൻ ഇടയാക്കുന്നത്",
+      "options": [
+        {
+          "key": "A",
+          "text": "താഴ്ന്ന മർദ്ദം ജലത്തിന്റെ തിളനില ഉയർത്തുന്നതിനാൽ"
+        },
+        {
+          "key": "B",
+          "text": "ഉയർന്ന മർദ്ദം ജലത്തിന്റെ തിളനില ഉയർത്തുന്നതിനാൽ"
+        },
+        {
+          "key": "C",
+          "text": "ഉയർന്ന മർദ്ദം ജലത്തിന്റെ തിളനില കുറയ്ക്കുന്നതിനാൽ"
+        },
+        {
+          "key": "D",
+          "text": "താഴ്ന്ന മർദ്ദം ജലത്തിന്റെ തിളനില കുറയ്ക്കുന്നതിനാൽ"
+        }
+      ],
+      "existingText": "പ്രഷര് കുക്കറില് പാചകം വേഗത്തിലാകാന് ഇട യാക്കുന്നത്",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "താഴ്നന adgo ജലത്തിന്റെ തിളനില ഉയര്ത്തുന്നതിനാല്"
+        },
+        {
+          "key": "B",
+          "text": "ഉയര്നന adgo ജലത്തിന്റെ തിളനില ഉയര്ത്തുന്നതിനാല്"
+        },
+        {
+          "key": "C",
+          "text": "ഉയര്നന a4go ജലത്തിന്റെ തിളനില കുറയ്ക്കുന്നതിനാല്"
+        },
+        {
+          "key": "D",
+          "text": "താഴ്നന adgo ജലത്തിന്റെ തിളനില കുറയ്ക്കുന്നതിനാല്"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": true,
+        "layoutJoins": [
+          [
+            "ഇട",
+            "യാക്കുന്നത്"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 324.16101
+      }
+    },
+    {
+      "paperNumber": 43,
+      "questionNumber": 1,
+      "sourcePage": 170,
+      "text": "സമുദ്രനിരപ്പിൽ നിന്ന് ഏകദേശം 75 മീറ്ററിൽ കൂടുതൽ ഉയരമുള്ള കേരളത്തിന്റെ ഭൂപ്രദേശം",
+      "options": [
+        {
+          "key": "A",
+          "text": "ഇടനാട്"
+        },
+        {
+          "key": "B",
+          "text": "മലനാട്"
+        },
+        {
+          "key": "C",
+          "text": "തീരപ്രദേശം"
+        },
+        {
+          "key": "D",
+          "text": "സമതലം"
+        }
+      ],
+      "existingText": "സമുദ്രനിരപ്പില് നിന്ന് ഏകദേശം 75 മീറ്ററില് കൂടു തല് ഉയരമുള്ള കേരളത്തിന്റെ ഭൂപ്രദേശം",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "ഇടനാട്"
+        },
+        {
+          "key": "B",
+          "text": "മലനാട്"
+        },
+        {
+          "key": "C",
+          "text": "തീരപ്രദേശം"
+        },
+        {
+          "key": "D",
+          "text": "സമതലം"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": true,
+        "layoutJoins": [
+          [
+            "കൂടു",
+            "തൽ"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 698.05077
+      }
+    },
+    {
+      "paperNumber": 44,
+      "questionNumber": 41,
+      "sourcePage": 176,
+      "text": "വൈദ്യുതിക്ക് ചാലകവും താപത്തിന് സുചാലകവുമായിട്ടുള്ളത്",
+      "options": [
+        {
+          "key": "A",
+          "text": "ഗ്ലാസ്"
+        },
+        {
+          "key": "B",
+          "text": "മൈക്ക"
+        },
+        {
+          "key": "C",
+          "text": "ആസ്ബെസ്റ്റോസ്"
+        },
+        {
+          "key": "D",
+          "text": "തടി"
+        }
+      ],
+      "existingText": "വൈദ്യുതിക്ക് ചാലകവും താപത്തിന് സുചാലക വുമായിട്ടുള്ളത്",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "ഗ്ലാസ്"
+        },
+        {
+          "key": "B",
+          "text": "മൈക്ക"
+        },
+        {
+          "key": "C",
+          "text": "ആസ്ബെസ്ഫോസ്"
+        },
+        {
+          "key": "D",
+          "text": "തടി"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": true,
+        "layoutJoins": [
+          [
+            "സുചാലക",
+            "വുമായിട്ടുള്ളത്"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 698.05077
+      }
+    },
+    {
+      "paperNumber": 45,
+      "questionNumber": 73,
+      "sourcePage": 181,
+      "text": "വിപരീതപദം ഏത്? - ശാന്തം",
+      "options": [
+        {
+          "key": "A",
+          "text": "ക്രോധം"
+        },
+        {
+          "key": "B",
+          "text": "ഉഗ്രം"
+        },
+        {
+          "key": "C",
+          "text": "കരുണം"
+        },
+        {
+          "key": "D",
+          "text": "വെറുപ്പ്"
+        }
+      ],
+      "existingText": "വിപരീതപദം ഏത്? - ശാന്തം",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "ക്രോധം"
+        },
+        {
+          "key": "B",
+          "text": "ഉഗ്രം"
+        },
+        {
+          "key": "C",
+          "text": "കരുണം"
+        },
+        {
+          "key": "D",
+          "text": "വെനുല്പ്"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": true,
+        "layoutJoins": [
+          [
+            "ചാലക",
+            "വും"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 239.32756000000006
+      }
+    },
+    {
+      "paperNumber": 46,
+      "questionNumber": 1,
+      "sourcePage": 182,
+      "text": "പൊയ്കയിൽ ശ്രീകുമാര ഗുരുദേവനുമായി യോജിക്കാത്ത പ്രസ്താവന ഏത്? (1) പത്തനംതിട്ട ജില്ലയിലെ ഇരവിപേരൂരിൽ ജനനം (2) പ്രത്യക്ഷ രക്ഷാ ദൈവസഭ സ്ഥാപിച്ചു (3) യോഗക്ഷേമ സഭയുമായി ചേർന്ന് പ്രവർത്തിച്ചു (4) ശ്രീമൂലം പ്രജാസഭയിൽ 1921 ലും 1931 ലും അംഗമായി",
+      "options": [
+        {
+          "key": "A",
+          "text": "(1) മാത്രം"
+        },
+        {
+          "key": "B",
+          "text": "(3) മാത്രം"
+        },
+        {
+          "key": "C",
+          "text": "(3), (4)"
+        },
+        {
+          "key": "D",
+          "text": "(1), (3), (4)"
+        }
+      ],
+      "existingText": "പൊയ്കയില് ശ്രീകുമാര ഗുരുദേവനുമായി ewasd) ക്കാത്ത പ്രസ്താവന ഏത്? (0പത്തനംതിട്ടജില്ലയിലെ ഇരവിടപരൂരില ജനനം (പ്രത്യക്ഷ രക്ഷാ ടൈലസഭസ്ഥാപിച്ചു 2) യാഥക്ഷമസഭയുമായി൪ന്പ്രവ൪ത്തില്ചു ((|ശ്രീമുലം പ്രജാസഭയില്1921 ലും 1931 A130 അംഗമായി",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "(1) മാ\u0000തം"
+        },
+        {
+          "key": "B",
+          "text": "(3) മാ\u0000തം"
+        },
+        {
+          "key": "C",
+          "text": "(3), (4)"
+        },
+        {
+          "key": "D",
+          "text": "(1), (3), (4)"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": true,
+        "layoutJoins": [
+          [
+            "യോജി",
+            "ക്കാത്ത"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 325.86634
+      }
+    },
+    {
+      "paperNumber": 47,
+      "questionNumber": 1,
+      "sourcePage": 189,
+      "text": "ഇന്ത്യൻ നാഷണൽ കോൺഗ്രസ്സിന്റെ ലക്ഷ്യം 'പൂർണ്ണ സ്വരാജ്' അഥവാ പൂർണ്ണ സ്വാതന്ത്ര്യം ആണെന്ന് പ്രഖ്യാപിച്ചത് എവിടെ വച്ച് നടന്ന സമ്മേളനത്തിലാണ്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "കൽക്കട്ട"
+        },
+        {
+          "key": "B",
+          "text": "ബോംബെ"
+        },
+        {
+          "key": "C",
+          "text": "ലക്നൗ"
+        },
+        {
+          "key": "D",
+          "text": "ലാഹോർ"
+        }
+      ],
+      "existingText": "ഇന്ത്യ൯ നാഷണല് കോണ്ടഗ്രസ്സിന്റെ ലക്ഷ്യം ‘പൂര് ണ്ണ സ്വരാജ്‘ അഥവാ പൂര൪ണ്ണ സ്വാതന്ത്രം ആണെന്ന് പ്രഖ്യാപിച്ചത് എവിടെ വച്ച് നടന്ന സമ്മേളനത്തിലാ ണ്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "കൽക്കട്ട"
+        },
+        {
+          "key": "B",
+          "text": "േബാംെബ"
+        },
+        {
+          "key": "C",
+          "text": "ലക്നൗ"
+        },
+        {
+          "key": "D",
+          "text": "ലാേഹാർ"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": true,
+        "layoutJoins": [
+          [
+            "പൂർ",
+            "ണ്ണ"
+          ],
+          [
+            "സമ്മേളനത്തിലാ",
+            "ണ്"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 518.21613
+      }
+    },
+    {
+      "paperNumber": 48,
+      "questionNumber": 1,
+      "sourcePage": 194,
+      "text": "(1) ബി.എൻ. ഭട്നാഗർ - ഡോ. രാജാരാമണ്ണ - ലക്ഷ്മണസ്വാമി മുതലിയാർ (2) വി.പി. മേനോൻ - ഫസൽ അലി - കെ.എം. പണിക്കർ (3) ഗുൽസരിലാൽ നന്ദ - ടി.ടി. കൃഷ്ണമാചാരി - സി. ഡി. ദേശ്മുഖ് ഇവയിൽ ഭാഷാ അടിസ്ഥാനത്തിൽ ഇന്ത്യൻ സംസ്ഥാനങ്ങൾ പുനഃസംഘടന നടത്താൻ വേണ്ടി രൂപീകരിച്ച കമ്മിറ്റിയിലെ അംഗങ്ങൾ ആരെല്ലാം?",
+      "options": [
+        {
+          "key": "A",
+          "text": "(1) മാത്രം"
+        },
+        {
+          "key": "B",
+          "text": "(2) മാത്രം"
+        },
+        {
+          "key": "C",
+          "text": "(3) മാത്രം"
+        },
+        {
+          "key": "D",
+          "text": "ഇവയൊന്നുമല്ല"
+        }
+      ],
+      "existingText": "(1) ബി.എന്. eSmane - ഡോ. രാജാരാമണ്ണു - ലക്ഷ് തെവിടെ? മണസ്വാമി മുതലിയാ൪",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "(1) മാ\u0000തം"
+        },
+        {
+          "key": "B",
+          "text": "(2) മാ\u0000തം"
+        },
+        {
+          "key": "C",
+          "text": "(3) മാ\u0000തം"
+        },
+        {
+          "key": "D",
+          "text": "ഇവെയാന്നുമല്ല"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": true,
+        "layoutJoins": [
+          [
+            "ലക്ഷ്",
+            "മണസ്വാമി"
+          ],
+          [
+            "പണി",
+            "ക്കർ"
+          ],
+          [
+            "നട",
+            "ത്താൻ"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 473.05077
+      }
+    },
+    {
+      "paperNumber": 49,
+      "questionNumber": 1,
+      "sourcePage": 199,
+      "text": "താഴെപ്പറയുന്നവയിൽ ശരിയായ ബന്ധം ഏതാണ്? (i) ചമ്പാരൻ സത്യാഗ്രഹം - ബീഹാർ (ii) ഖേഡ സത്യാഗ്രഹം - മഹാരാഷ്ട്ര (iii) അഹമ്മദാബാദ് മിൽ സമരം - ഗുജറാത്ത്",
+      "options": [
+        {
+          "key": "A",
+          "text": "എല്ലാം ശരിയാണ്"
+        },
+        {
+          "key": "B",
+          "text": "(i) & (ii)"
+        },
+        {
+          "key": "C",
+          "text": "(i) & (iii)"
+        },
+        {
+          "key": "D",
+          "text": "(ii) & (iii)"
+        }
+      ],
+      "existingText": "താഴെപ്പറയുന്നവയില് ശരിയായ ബന്ധം ഏതാണ്? ((ചമ്പാര൯സത്വാഗ്രഹം - ബീഫാ൪ ()ജഖേലസത്വാഗ്രഹം- മഹാര്യഷ്ട (ii) അഫമ്മദാബാദ്മിത് സമരം -ഗുജാത്ത്",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "എല്ലാം ശരിയാണ്"
+        },
+        {
+          "key": "B",
+          "text": "(i) & (ii)"
+        },
+        {
+          "key": "C",
+          "text": "(i) & (iii)"
+        },
+        {
+          "key": "D",
+          "text": "(ii) & (iii)"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 1,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": true,
+        "layoutJoins": []
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 229.38148
+      }
+    },
+    {
+      "paperNumber": 50,
+      "questionNumber": 41,
+      "sourcePage": 205,
+      "text": "ഹൃദ്രോഗങ്ങളുമായി ജനിക്കുന്ന കുട്ടികൾക്ക് സൗജന്യ ചികിത്സ ഒരുക്കുന്ന സംസ്ഥാന സർക്കാരിന്റെ പദ്ധതി",
+      "options": [
+        {
+          "key": "A",
+          "text": "ആർദ്രം"
+        },
+        {
+          "key": "B",
+          "text": "ഹൃദ്യം"
+        },
+        {
+          "key": "C",
+          "text": "അതുല്യം"
+        },
+        {
+          "key": "D",
+          "text": "മഴവില്ല"
+        }
+      ],
+      "existingText": "ഹൃദ്രോഗങ്ങളുമായി ജനിക്കുന്ന കുട്ടികള്ക്ക് സൌജ്ന്യ ചികിത്സ ഒരുക്കുന്ന സംസ്ഥാന സര്ക്കാരി ang പദ്ധതി",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "ആര്ദ്രം"
+        },
+        {
+          "key": "B",
+          "text": "ഹൃദ്യം"
+        },
+        {
+          "key": "C",
+          "text": "അതുല്യം"
+        },
+        {
+          "key": "D",
+          "text": "മഴവില്ല"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": true,
+        "layoutJoins": [
+          [
+            "സർക്കാരി",
+            "ന്റെ"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 405.38148
+      }
+    },
+    {
+      "paperNumber": 1,
+      "questionNumber": 2,
+      "sourcePage": 9,
+      "text": "'രാസവസ്തുക്കളുടെ രാജാവ്' - ഈ പേരിൽ അറിയപ്പെടുന്നത് ഏത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "സൾഫ്യൂരിക് ആസിഡ്"
+        },
+        {
+          "key": "B",
+          "text": "ഹൈഡ്രോക്ലോറിക് ആസിഡ്"
+        },
+        {
+          "key": "C",
+          "text": "അസ്റ്റിക്ക് ആസിഡ്"
+        },
+        {
+          "key": "D",
+          "text": "സിട്രിക്ക് ആസിഡ്"
+        }
+      ],
+      "existingText": "‘രാസവസ്തുക്കളുടെ രാജാവ്‘ - ഈ പേരില് അറി യപ്പെടുന്നത് ഏത്?",
+      "existingOptions": [
+        {
+          "key": "A",
+          "text": "സൾഫ്യൂരിക്ആസിഡ്"
+        },
+        {
+          "key": "B",
+          "text": "ൈഹേഡാോറിക്ആസിഡ്"
+        },
+        {
+          "key": "C",
+          "text": "അിക്ക്ആസിഡ്"
+        },
+        {
+          "key": "D",
+          "text": "സിടിക്ക്ആസിഡ്"
+        }
+      ],
+      "agrees": false,
+      "unmappedGlyphs": 0,
+      "answerKeyOverride": null,
+      "applied": {
+        "glyphMap": true,
+        "g_d0_f11Vowel": false,
+        "layoutJoins": [
+          [
+            "അറി",
+            "യപ്പെടുന്നത്"
+          ]
+        ]
+      },
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 603.75611
+      }
+    }
+  ]
+}

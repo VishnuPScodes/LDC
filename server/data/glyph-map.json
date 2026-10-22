@@ -1,0 +1,397 @@
+{
+  "source": "LDC.pdf; PDF.js operator glyph key (font resource ID, fontChar); OCR aligned candidates",
+  "acceptedMappings": {
+    "g_d0_f13|57418": {
+      "unicode": "ച്ച",
+      "votes": {
+        "ച്ച": 205,
+        "മ്മ": 4,
+        "ത്ഏ": 3,
+        "േ": 2,
+        "ത്ഇന്": 1
+      },
+      "alignedOccurrences": 215,
+      "share": 0.9534883720930233,
+      "confidence": "high"
+    },
+    "g_d0_f13|57431": {
+      "unicode": "മ്മ",
+      "votes": {
+        "മ്മ": 78,
+        "ിത": 1,
+        "ച്ഛന്റെ": 1,
+        "മ്മയുടെ": 1
+      },
+      "alignedOccurrences": 81,
+      "share": 0.9629629629629629,
+      "confidence": "high"
+    },
+    "g_d0_f24|57417": {
+      "unicode": "ട",
+      "votes": {
+        "ട": 8,
+        "േശരുകൾ": 1,
+        "ടന": 1
+      },
+      "alignedOccurrences": 10,
+      "share": 0.8,
+      "confidence": "medium"
+    },
+    "g_d0_f14|57414": {
+      "unicode": "ണ്ട",
+      "votes": {
+        "ണ്ട": 10,
+        "ന്ദ്ര": 1
+      },
+      "alignedOccurrences": 11,
+      "share": 0.9090909090909091,
+      "confidence": "medium"
+    }
+  },
+  "unresolved": [
+    {
+      "key": "g_d0_f13|57451",
+      "alignedOccurrences": 30,
+      "topCandidate": "ച്ച",
+      "votes": {
+        "ച്ച": 11,
+        "മ്മ": 4,
+        "തിേകാണത്": 2,
+        "ലാണ്": 1,
+        "്മാഗാ": 1,
+        "ന്നത്എ": 1,
+        "ോഹന": 1,
+        "ൈവസ്": 1,
+        "്തഗ": 1,
+        "ന്ദ്ര": 1,
+        "ുകു": 1,
+        "ക്ല": 1,
+        "ന്ദ്രമ": 1,
+        "്പ": 1,
+        "ഉ": 1,
+        "ന്ദ്രയാ": 1
+      },
+      "share": 0.36666666666666664
+    },
+    {
+      "key": "g_d0_f14|57412",
+      "alignedOccurrences": 11,
+      "topCandidate": "ന്ദ്ര",
+      "votes": {
+        "ന്ദ്ര": 2,
+        "രായിരു": 1,
+        "ബ്": 1,
+        "ഭ്": 1,
+        "ട": 1,
+        "കു": 1,
+        "ന്ദ്രയാ": 1,
+        "ബം": 1,
+        "ണ്ട": 1,
+        "സ്സ": 1
+      },
+      "share": 0.18181818181818182
+    },
+    {
+      "key": "g_d0_f13|57401",
+      "alignedOccurrences": 32,
+      "topCandidate": "ന്റ",
+      "votes": {
+        "ന്റ": 22,
+        "ച്ച": 5,
+        "ല": 2,
+        "റ്റ": 1,
+        "മ്മ": 1,
+        "ക്ല": 1
+      },
+      "share": 0.6875
+    },
+    {
+      "key": "g_d0_f24|57410",
+      "alignedOccurrences": 5,
+      "topCandidate": "ൂ",
+      "votes": {
+        "ൂ": 2,
+        "്ര": 1,
+        "ട": 1,
+        "ടക്കു": 1
+      },
+      "share": 0.4
+    },
+    {
+      "key": "g_d0_f14|57419",
+      "alignedOccurrences": 2,
+      "topCandidate": "സ്സ",
+      "votes": {
+        "സ്സ": 1,
+        "സ്റ്റ": 1
+      },
+      "share": 0.5
+    },
+    {
+      "key": "g_d0_f13|57424",
+      "alignedOccurrences": 9,
+      "topCandidate": "ക്ല",
+      "votes": {
+        "ക്ല": 7,
+        "ന": 2
+      },
+      "share": 0.7777777777777778
+    },
+    {
+      "key": "g_d0_f10|57406",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f24|57408",
+      "alignedOccurrences": 2,
+      "topCandidate": "്ര",
+      "votes": {
+        "്ര": 1,
+        "ന്റ": 1
+      },
+      "share": 0.5
+    },
+    {
+      "key": "g_d0_f14|57415",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f14|57413",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f14|57416",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f24|57406",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f10|57398",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f24|57419",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f24|57405",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f29|57395",
+      "alignedOccurrences": 1,
+      "topCandidate": "പ",
+      "votes": {
+        "പ": 1
+      },
+      "share": 1
+    },
+    {
+      "key": "g_d0_f14|57431",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f24|57418",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f29|57393",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f13|57455",
+      "alignedOccurrences": 2,
+      "topCandidate": "ശ്ശ",
+      "votes": {
+        "ശ്ശ": 2
+      },
+      "share": 1
+    },
+    {
+      "key": "g_d0_f10|57402",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f13|57442",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f14|57418",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f7|57400",
+      "alignedOccurrences": 1,
+      "topCandidate": "്ക്കു",
+      "votes": {
+        "്ക്കു": 1
+      },
+      "share": 1
+    },
+    {
+      "key": "g_d0_f10|57403",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f29|57392",
+      "alignedOccurrences": 2,
+      "topCandidate": "്യ",
+      "votes": {
+        "്യ": 2
+      },
+      "share": 1
+    },
+    {
+      "key": "g_d0_f30|57389",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f5|57383",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f13|57454",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f24|57407",
+      "alignedOccurrences": 1,
+      "topCandidate": "രിപാല",
+      "votes": {
+        "രിപാല": 1
+      },
+      "share": 1
+    },
+    {
+      "key": "g_d0_f28|57367",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f5|57384",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f13|57450",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f28|57369",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f29|57391",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f10|57399",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f10|57400",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f10|57401",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f12|57359",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    },
+    {
+      "key": "g_d0_f12|57363",
+      "alignedOccurrences": 0,
+      "topCandidate": null,
+      "votes": {},
+      "share": 0
+    }
+  ],
+  "summary": {
+    "uniqueKeys": 44,
+    "accepted": 4,
+    "unresolved": 40
+  }
+}

@@ -1,0 +1,16 @@
+[
+ {"topic":"History","part":"Part I — General Knowledge","marks":5,"subtopics":[]},
+ {"topic":"Geography","part":"Part I — General Knowledge","marks":5,"subtopics":[]},
+ {"topic":"Economics","part":"Part I — General Knowledge","marks":5,"subtopics":[]},
+ {"topic":"Indian Constitution","part":"Part I — General Knowledge","marks":5,"subtopics":[]},
+ {"topic":"Kerala – Governance and System of Administration","part":"Part I — General Knowledge","marks":10,"subtopics":[]},
+ {"topic":"Biology and Public Health","part":"Part I — General Knowledge","marks":6,"subtopics":[]},
+ {"topic":"Physics","part":"Part I — General Knowledge","marks":3,"subtopics":[]},
+ {"topic":"Chemistry","part":"Part I — General Knowledge","marks":3,"subtopics":[]},
+ {"topic":"Arts, Literature, Culture and Sports","part":"Part I — General Knowledge","marks":5,"subtopics":[]},
+ {"topic":"Basics of Computer","part":"Part I — General Knowledge","marks":3,"subtopics":[]},
+ {"topic":"Current Affairs","part":"Part II — Current Affairs","marks":20,"subtopics":[]},
+ {"topic":"Simple Arithmetic, Mental Ability and Reasoning","part":"Part III — Simple Arithmetic, Mental Ability and Reasoning","marks":10,"subtopics":["numbers","percentage","ratio","interest","time & work","time & distance","averages","series","coding-decoding","analogy","odd one out","direction","clocks/calendar"]},
+ {"topic":"General English","part":"Part IV — General English","marks":10,"subtopics":["grammar","vocabulary","synonyms/antonyms","idioms","one-word substitution","error spotting"]},
+ {"topic":"Regional Language: Malayalam","part":"Part V — Regional Language: Malayalam","marks":10,"subtopics":[]}
+]

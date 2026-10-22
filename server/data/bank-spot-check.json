@@ -1,0 +1,938 @@
+{
+  "seed": "0x7a102026",
+  "papers": [
+    17,
+    6,
+    5,
+    48,
+    47,
+    8,
+    27,
+    37,
+    22,
+    3,
+    39,
+    19,
+    16,
+    11,
+    49,
+    29,
+    31,
+    4,
+    30,
+    44,
+    24,
+    21,
+    34,
+    15,
+    18,
+    35,
+    20,
+    50,
+    10,
+    14
+  ],
+  "malayalamQuestions": 29,
+  "questions": [
+    {
+      "paperNumber": 17,
+      "questionNumber": 9,
+      "sourcePage": 73,
+      "text": "2²⁰ -ന്റെ പകുതി എത്ര ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "2¹⁰"
+        },
+        {
+          "key": "B",
+          "text": "1²⁰"
+        },
+        {
+          "key": "C",
+          "text": "1¹⁰"
+        },
+        {
+          "key": "D",
+          "text": "2¹⁹"
+        }
+      ],
+      "correctOption": "D",
+      "pdfLayerPosition": {
+        "x": 313.22834,
+        "y": 188.16100999999998
+      },
+      "recordIndex": 1623
+    },
+    {
+      "paperNumber": 6,
+      "questionNumber": 37,
+      "sourcePage": 30,
+      "text": "ഇന്ത്യയുടെ ബഹിരാകാശ ഗവേഷണ പദ്ധതിയു ടെ പിതാവ്",
+      "options": [
+        {
+          "key": "A",
+          "text": "ഹോമി ഭാഭാ"
+        },
+        {
+          "key": "B",
+          "text": "ഡോ. വിക്രം സാരാഭായ്"
+        },
+        {
+          "key": "C",
+          "text": "എ.പി.ജെ. അബ്ദുൾ കലാം"
+        },
+        {
+          "key": "D",
+          "text": "സതീഷ് ധവാൻ"
+        }
+      ],
+      "correctOption": "B",
+      "pdfLayerPosition": {
+        "x": 296.22047000000003,
+        "y": 121.75156000000004
+      },
+      "recordIndex": 545
+    },
+    {
+      "paperNumber": 5,
+      "questionNumber": 52,
+      "sourcePage": 27,
+      "text": "റഗുലേറ്റിംഗ് ആക്ട് ഇന്ത്യയിൽ നടപ്പിലാക്കിയത് ആരുടെ ഭരണകാലത്താണ് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "റോബർട്ട് ക്ലൈവ്"
+        },
+        {
+          "key": "B",
+          "text": "വെല്ലസ്ലി പ്രഭു"
+        },
+        {
+          "key": "C",
+          "text": "റിപ്പൺ പ്രഭു"
+        },
+        {
+          "key": "D",
+          "text": "വാറൻ ഹേസ്റ്റിംഗ്സ്"
+        }
+      ],
+      "correctOption": "D",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 108.75156000000004
+      },
+      "recordIndex": 458
+    },
+    {
+      "paperNumber": 48,
+      "questionNumber": 66,
+      "sourcePage": 197,
+      "text": "താഴെ പറയുന്നവയിൽ ശരിയായ പ്രസ്താവനക ൾ തിരഞ്ഞെടുക്കുക. (a) മുതിർന്ന പൗരൻമാരുടെ സംരക്ഷണത്തിനുള്ള നിയമത്തിൽ “രണ്ടാനച്ഛനെ യും രണ്ടാനമ്മയെയും” അച്ഛനമ്മമാർ എന്ന നിർവചനത്തിൽ ഉൾപ്പെടുത്തുന്നി ല്ല. (b) മുതിർന്ന പൗരൻമാരുടെ സംരക്ഷണചുമതല അവരുടെ മക്കൾക്കും മക്ക ളുടെ മക്കൾക്കും മാത്രമാണ്. (c) പൗരാവകാശനിയമപ്രകാരം അസ്പൃശ്യത കാരണമാക്കിയുള്ള മതപരമായ അവശതകൾ നിരോധിക്കുന്നില്ല. (d) ദേശീയ മനുഷ്യാവകാശകമ്മീഷനിലെ അംഗങ്ങളെ നിയമിക്കുന്നതിന് ശുപാ ർശ നൽകുന്ന കമ്മിറ്റിയുടെ അധ്യക്ഷൻ രാഷ്ട്രപതി ആണ്",
+      "options": [
+        {
+          "key": "A",
+          "text": "എല്ലാ പ്രസ്താവനകളും ശരിയാണ്"
+        },
+        {
+          "key": "B",
+          "text": "പ്രസ്താവന (b), (d) ശരിയാണ്"
+        },
+        {
+          "key": "C",
+          "text": "പ്രസ്താവന (a), (b), (d) ശരിയാണ്"
+        },
+        {
+          "key": "D",
+          "text": "എല്ലാ പ്രസ്താവനകളും തെറ്റാണ്"
+        }
+      ],
+      "correctOption": "D",
+      "pdfLayerPosition": {
+        "x": 313.22834,
+        "y": 524.75156
+      },
+      "recordIndex": 4498
+    },
+    {
+      "paperNumber": 47,
+      "questionNumber": 38,
+      "sourcePage": 191,
+      "text": "20 cm ഫോക്കസ് ദൂരമുള്ള ഒരു കോൺകേവ് ദർപ്പ ണത്തിന്റെ വക്രതാ ആരം -------- ആയിരിക്കും",
+      "options": [
+        {
+          "key": "A",
+          "text": "40 cm"
+        },
+        {
+          "key": "B",
+          "text": "20 cm"
+        },
+        {
+          "key": "C",
+          "text": "10 cm"
+        },
+        {
+          "key": "D",
+          "text": "40 m"
+        }
+      ],
+      "correctOption": "A",
+      "pdfLayerPosition": {
+        "x": 313.22834,
+        "y": 393.37006
+      },
+      "recordIndex": 4368
+    },
+    {
+      "paperNumber": 8,
+      "questionNumber": 22,
+      "sourcePage": 38,
+      "text": "2012-ലെ എഴുത്തച്ഛൻ പുരസ്ക്കാരം നേടിയത്",
+      "options": [
+        {
+          "key": "A",
+          "text": "ആറ്റൂർ രവിവർമ്മ"
+        },
+        {
+          "key": "B",
+          "text": "ടി പത്മനാഭൻ"
+        },
+        {
+          "key": "C",
+          "text": "എം.ടി. വാസുദേവൻ നായർ"
+        },
+        {
+          "key": "D",
+          "text": "സി. രാധാകൃഷ്ണൻ"
+        }
+      ],
+      "correctOption": "A",
+      "pdfLayerPosition": {
+        "x": 296.22047000000003,
+        "y": 550.75156
+      },
+      "recordIndex": 739
+    },
+    {
+      "paperNumber": 27,
+      "questionNumber": 28,
+      "sourcePage": 107,
+      "text": "പ്രധാനമന്ത്രി റോസ്ഗർ യോജന ആരംഭിച്ച പഞ്ച വത്സര പദ്ധതി ഏത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "എട്ടാം പദ്ധതി"
+        },
+        {
+          "key": "B",
+          "text": "അഞ്ചാം പദ്ധതി"
+        },
+        {
+          "key": "C",
+          "text": "നാലാം പദ്ധതി"
+        },
+        {
+          "key": "D",
+          "text": "ഒന്നാം പദ്ധതി"
+        }
+      ],
+      "correctOption": "A",
+      "pdfLayerPosition": {
+        "x": 313.22834,
+        "y": 329.75156000000004
+      },
+      "recordIndex": 2453
+    },
+    {
+      "paperNumber": 37,
+      "questionNumber": 43,
+      "sourcePage": 149,
+      "text": "ഭാരത രത്ന പുരസ്കാരം നേടിയ ആദ്യ കായിക താരം?",
+      "options": [
+        {
+          "key": "A",
+          "text": "സച്ചിൻ ടെൻഡുൽക്കർ"
+        },
+        {
+          "key": "B",
+          "text": "വീരേന്ദ്ര സേവാഗ്"
+        },
+        {
+          "key": "C",
+          "text": "വിരാട് കോഹി"
+        },
+        {
+          "key": "D",
+          "text": "സുനിൽ ഗവാസ്കർ"
+        }
+      ],
+      "correctOption": "A",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 524.75156
+      },
+      "recordIndex": 3478
+    },
+    {
+      "paperNumber": 22,
+      "questionNumber": 83,
+      "sourcePage": 94,
+      "text": "താഴെപ്പറയുന്നവയിൽ ഒറ്റയാൻ ഏത്? 2, 3, 4, 5",
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "5"
+        }
+      ],
+      "correctOption": "B",
+      "pdfLayerPosition": {
+        "x": 296.22047000000003,
+        "y": 758.75156
+      },
+      "recordIndex": 2118
+    },
+    {
+      "paperNumber": 3,
+      "questionNumber": 6,
+      "sourcePage": 17,
+      "text": "38 - 3 x 5 - 8 + 27 ÷ 9 എത്ര?",
+      "options": [
+        {
+          "key": "A",
+          "text": "170"
+        },
+        {
+          "key": "B",
+          "text": "20"
+        },
+        {
+          "key": "C",
+          "text": "16"
+        },
+        {
+          "key": "D",
+          "text": "18"
+        }
+      ],
+      "correctOption": "D",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 333.48384
+      },
+      "recordIndex": 205
+    },
+    {
+      "paperNumber": 39,
+      "questionNumber": 45,
+      "sourcePage": 155,
+      "text": "പ്രകൃതിദത്ത റബ്ബറിന്റെ മോണോമർ ഏത് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "നൈലോൺ"
+        },
+        {
+          "key": "B",
+          "text": "ടെറിലീൻ"
+        },
+        {
+          "key": "C",
+          "text": "ഗ്ലൂക്കോസ്"
+        },
+        {
+          "key": "D",
+          "text": "ഐസോപ്രീൻ തോഴെ കെോടുത്തിരിക്കുന്നവയിൽ നിന്ന് ശരിയോയ ഉത്തരം തെരെഞ്ഞെടുത്ത് എഴുതുക"
+        }
+      ],
+      "correctOption": "D",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 209.16100999999998
+      },
+      "recordIndex": 3640
+    },
+    {
+      "paperNumber": 19,
+      "questionNumber": 62,
+      "sourcePage": 83,
+      "text": "ക്രിയാവിശേഷണത്തിന് ഉദാഹരണം",
+      "options": [
+        {
+          "key": "A",
+          "text": "ചെറിയ പാവ"
+        },
+        {
+          "key": "B",
+          "text": "ഉറക്കെ കരഞ്ഞു"
+        },
+        {
+          "key": "C",
+          "text": "പാടുന്ന കുട്ടി"
+        },
+        {
+          "key": "D",
+          "text": "ചെമന്ന താമര"
+        }
+      ],
+      "correctOption": "B",
+      "pdfLayerPosition": {
+        "x": 313.22834,
+        "y": 667.75156
+      },
+      "recordIndex": 1836
+    },
+    {
+      "paperNumber": 16,
+      "questionNumber": 34,
+      "sourcePage": 70,
+      "text": "രാജീവ് ഗാന്ധി അന്താരാഷ്ട്ര വിമാനതാവളം എവിടെയാണ് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ന്യൂഡൽഹി"
+        },
+        {
+          "key": "B",
+          "text": "മുംബൈ"
+        },
+        {
+          "key": "C",
+          "text": "ലഖ്നൗ"
+        },
+        {
+          "key": "D",
+          "text": "ഹൈദരാബാദ്"
+        }
+      ],
+      "correctOption": "D",
+      "pdfLayerPosition": {
+        "x": 296.22047000000003,
+        "y": 537.75156
+      },
+      "recordIndex": 1545
+    },
+    {
+      "paperNumber": 11,
+      "questionNumber": 24,
+      "sourcePage": 50,
+      "text": "താഴെ കൊടുത്തവയിൽ നിഷേധവോട്ട് സംവിധാ നമില്ലാത്ത രാജ്യം ഏതാണ്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ഫ്രാൻസ്"
+        },
+        {
+          "key": "B",
+          "text": "ബംഗ്ലാദേശ്"
+        },
+        {
+          "key": "C",
+          "text": "പാക്കിസ്ഥാൻ"
+        },
+        {
+          "key": "D",
+          "text": "കൊളംബിയ"
+        }
+      ],
+      "correctOption": "C",
+      "pdfLayerPosition": {
+        "x": 296.22047000000003,
+        "y": 615.75156
+      },
+      "recordIndex": 1049
+    },
+    {
+      "paperNumber": 49,
+      "questionNumber": 59,
+      "sourcePage": 203,
+      "text": "താഴെ കൊടുത്തവയിൽ ശരിയായ പ്രസ് താവനക ൾ ഏതെല്ലാം? (i) ഒരു നെറ്റ് വർക്കിൽ ഡിജിറ്റൽ സിഗ്നലുകളെ അനാലോഗായും തിരിച്ചും മാറ്റാ ൻ കഴിവുള്ള ഉപകരണമാണ് മോഡം (ii) ഒരു നെറ്റ് വർക്കിൽ ഹബ്ബിലേക്ക് വരുന്ന വിവരങ്ങൾ പ്രസ് തുത നെറ്റ് വർക്കി ൽ ഉൾപ്പെട്ടിരിക്കുന്ന എല്ലാ കമ്പ്യൂട്ടറുകളിലേക്കും കൈമാറുകയാണ് ഹബ്ബ് ചെയ്യുന്നത് (iii) ഒരു നെറ്റ് വർക്കിൽ ഏതു കമ്പ്യൂട്ടറിലേക്കാണോ വിവരം എത്തിക്കേണ്ടത് ആ കമ്പ്യൂട്ടറിലേക്ക് മാത്രമേ സ്വിച്ച് വിവരം അയക്കുകയുള്ളൂ",
+      "options": [
+        {
+          "key": "A",
+          "text": "(i) ഉം (iii) ഉം മാത്രം"
+        },
+        {
+          "key": "B",
+          "text": "മുകളിൽ പറഞ്ഞ എല്ലാ പ്രസ് താവനകളും"
+        },
+        {
+          "key": "C",
+          "text": "(iii) മാത്രം"
+        },
+        {
+          "key": "D",
+          "text": "(i) ഉം (ii) ഉം മാത്രം"
+        }
+      ],
+      "correctOption": "B",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 588.3700600000001
+      },
+      "recordIndex": 4592
+    },
+    {
+      "paperNumber": 29,
+      "questionNumber": 19,
+      "sourcePage": 115,
+      "text": "'പോവർട്ടി ആന്റ് അൺബ്രിട്ടീഷ് റൂൾ ഇൻ ഇന്ത്യ' എന്ന പുസ്തകം രചിച്ചത്",
+      "options": [
+        {
+          "key": "A",
+          "text": "ദാദാഭായ് നവറോജി"
+        },
+        {
+          "key": "B",
+          "text": "രമേഷ് ചന്ദ്ര ദത്ത്"
+        },
+        {
+          "key": "C",
+          "text": "ഗോപാല കൃഷ്ണ ഗോഖലെ"
+        },
+        {
+          "key": "D",
+          "text": "മഹാത്മാ ഗാന്ധി"
+        }
+      ],
+      "correctOption": "A",
+      "pdfLayerPosition": {
+        "x": 313.22834,
+        "y": 412.05077000000006
+      },
+      "recordIndex": 2644
+    },
+    {
+      "paperNumber": 31,
+      "questionNumber": 29,
+      "sourcePage": 124,
+      "text": "ലോകസഭയിൽ പട്ടിക ജാതി പട്ടിക വർഗ്ഗ ജനവി ഭാഗങ്ങൾക്കായി സീറ്റുകൾ സംവരണം ചെയ്തിരിക്കു ന്നതുമായി ബന്ധപ്പെട്ട അനുച്ഛേദം",
+      "options": [
+        {
+          "key": "A",
+          "text": "243"
+        },
+        {
+          "key": "B",
+          "text": "330"
+        },
+        {
+          "key": "C",
+          "text": "332"
+        },
+        {
+          "key": "D",
+          "text": "46"
+        }
+      ],
+      "correctOption": "B",
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 420.75156000000004
+      },
+      "recordIndex": 2858
+    },
+    {
+      "paperNumber": 4,
+      "questionNumber": 35,
+      "sourcePage": 22,
+      "text": "ദ്രോണാചാര്യ അവാർഡ് നേടിയ ആദ്യ മലയാളി",
+      "options": [
+        {
+          "key": "A",
+          "text": "ഒ.എം. നമ്പ്യാർ"
+        },
+        {
+          "key": "B",
+          "text": "പി.ടി. ഉഷ"
+        },
+        {
+          "key": "C",
+          "text": "ഷൈനി വിത്സൺ"
+        },
+        {
+          "key": "D",
+          "text": "കെ.പി. തോമസ്"
+        }
+      ],
+      "correctOption": "A",
+      "pdfLayerPosition": {
+        "x": 296.22047000000003,
+        "y": 459.75156000000004
+      },
+      "recordIndex": 337
+    },
+    {
+      "paperNumber": 30,
+      "questionNumber": 11,
+      "sourcePage": 119,
+      "text": "\"വരാനിരിക്കുന്ന തലമുറകൾക്കുള്ള ഉദാത്ത മാതൃ ക\" എന്ന് ഗാന്ധിജിയെ വിശേഷിപ്പിച്ചത് ആര്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "വിക്രം സാരാഭായ്"
+        },
+        {
+          "key": "B",
+          "text": "ആൽബർട്ട് ഐൻസ്റ്റീൻ"
+        },
+        {
+          "key": "C",
+          "text": "വിൻസ്റ്റൺ ചർച്ചിൽ"
+        },
+        {
+          "key": "D",
+          "text": "സി.വി. രാമൻ"
+        }
+      ],
+      "correctOption": "B",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 204.05077000000006
+      },
+      "recordIndex": 2738
+    },
+    {
+      "paperNumber": 44,
+      "questionNumber": 75,
+      "sourcePage": 177,
+      "text": "ഇത്രയും പറഞ്ഞുകൊണ്ട് അയാൾ തോണി തുഴ യാൻ തുടങ്ങി. അടിവരയിട്ട പദം പിരിച്ചെഴുതുക",
+      "options": [
+        {
+          "key": "A",
+          "text": "തുഴ + അൻ"
+        },
+        {
+          "key": "B",
+          "text": "തുഴ + യാൻ"
+        },
+        {
+          "key": "C",
+          "text": "തുഴ + ആൻ"
+        },
+        {
+          "key": "D",
+          "text": "തു + ആൻ"
+        }
+      ],
+      "correctOption": "C",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 303.75156000000004
+      },
+      "recordIndex": 4101
+    },
+    {
+      "paperNumber": 24,
+      "questionNumber": 29,
+      "sourcePage": 98,
+      "text": "എന്തിന്റെ കാലപ്പഴക്കം കണ്ടെത്താനാണ് കാർബ ൺ ഡേറ്റിങ്ങ് ഉപയോഗിക്കുന്നത്?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ഗുഹകൾ"
+        },
+        {
+          "key": "B",
+          "text": "സമുദ്രജീവികൾ"
+        },
+        {
+          "key": "C",
+          "text": "ഫോസിലുകൾ"
+        },
+        {
+          "key": "D",
+          "text": "പാറകൾ"
+        }
+      ],
+      "correctOption": "C",
+      "pdfLayerPosition": {
+        "x": 296.22047000000003,
+        "y": 303.75156000000004
+      },
+      "recordIndex": 2231
+    },
+    {
+      "paperNumber": 21,
+      "questionNumber": 72,
+      "sourcePage": 90,
+      "text": "'ശ്രീധരൻ' കഥാപാത്രമായ മലയാള നോവൽ",
+      "options": [
+        {
+          "key": "A",
+          "text": "ഇനി ഞാൻ ഉറങ്ങട്ടെ"
+        },
+        {
+          "key": "B",
+          "text": "രണ്ടാമൂഴം"
+        },
+        {
+          "key": "C",
+          "text": "ഒരു ദേശത്തിന്റെ കഥ"
+        },
+        {
+          "key": "D",
+          "text": "തലയോട്"
+        }
+      ],
+      "correctOption": "C",
+      "pdfLayerPosition": {
+        "x": 39.68504,
+        "y": 472.75156000000004
+      },
+      "recordIndex": 2007
+    },
+    {
+      "paperNumber": 34,
+      "questionNumber": 69,
+      "sourcePage": 137,
+      "text": "2016 മാർച്ച് 1-ാം തീയതി ചൊവ്വാഴ്ചയാണെങ്കിൽ ആ മാസം എത്ര ബുധനാഴ്ചകൾ ഉണ്ടാകും?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "5"
+        }
+      ],
+      "correctOption": null,
+      "pdfLayerPosition": {
+        "x": 313.22834,
+        "y": 199.75156000000004
+      },
+      "recordIndex": 3201
+    },
+    {
+      "paperNumber": 15,
+      "questionNumber": 60,
+      "sourcePage": 67,
+      "text": "ഗുരുവായൂർ സത്യാഗ്രഹത്തിന്റെ വാളണ്ടിയർ ക്യാ പ്റ്റൻ ആരായിരുന്നു",
+      "options": [
+        {
+          "key": "A",
+          "text": "കെ. കേളപ്പൻ"
+        },
+        {
+          "key": "B",
+          "text": "ടി.കെ. മാധവൻ"
+        },
+        {
+          "key": "C",
+          "text": "പി.കൃഷ്ണപിള്ള"
+        },
+        {
+          "key": "D",
+          "text": "എ.കെ. ഗോപാലൻ"
+        }
+      ],
+      "correctOption": "D",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 173.75156000000004
+      },
+      "recordIndex": 1468
+    },
+    {
+      "paperNumber": 18,
+      "questionNumber": 61,
+      "sourcePage": 81,
+      "text": "7, 15, 23, ----- എന്ന ശ്രേണിയിലെ പദമാകാൻ സാ ധ്യതയില്ലാത്തത് ഏത് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "103"
+        },
+        {
+          "key": "B",
+          "text": "87"
+        },
+        {
+          "key": "C",
+          "text": "71"
+        },
+        {
+          "key": "D",
+          "text": "64"
+        }
+      ],
+      "correctOption": "D",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 706.75156
+      },
+      "recordIndex": 1775
+    },
+    {
+      "paperNumber": 35,
+      "questionNumber": 2,
+      "sourcePage": 139,
+      "text": "ഓക്സ്ഫോർഡ് യൂണിവേഴ്സിറ്റിയിൽ ആദ്യമായി മലയാളത്തിൽ പ്രസംഗിച്ചത് ആരാണ് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ശ്രീ നാരായണഗുരു"
+        },
+        {
+          "key": "B",
+          "text": "മന്നത്ത് പത്മനാഭൻ"
+        },
+        {
+          "key": "C",
+          "text": "രവീന്ദ്രനാഥ ടാഗോർ"
+        },
+        {
+          "key": "D",
+          "text": "കൃഷ്ണപ്പിള്ള"
+        }
+      ],
+      "correctOption": "B",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 633.05077
+      },
+      "recordIndex": 3234
+    },
+    {
+      "paperNumber": 20,
+      "questionNumber": 4,
+      "sourcePage": 85,
+      "text": "മദർ തെരേസയോടുള്ള ആദര സൂചകമായി അവരു ടെ ജന്മദിനമായ ആഗസ്റ്റ് 26 ന് സ്റ്റാമ്പ് പുറത്തിറക്കിയ രാജ്യം",
+      "options": [
+        {
+          "key": "A",
+          "text": "ഫ്രാൻസ്"
+        },
+        {
+          "key": "B",
+          "text": "ഇറ്റലി"
+        },
+        {
+          "key": "C",
+          "text": "ജർമ്മനി"
+        },
+        {
+          "key": "D",
+          "text": "അമേരിക്ക"
+        }
+      ],
+      "correctOption": "D",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 425.16101000000003
+      },
+      "recordIndex": 1880
+    },
+    {
+      "paperNumber": 50,
+      "questionNumber": 100,
+      "sourcePage": 207,
+      "text": "By the time we reached the station, the train",
+      "options": [
+        {
+          "key": "A",
+          "text": "left"
+        },
+        {
+          "key": "B",
+          "text": "had left"
+        },
+        {
+          "key": "C",
+          "text": "has left"
+        },
+        {
+          "key": "D",
+          "text": "is left"
+        }
+      ],
+      "correctOption": "B",
+      "pdfLayerPosition": {
+        "x": 313.22834,
+        "y": 122.32756000000006
+      },
+      "recordIndex": 4693
+    },
+    {
+      "paperNumber": 10,
+      "questionNumber": 30,
+      "sourcePage": 46,
+      "text": "ജലത്തിൽ ഏറ്റവും ലയിക്കുന്ന വാതകം",
+      "options": [
+        {
+          "key": "A",
+          "text": "ഓക്സിജൻ"
+        },
+        {
+          "key": "B",
+          "text": "ക്ലോറിൻ"
+        },
+        {
+          "key": "C",
+          "text": "നൈട്രജൻ"
+        },
+        {
+          "key": "D",
+          "text": "അമോണിയ"
+        }
+      ],
+      "correctOption": "D",
+      "pdfLayerPosition": {
+        "x": 296.22047000000003,
+        "y": 459.75156000000004
+      },
+      "recordIndex": 957
+    },
+    {
+      "paperNumber": 14,
+      "questionNumber": 64,
+      "sourcePage": 63,
+      "text": "'ഇന്ത്യ ഇന്ത്യാക്കാർക്ക്' എന്ന മുദ്രാവാക്യം ആദ്യ മായി ഉയർത്തിയത് ആര് ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ദാദാഭായ് നവറോജി"
+        },
+        {
+          "key": "B",
+          "text": "സ്വാമി വിവേകാനന്ദൻ"
+        },
+        {
+          "key": "C",
+          "text": "സ്വാമി ദയാനന്ദസരസ്വതി"
+        },
+        {
+          "key": "D",
+          "text": "മഹാദേവ ഗോവിന്ദ റാനഡെ"
+        }
+      ],
+      "correctOption": "C",
+      "pdfLayerPosition": {
+        "x": 56.69291,
+        "y": 498.75156000000004
+      },
+      "recordIndex": 1369
+    }
+  ]
+}
