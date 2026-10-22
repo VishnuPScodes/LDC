@@ -504,6 +504,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .nav button.active, .nav button:hover { background: var(--surface); color: var(--green); }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; box-shadow: 0 8px 28px rgba(22, 48, 32, .045); }
 .hero { padding: 54px 50px; background: radial-gradient(ellipse at 100% 0, #dff0e4, transparent 50%), var(--surface); }
+.landing-collection { display: flex; width: -moz-fit-content; width: fit-content; flex-wrap: wrap; align-items: center; gap: 9px; margin: 19px 0 4px; padding: 7px 11px; border: 1px solid var(--green-line); border-radius: 999px; background: var(--green-soft); color: var(--green-strong); font-size: 12px; font-weight: 700; }
+.landing-collection span { padding-left: 9px; border-left: 1px solid var(--green-line); font-variant-numeric: tabular-nums; }
 .eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: .13em; color: var(--green); font-weight: 750; }
 .title { font-size: clamp(36px, 6vw, 62px); line-height: 1.08; letter-spacing: -.055em; margin: 15px 0; }
 .lead { color: var(--muted); line-height: 1.75; max-width: 600px; }
