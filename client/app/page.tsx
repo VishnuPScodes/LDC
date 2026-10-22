@@ -9,10 +9,11 @@ import ProgressPage from './ProgressPage';
 import ReportPage from './ReportPage';
 import MockExam from './MockExam';
 
-const API=process.env.NEXT_PUBLIC_API_URL||'http://localhost:4000/api';
+// Next.js inlines NEXT_PUBLIC_* values at build time. Keep localhost as a dev-only fallback.
+const API=(process.env.NEXT_PUBLIC_API_URL|| (process.env.NODE_ENV==='development'?'http://localhost:4000/api':'' )).replace(/\/+$/,'');
 type Q={_id:string;questionNumber:number;text:string;options:{key:string;text:string}[];topic:string;subtopic?:string;sourcePage?:number;paperNumber?:number};
 type View='home'|'syllabus'|'setup'|'review'|'progress'|'quiz'|'mock'|'report'|'history'|'auth';
-async function api(path:string,body?:any){const response=await fetch(API+path,{method:body?'POST':'GET',credentials:'include',headers:{'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error||'Something went wrong.');return data}
+async function api(path:string,body?:any){if(!API)throw new Error('API URL is not configured. Set NEXT_PUBLIC_API_URL in the frontend deployment environment and rebuild.');const response=await fetch(API+path,{method:body?'POST':'GET',credentials:'include',headers:{'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error||'Something went wrong.');return data}
 
 export default function Home(){
   const [user,setUser]=useState<any>(null),[auth,setAuth]=useState(false),[signup,setSignup]=useState(false),[authName,setAuthName]=useState(''),[authEmail,setAuthEmail]=useState(''),[authPassword,setAuthPassword]=useState('');
