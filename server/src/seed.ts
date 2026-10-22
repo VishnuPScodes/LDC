@@ -2,15 +2,17 @@ import 'dotenv/config';
 import mongoose from 'mongoose';
 import fs from 'node:fs';
 import { Question } from './models.js';
+import { PAPER_METADATA } from './paper-metadata.js';
 
 const rows = JSON.parse(fs.readFileSync(new URL('../data/questions.json', import.meta.url), 'utf8'));
 if (!Array.isArray(rows)) throw new Error('questions.json must contain an array');
 if (rows.length !== 4632) throw new Error(`Expected 4,632 questions; found ${rows.length}`);
+const rowsWithPaperMetadata=rows.map((question:any)=>({...question,...PAPER_METADATA[question.paperNumber]}));
 
 await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/ldc_practice');
 try {
   await Question.deleteMany({});
-  await Question.insertMany(rows, { ordered: false });
+  await Question.insertMany(rowsWithPaperMetadata, { ordered: false });
 
   const [total, eligible, cancelled, sidebar] = await Promise.all([
     Question.countDocuments(),

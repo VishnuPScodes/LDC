@@ -1,5 +1,6 @@
 node_modules/
 .next/
+client/.next-dev/cache/webpack/
 dist/
 .env
 .env.local

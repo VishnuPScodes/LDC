@@ -11,7 +11,7 @@ import MockExam from './MockExam';
 
 // Route API calls through the frontend origin so auth cookies remain first-party.
 const API='/api';
-type Q={_id:string;questionNumber:number;text:string;options:{key:string;text:string}[];topic:string;subtopic?:string;sourcePage?:number;paperNumber?:number};
+type Q={_id:string;questionNumber:number;text:string;options:{key:string;text:string}[];topic:string;subtopic?:string;sourcePage?:number;paperNumber?:number;paperCode?:string;examDate?:string};
 type View='home'|'syllabus'|'setup'|'review'|'progress'|'quiz'|'mock'|'report'|'history'|'feedback'|'auth';
 async function api(path:string,body?:any){const response=await fetch(API+path,{method:body?'POST':'GET',credentials:'include',headers:{'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error||'Something went wrong.');return data}
 

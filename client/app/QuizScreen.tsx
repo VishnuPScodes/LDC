@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import QuestionSource from './QuestionSource';
 
 type Option = { key: string; text: string };
-type Question = { _id: string; questionNumber: number; text: string; options: Option[]; topic: string; paperNumber?: number; sourcePage?: number };
+type Question = { _id: string; questionNumber: number; text: string; options: Option[]; topic: string; paperNumber?: number; paperCode?:string;examDate?:string;sourcePage?: number };
 type Feedback = { isCorrect: boolean; correctOption: string; explanation?: string | null };
 
 type Props = {
@@ -74,7 +75,7 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
         })}
       </div>
       <div className="quiz-footer">
-        <span className="question-source">Question {question.questionNumber}{question.paperNumber ? ` · Paper ${question.paperNumber}` : ''}{question.sourcePage ? ` · Page ${question.sourcePage}` : ''}</span>
+        <QuestionSource questionNumber={question.questionNumber} paperCode={question.paperCode} paperNumber={question.paperNumber} examDate={question.examDate} sourcePage={question.sourcePage}/>
         <button type="button" className={`report-link${reported ? ' reported' : ''}`} onClick={onReport} disabled={reported}>
           {reported ? '✓ Sent for review' : 'Report a problem'}
         </button>
