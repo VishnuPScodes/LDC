@@ -111,6 +111,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .bar span { height: 100%; display: block; background: var(--green); border-radius: 20px; }
 .error { color: #9e332d; background: var(--wrong-soft); padding: 12px; border-radius: 12px; }
 .hidden { display: none; }
+.app-version { max-width: 1180px; margin: 0 auto; padding: 10px 24px 18px; color: var(--muted); font-size: 11px; text-align: right; }
 
 /* Today: a quiet daily plan with lightweight habit cues. */
 .today-page { max-width: 1040px; margin: 0 auto; padding-bottom: 32px; }
@@ -419,6 +420,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .streak-history span.met { border-color: var(--amber); background: var(--amber); }
 
 @media (max-width:720px) {
+  .app-version { padding: 10px 14px max(14px, env(safe-area-inset-bottom)); }
   .landing-shell .shell { padding-bottom: 25px; }
   .landing-points { display: grid; gap: 8px; margin-top: 27px; }
   .today-heading { gap: 10px; }
