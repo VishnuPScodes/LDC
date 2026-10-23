@@ -1,16 +1,29 @@
-const CACHE_NAME='ldc-practice-v1';
+const CACHE_NAME='ldc-practice-v2';
 const OFFLINE_URL='/offline.html';
+const APP_SHELL_URL='/';
+const PRECACHE_URLS=[
+  APP_SHELL_URL,
+  OFFLINE_URL,
+  '/icons/icon.svg',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png',
+  '/icons/apple-touch-icon.png',
+  '/icons/maskable-192.png',
+  '/icons/maskable-512.png'
+];
 
 self.addEventListener('install',event=>{
   event.waitUntil(Promise.all([
-    caches.open(CACHE_NAME).then(cache=>cache.addAll([OFFLINE_URL,'/icons/icon.svg','/icons/icon-192.png','/icons/icon-512.png','/icons/apple-touch-icon.png','/icons/maskable-512.png'])),
+    caches.open(CACHE_NAME).then(cache=>cache.addAll(PRECACHE_URLS)),
     self.skipWaiting()
   ]));
 });
 
 self.addEventListener('activate',event=>{
-  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE_NAME).map(key=>caches.delete(key)))));
-  self.clients.claim();
+  event.waitUntil(Promise.all([
+    caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('ldc-practice-')&&key!==CACHE_NAME).map(key=>caches.delete(key)))),
+    self.clients.claim()
+  ]));
 });
 
 self.addEventListener('fetch',event=>{
@@ -35,6 +48,15 @@ self.addEventListener('fetch',event=>{
   }
 
   if(request.mode==='navigate'){
-    event.respondWith(fetch(request).catch(()=>caches.match(OFFLINE_URL)));
+    event.respondWith(fetch(request).then(async response=>{
+      if(response.ok&&url.pathname==='/'){
+        const cache=await caches.open(CACHE_NAME);
+        await cache.put(APP_SHELL_URL,response.clone());
+      }
+      return response;
+    }).catch(async()=>{
+      const cache=await caches.open(CACHE_NAME);
+      return await cache.match(request)||await cache.match(APP_SHELL_URL)||await cache.match(OFFLINE_URL);
+    }));
   }
 });

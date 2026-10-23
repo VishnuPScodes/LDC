@@ -20,7 +20,7 @@ export default function PwaRegistration(){
     const handleInstalled=()=>{setInstalled(true);setInstallPrompt(null);setShowGuide(false)};
     window.addEventListener('beforeinstallprompt',handleInstall);
     window.addEventListener('appinstalled',handleInstalled);
-    if('serviceWorker' in navigator)void navigator.serviceWorker.register('/sw.js',{scope:'/'}).catch(error=>console.error('PWA service worker registration failed',error));
+    if('serviceWorker' in navigator)void navigator.serviceWorker.register('/sw.js',{scope:'/',updateViaCache:'none'}).catch(error=>console.error('PWA service worker registration failed',error));
     return()=>{window.removeEventListener('beforeinstallprompt',handleInstall);window.removeEventListener('appinstalled',handleInstalled)};
   },[]);
 
