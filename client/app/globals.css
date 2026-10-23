@@ -82,6 +82,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .feedback-card { max-width: 680px; margin: 0 auto; }
 .feedback-card .section-title { margin: 8px 0 12px; }
 .feedback-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.pwa-install { position: fixed; z-index: 9; right: 18px; bottom: 18px; display: grid; justify-items: end; gap: 8px; }
+.pwa-install-button { min-height: 48px; display: inline-flex; align-items: center; gap: 8px; padding: 10px 15px; border: 0; border-radius: 999px; background: var(--green-strong); color: #fff; box-shadow: var(--shadow); font-size: 14px; font-weight: 750; }
+.pwa-install-button span { font-size: 18px; line-height: 1; }
+.pwa-install-guide { max-width: min(310px,calc(100vw - 32px)); margin: 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow); font-size: 13px; line-height: 1.55; }
 .first-visit-loader { position: fixed; z-index: 100; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; background: radial-gradient(ellipse at 50% 42%, #e5f2e8, transparent 48%), var(--bg); color: var(--ink); text-align: center; }
 .loader-mark { z-index: 1; display: grid; width: 76px; height: 76px; place-items: center; border-radius: 24px; background: var(--green-strong); box-shadow: 0 12px 30px rgba(23,99,66,.2); color: white; font-size: 35px; font-weight: 850; letter-spacing: -.09em; animation: loader-bob 1.8s ease-in-out infinite; }
 .loader-mark span { color: #9bd9ad; }
@@ -230,28 +234,35 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .dark .nav button.active { background: var(--surface-soft); color: var(--green); }
 
 @media (max-width: 720px) {
-  .shell { padding: 17px 16px 92px; }
-  .shell.quiz-shell { padding: 16px; }
-  .header { z-index: 30; margin-bottom: 25px; flex-wrap: nowrap; gap: 10px; }
-  .brand { font-size: 17px; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Malayalam', sans-serif; font-size: 15px; }
+  .shell { padding: 14px 14px calc(92px + env(safe-area-inset-bottom)); }
+  .shell.quiz-shell { padding: 14px 14px calc(20px + env(safe-area-inset-bottom)); }
+  .header { z-index: 30; margin-bottom: 20px; flex-wrap: nowrap; gap: 8px; padding-left: 14px; padding-right: 14px; }
+  .shell.dark > .header { left: 0; right: 0; width: 100%; margin-left: 0; margin-right: 0; padding-left: 14px; padding-right: 14px; }
+  .brand { order: 1; font-size: 16px; }
   .header .nav { display: none; }
-  .mobile-menu-toggle { display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:44px; margin-left:auto; padding:8px 12px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--ink); font-size:13px; font-weight:700; }
+  .mobile-menu-toggle { order: 0; display:inline-flex; align-items:center; justify-content:center; gap:9px; width:44px; min-height:44px; flex:0 0 44px; margin:0; padding:8px; border:1px solid var(--line); border-radius:13px; background:var(--surface); color:var(--ink); font-size:0; font-weight:700; }
+  .mobile-menu-label { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
   .menu-toggle-icon { display:grid; gap:4px; width:17px; }
   .menu-toggle-icon i { display:block; width:17px; height:2px; border-radius:2px; background:currentColor; transition:transform .18s ease,opacity .18s ease; }
   .menu-toggle-icon.is-open i:first-child { transform:translateY(6px) rotate(45deg); }
   .menu-toggle-icon.is-open i:nth-child(2) { opacity:0; }
   .menu-toggle-icon.is-open i:last-child { transform:translateY(-6px) rotate(-45deg); }
   .mobile-menu-scrim { position:fixed; z-index:20; inset:0; display:block; border:0; background:rgba(5,15,9,.3); }
-  .mobile-site-menu { position:fixed; z-index:31; top:76px; right:14px; display:grid; width:min(300px,calc(100vw - 28px)); max-height:calc(100dvh - 100px); overflow:auto; gap:3px; padding:9px; border:1px solid var(--line); border-radius:16px; background:var(--surface); box-shadow:var(--shadow); }
+  .mobile-site-menu { position:fixed; z-index:31; top:calc(68px + env(safe-area-inset-top)); right:12px; display:grid; width:min(320px,calc(100vw - 24px)); max-height:calc(100dvh - 92px - env(safe-area-inset-top)); overflow:auto; gap:3px; padding:9px; border:1px solid var(--line); border-radius:16px; background:var(--surface); box-shadow:var(--shadow); }
   .mobile-site-menu button { min-height:48px; padding:10px 13px; border:0; border-radius:10px; background:transparent; color:var(--ink); text-align:left; font-weight:650; }
   .mobile-site-menu button.active,.mobile-site-menu button:hover { background:var(--green-soft); color:var(--green); }
   .mobile-site-menu button.mobile-logout { margin-top:4px; border-top:1px solid var(--line); border-radius:0 0 10px 10px; color:var(--wrong); }
-  .mobile-bottom-nav { position: fixed; z-index: 8; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 6px max(8px, env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(16px); }
-  .mobile-bottom-nav button { display: flex; min-height: 52px; flex-direction: column; align-items: center; justify-content: center; gap: 1px; border: 0; border-radius: 12px; background: transparent; color: var(--muted); font-size: 10px; font-weight: 650; }
+  .mobile-bottom-nav { position: fixed; z-index: 8; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(4, 1fr); padding: 6px 6px max(8px, env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(16px); }
+  .pwa-install { right: 12px; bottom: calc(72px + env(safe-area-inset-bottom)); }
+  .mobile-bottom-nav button { display: flex; min-height: 50px; flex-direction: column; align-items: center; justify-content: center; gap: 2px; border: 0; border-radius: 12px; background: transparent; color: var(--muted); font-size: 11px; font-weight: 650; }
   .mobile-bottom-nav button.active { background: var(--green-soft); color: var(--green); }
   .mobile-nav-mark { font-size: 18px; line-height: 1.1; }
   .nav { overflow: auto; max-width: 100%; }
-  .hero { padding: 35px 24px; }
+  .hero { padding: 28px 19px; border-radius: 18px; }
+  .title { font-size: clamp(34px, 9.2vw, 42px); line-height: 1.12; letter-spacing: -.045em; }
+  .lead { font-size: 15px; line-height: 1.65; }
+  .landing-collection { gap: 7px; font-size: 11px; }
   .grid { grid-template-columns: 1fr; }
   .card { padding: 19px; }
   .quiz-page { min-height: calc(100vh - 32px); padding-bottom: 300px; }
