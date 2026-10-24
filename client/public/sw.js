@@ -1,4 +1,4 @@
-const CACHE_NAME='ldc-practice-v2';
+const CACHE_NAME='ldc-practice-v3';
 const OFFLINE_URL='/offline.html';
 const APP_SHELL_URL='/';
 const PRECACHE_URLS=[

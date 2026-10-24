@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#176342">
-    <title>Offline | LDC Practice</title>
+    <title>Connection problem | LDC Practice</title>
     <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f2f6f2;color:#18251f;font:16px/1.6 system-ui,sans-serif}.card{max-width:420px;margin:24px;padding:32px;border:1px solid #dfe7e1;border-radius:20px;background:white}h1{margin-top:0}p{color:#637169}a{display:inline-block;margin-top:12px;padding:12px 18px;border-radius:12px;background:#176342;color:#fff;text-decoration:none;font-weight:700}</style>
   </head>
-  <body><main class="card"><h1>You’re offline</h1><p>LDC Practice needs an internet connection to load questions and save your progress. Reconnect, then try again.</p><a href="/">Try again</a></main></body>
+  <body><main class="card"><h1 id="title">Can’t reach LDC Practice</h1><p id="message" role="status">The app could not be reached. Your device may still be online. Check your connection, then try again.</p><a href="/">Try again</a></main><script>const title=document.getElementById('title');const message=document.getElementById('message');function updateConnectionMessage(){if(navigator.onLine){title.textContent='Can’t reach LDC Practice';message.textContent='Your device is online, but LDC Practice could not be reached. Try again in a moment.'}else{title.textContent='You’re offline';message.textContent='LDC Practice needs an internet connection to load questions and save your progress. Reconnect, then try again.'}}updateConnectionMessage();window.addEventListener('online',()=>location.replace('/'));window.addEventListener('offline',updateConnectionMessage);</script></body>
 </html>

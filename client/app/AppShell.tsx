@@ -9,11 +9,12 @@ import ReviewPage from './ReviewPage';
 import ProgressPage from './ProgressPage';
 import ReportPage from './ReportPage';
 import MockExam from './MockExam';
+import KnowledgeCards from './KnowledgeCards';
 
 // Route API calls through the frontend origin so auth cookies remain first-party.
 const API='/api';
 type Q={_id:string;questionNumber:number;text:string;options:{key:string;text:string}[];topic:string;subtopic?:string;sourcePage?:number;paperNumber?:number;paperCode?:string;examDate?:string};
-type View='home'|'syllabus'|'setup'|'review'|'progress'|'quiz'|'mock'|'report'|'history'|'feedback'|'auth';
+type View='home'|'knowledge'|'syllabus'|'setup'|'review'|'progress'|'quiz'|'mock'|'report'|'history'|'feedback'|'auth';
 async function api(path:string,body?:any){const response=await fetch(API+path,{method:body?'POST':'GET',credentials:'include',headers:{'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error||'Something went wrong.');return data}
 
 export default function AppShell({landing}:{landing:ReactNode}){
@@ -51,6 +52,7 @@ export default function AppShell({landing}:{landing:ReactNode}){
 
   return <main className={`shell ${dark?'dark':''} ${view==='quiz'?'quiz-shell':''}`}>{view!=='quiz'&&view!=='mock'&&<Header view={view} setView={setView} dark={dark} setDark={(v:boolean)=>{setDark(v);localStorage.setItem('ldc-theme',v?'dark':'light')}} user={user} logout={logout}/>}{error&&<p className="error" role="alert">{error}<button className="error-dismiss" onClick={()=>setError('')}>Dismiss</button></p>}
     {view==='home'&&<TodayDashboard name={user?.name?.split(' ')[0]||'there'} dailyCount={dailyCount} dailyGoal={dailyGoal} streak={dailyStreak} progress={progress} syllabus={syllabus} reviewDue={reviewDue} weekDays={weekDays} onStart={(config:any)=>start({...config,count:Math.min(10,Math.max(1,dailyGoal-dailyCount||10)),includeReview:reviewDue>0})} onPracticeTopic={(topic:string)=>start({topics:[topic]})} onContinuePdf={()=>start({order:'pdf',topics:[]})} onOpenSyllabus={()=>setView('syllabus')}/>}
+    {view==='knowledge'&&<KnowledgeCards/>}
     {view==='syllabus'&&<SyllabusPage syllabus={syllabus} progress={progress} onPracticeTopic={(topic:string)=>start({topics:[topic]})}/>}
     {view==='setup'&&<PracticeSetup count={count} setCount={setCount} order={order} setOrder={setOrder} topics={topics} setTopics={setTopics} mode={mode} setMode={setMode} onlyWrong={onlyWrong} setOnlyWrong={setOnlyWrong} syllabus={syllabus} progress={progress} dailyGoal={dailyGoal} setDailyGoal={setGoal} dark={dark} setDark={(v:boolean)=>{setDark(v);localStorage.setItem('ldc-theme',v?'dark':'light')}} busy={busy} onStart={()=>void start()}/>}
     {view==='review'&&<ReviewPage count={reviewDue} busy={busy} onStart={()=>void start({reviewOnly:true,mode:'practice',order:'random',count:Math.max(1,reviewDue)})}/>}
@@ -72,8 +74,8 @@ function FirstVisitLoader(){
 
 function Header({view,setView,dark,setDark,user,logout}:any){
   const [menuOpen,setMenuOpen]=useState(false);
-  const desktop=[['home','Today'],['setup','Practice'],['syllabus','Syllabus'],['review','Review'],['progress','Progress']];
-  const mobile=[['home','Today'],['setup','Practice'],['review','Review'],['progress','Progress']];
+  const desktop=[['home','Today'],['knowledge','അറിവ്'],['setup','Practice'],['syllabus','Syllabus'],['review','Review'],['progress','Progress']];
+  const mobile=[['home','Today'],['knowledge','അറിവ്'],['setup','Practice'],['review','Review'],['progress','Progress']];
   const navigate=(target:string)=>{setView(target);setMenuOpen(false)};
   return <>
     <header className="header">
@@ -82,7 +84,7 @@ function Header({view,setView,dark,setDark,user,logout}:any){
       <nav className="nav">{user&&desktop.map(([target,label])=><button className={view===target?'active':''} key={target} onClick={()=>setView(target)}>{label}</button>)}{user&&<button onClick={()=>setView('history')} className={view==='history'?'active':''}>History</button>}{user&&<button className={view==='feedback'?'active':''} onClick={()=>setView('feedback')}>Feedback</button>}<button onClick={()=>setDark(!dark)} aria-label="Toggle theme">{dark?'☀':'◐'}</button>{user&&<button onClick={logout}>Log out</button>}</nav>
       {menuOpen&&<><button className="mobile-menu-scrim" aria-label="Close menu" onClick={()=>setMenuOpen(false)}/><nav className="mobile-site-menu" id="mobile-site-menu" aria-label="Mobile menu">{user&&desktop.map(([target,label])=><button type="button" key={target} className={view===target?'active':''} onClick={()=>navigate(target)}>{label}</button>)}{user&&<button type="button" className={view==='history'?'active':''} onClick={()=>navigate('history')}>History</button>}{user&&<button type="button" className={view==='feedback'?'active':''} onClick={()=>navigate('feedback')}>Share feedback</button>}<button type="button" onClick={()=>setDark(!dark)}>{dark?'☀ Switch to light theme':'◐ Switch to dark theme'}</button>{user&&<button type="button" className="mobile-logout" onClick={()=>{setMenuOpen(false);void logout()}}>Log out</button>}</nav></>}
     </header>
-    {user&&<nav className="mobile-bottom-nav" aria-label="Primary navigation">{mobile.map(([target,label])=><button type="button" key={target} className={view===target?'active':''} aria-current={view===target?'page':undefined} onClick={()=>setView(target)}><span className="mobile-nav-mark" aria-hidden="true">{target==='home'?'◷':target==='setup'?'＋':target==='review'?'↺':'▥'}</span>{label}</button>)}</nav>}
+    {user&&<nav className="mobile-bottom-nav" aria-label="Primary navigation">{mobile.map(([target,label])=><button type="button" key={target} className={view===target?'active':''} aria-current={view===target?'page':undefined} onClick={()=>setView(target)}><span className="mobile-nav-mark" aria-hidden="true">{target==='home'?'◷':target==='knowledge'?'✳':target==='setup'?'＋':target==='review'?'↺':'▥'}</span>{label}</button>)}</nav>}
   </>;
 }
 
