@@ -5,24 +5,94 @@
 
 :root {
   color-scheme: light;
-  --bg: #f2f6f2;
-  --surface: #ffffff;
-  --surface-soft: #f8faf8;
-  --ink: #18251f;
-  --muted: #637169;
-  --line: #dfe7e1;
-  --green: #247a55;
-  --green-strong: #176342;
-  --green-soft: #e8f4ec;
-  --green-line: #a5d0b4;
-  --correct: #168447;
-  --correct-soft: #e7f5eb;
-  --wrong: #b94f49;
-  --wrong-soft: #fff0ee;
-  --wrong-line: #e9b2ad;
-  --amber: #9a671c;
-  --amber-soft: #fbf3e3;
-  --shadow: 0 18px 50px rgba(20, 50, 33, .09);
+  --bg: #FAF8F3;
+  --surface: #FFFFFF;
+  --surface-muted: #F3F0E8;
+  --border: #E7E2D8;
+  --text: #1C1F1A;
+  --text-secondary: #5E625A;
+  --brand: #1F7A4D;
+  --brand-hover: #186640;
+  --on-brand: #FFFFFF;
+  --correct-bg: #ECFDF3;
+  --correct-border: #16A34A;
+  --wrong-bg: #FEF2F2;
+  --wrong-border: #DC2626;
+  --selected-bg: #EEF4F0;
+  --selected-border: #1F7A4D;
+  --accent: #D97706;
+  --focus-ring: rgba(31, 122, 77, .4);
+  --radius-card: 12px;
+  --radius-button: 10px;
+  --radius-pill: 999px;
+  --shadow-card: 0 1px 2px rgba(0,0,0,.04);
+
+  /* Compatibility aliases, removed as legacy selectors are migrated. */
+  --surface-soft: var(--surface-muted);
+  --ink: var(--text);
+  --muted: var(--text-secondary);
+  --line: var(--border);
+  --green: var(--brand);
+  --green-strong: var(--brand-hover);
+  --green-soft: var(--selected-bg);
+  --green-line: var(--selected-border);
+  --correct: var(--correct-border);
+  --correct-soft: var(--correct-bg);
+  --wrong: var(--wrong-border);
+  --wrong-soft: var(--wrong-bg);
+  --wrong-line: var(--wrong-border);
+  --amber: var(--accent);
+  --amber-soft: #FFF8E8;
+  --shadow: var(--shadow-card);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme-choice="light"]) {
+    color-scheme: dark;
+    --bg: #121513;
+    --surface: #1A1E1B;
+    --surface-muted: #202521;
+    --border: #2A2F2B;
+    --text: #ECEFEC;
+    --text-secondary: #A3ADA7;
+    --brand: #4CC38A;
+    --brand-hover: #63D19B;
+    --on-brand: #0E1A13;
+    --correct-bg: #0F2A1C;
+    --correct-border: #22C55E;
+    --wrong-bg: #2A1414;
+    --wrong-border: #EF4444;
+    --selected-bg: #1E2A23;
+    --selected-border: #4CC38A;
+    --accent: #F59E0B;
+    --focus-ring: rgba(76, 195, 138, .4);
+    --shadow-card: none;
+    --amber-soft: #33230D;
+  }
+}
+.dark, :root[data-theme-choice="dark"] {
+  color-scheme: dark;
+  --bg: #121513;
+  --surface: #1A1E1B;
+  --surface-muted: #202521;
+  --border: #2A2F2B;
+  --text: #ECEFEC;
+  --text-secondary: #A3ADA7;
+  --brand: #4CC38A;
+  --brand-hover: #63D19B;
+  --on-brand: #0E1A13;
+  --correct-bg: #0F2A1C;
+  --correct-border: #22C55E;
+  --wrong-bg: #2A1414;
+  --wrong-border: #EF4444;
+  --selected-bg: #1E2A23;
+  --selected-border: #4CC38A;
+  --accent: #F59E0B;
+  --focus-ring: rgba(76, 195, 138, .4);
+  --shadow-card: none;
+  --amber-soft: #33230D;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme-choice="light"]), .dark { color-scheme: dark; }
 }
 * { box-sizing: border-box; }
 html { background: var(--bg); }
