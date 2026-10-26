@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.8.0
+
+- Opened verified LDC question papers, syllabus topics, year pages, and mark distribution for public reading and Google indexing.
+- Added local-only guest practice with instant feedback, timed paper sessions, and optional import of recent guest sessions after sign-in.
+- Added public navigation, page metadata, generated social images, stable data-based sitemap dates, and configurable site URL.
+
 ## 1.7.0
 
 - Added a daily activity summary, a kind streak restart prompt, and a direct link to review questions due today.
