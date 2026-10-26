@@ -263,6 +263,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .knowledge-complete-count { margin-top: 8px; color: var(--green); font-size: 22px; font-weight: 800; }
 .knowledge-complete-count span { color: var(--muted); font-size: 13px; font-weight: 600; }
 
+/* Knowledge cards use the full viewport on desktop and mobile. */
+.knowledge-shell { padding: 0 !important; }
+.knowledge-shell > .header,.knowledge-shell > .mobile-bottom-nav { display: none !important; }
+.knowledge-page { position: fixed; z-index: 40; inset: 0; display: flex; width: 100%; height: 100vh; height: 100dvh; min-height: 100vh; min-height: 100dvh; flex-direction: column; overflow: hidden; margin: 0; padding: max(12px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left)); background: var(--bg); }
+.knowledge-top { flex: 0 0 auto; }
+.knowledge-stage { width: 100%; height: auto; min-height: 0; flex: 1 1 0; margin: 8px auto 0; }
+.knowledge-card { padding: clamp(24px,5vh,52px) clamp(24px,6vw,80px); border-radius: 28px; }
+.knowledge-card-content { max-width: 900px; align-self: center; width: 100%; }
+.knowledge-card-content h2 { max-width: 780px; font-size: clamp(26px,4vw,46px); }
+.knowledge-card-content p { max-width: 780px; font-size: clamp(17px,2vw,23px); }
+.knowledge-card-footer { font-size: 13px; }
+.knowledge-card-footer span { text-align: right; }
+.knowledge-progress,.knowledge-intro,.knowledge-hints,.knowledge-footnote { display: none !important; }
+body:has(.knowledge-shell) > footer.app-version { display: none; }
+
 .dark { --bg: #0a120e; --surface: #111d16; --surface-soft: #14241a; --ink: #edf4ef; --muted: #a9b7ae; --line: #243b2e; --green: #2e7d52; --green-strong: #246342; --green-soft: #193323; --green-line: #4ade80; --correct: #4ade80; --correct-soft: #2e7d52; --wrong: #ef4444; --wrong-soft: #4a1d1d; --wrong-line: #f87171; --amber: #d97706; --amber-soft: #33230d; --shadow: 0 18px 50px rgba(0, 0, 0, .25); min-height: 100vh; background: var(--bg) !important; color: var(--ink) !important; }
 .dark { color-scheme: dark; }
 .shell.dark { width: 100%; max-width: none; margin: 0; background: var(--bg); }
