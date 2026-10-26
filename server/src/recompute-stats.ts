@@ -13,7 +13,7 @@ async function main(){
  let changed=0;
  for(const user of users){
   const computed=await getLearnerStats(String(user._id));
-  const snapshot={points:computed.points,level:computed.level,pointsToNextLevel:computed.pointsToNextLevel,questionsAnswered:computed.questionsAnswered,correct:computed.correct,accuracy:computed.accuracy,streak:computed.streak,bestStreak:computed.bestStreak,activeDays:computed.activeDays,sessionCount:computed.sessionCount,sessionsCompleted:computed.sessionsCompleted,mockExams:computed.mockExams,dailyGoal:computed.dailyGoal,goalDays:computed.goalDays,topicStats:computed.topicStats,coverage:computed.coverage,sessionPoints:computed.sessionPoints,sessionAwards:computed.sessionAwards};
+  const snapshot={points:computed.points,level:computed.level,pointsToNextLevel:computed.pointsToNextLevel,questionsAnswered:computed.questionsAnswered,correct:computed.correct,accuracy:computed.accuracy,streak:computed.streak,bestStreak:computed.bestStreak,activeDays:computed.activeDays,sessionCount:computed.sessionCount,sessionsCompleted:computed.sessionsCompleted,mockExams:computed.mockExams,dailyGoal:computed.dailyGoal,goalDays:computed.goalDays,topicStats:computed.topicStats,coverage:computed.coverage,sessionPoints:computed.sessionPoints,sessionAwards:computed.sessionAwards,milestones:computed.milestones};
   const before=JSON.stringify(user.learnerStatsSnapshot||null),after=JSON.stringify(snapshot);
   if(before===after){console.log(`UNCHANGED ${user._id} · ${snapshot.points} points · level ${snapshot.level}`);continue}
   changed++;

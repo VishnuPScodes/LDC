@@ -132,6 +132,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .session-points { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 0 16px; border-color:rgba(201,151,48,.5); }
 .session-points strong { color:var(--amber); font-size:1.2rem; }
 .session-points span { color:var(--muted); text-align:right; }
+.milestone-earned-note { display:flex; align-items:center; gap:12px; margin-bottom:12px; border-color:var(--amber); background:var(--amber-soft); }
+.milestone-earned-note>span { color:var(--amber); font-size:1.5rem; }
+.milestone-earned-note p { margin:0; color:var(--muted); font-size:.86rem; }
 .level-up-scrim { position:fixed; inset:0; z-index:120; display:grid; place-items:center; padding:20px; background:rgba(4,18,13,.72); }
 .level-up-card { width:min(100%,390px); padding:32px; text-align:center; border:1px solid var(--amber); border-radius:24px; background:var(--card); box-shadow:0 24px 90px #0008; animation:level-up-in .28s ease-out both; }
 .level-up-card h2 { margin:8px 0; font-size:1.7rem; }
@@ -223,6 +226,30 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .journey-topic-stats strong { color:var(--ink); }
 .journey-mastery-rule { color:var(--muted); font-size:.9rem; }
 .journey-sheet .button { min-height:48px; }
+.milestones-page { max-width:1000px; margin:0 auto; }
+.milestones-page>.small { color:var(--muted); }
+.milestones-loading { min-height:180px; display:grid; place-items:center; color:var(--muted); border:1px solid var(--line); border-radius:18px; }
+.milestone-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:20px; }
+.milestone-card { min-width:0; padding:18px; border:1px solid var(--line); border-radius:17px; background:var(--surface); color:var(--muted); }
+.milestone-card.earned { border-color:var(--green-line); color:var(--ink); }
+.milestone-card-top { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.milestone-mark { width:32px; height:32px; display:grid; place-items:center; border:1px solid var(--muted); border-radius:50%; font-weight:800; }
+.milestone-card.earned .milestone-mark { border-color:var(--green); background:var(--green); color:white; }
+.milestone-state { font-size:.82rem; font-weight:700; }
+.milestone-card h2 { margin:12px 0 5px; color:var(--ink); font-size:1.05rem; }
+.milestone-card p { min-height:46px; margin:0 0 12px; font-size:.9rem; }
+.milestone-card time { color:var(--muted); font-size:.85rem; }
+.milestone-progress { height:8px; margin:14px 0 7px; overflow:hidden; border-radius:99px; background:var(--line); }
+.milestone-progress span { display:block; height:100%; border-radius:inherit; background:var(--amber); }
+.milestone-progress-label { color:var(--ink); font-size:.85rem; }
+.recent-milestones .row { align-items:center; }
+.recent-milestones .row h2 { margin:0; }
+.recent-milestone-list { display:grid; gap:10px; margin-top:14px; }
+.recent-milestone-list>div { display:flex; align-items:center; gap:10px; min-height:44px; }
+.recent-milestone-list>div>span { color:var(--green); font-weight:900; }
+.recent-milestone-list strong { flex:1; }
+.recent-milestone-list time { color:var(--muted); font-size:.84rem; white-space:nowrap; }
+@media(max-width:600px){.milestone-grid{grid-template-columns:1fr}.milestone-card p{min-height:0}}
 .syllabus-title { margin: 4px 0 2px; }
 .syllabus-intro { margin: 0 0 19px; }
 .syllabus-link { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; margin-top: 17px; padding: 7px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); color: var(--green); font-weight: 700; }

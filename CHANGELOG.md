@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.0
+
+- Added historical, dependency-ordered milestones, recent milestone highlights, and an all-milestones page with progress toward locked achievements.
+
 ## 1.4.0
 
 - Added computed points, levels, streak totals, daily goal rewards, mock and review bonuses, and session point summaries from answer history.
