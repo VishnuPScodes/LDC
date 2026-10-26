@@ -574,6 +574,77 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
 .error { border-left: 3px solid var(--wrong-border); border-radius: 4px var(--radius-button) var(--radius-button) 4px; color: var(--text); }
 @media (min-width: 900px) { .question-prompt { font-size: 21px; } .quiz-option { font-size: 18px; } }
 
+/* Page cleanup: calm surfaces, fewer competing accents and consistent spacing. */
+*, *::before, *::after { text-shadow: none; }
+.card, .today-summary-card, .restart-streak-card, .review-due-card, .daily-goal-card, .today-plan, .points-level-card,
+.topic-card, .journey-map-wrap, .journey-list-row, .milestone-card, .progress-metric, .mock-question-card,
+.public-card, .knowledge-card, .knowledge-complete, .quiz-content, .setup-group, .setup-page > .card {
+  border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface); box-shadow: var(--shadow-card); color: var(--text);
+}
+.hero, .today-plan, .first-visit-loader, .knowledge-card, .knowledge-card-under, .knowledge-complete,
+.public-home-hero, .public-page-heading { background-image: none !important; }
+.hero { background: var(--surface); }
+.today-heading { margin-bottom: 24px; }
+.today-heading .title { margin: 0 0 8px; font-size: clamp(26px, 2.25vw, 32px); }
+.today-subtitle { color: var(--text-secondary); }
+.motivation-cards { display: block; }
+.points-level-card { margin-top: 16px; }
+.daily-goal-card { min-height: 124px; margin-bottom: 24px; padding: 20px 24px; background: var(--surface); }
+.goal-ring { color: var(--brand); }
+.goal-copy .eyebrow { font-size: 14px; }
+.goal-copy h2 { font-size: 20px; }
+.goal-streak { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-size: 14px; white-space: nowrap; }
+.goal-streak span { font-size: 17px; }
+.goal-streak strong { font-weight: 600; }
+.streak-card { display: none; }
+.today-plan { margin-bottom: 24px; padding: 24px; }
+.today-plan .eyebrow, .plan-note { color: var(--text-secondary); font-size: 14px; }
+.plan-copy h2 { font-size: 20px; }
+.plan-start { min-width: 112px; }
+.today-links { display: flex; flex-wrap: wrap; gap: 16px 24px; margin-top: 20px; }
+.syllabus-link, .pdf-order-link { min-height: 32px; margin: 0; padding: 4px 0; border: 0; background: transparent; color: var(--brand); font-weight: 500; text-decoration: none; }
+.syllabus-link:hover, .pdf-order-link:hover { color: var(--brand-hover); text-decoration: underline; }
+.setup-page, .syllabus-page, .milestones-page { max-width: 720px; }
+.setup-group { margin: 0 0 24px; padding: 20px 24px; }
+.setup-group h2 { margin-top: 0; }
+.preset-pill, .topic-pill, .mode-option { background: var(--surface); border: 1px solid var(--border); color: var(--text); border-radius: var(--radius-button); }
+.preset-pill.selected, .topic-pill.selected, .mode-option.selected, .syllabus-tabs button.selected, .journey-view-controls button.selected, .progress-range button.selected { border-color: var(--selected-border); background: var(--selected-bg); color: var(--text); }
+.setup-start { width: 100%; }
+.knowledge-card { padding: 24px; border-radius: var(--radius-card); }
+.knowledge-card-glow, .knowledge-card-under { display: none !important; }
+.knowledge-topic, .knowledge-progress strong, .knowledge-card-footer a { color: var(--text-secondary); }
+.knowledge-card-content h2 { font-size: 20px; font-weight: 600; line-height: 1.5; letter-spacing: 0; }
+.knowledge-card-content p { font-size: 18px; line-height: 1.7; }
+.knowledge-progress-track { height: 6px; background: var(--surface-muted); }
+.knowledge-progress-track span { background: var(--brand); }
+.knowledge-card-actions .knowledge-action-known { background: var(--brand); color: var(--on-brand); }
+.topic-card:hover { border-color: var(--border); background: var(--surface); }
+.syllabus-link, .pdf-order-link, .report-link { color: var(--brand); }
+.mobile-bottom-nav a.active { color: var(--brand); }
+.bar, .quiz-progress, .topic-meter, .milestone-progress, .points-level-meter, .knowledge-progress-track { background: var(--surface-muted); }
+.bar span, .quiz-progress span, .topic-meter > span, .milestone-progress span, .points-level-meter span, .knowledge-progress-track span { background: var(--brand); }
+.level-badge, .session-points strong, .milestone-earned-note > span, .streak-card { color: var(--accent); }
+.journey-route-line { stroke: var(--border); }
+.journey-stop.reached .journey-stop-dot, .journey-legend i.reached, .milestone-card.earned .milestone-mark { border-color: var(--brand); background: var(--brand); }
+.journey-stop.current .journey-stop-dot, .journey-legend i.current { fill: var(--surface-muted); stroke: var(--border); background: var(--surface-muted); }
+.journey-list-row.current, .milestone-card.earned { border-color: var(--border); background: var(--surface); }
+.activity-day.level-1, .activity-legend i.level-1 { background: var(--selected-bg); }
+.activity-day.level-2, .activity-legend i.level-2 { background: color-mix(in srgb, var(--brand) 55%, var(--surface)); }
+.activity-day.level-3, .activity-legend i.level-3 { background: var(--brand); }
+.goal-confetti { display: none !important; }
+.quiz-option:hover:not(:disabled) { transform: none; }
+.feedback-verdict.verdict-correct, .feedback-verdict.verdict-wrong { background: var(--surface-muted); border-color: var(--border); }
+.feedback-good { background: var(--correct-bg); border-color: var(--correct-border); }
+.feedback-missed { background: var(--wrong-bg); border-color: var(--wrong-border); }
+.app-version { font-size: 13px; }
+@media (max-width: 720px) {
+  .daily-goal-card { flex-wrap: wrap; padding: 16px; }
+  .goal-streak { flex-basis: 100%; margin-left: 1px; }
+  .today-plan { align-items: flex-start; flex-direction: column; padding: 16px; }
+  .plan-start { width: 100%; }
+  .setup-group { padding: 16px; }
+}
+
 @media (max-width: 720px) {
   body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Malayalam', sans-serif; font-size: 15px; }
   .shell { min-height: 100dvh; padding: 14px 14px calc(80px + env(safe-area-inset-bottom)); }

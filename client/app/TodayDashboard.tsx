@@ -46,8 +46,7 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
 
   return <div className="today-page">
     <section className="today-heading">
-      <div><div className="eyebrow">{ml?'ഇന്ന്':'TODAY'}</div><h1 className="title">{ml?`${name}, ഇന്ന് പഠിക്കാം.`:`Good ${new Date().getHours() < 12 ? 'morning' : 'day'}, ${name}.`}</h1><p className="today-subtitle">{ml?'ചെറിയൊരു പരിശീലനവും വലിയ മുന്നേറ്റമാണ്.':'A steady session is progress. Let’s take the next step.'}</p>{featureFlags.examCountdown&&<p className="exam-countdown">{targetExamDate?countdownText(daysUntilExam(targetExamDate),ml):<button type="button" className="text-button" onClick={onOpenSettings}>{ml?'പരീക്ഷാ തീയതി ചേർക്കുക':'Set your exam date'}</button>}</p>}</div>
-      <div className="streak-card" aria-label={`${streak} day streak`}><span aria-hidden="true">✦</span><div><strong>{streak} day{streak === 1 ? '' : 's'}</strong><small>daily goal streak</small><div className="week-dots" aria-label="Weekly goal activity">{'MTWTFSS'.split('').map((day, i) => <span key={i} className={`${weekDays[i] ? 'complete' : ''}${i === (new Date().getDay()+6)%7 ? ' today' : ''}`} aria-hidden="true">{day}</span>)}</div></div></div>
+      <div><h1 className="title">{ml?`നമസ്കാരം, ${name}`:`Good ${new Date().getHours() < 12 ? 'morning' : 'day'}, ${name}.`}</h1><p className="today-subtitle">{ml?'ചെറിയൊരു പരിശീലനവും വലിയ മുന്നേറ്റമാണ്.':'A steady session is progress. Let’s take the next step.'}</p>{featureFlags.examCountdown&&<p className="exam-countdown">{targetExamDate?countdownText(daysUntilExam(targetExamDate),ml):<button type="button" className="text-button" onClick={onOpenSettings}>{ml?'പരീക്ഷാ തീയതി ചേർക്കുക':'Set your exam date'}</button>}</p>}</div>
     </section>
 
     {featureFlags.todaySummary&&dailyCount>0&&<section className="today-summary-card" aria-label={ml?'ഇന്നത്തെ സംഗ്രഹം':'Today summary'}><div className="eyebrow">{ml?'ഇന്നത്തെ സംഗ്രഹം':'TODAY SO FAR'}</div><div className="today-summary-stats"><span><strong>{dailyCount}</strong>{ml?' ചോദ്യങ്ങൾ':' questions'}</span><span><strong>{Math.round(learnerStats?.todayAccuracy||0)}%</strong>{ml?' കൃത്യത':' accuracy'}</span><span><strong>+{learnerStats?.pointsEarnedToday||0}</strong>{ml?' പോയിന്റുകൾ':' points'}</span></div></section>}
@@ -64,6 +63,7 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
       </div>
       <div className="goal-copy"><div className="eyebrow">DAILY GOAL</div><h2>{percent >= 100 ? 'Goal complete' : 'One question at a time'}</h2><p>{dailyCount} of {dailyGoal} questions today</p></div>
       <div className="goal-count"><strong>{Math.min(dailyCount, dailyGoal)}</strong><span>/ {dailyGoal}</span></div>
+      <div className="goal-streak" aria-label={`${streak} day streak`}><span aria-hidden="true">🔥</span><strong>{streak}-day streak</strong></div>
     </section>{featureFlags.points&&<PointsLevelCard stats={learnerStats} language={language}/>}</div>
 
     <section className="today-plan card">
@@ -73,8 +73,7 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
 
     {featureFlags.todaySummary&&reviewDue>0&&<section className="review-due-card"><div><strong>{ml?`${reviewDue} ആവർത്തന ചോദ്യങ്ങൾ ഇന്ന് ചെയ്യാനുണ്ട്`:`${reviewDue} review questions due today`}</strong><span>{ml?'ഇപ്പോൾ വീണ്ടും പരിശീലിച്ച് ഓർമ്മ ഉറപ്പിക്കൂ.':'Give these questions another try to strengthen recall.'}</span></div><button className="secondary-button" type="button" onClick={onOpenReview}>{ml?'ആവർത്തിക്കുക':'Review now'} →</button></section>}
 
-    <button className="syllabus-link" type="button" onClick={onOpenSyllabus}>{ml?'പാഠ്യപദ്ധതി യാത്ര കാണുക':'Explore syllabus journey'} <span aria-hidden="true">→</span></button>
-    <button className="pdf-order-link" type="button" onClick={onContinuePdf}>Continue in Question Paper order <span aria-hidden="true">→</span></button>
+    <div className="today-links"><button className="syllabus-link" type="button" onClick={onOpenSyllabus}>{ml?'പാഠ്യപദ്ധതി യാത്ര കാണുക':'Explore syllabus journey'} <span aria-hidden="true">→</span></button><button className="pdf-order-link" type="button" onClick={onContinuePdf}>Continue in Question Paper order <span aria-hidden="true">→</span></button></div>
   </div>;
 }
 
