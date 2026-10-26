@@ -1,0 +1,1 @@
+export default function PublicFooter(){return <footer className="public-footer"><p>Questions are sourced from Kerala PSC examination papers. LDC Practice is an independent study resource and is not affiliated with Kerala PSC.</p><nav aria-label="Public resources"><a href="/papers">Question Papers</a><a href="/topics">Topics</a><a href="/ldc-syllabus">Syllabus</a></nav></footer>}
