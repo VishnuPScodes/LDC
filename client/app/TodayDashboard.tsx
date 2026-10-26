@@ -16,10 +16,13 @@ type Props = {
   onContinuePdf: () => void;
   onOpenSyllabus: () => void;
   reviewDue?: number;
+  reviewTomorrow?: number;
   weekDays?: boolean[];
+  unfinishedSession?: any;
+  onResume?: (session:any)=>void;
 };
 
-export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, progress, syllabus, onStart, onContinuePdf, onOpenSyllabus, reviewDue = 0, weekDays = [] }: Props) {
+export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, progress, syllabus, onStart, onContinuePdf, onOpenSyllabus, reviewDue = 0, reviewTomorrow=0, weekDays = [],unfinishedSession,onResume }: Props) {
   const [celebrate,setCelebrate]=useState(false);
   const topicStats: TopicProgress[] = progress?.coverage?.byTopic || [];
   const bestFocus = [...syllabus].map(topic => {
@@ -38,6 +41,8 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
       <div className="streak-card" aria-label={`${streak} day streak`}><span aria-hidden="true">✦</span><div><strong>{streak} day{streak === 1 ? '' : 's'}</strong><small>daily goal streak</small><div className="week-dots" aria-label="Weekly goal activity">{'MTWTFSS'.split('').map((day, i) => <span key={i} className={`${weekDays[i] ? 'complete' : ''}${i === (new Date().getDay()+6)%7 ? ' today' : ''}`} aria-hidden="true">{day}</span>)}</div></div></div>
     </section>
 
+    {unfinishedSession&&<section className="continue-session-card"><div><strong>Continue where you left off</strong><span>{unfinishedSession.settings?.mode==='mock'?'Mock exam':`${unfinishedSession.settings?.count||0} question session`}</span></div><button type="button" className="secondary-button" onClick={()=>onResume?.(unfinishedSession)}>Continue →</button></section>}
+
     <section className={`daily-goal-card${percent >= 100 ? ' goal-done' : ''}`} aria-label="Daily question goal">
       {celebrate&&<span className="goal-confetti" aria-hidden="true">{Array.from({length:7},(_,i)=><i key={i} style={{'--particle':i} as any}/>)}</span>}
       <div className="goal-ring" role="progressbar" aria-label="Daily goal progress" aria-valuemin={0} aria-valuemax={dailyGoal} aria-valuenow={Math.min(dailyCount, dailyGoal)}>
@@ -49,7 +54,7 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
     </section>
 
     <section className="today-plan card">
-      <div className="plan-copy"><div className="eyebrow">TODAY’S PLAN</div><h2>{bestFocus?.topic || 'A short practice session'}</h2><p>{bestFocus ? `${Math.max(1, Math.min(10, dailyGoal - dailyCount || 10))} focused questions · ${bestFocus.marks} syllabus marks${bestFocus.attempts >= 10 ? ` · ${Math.round(bestFocus.accuracy)}% accuracy` : ''}` : 'A gentle mix from your eligible question bank.'}</p><span className="plan-note">Review due: {reviewDue}</span></div>
+      <div className="plan-copy"><div className="eyebrow">TODAY’S PLAN</div><h2>{bestFocus?.topic || 'A short practice session'}</h2><p>{bestFocus ? `${Math.max(1, Math.min(10, dailyGoal - dailyCount || 10))} focused questions · ${bestFocus.marks} syllabus marks${bestFocus.attempts >= 10 ? ` · ${Math.round(bestFocus.accuracy)}% accuracy` : ''}` : 'A gentle mix from your eligible question bank.'}</p><span className="plan-note">Review due: {reviewDue}{reviewTomorrow?` · ${reviewTomorrow} tomorrow`:''}</span></div>
       <button className="button plan-start" type="button" onClick={() => onStart(bestFocus ? { topics: [bestFocus.topic] } : {})}>Start <span aria-hidden="true">→</span></button>
     </section>
 
