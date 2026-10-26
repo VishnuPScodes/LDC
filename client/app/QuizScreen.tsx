@@ -54,7 +54,7 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
     <div className="quiz-content">
       <div className="quiz-topic">{question.topic}</div>
       <h1 className="question-prompt" lang={/[ഀ-ൿ]/u.test(question.text)?'ml':'en'}>{question.text}</h1>
-      <div className="quiz-options" role="group" aria-label="Answer choices">
+      <div className={`quiz-options${question.options.every(option => option.text.length <= 40) ? ' short-options' : ''}`} role="group" aria-label="Answer choices">
         {question.options.map((option, position) => {
           const selected = picked === option.key;
           const isCorrectAnswer = feedback?.correctOption === option.key;
@@ -65,7 +65,7 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
             className={`quiz-option${isWrongSelection ? ' is-wrong' : ''}${feedback && isCorrectAnswer ? ' is-correct' : ''}${selected&&!feedback ? ' is-selected' : ''}${dim ? ' is-dimmed' : ''}`}
             whileTap={!picked && !reduceMotion ? { y: 2 } : undefined}
             animate={reduceMotion ? undefined : isWrongSelection ? { x: [0, -4, 4, -3, 0] } : isRightSelection ? { scale: [1, 1.012, 1] } : undefined}
-            transition={{ duration: .24 }} disabled={!!picked} aria-pressed={selected} data-answer-option="true" onClick={() => onChoose(option.key)}>
+            transition={{ duration: .24 }} disabled={!!picked} aria-pressed={selected} aria-label={`${option.key}. ${option.text}${isRightSelection || isCorrectAnswer ? ', Correct' : isWrongSelection ? ', Incorrect' : ''}`} data-answer-option="true" onClick={() => onChoose(option.key)}>
             <span className="option-badge">{option.key}</span>
             <span className="option-copy" lang={/[ഀ-ൿ]/u.test(option.text)?'ml':'en'}>{option.text}</span>
             <span className="option-mark" aria-hidden="true">
