@@ -9,7 +9,7 @@ const nextConfig = {
       || process.env.NEXT_PUBLIC_API_URL
       || (process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : 'https://ldc-2vk9-ashen.vercel.app');
     const backendOrigin = configuredBackend.replace(/\/+$/, '').replace(/\/api$/i, '');
-    return [{ source: '/api/:path*', destination: `${backendOrigin}/api/:path*` }];
+    return {afterFiles:[{source:'/api/:path((?!public/guest-session).*)',destination:`${backendOrigin}/api/:path*`}]};
   },
 };
 export default nextConfig;
