@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.0
+
+- Added a daily activity summary, a kind streak restart prompt, and a direct link to review questions due today.
+- Removed the separate local streak and question counter so Today uses the shared learner statistics.
+
 ## 1.6.0
 
 - Rebuilt Progress with time ranges, an activity calendar, topic accuracy practice links, mock score trends, and shared learner statistics.

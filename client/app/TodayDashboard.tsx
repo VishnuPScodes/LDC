@@ -27,9 +27,10 @@ type Props = {
   targetExamDate?: string;
   onOpenSettings?:()=>void;
   learnerStats?:any;
+  onOpenReview?:()=>void;
 };
 
-export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, progress, syllabus, onStart, onContinuePdf, onOpenSyllabus, reviewDue = 0, reviewTomorrow=0, weekDays = [],unfinishedSession,onResume,language='en',targetExamDate,onOpenSettings,learnerStats }: Props) {
+export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, progress, syllabus, onStart, onContinuePdf, onOpenSyllabus, reviewDue = 0, reviewTomorrow=0, weekDays = [],unfinishedSession,onResume,language='en',targetExamDate,onOpenSettings,learnerStats,onOpenReview }: Props) {
   const ml=language==='ml';
   const [celebrate,setCelebrate]=useState(false);
   const topicStats: TopicProgress[] = progress?.coverage?.byTopic || [];
@@ -49,6 +50,10 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
       <div className="streak-card" aria-label={`${streak} day streak`}><span aria-hidden="true">✦</span><div><strong>{streak} day{streak === 1 ? '' : 's'}</strong><small>daily goal streak</small><div className="week-dots" aria-label="Weekly goal activity">{'MTWTFSS'.split('').map((day, i) => <span key={i} className={`${weekDays[i] ? 'complete' : ''}${i === (new Date().getDay()+6)%7 ? ' today' : ''}`} aria-hidden="true">{day}</span>)}</div></div></div>
     </section>
 
+    {featureFlags.todaySummary&&dailyCount>0&&<section className="today-summary-card" aria-label={ml?'ഇന്നത്തെ സംഗ്രഹം':'Today summary'}><div className="eyebrow">{ml?'ഇന്നത്തെ സംഗ്രഹം':'TODAY SO FAR'}</div><div className="today-summary-stats"><span><strong>{dailyCount}</strong>{ml?' ചോദ്യങ്ങൾ':' questions'}</span><span><strong>{Math.round(learnerStats?.todayAccuracy||0)}%</strong>{ml?' കൃത്യത':' accuracy'}</span><span><strong>+{learnerStats?.pointsEarnedToday||0}</strong>{ml?' പോയിന്റുകൾ':' points'}</span></div></section>}
+
+    {featureFlags.todaySummary&&learnerStats&&streak===0&&<section className="restart-streak-card"><div><strong>{ml?'ഇന്ന് പുതിയ തുടക്കം കുറിക്കാം':'Start a new streak today'}</strong><span>{ml?`${dailyGoal} ചോദ്യങ്ങൾ · ദിവസേനയുള്ള ലക്ഷ്യം നേടൂ`:`${dailyGoal} questions · meet your daily goal`}</span></div><button className="secondary-button" type="button" onClick={()=>onStart({count:dailyGoal})}>{ml?'പരിശീലിക്കുക':'Start today'} →</button></section>}
+
     {unfinishedSession&&<section className="continue-session-card"><div><strong>Continue where you left off</strong><span>{unfinishedSession.settings?.mode==='mock'?'Mock exam':`${unfinishedSession.settings?.count||0} question session`}</span></div><button type="button" className="secondary-button" onClick={()=>onResume?.(unfinishedSession)}>Continue →</button></section>}
 
     <div className="motivation-cards"><section className={`daily-goal-card${percent >= 100 ? ' goal-done' : ''}`} aria-label="Daily question goal">
@@ -65,6 +70,8 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
       <div className="plan-copy"><div className="eyebrow">TODAY’S PLAN</div><h2>{bestFocus?.topic || 'A short practice session'}</h2><p>{bestFocus ? `${Math.max(1, Math.min(10, dailyGoal - dailyCount || 10))} focused questions · ${bestFocus.marks} syllabus marks${bestFocus.attempts >= 10 ? ` · ${Math.round(bestFocus.accuracy)}% accuracy` : ''}` : 'A gentle mix from your eligible question bank.'}</p><span className="plan-note">Review due: {reviewDue}{reviewTomorrow?` · ${reviewTomorrow} tomorrow`:''}</span></div>
       <button className="button plan-start" type="button" onClick={() => onStart(bestFocus ? { topics: [bestFocus.topic] } : {})}>Start <span aria-hidden="true">→</span></button>
     </section>
+
+    {featureFlags.todaySummary&&reviewDue>0&&<section className="review-due-card"><div><strong>{ml?`${reviewDue} ആവർത്തന ചോദ്യങ്ങൾ ഇന്ന് ചെയ്യാനുണ്ട്`:`${reviewDue} review questions due today`}</strong><span>{ml?'ഇപ്പോൾ വീണ്ടും പരിശീലിച്ച് ഓർമ്മ ഉറപ്പിക്കൂ.':'Give these questions another try to strengthen recall.'}</span></div><button className="secondary-button" type="button" onClick={onOpenReview}>{ml?'ആവർത്തിക്കുക':'Review now'} →</button></section>}
 
     <button className="syllabus-link" type="button" onClick={onOpenSyllabus}>{ml?'പാഠ്യപദ്ധതി യാത്ര കാണുക':'Explore syllabus journey'} <span aria-hidden="true">→</span></button>
     <button className="pdf-order-link" type="button" onClick={onContinuePdf}>Continue in Question Paper order <span aria-hidden="true">→</span></button>
