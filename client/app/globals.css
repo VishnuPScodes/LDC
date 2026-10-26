@@ -1073,3 +1073,32 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
 .more-panel a:hover { background:var(--green-soft); color:var(--green); }
 @media(max-width:760px){.public-site .shell{padding:16px}.public-header{gap:8px}.public-header .brand{width:calc(100% - 150px)}.public-nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap}.public-nav a{white-space:nowrap;padding:7px 10px}.public-header-actions{margin-left:auto}.public-home-hero,.public-page-heading{padding:22px}.public-section{padding:18px}.public-how-grid{grid-template-columns:1fr}.public-footer{align-items:flex-start;flex-direction:column}.public-syllabus-row{align-items:flex-start;flex-direction:column}.public-syllabus-row>strong{white-space:normal}}
 @media(prefers-reduced-motion:reduce){.public-card:hover{box-shadow:none}.public-site *{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Final precedence layer keeps legacy page selectors on the quiet palette. */
+.today-plan, .today-summary-card, .restart-streak-card, .review-due-card, .setup-group, .mock-setup-page,
+.public-home-hero, .public-page-heading, .public-section, .public-year-links a, .public-card, .public-how-grid article,
+.public-question, .guest-question, .guest-question-view, .knowledge-card, .knowledge-complete, .quiz-content,
+.journey-sheet, .level-up-card, .quit-dialog, .mock-question-card {
+  background: var(--surface); border-color: var(--border); color: var(--text); box-shadow: var(--shadow-card);
+}
+.today-plan { background-image: none !important; }
+.today-plan, .public-home-hero, .public-page-heading { border-radius: var(--radius-card); }
+.public-card strong, .public-link-list a, .report-problem-link, .public-syllabus-return a, .public-malayalam-subtitle { color: var(--text-secondary); }
+.public-year-links a, .public-how-grid article, .guest-options button, .guest-options button strong { background: var(--surface); color: var(--text); }
+.public-answer { background: var(--surface-muted); color: var(--text); }
+.public-correct-option, .answer-correct-option, .answer-correct { background: var(--correct-bg) !important; border-color: var(--correct-border) !important; color: var(--text); }
+.answer-wrong-option, .answer-wrong { background: var(--wrong-bg) !important; border-color: var(--wrong-border) !important; color: var(--text); }
+.option-key { background: var(--surface-muted); color: var(--text-secondary); }
+.preset-pill.selected, .topic-pill.selected, .mode-option.selected { border-color: var(--selected-border); background: var(--selected-bg); color: var(--text); }
+.today-plan { border: 1px solid var(--border); box-shadow: var(--shadow-card); }
+.level-up-card, .journey-sheet, .mock-setup-page, .mock-question-card { box-shadow: var(--shadow-card); }
+.streak-toast { border-color: var(--border); box-shadow: none; }
+.quiz-option.is-correct, .feedback-good { background: var(--correct-bg); border-color: var(--correct-border); color: var(--text); }
+.quiz-option.is-wrong, .feedback-missed { background: var(--wrong-bg); border-color: var(--wrong-border); color: var(--text); }
+.quiz-option.is-selected { background: var(--selected-bg); border-color: var(--selected-border); color: var(--text); }
+.feedback-icon, .feedback-missed .feedback-icon { color: var(--correct-border); }
+.feedback-missed .feedback-icon { color: var(--wrong-border); }
+.error, .inline-error { color: var(--text); }
+.error, .inline-error, .guest-feature-notice { border-left-color: var(--wrong-border); }
+.mobile-site-menu, .more-panel, .journey-zoom-controls button { box-shadow: var(--shadow-card); }
+.public-question h2, .public-options li, .guest-question h1, .guest-options button { font-family: var(--font-malayalam), var(--font-inter), sans-serif; word-break: normal; overflow-wrap: break-word; }
