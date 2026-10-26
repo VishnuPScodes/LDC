@@ -120,6 +120,26 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .today-subtitle { margin: 0; color: var(--muted); }
 .exam-countdown { margin: .55rem 0 0; color: var(--amber); font-size: .92rem; font-weight: 650; }
 .exam-countdown .text-button { color: var(--amber); font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.motivation-cards { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(240px,.8fr); gap: 14px; align-items: stretch; }
+.points-level-card { border: 1px solid var(--line); border-radius: 20px; background: var(--card); padding: 20px 22px; display: flex; flex-direction: column; justify-content: center; gap: 10px; min-width: 0; }
+.points-level-heading { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.level-badge { border:1px solid var(--amber); color:var(--amber); border-radius:999px; padding:5px 10px; font-size:.78rem; font-weight:800; letter-spacing:.04em; }
+.points-total { color:var(--text); font-weight:750; }
+.points-level-meter { height:8px; background:var(--line); border-radius:999px; overflow:hidden; }
+.points-level-meter span { display:block; height:100%; background:var(--amber); border-radius:inherit; transition:width .3s ease; }
+.points-level-card p { margin:0; color:var(--muted); font-size:.84rem; }
+.points-level-loading { min-height:130px; }
+.session-points { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 0 16px; border-color:rgba(201,151,48,.5); }
+.session-points strong { color:var(--amber); font-size:1.2rem; }
+.session-points span { color:var(--muted); text-align:right; }
+.level-up-scrim { position:fixed; inset:0; z-index:120; display:grid; place-items:center; padding:20px; background:rgba(4,18,13,.72); }
+.level-up-card { width:min(100%,390px); padding:32px; text-align:center; border:1px solid var(--amber); border-radius:24px; background:var(--card); box-shadow:0 24px 90px #0008; animation:level-up-in .28s ease-out both; }
+.level-up-card h2 { margin:8px 0; font-size:1.7rem; }
+.level-up-card p { color:var(--muted); }
+.level-up-mark { display:block; color:var(--amber); font-size:2.4rem; }
+@keyframes level-up-in { from { opacity:0; transform:translateY(10px) scale(.98) } to { opacity:1; transform:translateY(0) scale(1) } }
+@media(max-width:700px){.motivation-cards{grid-template-columns:1fr}.points-level-card{min-height:120px}}
+@media(prefers-reduced-motion:reduce){.points-level-meter span,.level-up-card{transition:none;animation:none}}
 .streak-card { display: flex; align-items: center; gap: 12px; min-width: 160px; padding: 14px 17px; border: 1px solid color-mix(in srgb, var(--amber) 34%, var(--line)); border-radius: 16px; background: var(--amber-soft); color: var(--amber); }
 .streak-card > span { font-size: 23px; }
 .streak-card strong, .streak-card small { display: block; }

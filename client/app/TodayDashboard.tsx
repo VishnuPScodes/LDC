@@ -2,6 +2,7 @@
 import {useEffect,useState} from 'react';
 import {featureFlags} from './feature-flags';
 import {daysUntilExam} from '../../server/src/exam-countdown';
+import PointsLevelCard from './PointsLevelCard';
 
 type Topic = { topic: string; marks: number };
 type TopicProgress = { topic: string; attempted: number; total: number; attempts: number; correct: number; accuracy: number };
@@ -25,9 +26,10 @@ type Props = {
   language?: 'en'|'ml';
   targetExamDate?: string;
   onOpenSettings?:()=>void;
+  learnerStats?:any;
 };
 
-export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, progress, syllabus, onStart, onContinuePdf, onOpenSyllabus, reviewDue = 0, reviewTomorrow=0, weekDays = [],unfinishedSession,onResume,language='en',targetExamDate,onOpenSettings }: Props) {
+export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, progress, syllabus, onStart, onContinuePdf, onOpenSyllabus, reviewDue = 0, reviewTomorrow=0, weekDays = [],unfinishedSession,onResume,language='en',targetExamDate,onOpenSettings,learnerStats }: Props) {
   const ml=language==='ml';
   const [celebrate,setCelebrate]=useState(false);
   const topicStats: TopicProgress[] = progress?.coverage?.byTopic || [];
@@ -49,7 +51,7 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
 
     {unfinishedSession&&<section className="continue-session-card"><div><strong>Continue where you left off</strong><span>{unfinishedSession.settings?.mode==='mock'?'Mock exam':`${unfinishedSession.settings?.count||0} question session`}</span></div><button type="button" className="secondary-button" onClick={()=>onResume?.(unfinishedSession)}>Continue →</button></section>}
 
-    <section className={`daily-goal-card${percent >= 100 ? ' goal-done' : ''}`} aria-label="Daily question goal">
+    <div className="motivation-cards"><section className={`daily-goal-card${percent >= 100 ? ' goal-done' : ''}`} aria-label="Daily question goal">
       {celebrate&&<span className="goal-confetti" aria-hidden="true">{Array.from({length:7},(_,i)=><i key={i} style={{'--particle':i} as any}/>)}</span>}
       <div className="goal-ring" role="progressbar" aria-label="Daily goal progress" aria-valuemin={0} aria-valuemax={dailyGoal} aria-valuenow={Math.min(dailyCount, dailyGoal)}>
         <svg viewBox="0 0 76 76" aria-hidden="true"><circle className="goal-track" cx="38" cy="38" r="33"/><circle className="goal-progress" cx="38" cy="38" r="33" strokeDasharray={circumference} strokeDashoffset={circumference * (1 - percent / 100)}/></svg>
@@ -57,7 +59,7 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
       </div>
       <div className="goal-copy"><div className="eyebrow">DAILY GOAL</div><h2>{percent >= 100 ? 'Goal complete' : 'One question at a time'}</h2><p>{dailyCount} of {dailyGoal} questions today</p></div>
       <div className="goal-count"><strong>{Math.min(dailyCount, dailyGoal)}</strong><span>/ {dailyGoal}</span></div>
-    </section>
+    </section>{featureFlags.points&&<PointsLevelCard stats={learnerStats} language={language}/>}</div>
 
     <section className="today-plan card">
       <div className="plan-copy"><div className="eyebrow">TODAY’S PLAN</div><h2>{bestFocus?.topic || 'A short practice session'}</h2><p>{bestFocus ? `${Math.max(1, Math.min(10, dailyGoal - dailyCount || 10))} focused questions · ${bestFocus.marks} syllabus marks${bestFocus.attempts >= 10 ? ` · ${Math.round(bestFocus.accuracy)}% accuracy` : ''}` : 'A gentle mix from your eligible question bank.'}</p><span className="plan-note">Review due: {reviewDue}{reviewTomorrow?` · ${reviewTomorrow} tomorrow`:''}</span></div>

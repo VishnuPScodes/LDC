@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0
+
+- Added computed points, levels, streak totals, daily goal rewards, mock and review bonuses, and session point summaries from answer history.
+- Added the safe `pnpm --filter @ldc/server stats:recompute` dry-run command and expanded point-rule consistency tests.
+
 ## 1.3.0
 
 - Added an optional, editable exam countdown to Today and Study settings in English and Malayalam.

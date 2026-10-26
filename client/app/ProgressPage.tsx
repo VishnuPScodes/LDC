@@ -1,11 +1,13 @@
 'use client';
 import {Area,AreaChart,CartesianGrid,ResponsiveContainer,Tooltip,XAxis,YAxis,Bar,BarChart} from 'recharts';
-export default function ProgressPage({progress,history,habitDays={},loading=false,error='',onRetry}:{progress:any;history:any[];habitDays?:Record<string,{count?:number;goalMet?:boolean}>;loading?:boolean;error?:string;onRetry?:()=>void}) {
+import PointsLevelCard from './PointsLevelCard';
+import {featureFlags} from './feature-flags';
+export default function ProgressPage({progress,history,habitDays={},loading=false,error='',onRetry,learnerStats,language='en'}:{progress:any;history:any[];habitDays?:Record<string,{count?:number;goalMet?:boolean}>;loading?:boolean;error?:string;onRetry?:()=>void;learnerStats?:any;language?:'en'|'ml'}) {
   const completed=history.filter(x=>x.status==='completed');
   const trend=completed.map((x,i)=>({name:`Test ${i+1}`,accuracy:Math.round(x.score?.accuracy||0),date:new Date(x.completedAt||x.startedAt).toLocaleDateString()}));
   const days=Array.from({length:30},(_,i)=>{const d=new Date();d.setDate(d.getDate()-(29-i));const key=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;return {key,count:habitDays[key]?.count||0,goalMet:!!habitDays[key]?.goalMet,label:d.toLocaleDateString()}});
   const coverage=progress?.coverage?.byTopic||[];
-  return <section className="progress-page"><div className="eyebrow">PROGRESS</div><h1 className="section-title">Your practice, over time.</h1>
+  return <section className="progress-page"><div className="eyebrow">PROGRESS</div><h1 className="section-title">Your practice, over time.</h1>{featureFlags.points&&<PointsLevelCard stats={learnerStats} language={language}/>}
     {loading&&<div className="progress-loading" role="status">Loading your progress…</div>}{!loading&&error&&<div className="page-load-error" role="alert"><p>Couldn’t load your progress.</p><button type="button" className="secondary-button" onClick={onRetry}>Retry</button></div>}
     {!loading&&!error&&<>
     {completed.length>=3&&<div className="progress-panel"><h2>Accuracy trend</h2><div className="chart-wrap"><ResponsiveContainer width="100%" height="100%"><AreaChart data={trend}><CartesianGrid stroke="var(--line)" strokeDasharray="3 3"/><XAxis dataKey="name" stroke="var(--muted)"/><YAxis domain={[0,100]} stroke="var(--muted)"/><Tooltip/><Area type="monotone" dataKey="accuracy" stroke="#4ade80" fill="#2e7d52" fillOpacity={.2}/></AreaChart></ResponsiveContainer></div></div>}
