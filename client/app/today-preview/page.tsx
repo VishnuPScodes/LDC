@@ -10,7 +10,7 @@ const progress = { coverage: { byTopic: [
 ] } };
 
 export default function TodayPreview() {
-  return <main className="shell dark">
+  return <main className="shell">
     <header className="header"><div className="brand">LDC<span>.</span> practice</div><span className="small">A calm study companion</span></header>
     <TodayDashboard name="Anu" dailyCount={12} dailyGoal={20} streak={4} progress={progress} syllabus={syllabus}
       onStart={() => {}} onPracticeTopic={() => {}} onContinuePdf={() => {}} onOpenSyllabus={() => {}} />

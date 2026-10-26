@@ -3,11 +3,13 @@
 import {useEffect, useState} from 'react';
 
 export default function LandingThemeToggle() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    const storedDark = localStorage.getItem('ldc-theme') !== 'light';
+    const theme = localStorage.getItem('ldc-theme');
+    const storedDark = theme ? theme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
     setDark(storedDark);
+    if (theme) document.documentElement.dataset.themeChoice = theme;
     document.querySelector('.landing-shell')?.classList.toggle('dark', storedDark);
   }, []);
 
@@ -15,6 +17,7 @@ export default function LandingThemeToggle() {
     const nextDark = !dark;
     setDark(nextDark);
     localStorage.setItem('ldc-theme', nextDark ? 'dark' : 'light');
+    document.documentElement.dataset.themeChoice = nextDark ? 'dark' : 'light';
     document.querySelector('.landing-shell')?.classList.toggle('dark', nextDark);
   };
 
