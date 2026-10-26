@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0
+
+- Added an optional, editable exam countdown to Today and Study settings in English and Malayalam.
+- Saved the target exam date and daily goal in the signed-in user's settings.
+
 ## 1.2.0
 
 - Fixed syllabus data loading and added topic mastery, coverage, loading, and retry states.

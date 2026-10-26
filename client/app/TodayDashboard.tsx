@@ -1,5 +1,7 @@
 'use client';
 import {useEffect,useState} from 'react';
+import {featureFlags} from './feature-flags';
+import {daysUntilExam} from '../../server/src/exam-countdown';
 
 type Topic = { topic: string; marks: number };
 type TopicProgress = { topic: string; attempted: number; total: number; attempts: number; correct: number; accuracy: number };
@@ -20,9 +22,13 @@ type Props = {
   weekDays?: boolean[];
   unfinishedSession?: any;
   onResume?: (session:any)=>void;
+  language?: 'en'|'ml';
+  targetExamDate?: string;
+  onOpenSettings?:()=>void;
 };
 
-export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, progress, syllabus, onStart, onContinuePdf, onOpenSyllabus, reviewDue = 0, reviewTomorrow=0, weekDays = [],unfinishedSession,onResume }: Props) {
+export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, progress, syllabus, onStart, onContinuePdf, onOpenSyllabus, reviewDue = 0, reviewTomorrow=0, weekDays = [],unfinishedSession,onResume,language='en',targetExamDate,onOpenSettings }: Props) {
+  const ml=language==='ml';
   const [celebrate,setCelebrate]=useState(false);
   const topicStats: TopicProgress[] = progress?.coverage?.byTopic || [];
   const bestFocus = [...syllabus].map(topic => {
@@ -37,7 +43,7 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
 
   return <div className="today-page">
     <section className="today-heading">
-      <div><div className="eyebrow">TODAY</div><h1 className="title">Good {new Date().getHours() < 12 ? 'morning' : 'day'}, {name}.</h1><p className="today-subtitle">A steady session is progress. Let’s take the next step.</p></div>
+      <div><div className="eyebrow">{ml?'ഇന്ന്':'TODAY'}</div><h1 className="title">{ml?`${name}, ഇന്ന് പഠിക്കാം.`:`Good ${new Date().getHours() < 12 ? 'morning' : 'day'}, ${name}.`}</h1><p className="today-subtitle">{ml?'ചെറിയൊരു പരിശീലനവും വലിയ മുന്നേറ്റമാണ്.':'A steady session is progress. Let’s take the next step.'}</p>{featureFlags.examCountdown&&<p className="exam-countdown">{targetExamDate?countdownText(daysUntilExam(targetExamDate),ml):<button type="button" className="text-button" onClick={onOpenSettings}>{ml?'പരീക്ഷാ തീയതി ചേർക്കുക':'Set your exam date'}</button>}</p>}</div>
       <div className="streak-card" aria-label={`${streak} day streak`}><span aria-hidden="true">✦</span><div><strong>{streak} day{streak === 1 ? '' : 's'}</strong><small>daily goal streak</small><div className="week-dots" aria-label="Weekly goal activity">{'MTWTFSS'.split('').map((day, i) => <span key={i} className={`${weekDays[i] ? 'complete' : ''}${i === (new Date().getDay()+6)%7 ? ' today' : ''}`} aria-hidden="true">{day}</span>)}</div></div></div>
     </section>
 
@@ -61,4 +67,11 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
     <button className="syllabus-link" type="button" onClick={onOpenSyllabus}>Browse syllabus and topics <span aria-hidden="true">→</span></button>
     <button className="pdf-order-link" type="button" onClick={onContinuePdf}>Continue in Question Paper order <span aria-hidden="true">→</span></button>
   </div>;
+}
+
+function countdownText(days:number,ml:boolean){
+  if(days<0)return ml?`പരീക്ഷാ തീയതി കഴിഞ്ഞു · ക്രമീകരണങ്ങളിൽ മാറ്റാം`:`Your exam date has passed · edit in settings`;
+  if(days===0)return ml?'ഇന്നാണ് പരീക്ഷ! ആശംസകൾ.':'Your exam is today. Good luck!';
+  if(ml)return `${days} ദിവസത്തിനകം പരീക്ഷ${days<30?' · മോക്ക് പരീക്ഷകൾ പരിശീലിക്കൂ':''}`;
+  return `${days} ${days===1?'day':'days'} to your exam${days<30?' · practise a mock exam':''}`;
 }
