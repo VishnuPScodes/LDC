@@ -637,6 +637,28 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
 .feedback-good { background: var(--correct-bg); border-color: var(--correct-border); }
 .feedback-missed { background: var(--wrong-bg); border-color: var(--wrong-border); }
 .app-version { font-size: 13px; }
+/* Neutralize legacy decorative declarations that precede the token layer. */
+:where(*) { background-image: none !important; text-shadow: none !important; }
+.card, .today-summary-card, .restart-streak-card, .review-due-card, .daily-goal-card, .today-plan, .points-level-card,
+.topic-card, .journey-map-wrap, .journey-list-row, .milestone-card, .progress-metric, .mock-question-card,
+.public-card, .knowledge-card, .knowledge-complete, .quiz-content, .setup-group {
+  box-shadow: var(--shadow-card) !important;
+}
+.loader-orbit, .loader-orbit i, .loader-mark, .knowledge-card-glow, .goal-confetti { display: none !important; }
+.today-plan, .restart-streak-card, .today-summary-card { background: var(--surface); border-color: var(--border); }
+.level-up-card, .journey-sheet, .mock-setup-page, .mock-question-card, .public-card, .public-home-hero, .public-page-heading { box-shadow: var(--shadow-card); border-color: var(--border); background: var(--surface); color: var(--text); }
+.mock-question-meta, .mock-mark-button, .mock-mark-button.marked { color: var(--text-secondary); }
+.mock-page-tools select, .mock-card-option { border-color: var(--border); background: var(--surface); color: var(--text); }
+.mock-card-option.selected { border-color: var(--selected-border); background: var(--selected-bg); }
+.mock-exam-footer .question-palette button { border-color: var(--border); background: var(--surface-muted); color: var(--text-secondary); }
+.mock-exam-footer .question-palette button.current { outline-color: var(--brand); }
+.mock-exam-footer .question-palette button.answered { background: var(--selected-bg); color: var(--text); }
+.mock-exam-footer .mock-submit { background: var(--brand); color: var(--on-brand); }
+.topic-map-skeleton span { background: var(--surface-muted); animation: none; }
+.journey-stop:focus-visible .journey-stop-dot, .mock-exam-footer .question-palette button:focus-visible { outline-color: var(--focus-ring); }
+.journey-sheet-scrim, .level-up-scrim, .dialog-scrim { background: rgba(0,0,0,.35); }
+.feedback-sheet, .mobile-site-menu, .journey-zoom-controls button, .quit-dialog { box-shadow: var(--shadow-card); }
+.knowledge-card { touch-action: pan-y; }
 @media (max-width: 720px) {
   .daily-goal-card { flex-wrap: wrap; padding: 16px; }
   .goal-streak { flex-basis: 100%; margin-left: 1px; }
