@@ -53,3 +53,9 @@ test('screen projections share the same level, points, and counts',()=>{
  const core=(value:any)=>({level:value.level,points:value.points,questionsAnswered:value.questionsAnswered,sessionCount:value.sessionCount});
  assert.deepEqual(core(today),core(progress));assert.deepEqual(core(today),core(journey));assert.deepEqual(core(today),core(milestones));
 });
+
+test('daily activity provides the same saved counts, accuracy, and goal state for progress views',()=>{
+ const day='2026-10-01T04:00:00.000Z';
+ const stats=computeLearnerStats([{settings:{mode:'practice',dailyGoal:2},answers:[answered('q0',true,day),answered('q1',false,day)]}],questions,20,new Date('2026-10-01T12:00:00.000Z'));
+ assert.deepEqual(stats.dailyActivity[0],{date:'2026-10-01',count:2,attempts:2,correct:1,goal:2,goalMet:true,points:12,topics:[{topic:'History',attempts:1,correct:1},{topic:'Geography',attempts:1,correct:0}]});
+});

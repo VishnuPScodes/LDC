@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.0
+
+- Rebuilt Progress with time ranges, an activity calendar, topic accuracy practice links, mock score trends, and shared learner statistics.
+
 ## 1.5.0
 
 - Added historical, dependency-ordered milestones, recent milestone highlights, and an all-milestones page with progress toward locked achievements.
