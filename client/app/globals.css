@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -181,6 +180,17 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .bar span { height: 100%; display: block; background: var(--green); border-radius: 20px; }
 .error { color: #9e332d; background: var(--wrong-soft); padding: 12px; border-radius: 12px; }
 .hidden { display: none; }
+
+/* Quiet shared type scale and accessible interactive states. */
+body { font-size: 16px; line-height: 1.6; }
+body, button, input, select, textarea { font-family: var(--font-inter), var(--font-malayalam), ui-sans-serif, system-ui, sans-serif; }
+:lang(ml), [lang="ml"], .question-prompt, .option-copy { font-family: var(--font-malayalam), sans-serif; word-break: normal; overflow-wrap: break-word; }
+h1, .title { font-size: clamp(26px, 2.25vw, 32px); line-height: 1.25; font-weight: 700; letter-spacing: 0; }
+h2, .section-title { font-size: 20px; line-height: 1.4; font-weight: 600; letter-spacing: 0; }
+.small, small, time, .eyebrow { font-size: 14px; color: var(--text-secondary); text-transform: none; letter-spacing: 0; font-weight: 400; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--focus-ring); outline-offset: 3px;
+}
 .app-version { max-width: 1180px; margin: 0 auto; padding: 10px 24px 18px; color: var(--muted); font-size: 11px; text-align: right; }
 
 /* Today: a quiet daily plan with lightweight habit cues. */
