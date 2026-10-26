@@ -1102,3 +1102,6 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
 .error, .inline-error, .guest-feature-notice { border-left-color: var(--wrong-border); }
 .mobile-site-menu, .more-panel, .journey-zoom-controls button { box-shadow: var(--shadow-card); }
 .public-question h2, .public-options li, .guest-question h1, .guest-options button { font-family: var(--font-malayalam), var(--font-inter), sans-serif; word-break: normal; overflow-wrap: break-word; }
+.dark .today-plan, .dark .today-summary-card, .dark .daily-goal-card { border-color: var(--border); box-shadow: none; }
+.points-level-loading { display: none !important; }
+:is(button,a,input,select,textarea,summary,[tabindex]):focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
