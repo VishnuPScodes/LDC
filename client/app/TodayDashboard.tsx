@@ -66,7 +66,7 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
       <button className="button plan-start" type="button" onClick={() => onStart(bestFocus ? { topics: [bestFocus.topic] } : {})}>Start <span aria-hidden="true">→</span></button>
     </section>
 
-    <button className="syllabus-link" type="button" onClick={onOpenSyllabus}>Browse syllabus and topics <span aria-hidden="true">→</span></button>
+    <button className="syllabus-link" type="button" onClick={onOpenSyllabus}>{ml?'പാഠ്യപദ്ധതി യാത്ര കാണുക':'Explore syllabus journey'} <span aria-hidden="true">→</span></button>
     <button className="pdf-order-link" type="button" onClick={onContinuePdf}>Continue in Question Paper order <span aria-hidden="true">→</span></button>
   </div>;
 }
