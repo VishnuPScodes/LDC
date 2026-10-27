@@ -1071,10 +1071,11 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
 .rank-estimate-heading h2,.rank-trend h3,.rank-tips h3 { margin: 0; color: var(--text); font-size: 20px; }
 .rank-reliability,.rank-estimate-locked span { color: var(--text-secondary); font-size: 14px; }
 .rank-estimate-score { display: grid; gap: 4px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface-muted); }
-.rank-estimate-score > span,.rank-data-years,.rank-no-history-secondary,.rank-disclaimer { color: var(--text-secondary); font-size: 14px; }
+.rank-estimate-score > span,.rank-data-years,.rank-no-history-secondary,.rank-disclaimer,.rank-syllabus-version { color: var(--text-secondary); font-size: 14px; }
 .rank-estimate-score strong { font-size: 30px; line-height: 1.2; font-variant-numeric: tabular-nums; }
 .rank-estimate-score strong small { font-size: 16px; font-weight: 500; }
 .rank-estimate-result strong { font-size: 20px; }
+.rank-syllabus-version { margin: -8px 0 0; }
 .rank-estimate-result span { padding: 5px 10px; border: 1px solid var(--border); border-radius: var(--radius-pill); color: var(--text-secondary); font-size: 14px; }
 .rank-no-history,.rank-estimate-locked { margin: 0; padding: 12px 16px; border-left: 3px solid var(--border); background: var(--surface-muted); }
 .rank-district-prompt,.rank-tips,.rank-trend { display: grid; gap: 12px; }
