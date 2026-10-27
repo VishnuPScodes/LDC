@@ -66,10 +66,10 @@ export function estimateRankRange(lowScore: number, highScore: number, curve: Di
   if (lowResult.edgeLabel === 'Top range' && highResult.edgeLabel === 'Top range') return { lowRank: null, highRank: null, label: 'Top range', widenedLowScore: lowScore, widenedHighScore: highScore };
   if (lowResult.edgeLabel === 'Below past list ranges' && highResult.edgeLabel === 'Below past list ranges') return { lowRank: null, highRank: null, label: 'Below past list ranges', widenedLowScore: lowScore, widenedHighScore: highScore };
   const widening = curve.scoreUncertainty + (lowResult.outsideAnchors || highResult.outsideAnchors ? rankEstimateConfig.curve.outsideAnchorWidening : 0);
-  const widenedLowScore = clamp(lowScore - widening, 0, 100), widenedHighScore = clamp(highScore + widening, 0, 100);
+  const widenedLowScore = clamp(lowScore - widening, rankEstimateConfig.score.minimum, rankEstimateConfig.score.maximum), widenedHighScore = clamp(highScore + widening, rankEstimateConfig.score.minimum, rankEstimateConfig.score.maximum);
   const firstRank = rankAtScore(widenedHighScore, curve).rank, secondRank = rankAtScore(widenedLowScore, curve).rank;
   const lowRank = roundRank(Math.min(firstRank, secondRank));
-  const rankStep = lowRank < 1000 ? rankEstimateConfig.curve.rankRoundingBelow1000 : rankEstimateConfig.curve.rankRoundingAtOrAbove1000;
+  const rankStep = lowRank < rankEstimateConfig.curve.rankRoundingThreshold ? rankEstimateConfig.curve.rankRoundingBelow1000 : rankEstimateConfig.curve.rankRoundingAtOrAbove1000;
   const highRank = Math.max(lowRank + rankStep, roundRank(Math.max(firstRank, secondRank)));
   return { lowRank, highRank, label: null, widenedLowScore, widenedHighScore };
 }
@@ -143,7 +143,7 @@ function endpointSlope(h1: number, h2: number, d1: number, d2: number) {
   return slope;
 }
 function roundRank(rank: number) {
-  const quantum = rank < 1000 ? rankEstimateConfig.curve.rankRoundingBelow1000 : rankEstimateConfig.curve.rankRoundingAtOrAbove1000;
+  const quantum = rank < rankEstimateConfig.curve.rankRoundingThreshold ? rankEstimateConfig.curve.rankRoundingBelow1000 : rankEstimateConfig.curve.rankRoundingAtOrAbove1000;
   return Math.max(quantum, Math.round(rank / quantum) * quantum);
 }
 function clamp(value: number, min: number, max: number) { return Math.max(min, Math.min(max, value)); }

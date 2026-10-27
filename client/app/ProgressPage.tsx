@@ -3,9 +3,10 @@ import {useMemo,useState} from 'react';
 import {CartesianGrid,Line,LineChart,ResponsiveContainer,Tooltip,XAxis,YAxis,Bar,BarChart} from 'recharts';
 import PointsLevelCard from './PointsLevelCard';
 import {featureFlags} from './feature-flags';
+import RankEstimateCard from './RankEstimateCard';
 
 type Range='7'|'30'|'all';
-export default function ProgressPage({progress,history,habitDays={},loading=false,error='',onRetry,learnerStats,language='en',onOpenMilestones,onPracticeTopic}:{progress:any;history:any[];habitDays?:Record<string,{count?:number;goalMet?:boolean}>;loading?:boolean;error?:string;onRetry?:()=>void;learnerStats?:any;language?:'en'|'ml';onOpenMilestones?:()=>void;onPracticeTopic?:(topic:string)=>void}){
+export default function ProgressPage({progress,history,habitDays={},loading=false,error='',onRetry,learnerStats,language='en',onOpenMilestones,onPracticeTopic,onStartMock,initialDistrict}:{progress:any;history:any[];habitDays?:Record<string,{count?:number;goalMet?:boolean}>;loading?:boolean;error?:string;onRetry?:()=>void;learnerStats?:any;language?:'en'|'ml';onOpenMilestones?:()=>void;onPracticeTopic?:(topic:string)=>void;onStartMock?:()=>void;initialDistrict?:string|null}){
  const [range,setRange]=useState<Range>('30'),ml=language==='ml';
  const model=learnerStats||{},today=istToday(),cutoff=range==='all'?(model.dailyActivity?.[0]?.date||today):shiftDay(today,-(Number(range)-1));
  const activeDaily=(model.dailyActivity||[]).filter((row:any)=>row.date>=cutoff&&row.date<=today),activityMap=new Map<string,any>(activeDaily.map((row:any)=>[row.date,row]));
@@ -17,6 +18,7 @@ export default function ProgressPage({progress,history,habitDays={},loading=fals
  if(!featureFlags.progressInsights)return <LegacyProgress progress={progress} language={language}/>;
  return <section className="progress-page">
   <div className="eyebrow">{ml?'പുരോഗതി':'PROGRESS'}</div><h1 className="section-title">{ml?'നിങ്ങളുടെ പരിശീലനം':'Your practice, over time.'}</h1>
+  {featureFlags.rankEstimate&&<RankEstimateCard language={language} initialDistrict={initialDistrict} onStart={onStartMock} onPracticeTopic={onPracticeTopic}/>}
   {featureFlags.points&&<PointsLevelCard stats={learnerStats} language={language}/>}
   <div className="progress-range" role="group" aria-label={ml?'സമയപരിധി':'Time range'}>{(['7','30','all'] as Range[]).map((value,index)=><button key={value} type="button" aria-pressed={range===value} className={range===value?'selected':''} onClick={()=>setRange(value)}>{labels[index]}</button>)}</div>
   {loading&&<div className="progress-loading" role="status">{ml?'പുരോഗതി ലോഡ് ചെയ്യുന്നു…':'Loading your progress…'}</div>}

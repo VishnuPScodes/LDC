@@ -1065,6 +1065,39 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
 .preset-pill.selected, .topic-pill.selected, .mode-option.selected { border-color: var(--selected-border); background: var(--selected-bg); color: var(--text); }
 .today-plan { border: 1px solid var(--border); box-shadow: var(--shadow-card); }
 .level-up-card, .journey-sheet, .mock-setup-page, .mock-question-card { box-shadow: var(--shadow-card); }
+
+.rank-estimate-card { display: grid; gap: 16px; margin: 24px 0; background: var(--surface); color: var(--text); }
+.rank-estimate-heading,.rank-estimate-result,.rank-district-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.rank-estimate-heading h2,.rank-trend h3,.rank-tips h3 { margin: 0; color: var(--text); font-size: 20px; }
+.rank-reliability,.rank-estimate-locked span { color: var(--text-secondary); font-size: 14px; }
+.rank-estimate-score { display: grid; gap: 4px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--surface-muted); }
+.rank-estimate-score > span,.rank-data-years,.rank-no-history-secondary,.rank-disclaimer { color: var(--text-secondary); font-size: 14px; }
+.rank-estimate-score strong { font-size: 30px; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.rank-estimate-score strong small { font-size: 16px; font-weight: 500; }
+.rank-estimate-result strong { font-size: 20px; }
+.rank-estimate-result span { padding: 5px 10px; border: 1px solid var(--border); border-radius: var(--radius-pill); color: var(--text-secondary); font-size: 14px; }
+.rank-no-history,.rank-estimate-locked { margin: 0; padding: 12px 16px; border-left: 3px solid var(--border); background: var(--surface-muted); }
+.rank-district-prompt,.rank-tips,.rank-trend { display: grid; gap: 12px; }
+.rank-district-prompt > p,.rank-no-history-secondary { margin: 0; }
+.rank-district-row label { display: flex; align-items: center; gap: 10px; color: var(--text-secondary); font-size: 14px; }
+.rank-district-row select,.rank-district-prompt select { min-height: 44px; max-width: 100%; padding: 8px 34px 8px 10px; border: 1px solid var(--border); border-radius: var(--radius-button); color: var(--text); background: var(--surface); }
+.rank-trend { padding-top: 8px; border-top: 1px solid var(--border); }
+.rank-trend figure { margin: 0; }
+.rank-trend svg { display: block; width: 100%; height: 130px; overflow: visible; }
+.rank-trend svg line { stroke: var(--border); stroke-width: 1; }
+.rank-trend svg polyline { fill: none; stroke: var(--brand); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.rank-trend svg circle { fill: var(--brand); }
+.rank-trend figcaption,.rank-trend li,.rank-trend p { color: var(--text-secondary); font-size: 14px; }
+.rank-trend ol { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0; padding-left: 20px; }
+.rank-trend p { margin: 0; }
+.rank-tips { padding-top: 8px; border-top: 1px solid var(--border); }
+.rank-tips article { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.rank-tips article:last-child { border-bottom: 0; }
+.rank-tips article p { margin: 4px 0 0; color: var(--text-secondary); font-size: 14px; }
+.rank-explanation { padding-top: 12px; border-top: 1px solid var(--border); color: var(--text-secondary); }
+.rank-explanation summary { color: var(--brand); cursor: pointer; }
+.rank-explanation p,.rank-disclaimer { margin: 8px 0 0; }
+@media(max-width:560px) { .rank-estimate-card { padding: 16px; } .rank-tips article { align-items: flex-start; flex-direction: column; } .rank-district-row label { width: 100%; align-items: flex-start; flex-direction: column; } }
 .streak-toast { border-color: var(--border); box-shadow: none; }
 .quiz-option.is-correct, .feedback-good { background: var(--correct-bg); border-color: var(--correct-border); color: var(--text); }
 .quiz-option.is-wrong, .feedback-missed { background: var(--wrong-bg); border-color: var(--wrong-border); color: var(--text); }

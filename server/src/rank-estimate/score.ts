@@ -20,7 +20,7 @@ export function questionDifficulty(firstAttempts: number, wrongFirstAttempts: nu
 
 export function adjustMockScore(rawScore: number, mockDifficulty: number) {
   const { adjustmentK, referenceDifficulty } = rankEstimateConfig.difficulty;
-  return clamp(rawScore + adjustmentK * (mockDifficulty - referenceDifficulty), 0, 100);
+  return clamp(rawScore + adjustmentK * (mockDifficulty - referenceDifficulty), rankEstimateConfig.score.minimum, rankEstimateConfig.score.maximum);
 }
 
 export function estimateScore(mocks: MockScoreInput[], now: Date = new Date()) {
@@ -46,9 +46,9 @@ export function estimateScore(mocks: MockScoreInput[], now: Date = new Date()) {
     return { sectionKey: section.key, title: section.title, marksScored: avg('marksScored'), possibleMarks: avg('possibleMarks'), marksLost: avg('marksLost'), accuracy: avg('accuracy'), attempted: avg('attempted') };
   });
   return {
-    expectedScore: round1(clamp(weightedMean, 0, 100)),
-    lowScore: round1(clamp(weightedMean - halfWidth, 0, 100)),
-    highScore: round1(clamp(weightedMean + halfWidth, 0, 100)),
+    expectedScore: round1(clamp(weightedMean, rankEstimateConfig.score.minimum, rankEstimateConfig.score.maximum)),
+    lowScore: round1(clamp(weightedMean - halfWidth, rankEstimateConfig.score.minimum, rankEstimateConfig.score.maximum)),
+    highScore: round1(clamp(weightedMean + halfWidth, rankEstimateConfig.score.minimum, rankEstimateConfig.score.maximum)),
     halfWidth: round1(halfWidth),
     mockCount: used.length,
     reliability: used.length === 1 ? 'First estimate' as const : used.length === 2 ? 'Getting sharper' as const : 'Reliable' as const,

@@ -50,7 +50,7 @@ export function calculateImprovementTips(sections: ImprovementSection[], expecte
 function estimateRankGain(score: number, marksGain: number, curve: DistrictCurve | null) {
   if (!curve) return null;
   const before = rankAtScore(score, curve).rank;
-  const after = rankAtScore(Math.min(100, score + marksGain), curve).rank;
+  const after = rankAtScore(Math.min(rankEstimateConfig.score.maximum, score + marksGain), curve).rank;
   const gain = Math.max(0, before - after);
   const step = rankEstimateConfig.improvement.rankGainRounding;
   return gain < step / 2 ? 0 : Math.round(gain / step) * step;

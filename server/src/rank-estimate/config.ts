@@ -30,6 +30,7 @@ export const rankEstimateConfig = {
     fullTimeShare: 1,
   },
   marking: { correct: 1, wrong: -1 / 3, skipped: 0 },
+  score: { minimum: 0, maximum: 100 },
   difficulty: {
     minimumFirstAttempts: 30,
     neutralDefault: 0.5,
@@ -38,6 +39,7 @@ export const rankEstimateConfig = {
   },
   averaging: {
     windowDays: 60,
+    maximumMocks: 100,
     recencyHalfLifeDays: 14,
     baseHalfWidth: 7,
     minimumHalfWidth: 3,
@@ -53,6 +55,7 @@ export const rankEstimateConfig = {
     simulationHighPercentile: 0.9,
     rankRoundingBelow1000: 50,
     rankRoundingAtOrAbove1000: 100,
+    rankRoundingThreshold: 1000,
     outsideAnchorWidening: 3,
     strongPositionMargin: 5,
     nearSupplementaryMargin: 5,

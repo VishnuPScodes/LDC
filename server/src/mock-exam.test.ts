@@ -48,5 +48,5 @@ test('rank eligibility applies quit, answered share, elapsed time and repeat lim
   assert.equal(evaluateMockRankEligibility({ ...passing, quitEarly: true }).reason, 'This mock was quit before submission.');
   assert.match(evaluateMockRankEligibility({ ...passing, answeredCount: 69 }).reason || '', /70%/);
   assert.equal(evaluateMockRankEligibility({ ...passing, answeredCount: 1, elapsedSeconds: 4500 }).counted, true);
-  assert.match(evaluateMockRankEligibility({ ...passing, repeatShare: .51 }).reason || '', /repeats/);
+  assert.match(evaluateMockRankEligibility({ ...passing, repeatShare: .51 }).reason || '', /repeat/);
 });
