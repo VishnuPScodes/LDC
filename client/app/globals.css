@@ -1075,6 +1075,52 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
 .error, .inline-error, .guest-feature-notice { border-left-color: var(--wrong-border); }
 .mobile-site-menu, .more-panel, .journey-zoom-controls button { box-shadow: var(--shadow-card); }
 .public-question h2, .public-options li, .guest-question h1, .guest-options button { font-family: var(--font-malayalam), var(--font-inter), sans-serif; word-break: normal; overflow-wrap: break-word; }
+
+/* Printed-paper treatment for mock exams and public question-paper pages. */
+.mock-page { width: min(100%, 960px); margin: 0 auto; }
+.mock-header { position: sticky; top: 0; z-index: 5; padding: 12px 0; background: var(--bg); border-bottom: 1px solid var(--border); }
+.mock-progress-copy, .mock-timer, .mock-page-tools { color: var(--text-secondary); font-size: 14px; font-weight: 400; }
+.mock-question-list, .public-question-list {
+  max-width: 820px; margin: 16px auto 24px; padding: 16px 32px;
+  border: 1px solid var(--border); border-radius: var(--radius-card);
+  background: var(--surface); box-shadow: var(--shadow-card);
+}
+.mock-question-card, .public-question {
+  padding: 24px 0; border: 0; border-bottom: 1px solid var(--border);
+  border-radius: 0; background: transparent; color: var(--text); box-shadow: none;
+}
+.mock-question-card:last-child, .public-question:last-child { border-bottom: 0; }
+.mock-question-meta, .public-question-label { gap: 8px 16px; color: var(--text-secondary); font-size: 14px; }
+.mock-question-meta strong, .public-question-label strong { color: var(--text); font-size: 14px; font-weight: 600; }
+.mock-question-card h2, .public-question h2 {
+  margin: 12px 0 16px; color: var(--text); font-size: 20px;
+  font-weight: 500; line-height: 1.7; letter-spacing: 0;
+}
+.mock-card-options, .public-options { display: grid; grid-template-columns: 1fr; gap: 2px; }
+.mock-card-option, .public-options li {
+  min-height: 42px; align-items: flex-start; gap: 10px; padding: 8px 10px;
+  border: 1px solid transparent; border-radius: 4px; background: transparent;
+  color: var(--text); font-size: 17px; line-height: 1.6;
+}
+.mock-card-option > span:first-child, .option-key {
+  width: 25px; height: 25px; flex: 0 0 25px; place-items: center;
+  border: 1px solid var(--border); border-radius: 50%; background: transparent;
+  color: var(--text); font-size: 13px; font-weight: 500;
+}
+.mock-card-option.selected { border-color: var(--selected-border); background: var(--selected-bg); color: var(--text); }
+.mock-card-option:hover:not(:disabled) { border-color: var(--border); background: var(--surface-muted); }
+.mock-mark-button { min-height: 36px; margin-top: 8px; color: var(--text-secondary); font-size: 14px; }
+.mock-mark-button.marked { color: var(--text); }
+.public-question-source, .report-problem-link { color: var(--text-secondary); font-size: 14px; }
+.answer-reveal { min-height: 36px; font-size: 14px; }
+.public-answer.is-revealed { margin: 8px 0; padding: 12px; border-left: 2px solid var(--correct-border); border-radius: 0; background: var(--correct-bg); color: var(--text); }
+.public-correct-option { border-color: var(--correct-border) !important; background: var(--correct-bg) !important; }
+.mock-question-list .mock-question-card h2, .public-question h2, .public-options li, .mock-card-option { word-break: normal; overflow-wrap: break-word; }
+@media (max-width: 600px) {
+  .mock-question-list, .public-question-list { padding: 8px 16px; border-radius: 8px; }
+  .mock-question-card, .public-question { padding: 20px 0; }
+  .mock-card-option, .public-options li { padding: 8px 4px; font-size: 16px; }
+}
 .dark .today-plan, .dark .today-summary-card, .dark .daily-goal-card { border-color: var(--border); box-shadow: none; }
 .points-level-loading { display: none !important; }
 :is(button,a,input,select,textarea,summary,[tabindex]):focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
