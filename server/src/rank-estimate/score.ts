@@ -7,7 +7,7 @@ export type MockScoreInput = {
   difficulty: number;
   repeatShare: number;
   counted: boolean;
-  sectionScores?: Array<{ sectionKey: RankSectionKey; marksScored: number; possibleMarks: number; marksLost: number; accuracy: number }>;
+  sectionScores?: Array<{ sectionKey: RankSectionKey; marksScored: number; possibleMarks: number; marksLost: number; accuracy: number; attempted?: number }>;
 };
 
 export function questionDifficulty(firstAttempts: number, wrongFirstAttempts: number, topicAverage?: number | null) {
@@ -42,8 +42,8 @@ export function estimateScore(mocks: MockScoreInput[], now: Date = new Date()) {
   const sectionScores = rankEstimateConfig.syllabus.sections.map(section => {
     const values = used.map((mock, index) => ({ row: mock.sectionScores?.find(item => item.sectionKey === section.key), weight: weights[index] })).filter(item => item.row);
     const weight = values.reduce((sum, item) => sum + item.weight, 0);
-    const avg = (key: 'marksScored' | 'possibleMarks' | 'marksLost' | 'accuracy') => weight ? values.reduce((sum, item) => sum + item.row![key] * item.weight, 0) / weight : 0;
-    return { sectionKey: section.key, title: section.title, marksScored: avg('marksScored'), possibleMarks: avg('possibleMarks'), marksLost: avg('marksLost'), accuracy: avg('accuracy') };
+    const avg = (key: 'marksScored' | 'possibleMarks' | 'marksLost' | 'accuracy' | 'attempted') => weight ? values.reduce((sum, item) => sum + (item.row![key] || 0) * item.weight, 0) / weight : 0;
+    return { sectionKey: section.key, title: section.title, marksScored: avg('marksScored'), possibleMarks: avg('possibleMarks'), marksLost: avg('marksLost'), accuracy: avg('accuracy'), attempted: avg('attempted') };
   });
   return {
     expectedScore: round1(clamp(weightedMean, 0, 100)),

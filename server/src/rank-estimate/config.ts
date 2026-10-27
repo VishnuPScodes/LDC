@@ -64,6 +64,7 @@ export const rankEstimateConfig = {
     wrongToSkipShare: 0.5,
     fewCurrentAffairsAttempts: 8,
     tipLimit: 3,
+    rankGainRounding: 50,
   },
   calibration: { targetRangeCoverage: 0.8 },
   districts: [

@@ -79,6 +79,7 @@ export function calculateMockSectionScores(
       correct,
       wrong,
       skipped,
+      attempted,
       marksScored: correct + wrong * rankEstimateConfig.marking.wrong,
       marksLost: wrong * -rankEstimateConfig.marking.wrong,
       accuracy: attempted ? correct / attempted * 100 : 0,
