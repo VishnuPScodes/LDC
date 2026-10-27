@@ -13,3 +13,5 @@ pnpm --filter @ldc/server rank-history:import path/to/history.csv path/to/curren
 ```
 
 The current-cycle CSV is optional. Historical rows upsert by district, exam year and notification number; current-cycle rows upsert by district. No rank-history values are seeded by the app.
+
+After the exam, logged-in students can optionally add their answer-key score in Progress and enter their rank later. To review calibration, run `LDC_RANK_HISTORY_ADMIN=true` with `MONGODB_URI` in the trusted admin shell, then use `pnpm --filter @ldc/server rank-calibration:report`. The report contains aggregate score error, score-range coverage, rank error and rank-range coverage only; it does not print user identifiers. Use these values to tune the shared rank-estimate config, with the initial target of 80% of actual results inside the displayed ranges.

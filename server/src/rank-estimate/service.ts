@@ -1,4 +1,4 @@
-import { LdcCurrentCycle, LdcHistory, TestSession, User } from '../models.js';
+import { LdcCurrentCycle, LdcHistory, RankCalibration, TestSession, User } from '../models.js';
 import { rankEstimateConfig } from './config.js';
 import { buildDistrictCurve, estimateRankRange, fitBand } from './curve.js';
 import { estimateScore, type MockScoreInput } from './score.js';
@@ -22,14 +22,30 @@ export async function getUserRankEstimate(userId: string, requestedDistrict?: st
     counted: !!session.mockMetadata.eligibility?.counted,
     sectionScores: session.mockMetadata.sectionScores,
   }));
-  return { ...(await getRankEstimateForMocks(mocks, district)), lockedReason };
+  const result = await getRankEstimateForMocks(mocks, district);
+  if (district && result.estimate) {
+    const current: any = await LdcCurrentCycle.findOne({ district }).lean();
+    if (current?.examDate && new Date(current.examDate).getTime() > Date.now()) {
+      const rankRange = (result.estimate as any).rankRange;
+      await RankCalibration.updateOne(
+        { userId, district, examDate: current.examDate, actualScore: null },
+        { $set: {
+          predictedAt: new Date(), predictedScore: result.estimate.expectedScore,
+          predictedLowScore: result.estimate.lowScore, predictedHighScore: result.estimate.highScore,
+          predictedRankLow: rankRange?.lowRank ?? null, predictedRankHigh: rankRange?.highRank ?? null,
+        }, $setOnInsert: { userId, district, examDate: current.examDate } },
+        { upsert: true },
+      );
+    }
+  }
+  return { ...result, lockedReason };
 }
 
 export async function getRankEstimateForMocks(mocks: MockScoreInput[], district: string | null) {
   const districtsWithHistory = await LdcHistory.distinct('district', { mainListSize: { $gt: 0 }, mainListCutoff: { $ne: null } });
   const estimate = estimateScore(mocks);
   const sectionTopics = Object.fromEntries(rankEstimateConfig.syllabus.sections.map(section => [section.key, section.topics.length ? section.topics : section.fallbackTopics]));
-  const base = { district, districts: rankEstimateConfig.districts, districtsWithHistory, estimate, curveYears: [] as number[], trend: [] as any[], noHistory: false, sectionTopics };
+  const base = { district, districts: rankEstimateConfig.districts, districtsWithHistory, estimate, curveYears: [] as number[], trend: [] as any[], noHistory: false, sectionTopics, scoreMinimum: rankEstimateConfig.score.minimum, scoreMaximum: rankEstimateConfig.score.maximum };
   if (!estimate || !district) return { ...base, trend: estimate ? buildTrend(mocks, null) : [] };
 
   const historical = await LdcHistory.find({ district, mainListSize: { $gt: 0 }, mainListCutoff: { $ne: null } })

@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
+import { rankEstimateConfig } from './rank-estimate/config.js';
 const userSchema = new Schema({ name:{type:String,required:true}, email:{type:String,required:true,unique:true,lowercase:true}, passwordHash:{type:String,required:true}, settings:{targetExamDate:String,dailyGoal:{type:Number,default:20},district:String}, learnerStatsSnapshot:Schema.Types.Mixed },{timestamps:{createdAt:true,updatedAt:false}});
 const questionSchema = new Schema({ questionNumber:{type:Number,required:true}, text:{type:String,default:''}, options:[{key:String,text:String}], correctOption:{type:String,default:null}, explanation:String, topic:{type:String,required:true}, subtopic:String, sourcePage:Number, pdfOrder:Number, paperNumber:Number, paperCode:String, examDate:String, sourceFile:String, notes:String, needsReview:{type:Boolean,default:false}, eligibleForPractice:{type:Boolean,default:false,index:true}, excludedFromPractice:{type:Boolean,default:false}, exclusionReason:String, answerKeyStatus:String, reviewReasons:[String], sanityIssues:[String], pdfLayerPosition:Schema.Types.Mixed, reviewPreview:Schema.Types.Mixed, pdfLayerOptionCount:Number });
 const answerSchema = new Schema({ questionId:{type:Schema.Types.ObjectId,ref:'Question',required:true}, selectedOption:String, firstSelectedOption:String, firstIsCorrect:Boolean, isFirstAttempt:Boolean, isCorrect:Boolean, timeTakenMs:Number, answeredAt:Date });
@@ -8,8 +9,8 @@ const progressSchema = new Schema({ userId:{type:Schema.Types.ObjectId,ref:'User
 const feedbackSchema = new Schema({ userId:{type:Schema.Types.ObjectId,ref:'User',required:true,index:true},message:{type:String,required:true,trim:true,maxlength:3000} },{timestamps:{createdAt:true,updatedAt:false}});
 const ldcHistorySchema = new Schema({
  district:{type:String,required:true},examYear:{type:Number,required:true,min:1},notificationNo:{type:String,required:true},examDate:{type:Date,default:null},
- applicants:{type:Number,default:null,min:1},attendees:{type:Number,default:null,min:1},mainListSize:{type:Number,default:null,min:1},mainListCutoff:{type:Number,default:null,min:0,max:100},
- supplementaryListSize:{type:Number,default:null,min:1},supplementaryListCutoff:{type:Number,default:null,min:0,max:100},shortListSize:{type:Number,default:null,min:1},shortListCutoff:{type:Number,default:null,min:0,max:100},topScore:{type:Number,default:null,min:0,max:100},
+ applicants:{type:Number,default:null,min:1},attendees:{type:Number,default:null,min:1},mainListSize:{type:Number,default:null,min:1},mainListCutoff:{type:Number,default:null,min:rankEstimateConfig.score.minimum,max:rankEstimateConfig.score.maximum},
+ supplementaryListSize:{type:Number,default:null,min:1},supplementaryListCutoff:{type:Number,default:null,min:rankEstimateConfig.score.minimum,max:rankEstimateConfig.score.maximum},shortListSize:{type:Number,default:null,min:1},shortListCutoff:{type:Number,default:null,min:rankEstimateConfig.score.minimum,max:rankEstimateConfig.score.maximum},topScore:{type:Number,default:null,min:rankEstimateConfig.score.minimum,max:rankEstimateConfig.score.maximum},
  sourceUrl:{type:String,default:null},sourceNote:{type:String,default:null},verifiedBy:{type:String,default:null},verifiedAt:{type:Date,default:null},
 },{timestamps:true});
 ldcHistorySchema.index({district:1,examYear:1,notificationNo:1},{unique:true});
@@ -17,6 +18,8 @@ ldcHistorySchema.pre('validate',function(next){const row:any=this;const fields=[
 const ldcCurrentCycleSchema = new Schema({district:{type:String,required:true},applicants:{type:Number,default:null,min:1},expectedAttendanceRatio:{type:Number,default:null,min:0,max:1},examDate:{type:Date,default:null},sourceUrl:{type:String,default:null},sourceNote:{type:String,default:null}},{timestamps:true});
 ldcCurrentCycleSchema.index({district:1},{unique:true});
 ldcCurrentCycleSchema.pre('validate',function(next){const row:any=this;if((row.applicants!==null||row.expectedAttendanceRatio!==null)&&(!row.sourceUrl||!row.sourceNote)){row.invalidate('sourceUrl','A source URL and note are required for every row containing figures.')}next()});
+const rankCalibrationSchema = new Schema({userId:{type:Schema.Types.ObjectId,ref:'User',required:true,index:true},district:{type:String,required:true},examDate:{type:Date,required:true},predictedAt:{type:Date,required:true},predictedScore:{type:Number,required:true},predictedLowScore:{type:Number,required:true},predictedHighScore:{type:Number,required:true},predictedRankLow:{type:Number,default:null},predictedRankHigh:{type:Number,default:null},actualScore:{type:Number,default:null,min:rankEstimateConfig.score.minimum,max:rankEstimateConfig.score.maximum},actualRank:{type:Number,default:null,min:1},reportedAt:Date},{timestamps:true});
+rankCalibrationSchema.index({userId:1,district:1,examDate:1},{unique:true});
 export const User=mongoose.models.User||mongoose.model('User',userSchema);
 export const Question=mongoose.models.Question||mongoose.model('Question',questionSchema);
 export const TestSession=mongoose.models.TestSession||mongoose.model('TestSession',testSchema);
@@ -24,3 +27,4 @@ export const UserProgress=mongoose.models.UserProgress||mongoose.model('UserProg
 export const Feedback=mongoose.models.Feedback||mongoose.model('Feedback',feedbackSchema);
 export const LdcHistory=mongoose.models.LdcHistory||mongoose.model('LdcHistory',ldcHistorySchema);
 export const LdcCurrentCycle=mongoose.models.LdcCurrentCycle||mongoose.model('LdcCurrentCycle',ldcCurrentCycleSchema);
+export const RankCalibration=mongoose.models.RankCalibration||mongoose.model('RankCalibration',rankCalibrationSchema);

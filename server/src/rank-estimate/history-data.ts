@@ -30,7 +30,7 @@ export function parseHistoryRow(row: Record<string, string>) {
     const value = numericValue(row[column], column);
     if (value !== null) {
       if (rankColumns.has(column) && value <= 0) throw new Error(`${column} must be positive.`);
-      if (scoreColumns.has(column) && (value < 0 || value > 100)) throw new Error(`${column} must be between 0 and 100.`);
+      if (scoreColumns.has(column) && (value < rankEstimateConfig.score.minimum || value > rankEstimateConfig.score.maximum)) throw new Error(`${column} must be between ${rankEstimateConfig.score.minimum} and ${rankEstimateConfig.score.maximum}.`);
     }
     values[toCamel(column)] = value;
   }
