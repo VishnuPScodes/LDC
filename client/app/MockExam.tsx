@@ -2,13 +2,13 @@
 import {useEffect,useRef,useState} from 'react';
 import QuestionSource from './QuestionSource';
 type Q={_id:string;questionNumber:number;text:string;options:{key:string;text:string}[];topic:string;paperNumber?:number;paperCode?:string;examDate?:string;sourcePage?:number};
-type Props={questions:Q[];answers:any[];onAnswer:(id:string,key:string,timeMs:number)=>Promise<void>;onSkip:(id:string,timeMs:number)=>Promise<void>;onSubmit:()=>void;onQuit:()=>void;startedAt:number|string;durationSeconds:number};
+type Props={questions:Q[];answers:any[];onAnswer:(id:string,key:string,timeMs:number)=>Promise<void>;onSkip:(id:string,timeMs:number)=>Promise<void>;onSubmit:(reason:'submit'|'timeout')=>void;onQuit:()=>void;startedAt:number|string;durationSeconds:number};
 export default function MockExam({questions,answers,onAnswer,onSkip,onSubmit,onQuit,startedAt,durationSeconds}:Props){
  const [page,setPage]=useState(0),[pageSize,setPageSize]=useState(10),[marked,setMarked]=useState<string[]>([]),[seconds,setSeconds]=useState(durationSeconds),[confirm,setConfirm]=useState(false),[busy,setBusy]=useState(false);
  const openedAt=useRef(Date.now()),submitRef=useRef<()=>void>(()=>{}),autoSubmitted=useRef(false);
  const pages=Math.ceil(questions.length/pageSize),visible=questions.slice(page*pageSize,(page+1)*pageSize);
- const submit=async()=>{if(busy)return;setBusy(true);try{onSubmit()}finally{setBusy(false)}};
- useEffect(()=>{submitRef.current=()=>{void submit()}},[answers,questions,busy,onSkip,onSubmit]);
+ const submit=async(reason:'submit'|'timeout'='submit')=>{if(busy)return;setBusy(true);try{onSubmit(reason)}finally{setBusy(false)}};
+ useEffect(()=>{submitRef.current=()=>{void submit('timeout')}},[answers,questions,busy,onSkip,onSubmit]);
  useEffect(()=>{const onEscape=()=>setConfirm(true);window.addEventListener('quiz-escape',onEscape);return()=>window.removeEventListener('quiz-escape',onEscape)},[]);
  useEffect(()=>{const start=typeof startedAt==='number'?startedAt:new Date(startedAt).getTime();const timer=window.setInterval(()=>{const left=Math.max(0,durationSeconds-Math.floor((Date.now()-start)/1000));setSeconds(left);if(left===0&&!autoSubmitted.current){autoSubmitted.current=true;submitRef.current()}},250);return()=>window.clearInterval(timer)},[startedAt,durationSeconds]);
  const jumpToPage=(next:number)=>{setPage(Math.max(0,Math.min(pages-1,next)));window.scrollTo({top:0,behavior:'smooth'})};
@@ -22,7 +22,7 @@ export default function MockExam({questions,answers,onAnswer,onSkip,onSubmit,onQ
     <button type="button" className={`mock-mark-button${marked.includes(q._id)?' marked':''}`} onClick={()=>setMarked(xs=>xs.includes(q._id)?xs.filter(x=>x!==q._id):[...xs,q._id])}>{marked.includes(q._id)?'★ Marked for review':'☆ Mark for review'}</button>
    </article>})}</div>
   <nav className="mock-pagination" aria-label="Exam pages"><button className="secondary-button" type="button" disabled={page===0} onClick={()=>jumpToPage(page-1)}>← Previous</button><span>Page {page+1} / {pages}</span><button className="button" type="button" disabled={page===pages-1} onClick={()=>jumpToPage(page+1)}>Next page →</button></nav>
-  <div className="mock-exam-footer"><div className="question-palette" aria-label="Question navigation">{questions.map((item,i)=><button key={item._id} type="button" aria-label={`Question ${i+1}${answers.some(a=>a.questionId===item._id)?', answered':''}${marked.includes(item._id)?', marked for review':''}`} className={`${Math.floor(i/pageSize)===page?'current':''}${answers.some(a=>a.questionId===item._id)?' answered':''}${marked.includes(item._id)?' review-mark':''}`} onClick={()=>jumpToPage(Math.floor(i/pageSize))}>{i+1}</button>)}</div><button type="button" className="button mock-submit" disabled={busy} onClick={()=>void submit()}>{busy?'Submitting…':'Submit mock exam'}</button></div>
+  <div className="mock-exam-footer"><div className="question-palette" aria-label="Question navigation">{questions.map((item,i)=><button key={item._id} type="button" aria-label={`Question ${i+1}${answers.some(a=>a.questionId===item._id)?', answered':''}${marked.includes(item._id)?', marked for review':''}`} className={`${Math.floor(i/pageSize)===page?'current':''}${answers.some(a=>a.questionId===item._id)?' answered':''}${marked.includes(item._id)?' review-mark':''}`} onClick={()=>jumpToPage(Math.floor(i/pageSize))}>{i+1}</button>)}</div><button type="button" className="button mock-submit" disabled={busy} onClick={()=>void submit('submit')}>{busy?'Submitting…':'Submit mock exam'}</button></div>
   {confirm&&<div className="dialog-scrim"><div className="quit-dialog" role="alertdialog" aria-modal="true"><h2>Quit mock exam?</h2><p>Your answers so far will be saved as an unfinished test.</p><div className="dialog-actions"><button className="secondary-button" onClick={()=>setConfirm(false)}>Keep going</button><button className="quit-confirm" onClick={onQuit}>Quit test</button></div></div></div>}
  </section>;
 }
