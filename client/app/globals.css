@@ -44,30 +44,6 @@
   --amber-soft: #FFF8E8;
   --shadow: var(--shadow-card);
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme-choice="light"]) {
-    color-scheme: dark;
-    --bg: #121513;
-    --surface: #1A1E1B;
-    --surface-muted: #202521;
-    --border: #2A2F2B;
-    --text: #ECEFEC;
-    --text-secondary: #A3ADA7;
-    --brand: #4CC38A;
-    --brand-hover: #63D19B;
-    --on-brand: #0E1A13;
-    --correct-bg: #0F2A1C;
-    --correct-border: #22C55E;
-    --wrong-bg: #2A1414;
-    --wrong-border: #EF4444;
-    --selected-bg: #1E2A23;
-    --selected-border: #4CC38A;
-    --accent: #F59E0B;
-    --focus-ring: rgba(76, 195, 138, .4);
-    --shadow-card: none;
-    --amber-soft: #33230D;
-  }
-}
 .dark, :root[data-theme-choice="dark"] {
   color-scheme: dark;
   --bg: #121513;
@@ -90,12 +66,9 @@
   --shadow-card: none;
   --amber-soft: #33230D;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme-choice="light"]), .dark { color-scheme: dark; }
-}
 * { box-sizing: border-box; }
 html { background: var(--bg); }
-html:has(.dark), body:has(.dark) { background: #0a120e; }
+html:has(.dark), body:has(.dark) { background: var(--bg); }
 body {
   margin: 0;
   background: var(--bg);
