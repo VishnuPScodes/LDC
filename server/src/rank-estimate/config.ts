@@ -33,6 +33,7 @@ export const rankEstimateConfig = {
   difficulty: {
     minimumFirstAttempts: 30,
     neutralDefault: 0.5,
+    referenceDifficulty: 0.5,
     adjustmentK: 8,
   },
   averaging: {
