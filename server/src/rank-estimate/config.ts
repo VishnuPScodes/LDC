@@ -53,6 +53,7 @@ export const rankEstimateConfig = {
     simulationHighPercentile: 0.9,
     rankRoundingBelow1000: 50,
     rankRoundingAtOrAbove1000: 100,
+    outsideAnchorWidening: 3,
     strongPositionMargin: 5,
     nearSupplementaryMargin: 5,
   },
