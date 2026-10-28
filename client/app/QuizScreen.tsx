@@ -21,12 +21,13 @@ type Props = {
   streak: number;
   onChoose: (key: string) => void;
   onContinue: () => void;
-  onQuit: () => void;
+  onQuit: () => void | Promise<void>;
   onReport: () => void;
 };
 
 export default function QuizScreen({ question, index, total, elapsed, picked, feedback, quick, reported, streak, onChoose, onContinue, onQuit, onReport }: Props) {
   const [showQuit, setShowQuit] = useState(false);
+  const [quitting, setQuitting] = useState(false);
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -100,7 +101,7 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
           <h2 id="quit-title">Quit test?</h2><p>Your progress so far will be saved.</p>
           <div className="dialog-actions">
             <button type="button" className="secondary-button" onClick={() => setShowQuit(false)}>Keep going</button>
-            <button type="button" className="quit-confirm" onClick={onQuit}>Quit test</button>
+            <button type="button" className="quit-confirm" disabled={quitting} onClick={async()=>{setQuitting(true);try{await onQuit()}finally{setQuitting(false)}}}>{quitting?'Ending session…':'Quit test'}</button>
           </div>
         </motion.div>
       </motion.div>}
