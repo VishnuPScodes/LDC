@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import QuestionSource from './QuestionSource';
+import PaperSettings from './PaperSettings';
 
 type Option = { key: string; text: string };
 type Question = { _id: string; questionNumber: number; text: string; options: Option[]; topic: string; paperNumber?: number; paperCode?:string;examDate?:string;sourcePage?: number };
@@ -42,19 +43,21 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
     return () => window.clearTimeout(timer);
   }, [feedback, quick]);
 
-  return <section className="quiz-page" aria-label="Exam practice question">
+  return <section className="quiz-page paper-screen" aria-label="Exam practice question">
     <header className="quiz-topbar">
       <button className="icon-button quit-button" type="button" aria-label="Quit test" onClick={() => setShowQuit(true)}><span aria-hidden="true">×</span></button>
       <div className="quiz-progress-wrap">
         <div className="quiz-count"><strong>{index + 1}</strong><span>/ {total}</span><span className="quiz-time">{Math.floor(elapsed / 60)}:{String(elapsed % 60).padStart(2, '0')}</span></div>
         <div className="quiz-progress" role="progressbar" aria-label="Test progress" aria-valuemin={0} aria-valuemax={total} aria-valuenow={index + 1}><span style={{ width: `${(index + 1) / total * 100}%` }} /></div>
       </div>
+      <PaperSettings />
     </header>
 
     <div className="quiz-content">
+      <div className="booklet-heading"><strong>Kerala PSC · {question.paperCode||question.topic}</strong><span>Question {index+1} of {total}</span></div>
       <div className="quiz-topic">{question.topic}</div>
-      <h1 className="question-prompt" lang={/[ഀ-ൿ]/u.test(question.text)?'ml':'en'}>{question.text}</h1>
-      <div className={`quiz-options${question.options.every(option => option.text.length <= 40) ? ' short-options' : ''}`} role="group" aria-label="Answer choices">
+      <h1 className="question-prompt" lang={/[ഀ-ൿ]/u.test(question.text)?'ml':'en'}><span className="paper-question-number">{question.questionNumber}.</span>{question.text}</h1>
+      <div className={`quiz-options${question.options.every(option => option.text.length <= 18) ? ' short-options' : ''}`} role="group" aria-label="Answer choices">
         {question.options.map((option, position) => {
           const selected = picked === option.key;
           const isCorrectAnswer = feedback?.correctOption === option.key;
@@ -63,13 +66,12 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
           const dim = !!feedback && !selected && !isCorrectAnswer;
           return <motion.button key={option.key} type="button"
             className={`quiz-option${isWrongSelection ? ' is-wrong' : ''}${feedback && isCorrectAnswer ? ' is-correct' : ''}${selected&&!feedback ? ' is-selected' : ''}${dim ? ' is-dimmed' : ''}`}
-            whileTap={!picked && !reduceMotion ? { y: 2 } : undefined}
-            animate={reduceMotion ? undefined : isWrongSelection ? { x: [0, -4, 4, -3, 0] } : isRightSelection ? { scale: [1, 1.012, 1] } : undefined}
-            transition={{ duration: .24 }} disabled={!!picked} aria-pressed={selected} aria-label={`${option.key}. ${option.text}${isRightSelection || isCorrectAnswer ? ', Correct' : isWrongSelection ? ', Incorrect' : ''}`} data-answer-option="true" onClick={() => onChoose(option.key)}>
-            <span className="option-badge">{option.key}</span>
+            animate={reduceMotion ? undefined : { opacity: 1 }}
+            transition={{ duration: .15 }} disabled={!!picked} aria-pressed={selected} aria-label={`${option.key}. ${option.text}${isRightSelection || isCorrectAnswer ? ', Correct answer' : isWrongSelection ? ', Your answer, wrong' : ''}`} data-answer-option="true" onClick={() => onChoose(option.key)}>
+            <span className="option-badge">({option.key})</span>
             <span className="option-copy" lang={/[ഀ-ൿ]/u.test(option.text)?'ml':'en'}>{option.text}</span>
             <span className="option-mark" aria-hidden="true">
-              {isWrongSelection ? '✗' : isRightSelection ? '✓' : isCorrectAnswer ? '✓' : !picked ? <span className="option-shortcut">{position + 1}</span> : null}
+              {isWrongSelection ? '✗' : isRightSelection || isCorrectAnswer ? <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg> : !picked ? <span className="option-shortcut">{position + 1}</span> : null}
             </span>
           </motion.button>;
         })}
@@ -77,7 +79,7 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
       {feedback&&<div className={`feedback-verdict ${feedback.isCorrect?'verdict-correct':'verdict-wrong'}`} role="status" aria-live="polite">
         <strong>{feedback.isCorrect?'✓ Correct':`✗ Wrong — answer is ${feedback.correctOption}`}</strong>
         {!feedback.isCorrect&&<span>Your answer: {picked}</span>}
-        {feedback.explanation&&<p>{feedback.explanation}</p>}
+        {feedback.explanation&&<div className="paper-explanation"><span>Explanation</span><p lang={/[ഀ-ൿ]/u.test(feedback.explanation)?'ml':'en'}>{feedback.explanation}</p></div>}
         {!quick&&<button type="button" className="button" onClick={onContinue}>Next →</button>}
       </div>}
       <div className="quiz-footer">
