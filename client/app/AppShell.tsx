@@ -7,6 +7,7 @@ import SyllabusPage from './SyllabusPage';
 import PracticeSetup from './PracticeSetup';
 import ReviewPage from './ReviewPage';
 import ProgressPage from './ProgressPage';
+import AnalyticsPage from './AnalyticsPage';
 import ReportPage from './ReportPage';
 import MockExam from './MockExam';
 import MockExamSetup from './MockExamSetup';
@@ -76,7 +77,7 @@ export default function AppShell({landing}:{landing:ReactNode}){
     {view==='setup'&&<PracticeSetup count={count} setCount={setCount} order={order} setOrder={setOrder} topics={topics} setTopics={setTopics} mode={mode} setMode={setMode} onlyWrong={onlyWrong} setOnlyWrong={setOnlyWrong} syllabus={syllabus} syllabusError={dataErrors.syllabus} onRetrySyllabus={()=>void refresh()} progress={progress} dailyGoal={dailyGoal} setDailyGoal={setGoal} targetExamDate={targetExamDate} setTargetExamDate={updateExamDate} language={language} dark={dark} setDark={(v:boolean)=>{setDark(v);localStorage.setItem('ldc-theme',v?'dark':'light')}} busy={busy} onStart={()=>void start()}/>}
     {view==='mock-setup'&&<MockExamSetup questionCount={mockConfig?.questionCount??null} durationSeconds={mockConfig?.durationSeconds??null} busy={busy} onStart={()=>void start({mode:'mock'})}/>}
     {view==='review'&&<ReviewPage count={reviewDue} busy={busy} error={dataErrors.review} onRetry={()=>void refresh()} onStart={()=>void start({reviewOnly:true,mode:'practice',order:'random',count:Math.max(1,reviewDue)})}/>}
-    {view==='progress'&&<ProgressPage progress={progress} history={history} loading={progressLoading} error={dataErrors.learner||dataErrors.progress} onRetry={()=>void refresh()} learnerStats={learnerStats} language={language} initialDistrict={user?.settings?.district} onStartMock={()=>setView('mock-setup')} onOpenMilestones={()=>setView('milestones')} onPracticeTopic={(topic:string)=>start({topics:[topic],mode:'practice'})}/>}
+    {view==='progress'&&(featureFlags.analyticsV2?<AnalyticsPage language={language} onStart={(config:any)=>{if(config?.mode==='mock'){setView('mock-setup');return}void start({...config,order:'random'})}}/>:<ProgressPage progress={progress} history={history} loading={progressLoading} error={dataErrors.learner||dataErrors.progress} onRetry={()=>void refresh()} learnerStats={learnerStats} language={language} initialDistrict={user?.settings?.district} onStartMock={()=>setView('mock-setup')} onOpenMilestones={()=>setView('milestones')} onPracticeTopic={(topic:string)=>start({topics:[topic],mode:'practice'})}/>)}
     {view==='milestones'&&<MilestonesPage stats={learnerStats} loading={progressLoading} error={dataErrors.learner} onRetry={()=>void refresh()} language={language}/>}
     {view==='quiz'&&questions[index]&&<QuizScreen question={questions[index]} index={index} total={questions.length} elapsed={time} picked={picked} feedback={feedback} quick={session?.settings?.mode==='quick'} reported={reportedQuestions.includes(questions[index]._id)} streak={showStreakToast?correctStreak:0} onChoose={choose} onContinue={()=>void next()} onQuit={quit} onReport={async()=>{try{await api(`/questions/${questions[index]._id}/report`,{});setReportedQuestions(xs=>[...xs,questions[index]._id])}catch(e:any){setError(e.message)}}}/>}
     {view==='mock'&&session&&<MockExam questions={questions} answers={answers} startedAt={session.startedAt||Date.now()} durationSeconds={session.settings?.durationSeconds||mockConfig?.durationSeconds||0} onAnswer={mockAnswer} onSkip={mockSkip} onSubmit={reason=>void completeSession(false,reason)} onQuit={quit}/>}
@@ -98,9 +99,9 @@ function GuestFeatureNotice({view}:{view:View}){const messages:Record<string,[st
 function Header({view,setView,dark,setDark,user,logout,language,setLanguage}:any){
   const [menuOpen,setMenuOpen]=useState(false);
   const ml=language==='ml';
-  const desktop=[['home',ml?'ഇന്ന്':'Today'],['setup',ml?'പരിശീലനം':'Practice'],['review',ml?'ആവർത്തനം':'Review'],['progress',ml?'പുരോഗതി':'Progress']];
+  const desktop=[['home',ml?'ഇന്ന്':'Today'],['setup',ml?'പരിശീലനം':'Practice'],['review',ml?'ആവർത്തനം':'Review'],['progress',ml?'വിശകലനം':'Analytics']];
   const more=[['knowledge','അറിവ്'],['mock-setup',ml?'മോക്ക് പരീക്ഷ':'Mock exam'],['syllabus',ml?'പാഠ്യപദ്ധതി':'Syllabus'],...(featureFlags.milestones?[['milestones',ml?'നേട്ടങ്ങൾ':'Milestones']]:[]),['history',ml?'ചരിത്രം':'History'],['feedback',ml?'അഭിപ്രായം':'Feedback']];
-  const mobile=[['home',ml?'ഇന്ന്':'Today'],['setup',ml?'പരിശീലനം':'Practice'],['knowledge','അറിവ്'],['review',ml?'ആവർത്തനം':'Review'],['progress',ml?'പുരോഗതി':'Progress']];
+  const mobile=[['home',ml?'ഇന്ന്':'Today'],['setup',ml?'പരിശീലനം':'Practice'],['knowledge','അറിവ്'],['review',ml?'ആവർത്തനം':'Review'],['progress',ml?'വിശകലനം':'Analytics']];
   const navigate=(target:string)=>{setView(target);setMenuOpen(false)};
   return <>
     <header className="header">
