@@ -16,8 +16,14 @@ export function createMockExamRouter(auth: (req: any, res: any, next: any) => vo
 
   router.post('/', auth, async (req: any, res, next) => {
     if (req.body?.mode !== 'mock') return next('route');
-    const progress = await UserProgress.findOne({ userId: req.userId });
-    const previouslyAnsweredIds = new Set<string>((progress?.questions || []).map((row: any) => String(row.questionId)));
+    const [progress, previousSessions] = await Promise.all([
+      UserProgress.findOne({ userId: req.userId }),
+      TestSession.find({ userId: req.userId, status: 'completed' }).select('questionIds').lean(),
+    ]);
+    const previouslyAnsweredIds = new Set<string>([
+      ...(progress?.questions || []).map((row: any) => String(row.questionId)),
+      ...previousSessions.flatMap((session: any) => (session.questionIds || []).map((id: any) => String(id))),
+    ]);
     const candidateTopics = [...new Set(rankEstimateConfig.syllabus.sections.flatMap(section => [...section.topics, ...section.fallbackTopics]))];
     const candidates = await Question.find({
       topic: { $in: candidateTopics }, eligibleForPractice: true, needsReview: false,
