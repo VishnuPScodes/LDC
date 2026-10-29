@@ -1,18 +1,22 @@
 'use client';
 
-import {useState} from 'react';
+import {useEffect,useState} from 'react';
 import type {PublicQuestion} from './public-content';
+import {topicLabel} from './topic-labels';
 
 const formatExamDate=(value:string)=>new Intl.DateTimeFormat('en-IN',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(`${value}T00:00:00Z`));
 const questionLanguage=(text:string)=>/[\u0D00-\u0D7F]/u.test(text)?'ml':'en-IN';
 const questionReportHref=(question:PublicQuestion)=>`/login?next=${encodeURIComponent(`/feedback?paper=${question.paperNumber}&question=${question.questionNumber}`)}`;
 
 export default function PublicQuestion({question,index}:{question:PublicQuestion;index?:number}){
- const [revealed,setRevealed]=useState(false);
+ const [revealed,setRevealed]=useState(false),[ml,setMl]=useState(false);
+ useEffect(()=>{try{setMl(localStorage.getItem('ldc-language')==='ml')}catch{}},[]);
  const answer=question.options.find(option=>option.key===question.correctOption);
+ const asksCurrent=/(\bcurrent\b|\bnow\b|\bpresent\b|നിലവിലെ|ഇപ്പോഴത്തെ|ഇപ്പോൾ)/iu.test(question.text),year=Number(question.examDate.slice(0,4)),historical=asksCurrent&&year<=new Date().getFullYear()-1;
  return <article className="public-question paper-question" id={`q-${question.questionNumber}`}>
-  <div className="public-question-label"><strong>Question / ചോദ്യം {index??question.questionNumber}</strong><span>{question.topic}</span></div>
+  <div className="public-question-label"><strong>Question / ചോദ്യം {index??question.questionNumber}</strong><span>{topicLabel(question.topic,ml?'ml':'en')}</span></div>
   <h2 lang={questionLanguage(question.text)}><span className="paper-question-number">{index??question.questionNumber}.</span>{question.text}</h2>
+  {historical&&<p className="historical-current-note" role="note">{ml?`ചോദിച്ചത് ${year}ൽ — അന്നത്തെ ഉത്തരമാണ്`:`Asked in ${year} — answer reflects that time`}</p>}
   <ol className={`public-options${question.options.every(option=>option.text.length<=18)?' short-options':''}`} type="A">{question.options.map(option=><li key={option.key} className={revealed&&option.key===question.correctOption?'public-correct-option':''}><span className="option-key">({option.key})</span><span lang={questionLanguage(option.text)}>{option.text}</span>{revealed&&option.key===question.correctOption&&<strong className="answer-check">✓ Correct / ശരിയുത്തരം</strong>}</li>)}</ol>
   <button className="text-button answer-reveal" type="button" aria-expanded={revealed} onClick={()=>setRevealed(value=>!value)}>{revealed?'Hide answer / ഉത്തരം മറയ്ക്കുക':'Show answer / ഉത്തരം കാണുക'}</button>
   <div className={`public-answer${revealed?' is-revealed':''}`} aria-hidden={!revealed}><strong>Answer / ഉത്തരം: {question.correctOption}{answer?` — ${answer.text}`:''}</strong>{question.explanation&&<div className="paper-explanation"><span>Explanation</span><p lang={questionLanguage(question.explanation)}>{question.explanation}</p></div>}</div>

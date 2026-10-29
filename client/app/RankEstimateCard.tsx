@@ -2,7 +2,8 @@
 import {useEffect,useMemo,useState} from 'react';
 
 type Props={language?:'en'|'ml';mockMetadata?:any;initialDistrict?:string|null;guestMode?:boolean;guestMocks?:any[];onStart?:()=>void;onPracticeTopic?:(topic:string)=>void};
-export default function RankEstimateCard({language='en',mockMetadata,initialDistrict,guestMode=false,guestMocks=[],onStart,onPracticeTopic}:Props){
+const EMPTY_MOCKS:any[]=[];
+export default function RankEstimateCard({language='en',mockMetadata,initialDistrict,guestMode=false,guestMocks=EMPTY_MOCKS,onStart,onPracticeTopic}:Props){
  const ml=language==='ml',counted=mockMetadata?mockMetadata.eligibility?.counted===true:guestMode?guestMocks.some(mock=>mock.counted):true;
  const [data,setData]=useState<any>(null),[district,setDistrict]=useState(initialDistrict||''),[busy,setBusy]=useState(true),[saving,setSaving]=useState(false),[error,setError]=useState('');
  const load=async(nextDistrict?:string)=>{setBusy(true);setError('');try{let response:Response;if(guestMode){let savedDistrict=nextDistrict;try{savedDistrict=savedDistrict||localStorage.getItem('ldc-guest-district-v1')||undefined}catch{}response=await fetch('/api/rank-estimate/guest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({district:savedDistrict||null,mocks:guestMocks})})}else{const query=nextDistrict?`?district=${encodeURIComponent(nextDistrict)}`:'';response=await fetch(`/api/rank-estimate${query}`,{credentials:'include'})}const body=await response.json();if(!response.ok)throw new Error(body.error||'Could not load the estimate.');setData(body);setDistrict(body.district||nextDistrict||'')}catch(e:any){setError(e.message)}finally{setBusy(false)}};

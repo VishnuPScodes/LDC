@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import QuestionSource from './QuestionSource';
 import PaperSettings from './PaperSettings';
+import {topicLabel} from './topic-labels';
 
 type Option = { key: string; text: string };
 type Question = { _id: string; questionNumber: number; text: string; options: Option[]; topic: string; paperNumber?: number; paperCode?:string;examDate?:string;sourcePage?: number };
@@ -19,13 +20,14 @@ type Props = {
   quick: boolean;
   reported: boolean;
   streak: number;
+  language?:'en'|'ml';
   onChoose: (key: string) => void;
   onContinue: () => void;
   onQuit: () => void | Promise<void>;
   onReport: () => void;
 };
 
-export default function QuizScreen({ question, index, total, elapsed, picked, feedback, quick, reported, streak, onChoose, onContinue, onQuit, onReport }: Props) {
+export default function QuizScreen({ question, index, total, elapsed, picked, feedback, quick, reported, streak, language='en', onChoose, onContinue, onQuit, onReport }: Props) {
   const [showQuit, setShowQuit] = useState(false);
   const [quitting, setQuitting] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -56,7 +58,7 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
 
     <div className="quiz-content">
       <div className="booklet-heading"><strong>Kerala PSC · {question.paperCode||question.topic}</strong><span>Question {index+1} of {total}</span></div>
-      <div className="quiz-topic">{question.topic}</div>
+      <div className="quiz-topic">{topicLabel(question.topic,language)}</div>
       <h1 className="question-prompt" lang={/[ഀ-ൿ]/u.test(question.text)?'ml':'en'}><span className="paper-question-number">{question.questionNumber}.</span>{question.text}</h1>
       <div className={`quiz-options${question.options.every(option => option.text.length <= 18) ? ' short-options' : ''}`} role="group" aria-label="Answer choices">
         {question.options.map((option, position) => {
@@ -77,6 +79,7 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
           </motion.button>;
         })}
       </div>
+      {picked&&!feedback&&<div className="feedback-verdict feedback-checking" role="status" aria-live="polite">{/[\u0D00-\u0D7F]/u.test(question.text)?'ഉത്തരം പരിശോധിക്കുന്നു…':'Checking your answer…'}</div>}
       {feedback&&<div className={`feedback-verdict ${feedback.isCorrect?'verdict-correct':'verdict-wrong'}`} role="status" aria-live="polite">
         <strong>{feedback.isCorrect?'✓ Correct':`✗ Wrong — answer is ${feedback.correctOption}`}</strong>
         {!feedback.isCorrect&&<span>Your answer: {picked}</span>}
@@ -84,7 +87,7 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
         {!quick&&<button type="button" className="button" onClick={onContinue}>Next →</button>}
       </div>}
       <div className="quiz-footer">
-        <QuestionSource questionNumber={question.questionNumber} paperCode={question.paperCode} paperNumber={question.paperNumber} examDate={question.examDate} sourcePage={question.sourcePage}/>
+        <QuestionSource questionNumber={question.questionNumber} paperCode={question.paperCode} paperNumber={question.paperNumber} examDate={question.examDate} sourcePage={question.sourcePage} text={question.text}/>
         <button type="button" className={`report-link${reported ? ' reported' : ''}`} onClick={onReport} disabled={reported}>
           {reported ? '✓ Sent for review' : 'Report a problem'}
         </button>

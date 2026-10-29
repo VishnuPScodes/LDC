@@ -2,14 +2,14 @@
 
 ## Data and page choice
 
-Keep `/progress` and replace its insights content behind `analyticsV2`. This preserves saved links and the existing navigation slot. The current Progress page already uses Recharts. Authenticated answers come from per-user `TestSession` records; review due dates come from `UserProgress`; the official section map comes from `rankEstimateConfig`. Guest sessions are stored locally and will be aggregated in the client using the same pure analytics engine.
+Keep `/progress` and replace its insights content behind `analyticsV2`. This preserves saved links and the existing navigation slot. The current Progress page already uses Recharts. Authenticated answers come from per-user `TestSession` records; review due dates come from `UserProgress`; the official section map comes from `rankEstimateConfig`. Guest sessions stay in local storage. Before analytics are calculated, the guest sees a disclosure and chooses to send the saved history to the server for this request; the endpoint computes results without persisting the sessions.
 
 The checked-in syllabus sources disagree with the supplied mark list. `server/data/syllabus.json` and `rankEstimateConfig.syllabus.sections` make a 100-mark allocation, including 10 Kerala Governance, 6 Biology and Public Health, and a separate 5-mark Important Acts section whose mock questions are drawn from Constitution and Kerala Governance pools. The values supplied in the request total 94. Analytics will reuse the Rank Estimate's 100-mark section keys and question section assignments to keep mock breakdowns and Rank Estimate aligned. This mapping remains editable in `server/src/analytics/config.ts`.
 
 ## Metrics
 
 - Accuracy uses the first saved answer per student and question (`firstIsCorrect`, falling back to earliest stored answer for imported/legacy sessions). Mock revisions do not replace first-attempt accuracy. Repeats are counted separately.
-- Recent accuracy compares first attempts in the latest 14 calendar days with the preceding 14 days. Trend is up/down at a difference of at least 5 percentage points; otherwise flat.
+- Recent accuracy compares first attempts in the latest 14 days with the preceding 14 days. The prior window excludes the exact 14-day boundary so an event is counted in only one window. Trend is up/down at a difference of at least 5 percentage points; otherwise flat.
 - Confidence requires 20 first attempts in the selected range. Mastery bands apply only at that confidence: Weak <50%, Developing 50–69%, Good 70–84%, Strong ≥85%.
 - Coverage is distinct eligible questions attempted divided by eligible questions in the selected section. Accuracy and coverage follow the selected 7-day, 30-day, or all-time range; trend remains a fixed recent-vs-prior 14-day comparison.
 - Marks at stake = configured section marks × (1 − latest-14-day accuracy). If there are no recent attempts, use all-time first-attempt accuracy; with no attempts, report marks as unassessed rather than a loss.
@@ -33,8 +33,8 @@ De-duplicate by section, sort by priority with stable configured rule order for 
 
 ## Compute and cache
 
-One pure engine computes section/topic metrics, summaries, charts' datasets, detail data, and advice from a normalized learner snapshot. A server service reads user-owned sessions, question eligibility, review due dates, and Rank Estimate metadata, then caches the serialized result on that user's `User` document by range. Cache refresh runs after session completion; a missing/stale legacy cache is rebuilt on the next Analytics request. The API never accepts a user ID from the browser. Guests run the same engine against their local session history and include a sign-in sync note.
+One pure server engine computes section/topic metrics, summaries, chart datasets, detail data, and advice from a normalized learner snapshot. A server service reads user-owned sessions, question eligibility, review due dates, and Rank Estimate metadata, then caches the serialized result on that user's `User` document by range. Cache refresh runs after session completion; a missing/stale legacy cache is rebuilt on the next Analytics request. The authenticated API never accepts a user ID from the browser. The guest endpoint validates its bounded request and computes against the submitted local history without saving it.
 
 ## Accessibility and presentation
 
-Use existing warm-background, white-card, text, and brand tokens; retain Recharts already in the client. Every chart is paired with a visible table/list and labels, and mastery includes text as well as muted color. The page content and reasons are available in English and Malayalam. The section detail opens from the section bar and practice actions pass explicit topics, modes, and counts to the existing session-start flow.
+Use existing warm-background, white-card, text, and brand tokens; retain Recharts already in the client. Every chart is paired with a visible table/list and labels, and mastery includes text as well as color. The main page content, recommendations, and core chart/table labels have English and Malayalam copy; remaining topic names and question content can remain English. The section detail opens from the section bar and practice actions pass explicit topics, modes, and counts to the existing session-start flow. Guest controls that depend on a signed-in review queue or saved mistake filtering are hidden.

@@ -1,13 +1,15 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
 import QuestionSource from './QuestionSource';
+import {topicLabel} from './topic-labels';
 import PaperSettings from './PaperSettings';
 type Q={_id:string;questionNumber:number;text:string;options:{key:string;text:string}[];topic:string;paperNumber?:number;paperCode?:string;examDate?:string;sourcePage?:number};
-type Props={questions:Q[];answers:any[];onAnswer:(id:string,key:string,timeMs:number)=>Promise<void>;onSkip:(id:string,timeMs:number)=>Promise<void>;onSubmit:(reason:'submit'|'timeout')=>void;onQuit:()=>void|Promise<void>;startedAt:number|string;durationSeconds:number};
-export default function MockExam({questions,answers,onAnswer,onSkip,onSubmit,onQuit,startedAt,durationSeconds}:Props){
+type Props={questions:Q[];answers:any[];onAnswer:(id:string,key:string,timeMs:number)=>Promise<void>;onSkip:(id:string,timeMs:number)=>Promise<void>;onSubmit:(reason:'submit'|'timeout')=>void;onQuit:(shownQuestionIds?:string[])=>void|Promise<void>;startedAt:number|string;durationSeconds:number;language?:'en'|'ml'};
+export default function MockExam({questions,answers,onAnswer,onSkip,onSubmit,onQuit,startedAt,durationSeconds,language='en'}:Props){
  const [page,setPage]=useState(0),[pageSize,setPageSize]=useState(10),[marked,setMarked]=useState<string[]>([]),[seconds,setSeconds]=useState(durationSeconds),[confirm,setConfirm]=useState(false),[busy,setBusy]=useState(false),[quitting,setQuitting]=useState(false),[showAnswerSheet,setShowAnswerSheet]=useState(false);
- const openedAt=useRef(Date.now()),submitRef=useRef<()=>void>(()=>{}),autoSubmitted=useRef(false);
+ const openedAt=useRef(Date.now()),submitRef=useRef<()=>void>(()=>{}),autoSubmitted=useRef(false),visitedQuestionIds=useRef(new Set(questions.slice(0,pageSize).map(question=>question._id)));
  const pages=Math.ceil(questions.length/pageSize),visible=questions.slice(page*pageSize,(page+1)*pageSize);
+ useEffect(()=>{visible.forEach(question=>visitedQuestionIds.current.add(question._id))},[page,pageSize,questions]);
  const submit=async(reason:'submit'|'timeout'='submit')=>{if(busy)return;setBusy(true);try{onSubmit(reason)}finally{setBusy(false)}};
  useEffect(()=>{submitRef.current=()=>{void submit('timeout')}},[answers,questions,busy,onSkip,onSubmit]);
  useEffect(()=>{const onEscape=()=>setConfirm(true);window.addEventListener('quiz-escape',onEscape);return()=>window.removeEventListener('quiz-escape',onEscape)},[]);
@@ -20,13 +22,13 @@ export default function MockExam({questions,answers,onAnswer,onSkip,onSubmit,onQ
   <div className="booklet-heading mock-booklet-heading"><strong>Kerala PSC · Lower Division Clerk</strong><span>Time: {Math.round(durationSeconds/60)} minutes · Maximum marks: 100</span></div>
   <div className="mock-page-tools"><span>Questions {page*pageSize+1}–{Math.min((page+1)*pageSize,questions.length)} of {questions.length}</span><label>Show <select aria-label="Questions per page" value={pageSize} onChange={e=>{setPageSize(Number(e.target.value));setPage(0)}}><option value={10}>10</option><option value={15}>15</option></select> per page</label></div>
   <div className="mock-question-list">{visible.map((q,offset)=>{const number=page*pageSize+offset,answer=answers.find(a=>a.questionId===q._id);return <article className="mock-question-card" id={`mock-question-${number}`} key={q._id}>
-    <div className="mock-question-meta"><strong>Question {number+1}</strong><span>{q.topic}</span><QuestionSource questionNumber={q.questionNumber} paperCode={q.paperCode} paperNumber={q.paperNumber} examDate={q.examDate} sourcePage={q.sourcePage}/></div>
+    <div className="mock-question-meta"><strong>{language==='ml'?'ചോദ്യം':'Question'} {number+1}</strong><span>{topicLabel(q.topic,language)}</span><QuestionSource questionNumber={q.questionNumber} paperCode={q.paperCode} paperNumber={q.paperNumber} examDate={q.examDate} sourcePage={q.sourcePage} text={q.text}/></div>
     <h2 lang={/[ഀ-ൿ]/u.test(q.text)?'ml':'en'}><span className="paper-question-number">{number+1}.</span>{q.text}</h2>
     <div className="mock-card-options">{q.options.map(o=><button key={o.key} type="button" className={`mock-card-option${answer?.selectedOption===o.key?' selected':''}`} aria-pressed={answer?.selectedOption===o.key} onClick={()=>void onAnswer(q._id,o.key,Date.now()-openedAt.current)}><span className="omr-bubble">{o.key}</span><span lang={/[ഀ-ൿ]/u.test(o.text)?'ml':'en'}>{o.text}</span></button>)}</div>
     <button type="button" className={`mock-mark-button${marked.includes(q._id)?' marked':''}`} onClick={()=>setMarked(xs=>xs.includes(q._id)?xs.filter(x=>x!==q._id):[...xs,q._id])}>{marked.includes(q._id)?'★ Marked for review':'☆ Mark for review'}</button>
    </article>})}</div>
   <nav className="mock-pagination" aria-label="Exam pages"><button className="secondary-button" type="button" disabled={page===0} onClick={()=>jumpToPage(page-1)}>← Previous</button><span>Page {page+1} / {pages}</span><button className="button" type="button" disabled={page===pages-1} onClick={()=>jumpToPage(page+1)}>Next page →</button></nav>
   <div className="mock-exam-footer"><div className="question-palette" aria-label="Question navigation">{questions.map((item,i)=><button key={item._id} type="button" aria-label={`Question ${i+1}${answers.some(a=>a.questionId===item._id)?', answered':''}${marked.includes(item._id)?', marked for review':''}`} className={`${Math.floor(i/pageSize)===page?'current':''}${answers.some(a=>a.questionId===item._id)?' answered':''}${marked.includes(item._id)?' review-mark':''}`} onClick={()=>jumpToPage(Math.floor(i/pageSize))}>{i+1}</button>)}</div><button type="button" className="button mock-submit" disabled={busy} onClick={()=>void submit('submit')}>{busy?'Submitting…':'Submit mock exam'}</button></div>
-  {confirm&&<div className="dialog-scrim"><div className="quit-dialog" role="alertdialog" aria-modal="true"><h2>Quit mock exam?</h2><p>Your answers so far will be saved as an unfinished test.</p><div className="dialog-actions"><button className="secondary-button" disabled={quitting} onClick={()=>setConfirm(false)}>Keep going</button><button className="quit-confirm" disabled={quitting} onClick={async()=>{setQuitting(true);try{await onQuit()}finally{setQuitting(false)}}}>{quitting?'Ending session…':'Quit test'}</button></div></div></div>}
+  {confirm&&<div className="dialog-scrim"><div className="quit-dialog" role="alertdialog" aria-modal="true"><h2>Quit mock exam?</h2><p>Only questions shown so far will be included in your report.</p><div className="dialog-actions"><button className="secondary-button" disabled={quitting} onClick={()=>setConfirm(false)}>Keep going</button><button className="quit-confirm" disabled={quitting} onClick={async()=>{setQuitting(true);try{await onQuit([...visitedQuestionIds.current])}finally{setQuitting(false)}}}>{quitting?'Ending session…':'Quit test'}</button></div></div></div>}
  </section>;
 }
