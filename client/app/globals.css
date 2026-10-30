@@ -95,6 +95,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   box-sizing: border-box;
 }
 .public-auth-check { position:fixed; z-index:150; inset:0; background:var(--bg); }
+.public-site .public-header { z-index:151; }
 .brand { color: var(--ink); font-weight: 800; font-size: 18px; letter-spacing: -.04em; }
 .brand span { color: var(--green); }
 .nav { display: flex; gap: 8px; align-items: center; }
