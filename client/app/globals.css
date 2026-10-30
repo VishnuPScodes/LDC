@@ -86,6 +86,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 34px;
   isolation: isolate;
   position: relative;
+  z-index: 50;
   width: 100%;
   margin-left: 0;
   margin-right: 0;
