@@ -84,6 +84,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 .shell { max-width: 1180px; margin: auto; min-height: 100vh; padding: 25px 24px; }
 .header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 34px;
+  isolation: isolate;
   position: relative;
   width: 100%;
   margin-left: 0;
@@ -91,7 +92,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   padding-left: 24px;
   padding-right: 24px;
   background: var(--bg);
-  box-shadow: 0 0 0 100vmax var(--bg);
   box-sizing: border-box;
 }
 .brand { color: var(--ink); font-weight: 800; font-size: 18px; letter-spacing: -.04em; }
@@ -1060,7 +1060,7 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
 .dark .public-correct-option { color:var(--ink); }
 .more-panel a { display:flex; align-items:center; min-height:44px; padding:9px 12px; border-radius:10px; color:var(--ink); text-decoration:none; font-weight:650; }
 .more-panel a:hover { background:var(--green-soft); color:var(--green); }
-@media(max-width:760px){.public-site .shell{padding:16px}.public-header{gap:8px}.public-header .brand{width:calc(100% - 150px)}.public-nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap}.public-nav a{white-space:nowrap;padding:7px 10px}.public-header-actions{margin-left:auto}.public-home-hero,.public-page-heading{padding:22px}.public-section{padding:18px}.public-how-grid{grid-template-columns:1fr}.public-footer{align-items:flex-start;flex-direction:column}.public-syllabus-row{align-items:flex-start;flex-direction:column}.public-syllabus-row>strong{white-space:normal}}
+@media(max-width:760px){.public-site .shell{padding:16px}.public-header{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px}.public-header .brand{grid-column:1;grid-row:1;width:auto;white-space:nowrap}.public-nav{grid-column:1/-1;grid-row:2;width:100%;min-width:0;overflow:visible;flex-wrap:wrap;gap:2px}.public-nav a{flex:0 0 auto;white-space:nowrap;padding:7px 8px}.public-header>.public-language-toggle{grid-column:2;grid-row:1}.public-header-actions{grid-column:3;grid-row:1;margin-left:0}.public-home-hero,.public-page-heading{padding:22px}.public-section{padding:18px}.public-how-grid{grid-template-columns:1fr}.public-footer{align-items:flex-start;flex-direction:column}.public-syllabus-row{align-items:flex-start;flex-direction:column}.public-syllabus-row>strong{white-space:normal}}
 @media(prefers-reduced-motion:reduce){.public-card:hover{box-shadow:none}.public-site *{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
 /* Printed question sheets. These variables are scoped to question screens. */
