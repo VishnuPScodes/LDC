@@ -4,6 +4,7 @@ import {featureFlags} from './feature-flags';
 import {daysUntilExam} from '../../server/src/exam-countdown';
 import PointsLevelCard from './PointsLevelCard';
 import {topicLabel} from './topic-labels';
+import MotivationQuoteCard from './MotivationQuoteCard';
 
 type Topic = { topic: string; marks: number };
 type TopicProgress = { topic: string; attempted: number; total: number; attempts: number; correct: number; accuracy: number };
@@ -51,6 +52,8 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
     <section className="today-heading">
       <div><h1 className="title">{ml?`നമസ്കാരം, ${name}`:`Good ${new Date().getHours() < 12 ? 'morning' : 'day'}, ${name}.`}</h1><p className="today-subtitle">{ml?'ചെറിയൊരു പരിശീലനവും വലിയ മുന്നേറ്റമാണ്.':'A steady session is progress. Let’s take the next step.'}</p>{featureFlags.examCountdown&&<p className="exam-countdown">{targetExamDate?countdownText(daysUntilExam(targetExamDate),ml):<button type="button" className="text-button" onClick={onOpenSettings}>{ml?'പരീക്ഷാ തീയതി ചേർക്കുക':'Set your exam date'}</button>}</p>}</div>
     </section>
+
+    <MotivationQuoteCard language={language}/>
 
     {loading&&<div className="today-placeholder" aria-hidden="true"/>}
     {!loading&&featureFlags.todaySummary&&dailyCount>0&&<section className="today-summary-card" aria-label={ml?'ഇന്നത്തെ സംഗ്രഹം':'Today summary'}><div className="eyebrow">{ml?'ഇന്നത്തെ സംഗ്രഹം':'TODAY SO FAR'}</div><div className="today-summary-stats"><span><strong>{dailyCount}</strong>{ml?' ചോദ്യങ്ങൾ':' questions'}</span><span><strong>{Math.round(learnerStats?.todayAccuracy||0)}%</strong>{ml?' കൃത്യത':' accuracy'}</span><span><strong>+{learnerStats?.pointsEarnedToday||0}</strong>{ml?' പോയിന്റുകൾ':' points'}</span></div></section>}
