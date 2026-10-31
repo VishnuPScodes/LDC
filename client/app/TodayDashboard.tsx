@@ -3,6 +3,7 @@ import {useEffect,useState} from 'react';
 import {featureFlags} from './feature-flags';
 import {daysUntilExam} from '../../server/src/exam-countdown';
 import PointsLevelCard from './PointsLevelCard';
+import RankEstimateCard from './RankEstimateCard';
 import {topicLabel} from './topic-labels';
 import MotivationQuoteCard from './MotivationQuoteCard';
 
@@ -30,10 +31,11 @@ type Props = {
   onOpenSettings?:()=>void;
   learnerStats?:any;
   onOpenReview?:()=>void;
+  onStartMock?:()=>void;
   loading?:boolean;
 };
 
-export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, progress, syllabus, onStart, onContinuePdf, onOpenSyllabus, reviewDue = 0, reviewTomorrow=0, weekDays = [],unfinishedSession,onResume,language='en',targetExamDate,onOpenSettings,learnerStats,onOpenReview,loading=false }: Props) {
+export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, progress, syllabus, onStart, onContinuePdf, onOpenSyllabus, reviewDue = 0, reviewTomorrow=0, weekDays = [],unfinishedSession,onResume,language='en',targetExamDate,onOpenSettings,learnerStats,onOpenReview,onStartMock,loading=false }: Props) {
   const ml=language==='ml';
   const [celebrate,setCelebrate]=useState(false);
   const topicStats: TopicProgress[] = progress?.coverage?.byTopic || [];
@@ -68,6 +70,8 @@ export default function TodayDashboard({ name, dailyCount, dailyGoal, streak, pr
       <div className="goal-count"><strong>{Math.min(dailyCount, dailyGoal)}</strong><span>/ {dailyGoal}</span></div>
       <div className="goal-streak" aria-label={`${streak} day streak`}><span aria-hidden="true">🔥</span><strong>{streak}-day streak</strong></div>
     </section>{featureFlags.points&&<PointsLevelCard stats={learnerStats} language={language}/>}</div>
+
+    {featureFlags.rankEstimate&&<RankEstimateCard language={language} onStart={onStartMock}/>}
 
     <section className="today-plan card">
       <div className="plan-copy"><div className="eyebrow">{ml?'ഇന്നത്തെ പദ്ധതി':'TODAY’S PLAN'}</div><h2>{planFocus?topicLabel(planFocus.topic,language):(ml?'ഒരു ചെറിയ പരിശീലന സെഷൻ':'A short practice session')}</h2><p>{planFocus ? `${Math.max(1, Math.min(10, dailyGoal - dailyCount || 10))} ${ml?'ചോദ്യങ്ങൾ':'focused questions'} · ${planFocus.marks} ${ml?'സിലബസ് മാർക്കുകൾ':'syllabus marks'}${planFocus.attempts >= 10 ? ` · ${Math.round(planFocus.accuracy)}% ${ml?'കൃത്യത':'accuracy'}` : ''}` : (ml?'ലഭ്യമായ ചോദ്യങ്ങളിൽ നിന്നുള്ള പരിശീലനം.':'A gentle mix from your eligible question bank.')}</p><span className="plan-note">{ml?'ആവർത്തനം:':'Review due:'} {reviewDue}{reviewTomorrow?` · ${reviewTomorrow} ${ml?'നാളെ':'tomorrow'}`:''}</span></div>

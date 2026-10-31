@@ -1,7 +1,6 @@
 import LandingActions from './LandingActions';
 import LandingThemeToggle from './LandingThemeToggle';
 import {siteUrl} from './site-url';
-import LeafBackground from './LeafBackground';
 
 export default function LandingShell() {
   const structuredData = {
@@ -16,7 +15,6 @@ export default function LandingShell() {
   };
 
   return <main className="landing-shell">
-    <LeafBackground />
     <div className="shell">
       <header className="header"><a className="brand" href="/">LDC<span>.</span> practice</a><LandingThemeToggle /></header>
       <section className="card hero">
