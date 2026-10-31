@@ -1324,3 +1324,31 @@ body:has(.paper-screen) .pwa-install,body:has(.paper-screen) .mobile-bottom-nav 
  .mock-page.paper-screen .omr-sheet>div{grid-template-columns:repeat(2,minmax(0,1fr))}
  .mock-page.paper-screen .mock-submit{min-height:48px}
 }
+
+/* Phone layout: use the full viewport width and keep both navigation systems clear of the logo. */
+@media(max-width:720px){
+ html,body{width:100%;max-width:100%;overflow-x:clip}
+ .shell{width:100%;max-width:none;box-sizing:border-box;padding: max(12px,env(safe-area-inset-top)) 12px calc(86px + env(safe-area-inset-bottom))}
+ .shell.quiz-shell,.shell.mock-shell{padding-bottom:calc(18px + env(safe-area-inset-bottom))}
+ .shell>.header:not(.public-header){display:grid;grid-template-columns:44px minmax(0,1fr);justify-content:initial;gap:10px;width:100%;margin:0 0 16px;padding:0;box-sizing:border-box}
+ .shell.dark>.header:not(.public-header){left:auto;right:auto;width:100%;margin:0 0 16px;padding:0}
+ .shell>.header:not(.public-header)>.mobile-menu-toggle{grid-column:1;grid-row:1}
+ .shell>.header:not(.public-header)>.brand{grid-column:2;grid-row:1;min-width:0;justify-self:start;white-space:nowrap;font-size:clamp(15px,4.5vw,17px)}
+ .mobile-site-menu{top:calc(68px + env(safe-area-inset-top));right:10px;width:min(340px,calc(100vw - 20px));max-height:calc(100dvh - 82px - env(safe-area-inset-top))}
+ .mobile-bottom-nav{right:0;left:0;width:100%;box-sizing:border-box;grid-template-columns:repeat(5,minmax(0,1fr));padding-right:max(6px,env(safe-area-inset-right));padding-left:max(6px,env(safe-area-inset-left))}
+ .mobile-bottom-nav button{min-width:0;padding:4px 2px;font-size:clamp(9px,2.8vw,11px);white-space:nowrap}
+ .today-page,.analytics-page,.progress-page,.history-page,.report-page,.review-page,.setup-page{width:100%;max-width:100%;min-width:0}
+ .today-page .title,.analytics-page>.section-title,.progress-page>.section-title,.report-page>.section-title{font-size:clamp(25px,7vw,32px);line-height:1.18;overflow-wrap:anywhere}
+ .today-page :is(.card,.analytics-panel,.progress-panel),.today-page>*{min-width:0;max-width:100%}
+ .public-site .shell{width:100%;max-width:none;box-sizing:border-box;padding:12px}
+ .public-header{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto;align-items:center;gap:6px 8px;width:100%;min-width:0;padding:0;margin:0 0 16px}
+ .public-header>.brand{grid-column:1;grid-row:1;min-width:0;white-space:nowrap;font-size:clamp(15px,4.6vw,17px)}
+ .public-header>.public-nav{grid-column:1/-1;grid-row:3;display:flex;width:100%;min-width:0;overflow:visible;flex-wrap:wrap;gap:2px}
+ .public-header>.public-nav a{min-height:40px;padding:6px 8px;font-size:clamp(12px,3.4vw,14px);white-space:nowrap}
+ .public-header>.public-language-toggle{grid-column:2;grid-row:2;justify-self:end;min-height:38px;padding:5px 9px;font-size:12px}
+ .public-header>.public-header-actions{grid-column:2;grid-row:1;justify-self:end;gap:6px;min-width:0}
+ .public-header-actions>.public-sign-in{min-height:40px;padding:6px 9px;font-size:12px;white-space:nowrap}
+ .public-home-hero,.public-page-heading{width:100%;max-width:100%;margin-bottom:18px;padding:18px 14px}
+ .public-home-hero h1,.public-page-heading h1{font-size:clamp(26px,7.2vw,36px);line-height:1.16;overflow-wrap:anywhere}
+ .public-section{margin:18px 0;padding:16px 14px}
+}
