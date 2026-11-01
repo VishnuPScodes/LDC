@@ -1168,6 +1168,8 @@ body:has(.paper-screen) .pwa-install,body:has(.paper-screen) .mobile-bottom-nav 
 .omr-sheet button { min-height:36px;display:flex;align-items:center;gap:3px;padding:3px;border:0;background:transparent;color:var(--ink);font-size:11px; }
 .omr-sheet i { width:19px;height:19px;display:grid;place-items:center;border:1px solid var(--ink-secondary);border-radius:50%;font-style:normal;font-size:9px; }
 .paper-screen .guest-question-view { margin:0 auto;padding:0 40px 24px;max-width:760px;background:var(--paper);border:1px solid var(--paper-edge); }
+.paper-screen .guest-question .booklet-heading span { display:none; }
+.paper-screen .guest-question .quiz-topic { margin:0 0 8px;color:var(--ink-secondary);font-size:14px;font-weight:400;line-height:1.45; }
 .paper-screen .guest-options button { background:transparent!important; }
 .paper-screen .guest-options button strong { width:auto;height:auto;flex:0 0 30px;border-radius:0;background:transparent;color:var(--ink-secondary); }
 .paper-screen .public-question-label,.paper-screen .public-question-label strong,.paper-screen .public-question-source { color:var(--ink-secondary); }

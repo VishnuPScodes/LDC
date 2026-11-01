@@ -53,7 +53,9 @@ test('guest answer feedback fits the phone viewport',async({page})=>{
  await expect(option).toBeVisible({timeout:15_000});
  await page.screenshot({path:`${screenshotDir}/guest-before-answer-390.png`,fullPage:false});
  await option.click();
- await expect(page.locator('.guest-feedback')).toBeVisible();
+ await expect(page.locator('.feedback-verdict')).toBeVisible();
+ await expect(page.locator('.quiz-option.is-correct')).toBeVisible();
+ await expect(page.locator('.quiz-option.is-dimmed')).toHaveCount(2);
  await assertNoHorizontalOverflow(page);
  await page.screenshot({path:`${screenshotDir}/guest-after-answer-390.png`,fullPage:false});
 });
