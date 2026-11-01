@@ -55,9 +55,27 @@ test('guest answer feedback fits the phone viewport',async({page})=>{
  await option.click();
  await expect(page.locator('.feedback-verdict')).toBeVisible();
  await expect(page.locator('.quiz-option.is-correct')).toBeVisible();
- await expect(page.locator('.quiz-option.is-dimmed')).toHaveCount(2);
+ const selected=page.locator('.quiz-option[aria-pressed="true"]');
+ const selectedCorrect=await selected.evaluate((node:any)=>node.classList.contains('is-correct'));
+ await expect(page.locator('.quiz-option.is-dimmed')).toHaveCount(selectedCorrect?3:2);
  await assertNoHorizontalOverflow(page);
  await page.screenshot({path:`${screenshotDir}/guest-after-answer-390.png`,fullPage:false});
+});
+
+test('quitting guest practice reports only questions shown so far',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto('/practice?topic=arts-literature-culture-sports&count=10');
+ const start=page.getByRole('button',{name:/Start practice/i});
+ if(await start.count())await start.click();
+ const option=page.locator('.guest-options button').first();
+ await expect(option).toBeVisible({timeout:15_000});
+ await option.click();
+ await page.getByRole('button',{name:/Next/i}).click();
+ await expect(page.getByRole('button',{name:'Exit practice'})).toBeVisible();
+ await page.getByRole('button',{name:'Exit practice'}).click();
+ await expect(page.getByRole('heading',{name:'Your practice results'})).toBeVisible();
+ await expect(page.getByText(/You answered 1 of 2 questions/)).toBeVisible();
+ await expect(page.locator('.guest-results .public-question')).toHaveCount(1);
 });
 
 test('public mobile header is compact and opens navigation sheet',async({page})=>{
@@ -90,4 +108,27 @@ test('signed-in mobile navigation has five usable tabs',async({page})=>{
  await expect(tabs.getByRole('button',{name:'More'})).toBeVisible();
  await expect(page.locator('.app-header').evaluate((node:any)=>node.getBoundingClientRect().height)).resolves.toBeLessThanOrEqual(56);
  await assertNoHorizontalOverflow(page);
+});
+
+test('visible UI version matches the client package release',async({page})=>{
+ await page.goto('/');
+ await expect(page.locator('footer.app-version')).toContainText('v1.10.14');
+});
+
+test('analytics active days include the selected range in Malayalam',async({page})=>{
+ await page.goto('/analytics-preview?language=ml');
+ await expect(page.locator('.analytics-summary')).toContainText('30 ദിവസത്തിൽ 12 ദിവസം');
+ await expect(page.locator('.analytics-summary')).toContainText('412');
+ await expect(page.locator('.analytics-summary')).toContainText('3');
+});
+
+test('rank estimate changes to a retryable error within ten seconds',async({page})=>{
+ await page.route('**/api/rank-estimate**',async route=>{
+  await page.waitForTimeout(15_000);
+  await route.fulfill({status:503,body:'Unavailable'}).catch(()=>{});
+ });
+ await page.goto('/analytics-preview?rank=1');
+ await expect(page.getByText('The estimate took too long to load. Please retry.')).toBeVisible({timeout:12_000});
+ await expect(page.getByRole('button',{name:'Retry'})).toBeVisible();
+ await page.unrouteAll({behavior:'ignoreErrors'});
 });

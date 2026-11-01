@@ -17,6 +17,7 @@ type Props = {
   elapsed: number;
   picked: string | null;
   feedback: Feedback | null;
+  savePending?: boolean;
   quick: boolean;
   reported: boolean;
   streak: number;
@@ -27,7 +28,7 @@ type Props = {
   onReport: () => void;
 };
 
-export default function QuizScreen({ question, index, total, elapsed, picked, feedback, quick, reported, streak, language='en', onChoose, onContinue, onQuit, onReport }: Props) {
+export default function QuizScreen({ question, index, total, elapsed, picked, feedback, savePending=false, quick, reported, streak, language='en', onChoose, onContinue, onQuit, onReport }: Props) {
   const [showQuit, setShowQuit] = useState(false);
   const [quitting, setQuitting] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -41,10 +42,10 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
   const continueRef=useRef(onContinue);
   useEffect(()=>{continueRef.current=onContinue},[onContinue]);
   useEffect(() => {
-    if (!feedback||!quick) return;
+    if (!feedback||!quick||savePending) return;
     const timer = window.setTimeout(() => continueRef.current(), 1200);
     return () => window.clearTimeout(timer);
-  }, [feedback, quick]);
+  }, [feedback, quick, savePending]);
 
   return <section className="quiz-page paper-screen" aria-label="Exam practice question">
     <header className="quiz-topbar">
@@ -84,7 +85,8 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
         <strong>{feedback.isCorrect?'✓ Correct':`✗ Wrong — answer is ${feedback.correctOption}`}</strong>
         {!feedback.isCorrect&&<span>Your answer: {picked}</span>}
         {feedback.explanation&&<div className="paper-explanation"><span>Explanation</span><p lang={/[ഀ-ൿ]/u.test(feedback.explanation)?'ml':'en'}>{feedback.explanation}</p></div>}
-        {!quick&&<button type="button" className="button" onClick={onContinue}>Next →</button>}
+        {savePending&&<span className="small" role="status">Not saved — retrying</span>}
+        {!quick&&<button type="button" className="button" disabled={savePending} onClick={onContinue}>{savePending?'Saving…':'Next →'}</button>}
       </div>}
       <div className="quiz-footer">
         <QuestionSource questionNumber={question.questionNumber} paperCode={question.paperCode} paperNumber={question.paperNumber} examDate={question.examDate} sourcePage={question.sourcePage} text={question.text}/>
