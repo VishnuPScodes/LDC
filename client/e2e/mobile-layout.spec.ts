@@ -57,3 +57,35 @@ test('guest answer feedback fits the phone viewport',async({page})=>{
  await assertNoHorizontalOverflow(page);
  await page.screenshot({path:`${screenshotDir}/guest-after-answer-390.png`,fullPage:false});
 });
+
+test('public mobile header is compact and opens navigation sheet',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto('/papers');
+ const header=page.locator('.public-header');
+ await expect(header).toBeVisible();
+ expect(await header.evaluate((node:any)=>node.getBoundingClientRect().height)).toBeLessThanOrEqual(56);
+ await expect(page.getByRole('button',{name:'Open menu'})).toBeVisible();
+ await page.screenshot({path:`${screenshotDir}/mobile-nav-closed-390.png`,fullPage:false});
+ await page.getByRole('button',{name:'Open menu'}).click();
+ await expect(page.locator('#public-mobile-menu')).toBeVisible();
+ await expect(page.locator('#public-mobile-menu').getByRole('link',{name:'Question Papers'})).toHaveAttribute('href','/papers');
+ await expect(page.locator('#public-mobile-menu').getByRole('link',{name:'Sign in'})).toHaveAttribute('href','/login');
+ await page.screenshot({path:`${screenshotDir}/mobile-nav-open-390.png`,fullPage:false});
+ await assertNoHorizontalOverflow(page);
+});
+
+test('signed-in mobile navigation has five usable tabs',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.route('**/api/auth/me',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({_id:'mobile-test-user',name:'Student',email:'student@example.test'})}));
+ await page.goto('/today');
+ const tabs=page.locator('.mobile-bottom-nav');
+ await expect(tabs).toBeVisible({timeout:12_000});
+ for(const [label,href] of [['Today','/today'],['Practice','/practice'],['Review','/review'],['Progress','/progress']]){
+  const link=tabs.getByRole('link',{name:label});
+  await expect(link).toHaveAttribute('href',href);
+  expect(await link.evaluate((node:any)=>node.getBoundingClientRect().height)).toBeGreaterThanOrEqual(44);
+ }
+ await expect(tabs.getByRole('button',{name:'More'})).toBeVisible();
+ await expect(page.locator('.app-header').evaluate((node:any)=>node.getBoundingClientRect().height)).resolves.toBeLessThanOrEqual(56);
+ await assertNoHorizontalOverflow(page);
+});

@@ -1358,3 +1358,36 @@ body:has(.paper-screen) .pwa-install,body:has(.paper-screen) .mobile-bottom-nav 
  .public-home-hero h1,.public-page-heading h1{font-size:clamp(26px,7.2vw,36px);line-height:1.16;overflow-wrap:anywhere}
  .public-section{margin:18px 0;padding:16px 14px}
 }
+
+/* Compact, single-row mobile navigation shared by public and signed-in pages. */
+@media(max-width:767px){
+ .app-header{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:52px;align-items:center;gap:8px;width:100%;min-height:52px;margin:0 0 14px;padding:0;box-sizing:border-box}
+ .app-header>.brand{grid-column:1;grid-row:1;min-width:0;justify-self:start;white-space:nowrap;font-size:clamp(15px,4.6vw,18px)}
+ .app-header>.nav{display:none}
+ .app-header-controls{display:flex;grid-column:2;grid-row:1;align-items:center;gap:8px}
+ .app-language-toggle,.app-header .mobile-menu-toggle,.public-language-toggle,.public-menu-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;padding:4px 8px;border:1px solid var(--line);border-radius:11px;background:var(--surface);color:var(--ink);font:inherit;font-size:13px;font-weight:700}
+ .app-header .mobile-menu-toggle{width:42px;height:42px;font-size:19px}
+ .public-header{display:grid;grid-template-columns:minmax(0,1fr) auto auto;grid-template-rows:52px;align-items:center;gap:8px;width:100%;min-height:52px;margin:0 0 14px;padding:0;box-sizing:border-box}
+ .public-header>.brand{grid-column:1;grid-row:1;min-width:0;white-space:nowrap;font-size:clamp(15px,4.6vw,18px)}
+ .public-header-controls{display:contents}
+ .public-header>.public-nav,.public-header-actions{display:none!important}
+ .public-header .public-language-toggle{grid-column:2;grid-row:1;min-height:40px;padding:4px 8px;font-size:13px}
+ .public-header .public-menu-toggle{grid-column:3;grid-row:1;width:42px;height:42px;font-size:19px}
+ .public-menu-toggle{display:inline-flex}
+ .mobile-menu-scrim{position:fixed;inset:0;z-index:29;display:block;border:0;background:rgba(20,25,22,.24)}
+ .mobile-site-menu{position:fixed;z-index:31;top:calc(60px + env(safe-area-inset-top));right:10px;display:grid;width:min(340px,calc(100vw - 20px));max-height:calc(100dvh - 72px - env(safe-area-inset-top));overflow:auto;gap:3px;padding:10px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:var(--shadow-card)}
+ .mobile-site-menu>a,.mobile-site-menu>button{display:flex;align-items:center;min-height:46px;padding:9px 12px;border:0;border-radius:10px;background:transparent;color:var(--ink);font:inherit;text-align:left;text-decoration:none;font-weight:650}
+ .mobile-site-menu>a[aria-current=page]{background:var(--green-soft);color:var(--green)}
+ .mobile-site-menu .mobile-menu-brand{min-height:34px;padding:0;color:var(--ink);font-size:18px;font-weight:850;letter-spacing:-.04em;text-decoration:none}
+ .mobile-install-guide{margin:2px 8px 8px;padding:9px 10px;border-radius:9px;background:var(--green-soft);color:var(--ink-secondary);font-size:13px;line-height:1.45}
+ .mobile-menu-brand-block{display:grid;gap:2px;padding:4px 8px 8px;border-bottom:1px solid var(--line)}
+ .mobile-menu-version{color:var(--ink-secondary);font-size:12px}
+ .mobile-public-menu-links .public-nav{display:grid;gap:2px;width:100%}
+ .mobile-public-menu-links .public-nav a{display:flex;align-items:center;min-height:46px;padding:8px 12px;border-radius:10px;color:var(--ink);font-size:15px;text-decoration:none}
+ .mobile-public-menu-links .public-nav a[aria-current=page]{background:var(--green-soft);color:var(--green)}
+ .mobile-bottom-nav{position:fixed;z-index:8;right:0;bottom:0;left:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;padding:5px max(6px,env(safe-area-inset-right)) max(5px,env(safe-area-inset-bottom)) max(6px,env(safe-area-inset-left));border-top:1px solid var(--line);background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(16px)}
+ .mobile-bottom-nav>a,.mobile-bottom-nav>button{display:flex;min-width:0;min-height:48px;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:0;border-radius:11px;background:transparent;color:var(--ink-secondary);font:inherit;font-size:clamp(9px,2.8vw,11px);font-weight:650;text-decoration:none;white-space:nowrap}
+ .mobile-bottom-nav>a.active{background:var(--green-soft);color:var(--green)}
+ .pwa-install{display:none!important}
+ .shell:not(.quiz-shell):not(.mock-shell){padding-bottom:calc(78px + env(safe-area-inset-bottom))}
+}

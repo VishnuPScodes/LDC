@@ -1,3 +1,17 @@
 'use client';
-import {useEffect,useState} from 'react';
-export default function PublicNav({authenticated=false}:{authenticated?:boolean}){const [ml,setMl]=useState(false);useEffect(()=>{try{const selected=localStorage.getItem('ldc-language')==='ml';setMl(selected);document.documentElement.lang=selected?'ml':'en-IN'}catch{}},[]);const toggle=()=>{const next=!ml;setMl(next);try{localStorage.setItem('ldc-language',next?'ml':'en');document.documentElement.lang=next?'ml':'en-IN'}catch{}};return <><nav className="public-nav" aria-label={ml?'പ്രധാന നാവിഗേഷൻ':'Main navigation'}>{authenticated?<><a href="/today">{ml?'ഇന്ന്':'Today'}</a><a href="/practice">{ml?'പരിശീലനം':'Practice'}</a><a href="/review">{ml?'ആവർത്തനം':'Review'}</a><a href="/progress">{ml?'വിശകലനം':'Analytics'}</a></>:<><a href="/papers">{ml?'ചോദ്യപേപ്പറുകൾ':'Question Papers'}</a><a href="/topics">{ml?'വിഷയങ്ങൾ':'Topics'}</a><a href="/ldc-syllabus">{ml?'പാഠ്യപദ്ധതി':'Syllabus'}</a><a href="/practice">{ml?'പരിശീലനം':'Practice'}</a><a href="/facts">അറിവ്</a></>}</nav><button type="button" className="public-language-toggle" onClick={toggle} aria-label={ml?'Switch to English':'മലയാളത്തിലേക്ക് മാറുക'}>{ml?'English':'മലയാളം'}</button></>}
+
+import {usePathname} from 'next/navigation';
+
+const links=[
+ ['/papers','Question Papers','ചോദ്യപേപ്പറുകൾ'],
+ ['/topics','Topics','വിഷയങ്ങൾ'],
+ ['/ldc-syllabus','Syllabus','പാഠ്യപദ്ധതി'],
+ ['/practice','Practice','പരിശീലനം'],
+ ['/facts','Knowledge','അറിവ്'],
+] as const;
+
+export default function PublicNav({authenticated=false,language='en'}:{authenticated?:boolean;language?:'en'|'ml'}){
+ const pathname=usePathname()||'/',ml=language==='ml';
+ const items=authenticated?[['/today','Today','ഇന്ന്'],['/practice','Practice','പരിശീലനം'],['/review','Review','ആവർത്തനം'],['/progress','Progress','പുരോഗതി'],...links] as const:links;
+ return <nav className="public-nav" aria-label={ml?'പ്രധാന നാവിഗേഷൻ':'Main navigation'}>{items.map(([href,en,mlLabel])=><a key={href} href={href} aria-current={pathname===href||pathname.startsWith(`${href}/`)?'page':undefined}>{ml?mlLabel:en}</a>)}</nav>;
+}
