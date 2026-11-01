@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.10.14
+
+- Fixed Progress counts, selected-range active-day wording, low-data topic accuracy, and rank estimate timeout/retry states.
+- Made signed-in practice feedback immediate with retryable saves and kept mock answers hidden during the exam.
+- Limited guest early-quit results to questions shown, corrected paper numbering, and identified the 116/2014 special recruitment category.
+- Added dry-run review scripts for topic retagging, time-sensitive questions, and Malayalam text normalization.
+
 ## 1.8.0
 
 - Opened verified LDC question papers, syllabus topics, year pages, and mark distribution for public reading and Google indexing.

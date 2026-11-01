@@ -3,6 +3,7 @@
 import {useEffect,useState} from 'react';
 import type {PublicQuestion} from './public-content';
 import {topicLabel} from './topic-labels';
+import {isTimeSensitiveQuestion} from '../../server/src/time-sensitive';
 
 const formatExamDate=(value:string)=>new Intl.DateTimeFormat('en-IN',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(`${value}T00:00:00Z`));
 const questionLanguage=(text:string)=>/[\u0D00-\u0D7F]/u.test(text)?'ml':'en-IN';
@@ -12,11 +13,11 @@ export default function PublicQuestion({question,index}:{question:PublicQuestion
  const [revealed,setRevealed]=useState(false),[ml,setMl]=useState(false);
  useEffect(()=>{try{setMl(localStorage.getItem('ldc-language')==='ml')}catch{}},[]);
  const answer=question.options.find(option=>option.key===question.correctOption);
- const asksCurrent=/(\bcurrent\b|\bnow\b|\bpresent\b|നിലവിലെ|ഇപ്പോഴത്തെ|ഇപ്പോൾ)/iu.test(question.text),year=Number(question.examDate.slice(0,4)),historical=asksCurrent&&year<=new Date().getFullYear()-1;
+ const year=Number(question.examDate.slice(0,4)),historical=isTimeSensitiveQuestion(question.text);
  return <article className="public-question paper-question" id={`q-${question.questionNumber}`}>
-  <div className="public-question-label"><strong>Question / ചോദ്യം {index??question.questionNumber}</strong><span>{topicLabel(question.topic,ml?'ml':'en')}</span></div>
+  <div className="public-question-label"><strong>{ml?(question.recruitmentCategory==='Regular recruitment'?'സാധാരണ നിയമനം':'ഭിന്നശേഷിക്കാർക്കുള്ള പ്രത്യേക നിയമനം'):question.recruitmentCategory} · Paper {question.paperCode}</strong><span>{topicLabel(question.topic,ml?'ml':'en')}</span></div>
   <h2 lang={questionLanguage(question.text)}><span className="paper-question-number">{index??question.questionNumber}.</span>{question.text}</h2>
-  {historical&&<p className="historical-current-note" role="note">{ml?`ചോദിച്ചത് ${year}ൽ — അന്നത്തെ ഉത്തരമാണ്`:`Asked in ${year} — answer reflects that time`}</p>}
+  {historical&&<p className="historical-current-note" role="note">{ml?`${year}ൽ ചോദിച്ചത് · അന്ന് ഉത്തരം ശരിയായിരുന്നു; മാറിയിരിക്കാം`:`Asked in ${year}; the answer was correct then and may have changed.`}</p>}
   <ol className={`public-options${question.options.every(option=>option.text.length<=18)?' short-options':''}`} type="A">{question.options.map(option=>{const isCorrect=option.key===question.correctOption;return <li key={option.key} className={revealed&&isCorrect?'public-correct-option':''}><span className="answer-check" aria-hidden="true">{revealed&&isCorrect?'✓':''}</span><span className="option-key">({option.key})</span><span className="public-option-copy" lang={questionLanguage(option.text)}>{option.text}</span>{revealed&&isCorrect&&<span className="sr-only">Correct answer / ശരിയുത്തരം</span>}</li>})}</ol>
   <button className="text-button answer-reveal" type="button" aria-expanded={revealed} onClick={()=>setRevealed(value=>!value)}>{revealed?'Hide answer / ഉത്തരം മറയ്ക്കുക':'Show answer / ഉത്തരം കാണുക'}</button>
   <div className={`public-answer${revealed?' is-revealed':''}`} aria-hidden={!revealed}><strong>Answer / ഉത്തരം: {question.correctOption}{answer?` — ${answer.text}`:''}</strong>{question.explanation&&<div className="paper-explanation"><span>Explanation</span><p lang={questionLanguage(question.explanation)}>{question.explanation}</p></div>}</div>

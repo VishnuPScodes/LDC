@@ -1189,7 +1189,40 @@ body:has(.paper-screen) .pwa-install,body:has(.paper-screen) .mobile-bottom-nav 
 @media(max-width:600px){html:has(.paper-screen),body:has(.paper-screen){width:100%;max-width:100%;overflow-x:hidden}.shell.quiz-shell:has(.paper-screen),.shell.mock-shell:has(.paper-screen){width:100%;max-width:100%;padding-left:0;padding-right:0;overflow-x:hidden}.paper-screen{width:100%;max-width:100%;margin-left:0;padding:0 18px 24px;border:0;border-radius:0;overflow-x:clip}.paper-screen .quiz-topbar{display:grid;grid-template-columns:40px minmax(0,1fr) 40px;margin:0 -18px 16px;padding:5px 18px;gap:8px;width:calc(100% + 36px)}.paper-screen .mock-header,.paper-screen .guest-practice-header{margin:0 -18px 16px;padding:5px 18px;width:calc(100% + 36px)}.paper-screen .question-prompt,.paper-screen .mock-question-card h2,.paper-screen .guest-question h1,.paper-screen .public-question h2{padding-left:1em}.paper-screen .short-options,.paper-screen .public-options.short-options{grid-template-columns:1fr}.public-question-list.paper-screen{padding:0 18px;border:0}.paper-screen .guest-question-view{padding:0 18px 20px;border:0}.omr-sheet>div{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .today-placeholder{height:92px;margin:0 0 16px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(90deg,var(--surface) 25%,var(--surface-alt, var(--surface)) 40%,var(--surface) 65%);background-size:300% 100%;animation:today-placeholder-shimmer 1.4s ease infinite}.today-quick-links{display:flex;flex-wrap:wrap;gap:12px 22px;margin:12px 0 20px;color:var(--muted);font-size:14px}.today-quick-links .text-button{color:var(--accent)}
 @keyframes today-placeholder-shimmer{to{background-position:-150% 0}}
-.historical-current-note{display:inline-flex;width:fit-content;margin:5px 0;padding:3px 8px;border-radius:6px;background:#FFF2D7;color:#79530A;font-size:12px;line-height:1.5}.paper-screen .historical-current-note{display:flex;margin:8px 0;color:#79530A;font-family:var(--font-anek-malayalam),var(--font-inter),sans-serif}
+
+/* Fix round: keep the compact public pages legible and controls aligned on phones. */
+.public-syllabus-row::after{content:'›';flex:0 0 auto;color:var(--ink-secondary);font-size:22px;line-height:1}
+.public-syllabus-row>strong{color:var(--ink-secondary)}
+.topic-card-top strong{color:var(--ink)}
+.paper-question .public-question-label{font-size:14px;line-height:1.35;gap:4px 10px}
+.paper-question .public-question-label,.paper-question .public-question-source{color:var(--ink-secondary)}
+.paper-question .public-question-label strong{font-size:14px;color:var(--ink-secondary)}
+.historical-current-note{color:var(--ink-secondary);font-size:14px;margin:7px 0}
+.today-summary-stable{min-height:112px;box-sizing:border-box}
+.today-primary-action{min-height:146px;box-sizing:border-box}
+.today-quick-links{min-height:48px}
+.landing-shell>.shell>.header .brand{display:inline-flex;align-items:center;min-height:44px}
+.knowledge-stage{max-width:680px}
+body:has(.knowledge-page) .pwa-install{display:none!important}
+@media(max-width:767px){body:has(.guest-feature-notice) header.public-header :is(.brand,.public-nav a,.secondary-button){display:inline-flex;min-height:44px!important;padding-block:10px!important;align-items:center;box-sizing:border-box}}
+@media(max-width:600px){
+ .public-home-hero .public-page-actions{display:grid;grid-template-columns:1fr;width:100%}
+ .public-home-hero .public-page-actions>*{width:100%;justify-content:center}
+ .public-home-hero .public-home-lead{max-width:38ch;margin:8px 0;font-size:14px;line-height:1.55}
+ .public-home-hero .public-malayalam-subtitle{font-size:16px;line-height:1.6}
+ .public-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .public-card-grid .public-card{min-width:0;padding:12px}
+ .public-syllabus-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px 12px}
+ .public-syllabus-row>strong{grid-column:2;grid-row:1/3}
+ .public-syllabus-row::after{grid-column:2;grid-row:1/3}
+ .paper-screen .paper-reading-tools .secondary-button,.paper-screen .paper-reading-tools .button{width:100%;justify-content:center}
+ .paper-screen .paper-reading-tools .public-page-actions{display:grid;grid-template-columns:1fr;gap:8px}
+ body:has(.paper-question) .public-page-heading .public-page-actions{display:grid;grid-template-columns:1fr;gap:8px}
+ body:has(.paper-question) .public-page-heading .public-page-actions>*{width:100%;justify-content:center}
+ .today-summary-stable{min-height:136px}
+ .today-primary-action{min-height:180px}
+}
+.historical-current-note{display:inline-flex;width:fit-content;margin:5px 0;padding:3px 8px;border-radius:6px;background:var(--surface-muted);color:var(--ink-secondary);font-size:12px;line-height:1.5}.paper-screen .historical-current-note{display:flex;margin:8px 0;color:var(--ink-secondary);font-family:var(--font-anek-malayalam),var(--font-inter),sans-serif}
 @media(prefers-reduced-motion:reduce){.paper-screen *{animation:none!important;transition:none!important}}
 
 /* Final precedence layer keeps legacy page selectors on the quiet palette. */

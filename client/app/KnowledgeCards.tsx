@@ -18,7 +18,7 @@ export default function KnowledgeCards({onExit,onPractice}:{onExit:()=>void;onPr
  if(!ready)return <section className="knowledge-page" aria-busy="true"/>;
  return <section className="knowledge-page">
   <div className="knowledge-top"><button type="button" className="knowledge-back" onClick={onExit}><span aria-hidden="true">←</span><span>തിരികെ</span></button><div className="knowledge-title"><div className="eyebrow">ദിവസവും പത്ത് അറിവുകൾ</div><h1 className="section-title">അറിവ്</h1></div><div className="knowledge-date">{new Intl.DateTimeFormat('ml-IN',{day:'numeric',month:'short'}).format(new Date())}</div></div>
-  <div className="knowledge-progress" aria-label={`${Math.min(index,group.length)} / ${group.length} അറിവുകൾ`}><div className="knowledge-progress-track"><span style={{width:`${Math.min(100,index/group.length*100)}%`}}/></div><strong>{Math.min(index,group.length)} <span>/ {group.length}</span></strong></div>
+  <div className="knowledge-progress" aria-label={`${Math.min(index+1,group.length)} / ${group.length} അറിവുകൾ`}><div className="knowledge-progress-track"><span style={{width:`${Math.min(100,(index+1)/group.length*100)}%`}}/></div><strong>{Math.min(index+1,group.length)} <span>/ {group.length}</span></strong></div>
   <div className="knowledge-stage" aria-live="polite">
    {next&&<div className="knowledge-card knowledge-card-under" aria-hidden="true"><span className="knowledge-card-orbit"/></div>}
    <AnimatePresence mode="popLayout" initial={false}>

@@ -1,4 +1,4 @@
-export type PaperMetadata={paperCode:string;examDate:string};
+export type PaperMetadata={paperCode:string;examDate:string;recruitmentCategory?:string};
 
 // Paper numbers follow the order in the supplied Kerala PSC LDC collection.
 export const PAPER_METADATA:Record<number,PaperMetadata>={
@@ -17,7 +17,7 @@ export const PAPER_METADATA:Record<number,PaperMetadata>={
   13:{paperCode:'024/2014',examDate:'2014-02-22'},
   14:{paperCode:'025/2014',examDate:'2014-02-22'},
   15:{paperCode:'027/2014',examDate:'2014-03-01'},
-  16:{paperCode:'116/2014',examDate:'2014-08-06'},
+  16:{paperCode:'116/2014',examDate:'2014-08-06',recruitmentCategory:'Special recruitment for differently abled candidates'},
   17:{paperCode:'139/2014',examDate:'2014-08-26'},
   18:{paperCode:'003/2015',examDate:'2015-01-06'},
   19:{paperCode:'039/2015',examDate:'2015-02-28'},
