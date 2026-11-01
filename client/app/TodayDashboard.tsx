@@ -1,6 +1,7 @@
 'use client';
 import {featureFlags} from './feature-flags';
 import {daysUntilExam} from '../../server/src/exam-countdown';
+import MotivationQuoteCard from './MotivationQuoteCard';
 
 type Topic={topic:string;marks:number};
 type Props={name:string;dailyCount:number;dailyGoal:number;streak:number;progress:any;syllabus:Topic[];onStart:(config?:any)=>void;onPracticeTopic:(topic:string)=>void;onContinuePdf:()=>void;onOpenSyllabus:()=>void;reviewDue?:number;reviewTomorrow?:number;weekDays?:boolean[];unfinishedSession?:any;onResume?:(session:any)=>void;language?:'en'|'ml';targetExamDate?:string;onOpenSettings?:()=>void;learnerStats?:any;onOpenReview?:()=>void;onStartMock?:()=>void;loading?:boolean};
@@ -8,6 +9,7 @@ export default function TodayDashboard({name,dailyCount,dailyGoal,streak,unfinis
  const ml=language==='ml';
  return <section className="today-page">
   <header className="today-heading"><div><h1 className="title">{ml?`നമസ്കാരം, ${name}`:`Good ${new Date().getHours()<12?'morning':'day'}, ${name}.`}</h1><p className="today-subtitle">{ml?'ഇന്ന് ചെറിയൊരു പരിശീലനം മതി.':'A short, steady session is enough for today.'}</p>{featureFlags.examCountdown&&<p className="exam-countdown">{targetExamDate?countdownText(daysUntilExam(targetExamDate),ml):<button type="button" className="text-button" onClick={onOpenSettings}>{ml?'പരീക്ഷാ തീയതി ചേർക്കുക':'Set your exam date'}</button>}</p>}</div></header>
+  <MotivationQuoteCard language={language}/>
   <section className="today-summary-card today-summary-stable" aria-label={ml?'ഇന്നത്തെ സംഗ്രഹം':'Today summary'} aria-busy={loading}>
    <div className="eyebrow">{ml?'ഇന്നത്തെ സംഗ്രഹം':'TODAY'}</div>
    <div className="today-summary-stats"><span><strong>{loading?'—':Number(dailyCount)||0}</strong>{ml?' ചോദ്യങ്ങൾ':` ${plural(dailyCount,'question','questions')}`}</span><span><strong>{loading?'—':`${Number(dailyCount)||0} / ${Number(dailyGoal)||20}`}</strong>{ml?' ലക്ഷ്യചോദ്യങ്ങൾ':' daily goal'}</span><span><strong>{loading?'—':`${Math.round(Number(learnerStats?.todayAccuracy)||0)}%`}</strong>{ml?' കൃത്യത':' accuracy'}</span><span><strong>{loading?'—':Number(streak)||0}</strong>{ml?' ദിവസത്തെ തുടർച്ച':` ${plural(streak,'day','days')} streak`}</span></div>

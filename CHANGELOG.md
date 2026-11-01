@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.15
+
+- Restored the daily inspiration quote on Today.
+
 ## 1.10.14
 
 - Fixed Progress counts, selected-range active-day wording, low-data topic accuracy, and rank estimate timeout/retry states.
