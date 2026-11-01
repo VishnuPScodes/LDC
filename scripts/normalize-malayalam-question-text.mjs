@@ -8,11 +8,13 @@ const apply=process.argv.includes('--apply');
 const outputArg=process.argv.slice(2).find(argument=>!argument.startsWith('--'));
 const output=path.resolve(outputArg||path.join(root,'server/data/malayalam-text-review.csv'));
 const rows=JSON.parse(fs.readFileSync(input,'utf8'));
+const backup=()=>{const stamp=new Date().toISOString().replaceAll(':','-'),destination=path.join(root,'server/data/backups',`questions-before-mal-apply-${stamp}.json`);fs.mkdirSync(path.dirname(destination),{recursive:true});fs.copyFileSync(input,destination);console.log(`Backup: ${destination}`)};
 const mal='[\\u0D00-\\u0D7F]';
 const fragments=/^(?:ന്റെ|ത്തിൻറെ|ത്തിന്റേ)$/u;
 const fix=value=>{
  let text=value.normalize('NFC');
  text=text.replace(/([\u0D00-\u0D7F])[\u200B-\u200D\uFEFF]+(?=[\u0D00-\u0D7F])/gu,'$1');
+ text=text.replace(/([\u0D00-\u0D7F])\s+(?=[\u0D3E-\u0D4C\u0D4D\u0D57\u0D62\u0D63\u0D7A-\u0D7F])/gu,'$1');
  text=text.replace(/രാസപ്രവർത്തനത്തി\s+ന്റെ/gu,'രാസപ്രവർത്തനത്തിന്റെ');
  text=text.replace(/വ\s+സ്തുക്കളാണ്/gu,'വസ്തുക്കളാണ്');
  text=text.replace(new RegExp(`(${mal}{2,})\\s+(${mal}{2,})`,'gu'),(whole,left,right)=>fragments.test(right)?left+right:whole);
@@ -32,7 +34,7 @@ if(process.argv.includes('--restore-vowel-boundaries')){
  }
  for(const item of restores)console.log(`RESTORE paper ${item.paper} Q${item.number} ${item.label}: ${item.after} -> ${item.before}`);
  console.log(`${apply?'Applying':'Dry run:'} ${restores.length} word-boundary restorations.`);
- if(apply&&restores.length){for(const item of restores)item.target.text=item.before;fs.writeFileSync(input,`${JSON.stringify(rows,null,2)}\n`);console.log(`Updated ${input}`)}
+ if(apply&&restores.length){backup();for(const item of restores)item.target.text=item.before;fs.writeFileSync(input,`${JSON.stringify(rows,null,2)}\n`);console.log(`Updated ${input}`)}
  process.exit(0);
 }
 const changes=[];
@@ -44,4 +46,4 @@ fs.mkdirSync(path.dirname(output),{recursive:true});
 fs.writeFileSync(output,[['paperNumber','questionNumber','field','before','after'].map(quote).join(','),...changes.map(x=>[x.row.paperNumber,x.row.questionNumber,x.label,x.before,x.after].map(quote).join(','))].join('\n')+'\n');
 for(const change of changes)console.log(`paper ${change.row.paperNumber} Q${change.row.questionNumber} ${change.label}: ${change.before} -> ${change.after}`);
 console.log(`${apply?'Applying':'Dry run:'} ${changes.length} changes. Review ${output}${apply?' (recorded change list)':' and rerun with --apply to write.'}`);
-if(apply&&changes.length){for(const change of changes)change.target[change.key]=change.after;fs.writeFileSync(input,`${JSON.stringify(rows,null,2)}\n`);console.log(`Updated ${input}`)}
+if(apply&&changes.length){backup();for(const change of changes)change.target[change.key]=change.after;fs.writeFileSync(input,`${JSON.stringify(rows,null,2)}\n`);console.log(`Updated ${input}`)}
