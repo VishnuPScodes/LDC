@@ -1,0 +1,101 @@
+{
+  "title": "Lower Division Clerk (Various Departments)",
+  "categoryNumbers": ["503/2023", "504/2023"],
+  "totalMarks": 100,
+  "sourceUrl": "https://www.keralapsc.gov.in/sites/default/files/2024-01/L%20D%20Clerks.pdf",
+  "sourceLabel": "Kerala PSC detailed syllabus for LDC, categories 503/2023 and 504/2023",
+  "note": "Questions from other topics related to the prescribed educational qualification may also appear. Kerala PSC does not guarantee that every listed topic will be covered in a question paper.",
+  "parts": [
+    {
+      "number": "I",
+      "title": "General Knowledge",
+      "marks": 50,
+      "sections": [
+        {
+          "title": "History",
+          "marks": 5,
+          "groups": [
+            {"title": "Kerala", "topics": ["Arrival and contributions of Europeans", "Travancore from Marthanda Varma to Sree Chithira Thirunal", "Social, religious and renaissance movements", "Kerala's national movement", "Literary sources of Kerala history", "United Kerala movement", "Political and social history after 1956"]},
+            {"title": "India", "topics": ["Political history and establishment of British rule", "First War of Independence and formation of the Indian National Congress", "Swadeshi and social reform movements", "Newspapers, literature and art during the freedom struggle", "Independence movement and Mahatma Gandhi", "Post-independence period and state reorganisation", "Developments in science, education and technology", "Foreign policy"]},
+            {"title": "World", "topics": ["English, American, French, Russian and Chinese revolutions", "Political history after the Second World War", "United Nations and other international organisations"]}
+          ]
+        },
+        {
+          "title": "Geography",
+          "marks": 5,
+          "groups": [
+            {"title": "Physical and world geography", "topics": ["Basic geography and structure of the Earth", "Atmosphere, rocks and landforms", "Pressure belts, winds, temperature and seasons", "Global issues, global warming and types of pollution", "Maps, topographic maps and map symbols", "Remote sensing and geographic information systems", "Oceans and ocean movements", "Continents and countries with their distinguishing features"]},
+            {"title": "India", "topics": ["Physiography and states", "Northern mountain region, rivers, Northern Great Plain, Peninsular Plateau and coastal plains", "Climate and natural vegetation", "Agriculture, minerals, industries and energy sources", "Road, water, rail and air transport"]},
+            {"title": "Kerala", "topics": ["Physiography, districts and their features", "Rivers, climate, natural vegetation and wildlife", "Agriculture and research institutions", "Minerals, industries and energy sources", "Road, water, rail and air transport"]}
+          ]
+        },
+        {"title": "Economics", "marks": 5, "groups": [{"title": "India", "topics": ["Indian economy", "Five Year Plans, Planning Commission and NITI Aayog", "New economic reforms and financial institutions", "Agriculture, major crops, minerals and the Green Revolution"]}]},
+        {"title": "Indian Constitution", "marks": 5, "groups": [{"topics": ["Constituent Assembly, Preamble and citizenship", "Fundamental Rights, Directive Principles and Fundamental Duties", "Structure and components of government", "Important amendments: 42nd, 44th, 52nd, 73rd, 74th, 86th and 91st", "Panchayati Raj", "Constitutional bodies and their responsibilities", "Union List, State List and Concurrent List"]}]},
+        {"title": "Kerala: Governance and System of Administration", "marks": 5, "groups": [{"topics": ["Kerala State Civil Service and constitutional bodies", "Commissions", "Basic socio-economic and commercial planning facts", "Disaster Management Authority and watershed conservation", "Employment, labour and national rural employment programmes", "Land reforms", "Protection of women, children and senior citizens", "Social welfare and social security"]}]},
+        {"title": "Life Science and Public Health", "marks": 6, "groups": [{"topics": ["Basic facts about the human body", "Vitamins, minerals and deficiency diseases", "Communicable diseases and their causative organisms", "Kerala health and welfare programmes", "Lifestyle diseases", "Basic health knowledge", "Environment and environmental issues"]}]},
+        {"title": "Physics", "marks": 3, "groups": [{"topics": ["Branches of physics, matter, units, measurements and physical quantities", "Motion, Newton's laws, momentum, projectile motion and ISRO achievements", "Light, lenses, mirrors, the relation r = 2f, optical phenomena, rainbow, colours, electromagnetic spectrum, IR, UV, X-rays and photoelectric effect", "Sound, wave types, speed in different media, resonance and reverberation", "Forces, friction, liquid pressure, buoyancy, Archimedes' principle, Pascal's law, density, adhesion, cohesion, capillarity, viscosity and surface tension", "Gravitation, centripetal and centrifugal force, satellites, escape velocity, mass, weight and variation in g", "Heat, temperature, thermometers and relative humidity", "Work, energy, power, related problems and types of levers"]}]},
+        {"title": "Chemistry", "marks": 3, "groups": [{"topics": ["Atoms, molecules, states of matter, allotropy, gas laws and aqua regia", "Elements and periodic table; metals and non-metals; physical and chemical changes; reactions; solutions, mixtures and compounds", "Metals, non-metals, alloys, acids, alkalis, pH and alkaloids"]}]},
+        {
+          "title": "Arts, Sports, Literature and Culture",
+          "marks": 5,
+          "groups": [
+            {"title": "Arts", "topics": ["Kerala's important visual and performing art forms", "Their origins, development, spread and practice", "Famous places, institutions, people, artists and writers associated with the art forms"]},
+            {"title": "Sports", "topics": ["Prominent Kerala, Indian and world sportspersons, events, achievements and honours", "Major awards and their fields", "Trophies and associated competitions or sports", "Player counts and important terms in sports", "Olympics: facts, venues, countries, notable performances, India, Winter Olympics and Paralympics", "Asian, Afro-Asian, Commonwealth and SAF Games: venues, countries and India's performance", "National Games", "Games, events, players and achievements", "National sports or games of countries"]},
+            {"title": "Literature", "topics": ["Malayalam literary movements, pioneers and first works", "Important works and authors of each movement", "Writers' pen names and nicknames", "Famous works and characters", "Famous quotations, books and authors", "The beginnings of journalism in Kerala, pioneers and publications", "Literary awards and honoured writers and works", "Malayalam Jnanpith award winners and related facts", "Malayalam cinema: origin, development, milestones, pioneers and national awards"]},
+            {"title": "Culture", "topics": ["Kerala's important celebrations, associated places and festivals", "Cultural centres, places of worship, cultural leaders and their contributions"]}
+          ]
+        },
+        {
+          "title": "Computer: Basics",
+          "marks": 3,
+          "groups": [
+            {"title": "Hardware", "topics": ["Input devices and uses", "Output devices and features", "Primary and secondary memory devices, examples and features"]},
+            {"title": "Software", "topics": ["System and application software", "Operating systems, functions and examples", "Word processors, spreadsheets, databases, presentation and image-editing software", "Basic programming instruction types: input, output, store and control transfer"]},
+            {"title": "Networks and Internet", "topics": ["LAN, WAN and MAN: features and uses", "Network media, switches, hubs, routers, bridges and gateways", "WWW, email and search engines", "Social media", "Web browsers and basic HTML", "E-governance"]},
+            {"title": "Cyber safety", "topics": ["Cyber crimes and cyber laws at awareness level", "Information Technology Act and other laws at awareness level"]}
+          ]
+        },
+        {
+          "title": "Important Acts",
+          "marks": 5,
+          "groups": [
+            {"title": "Right to Information", "topics": ["Information exempt from disclosure", "Information Commissions: constitution, powers and functions"]},
+            {"title": "Consumer protection", "topics": ["Consumer rights"]},
+            {"title": "Protection of vulnerable sections", "topics": ["Protection of Civil Rights", "Atrocities against SC and ST communities", "National and Kerala State SC/ST Commissions", "National and State Minority Commissions", "National and State Human Rights Commissions", "Protection of senior citizens"]},
+            {"title": "Protection of women", "topics": ["Offences affecting public decency and morals", "National and State Commissions for Women", "Protection of Women from Domestic Violence Act, 2005"]},
+            {"title": "Protection of children", "topics": ["Protection of Children from Sexual Offences (POCSO) Act, 2012"]}
+          ]
+        }
+      ]
+    },
+    {"number": "II", "title": "Current Affairs", "marks": 20, "sections": [{"title": "Current Affairs", "marks": 20, "groups": []}]},
+    {
+      "number": "III",
+      "title": "Simple Arithmetic, Mental Ability and Observation Skills",
+      "marks": 10,
+      "sections": [
+        {"title": "Simple Arithmetic", "marks": 5, "groups": [{"topics": ["Numbers and basic operations", "Fractions and decimal numbers", "Percentage", "Profit and loss", "Simple and compound interest", "Ratio and proportion", "Time and distance", "Time and work", "Average", "Laws of exponents", "Mensuration", "Progressions"]}]},
+        {"title": "Mental Ability and Observation Skills", "marks": 5, "groups": [{"topics": ["Number and letter series", "Problems using mathematical signs", "Position finding", "Word, alphabet and number analogies", "Odd one out", "Numerical ability", "Coding and decoding", "Family relations", "Sense of direction", "Time and angles", "Clock time and mirror images", "Dates and calendar", "Clerical ability"]}]}
+      ]
+    },
+    {
+      "number": "IV",
+      "title": "General English",
+      "marks": 10,
+      "sections": [
+        {"title": "English Grammar", "marks": 5, "groups": [{"topics": ["Types and transformation of sentences", "Parts of speech", "Subject–verb agreement", "Definite and indefinite articles", "Primary and modal auxiliary verbs", "Question tags", "Infinitives and gerunds", "Tenses, including conditional sentences", "Prepositions", "Correlatives", "Direct and indirect speech", "Active and passive voice", "Sentence correction", "Degrees of comparison"]}]},
+        {"title": "Vocabulary", "marks": 5, "groups": [{"topics": ["Singular and plural; gender; collective nouns", "Word formation, prefixes and suffixes", "Compound words", "Synonyms and antonyms", "Phrasal verbs", "Foreign words and phrases", "One-word substitutions", "Often-confused words", "Spelling", "Idioms and meanings", "Common abbreviations and their meanings"]}]}
+      ]
+    },
+    {
+      "number": "V",
+      "title": "Regional Languages",
+      "marks": 10,
+      "sections": [
+        {"title": "Malayalam", "marks": 10, "groups": [{"topics": ["Word purity", "Sentence correctness", "Translation", "One-word expressions", "Synonyms", "Antonyms", "Idioms and proverbs", "Equivalent words", "Joining words", "Gender", "Number", "Separating words", "Phrase completion"]}]},
+        {"title": "Kannada", "marks": 10, "groups": [{"topics": ["Word purity or correct word", "Correct sentence", "Translation", "One-word substitution", "Synonyms", "Antonyms", "Idioms and proverbs", "Equivalent word", "Joining words", "Feminine and masculine gender", "Number", "Sorting and writing"]}]},
+        {"title": "Tamil", "marks": 10, "groups": [{"topics": ["Correct word", "Correct sentence structure", "Translation", "Single word", "Synonyms", "Antonyms", "Phrases and proverbs", "Equivalent word", "Joining words", "Feminine and masculine gender", "Singular and plural", "Separating words", "Adding phrases"]}]}
+      ]
+    }
+  ]
+}

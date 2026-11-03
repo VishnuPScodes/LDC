@@ -1,5 +1,6 @@
 import questionsJson from '../../server/data/questions.json';
 import syllabusJson from '../../server/data/syllabus.json';
+import officialLdcSyllabusJson from '../../server/data/ldc-syllabus-503-2023.json';
 import {PAPER_METADATA} from '../../server/src/paper-metadata';
 import {isPublicQuestion} from '../../server/src/public-question';
 
@@ -9,9 +10,10 @@ export type PublicTopic={topic:string;slug:string;part:string;marks:number;descr
 
 const rawQuestions=questionsJson as any[];
 export const syllabus=syllabusJson as {topic:string;part:string;marks:number;subtopics:string[]}[];
+export const officialLdcSyllabus=officialLdcSyllabusJson;
 // Stable source revision from the latest committed change to each data file; never use request time here.
 export const questionDataLastModified=new Date('2026-10-26T15:09:34+05:30');
-export const syllabusDataLastModified=new Date('2026-10-22T14:04:59+05:30');
+export const syllabusDataLastModified=new Date('2026-11-03T00:00:00+05:30');
 const language='[\\u0D00-\\u0D7F]';
 const descriptions:Record<string,string>={
  History:'Study Indian and Kerala history, national movements, social reformers and key events asked in Kerala PSC LDC previous papers.',

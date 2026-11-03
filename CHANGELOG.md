@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.16
+
+- Replaced the brief LDC syllabus list with the detailed official syllabus for categories 503/2023 and 504/2023, corrected the mark distribution, and linked the source PDF.
+
 ## 1.10.15
 
 - Restored the daily inspiration quote on Today.

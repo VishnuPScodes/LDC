@@ -112,7 +112,24 @@ test('signed-in mobile navigation has five usable tabs',async({page})=>{
 
 test('visible UI version matches the client package release',async({page})=>{
  await page.goto('/');
- await expect(page.locator('footer.app-version')).toContainText('v1.10.14');
+ await expect(page.locator('footer.app-version')).toContainText('v1.10.16');
+});
+
+test('public syllabus shows detailed official content and corrected mark distribution',async({page})=>{
+ await page.goto('/ldc-syllabus');
+ await expect(page.getByRole('heading',{name:'Detailed LDC syllabus and mark distribution'})).toBeVisible();
+ await expect(page.getByText('100',{exact:true}).first()).toBeVisible();
+ const source=page.getByRole('link',{name:/Open official Kerala PSC syllabus PDF/});
+ await expect(source).toHaveAttribute('href','https://www.keralapsc.gov.in/sites/default/files/2024-01/L%20D%20Clerks.pdf');
+ expect(await page.locator('#syllabus-part-I').evaluate((node:any)=>node.open)).toBe(true);
+ const governance=page.locator('.ldc-syllabus-topic').filter({hasText:'Kerala: Governance and System of Administration'});
+ await expect(governance.locator('.ldc-topic-marks')).toHaveText('5 marks');
+ const acts=page.locator('.ldc-syllabus-topic').filter({hasText:'Important Acts'});
+ await expect(acts.locator('.ldc-topic-marks')).toHaveText('5 marks');
+ await acts.locator('summary').click();
+ await expect(acts.getByText('Right to Information',{exact:true})).toBeVisible();
+ await expect(acts.getByText('Consumer protection',{exact:true})).toBeVisible();
+ await assertNoHorizontalOverflow(page);
 });
 
 test('analytics active days include the selected range in Malayalam',async({page})=>{
