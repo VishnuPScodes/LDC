@@ -503,12 +503,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .knowledge-card-footer span { text-align: right; }
 .knowledge-intro,.knowledge-hints,.knowledge-footnote { display: none !important; }
 .knowledge-progress { flex: 0 0 auto; width: min(100%,680px); margin: 12px auto 0; }
-.knowledge-card-actions { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.knowledge-card-actions button { min-height: 48px; padding: 10px 14px; border: 1px solid var(--green-line); border-radius: 13px; background: var(--green-soft); color: var(--green-strong); font: inherit; font-weight: 750; cursor: pointer; }
-.dark .knowledge-card-actions button { color: #dcfce7; }
-.knowledge-card-actions .knowledge-action-known { background: var(--green); color: #fff; }
-.knowledge-swipe-hint { display: none; }
-@media (pointer:coarse) { .knowledge-swipe-hint { display: inline; } }
+.knowledge-swipe-hint { display: inline-flex; min-width: 0; max-width: 76%; align-items: baseline; justify-content: flex-end; gap: 5px; color: var(--muted); font-size: 11px; line-height: 1.5; text-align: right; }
+.knowledge-swipe-hint > span { flex: 0 0 auto; color: var(--green-strong); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 800; }
 body:has(.knowledge-shell) > footer.app-version { display: none; }
 
 .dark { min-height: 100vh; background: var(--bg) !important; color: var(--text) !important; }
@@ -527,9 +523,9 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
 .card, .points-level-card, .topic-card, .journey-map-wrap, .journey-list-row, .milestone-card, .progress-metric, .knowledge-card, .mock-question-card, .public-card {
   background: var(--surface); border-color: var(--border); border-radius: var(--radius-card); box-shadow: var(--shadow-card); color: var(--text);
 }
-.button, .continue-button, .knowledge-card-actions .knowledge-action-known { background: var(--brand); color: var(--on-brand); border: 0; box-shadow: none; border-radius: var(--radius-button); min-height: 44px; }
-.button:hover:not(:disabled), .continue-button:hover, .knowledge-card-actions .knowledge-action-known:hover { background: var(--brand-hover); transform: none; }
-.secondary-button, .button.alt, .knowledge-card-actions button, .syllabus-tabs button, .journey-view-controls button, .progress-range button {
+.button, .continue-button { background: var(--brand); color: var(--on-brand); border: 0; box-shadow: none; border-radius: var(--radius-button); min-height: 44px; }
+.button:hover:not(:disabled), .continue-button:hover { background: var(--brand-hover); transform: none; }
+.secondary-button, .button.alt, .syllabus-tabs button, .journey-view-controls button, .progress-range button {
   min-height: 44px; border: 1px solid var(--border); border-radius: var(--radius-button); background: var(--surface); color: var(--text); box-shadow: none;
 }
 .pwa-install-button { background: var(--brand); color: var(--on-brand); box-shadow: none; }
@@ -620,7 +616,6 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
 .knowledge-card-content p { font-size: 18px; line-height: 1.7; }
 .knowledge-progress-track { height: 6px; background: var(--surface-muted); }
 .knowledge-progress-track span { background: var(--brand); }
-.knowledge-card-actions .knowledge-action-known { background: var(--brand); color: var(--on-brand); }
 .topic-card:hover { border-color: var(--border); background: var(--surface); }
 .syllabus-link, .pdf-order-link, .report-link { color: var(--brand); }
 .mobile-bottom-nav a.active { color: var(--brand); }
@@ -737,10 +732,13 @@ body:has(.knowledge-shell) > footer.app-version { display: none; }
   .knowledge-intro { margin: 3px 0 12px; font-size: 12px; text-align: center; }
   .knowledge-progress { flex: 0 0 auto; margin-bottom: 13px; }
   .knowledge-stage { width: 100%; height: auto; min-height: 0; flex: 1 1 0; margin: 0 auto; }
-  .knowledge-card { padding: clamp(22px,6vh,42px) 22px 22px; border-radius: 26px; }
-  .knowledge-card-content { max-height: 100%; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+  .knowledge-card { padding: clamp(18px,4vh,30px) clamp(17px,5vw,24px) 18px; border-radius: 23px; }
+  .knowledge-card-content { min-height: 0; max-height: 100%; flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+  .knowledge-card-footer { gap: 8px; padding-top: 11px; }
+  .knowledge-card-footer a { flex: 0 0 auto; }
+  .knowledge-swipe-hint { max-width: 76%; font-size: 10px; line-height: 1.4; }
   .knowledge-card-content h2 { font-size: clamp(22px,6.2vw,28px); }
-  .knowledge-card-content p { font-size: 16px; line-height: 1.95; }
+  .knowledge-card-content p { font-size: 16px; line-height: 1.7; }
   .knowledge-card-footer { font-size: 10px; }
   .knowledge-card-footer a { font-size: 11px; }
   .knowledge-hints { flex: 0 0 auto; margin-top: 12px; font-size: 11px; }
@@ -1250,6 +1248,7 @@ body:has(.paper-screen) .pwa-install,body:has(.paper-screen) .mobile-bottom-nav 
 .landing-shell>.shell>.header .brand{display:inline-flex;align-items:center;min-height:44px}
 .knowledge-stage{max-width:680px}
 body:has(.knowledge-page) .pwa-install{display:none!important}
+@media(max-width:760px) and (max-height:780px){.knowledge-page{padding-top:max(8px,env(safe-area-inset-top));padding-bottom:max(8px,env(safe-area-inset-bottom))}.knowledge-progress{margin-bottom:9px}.knowledge-card{padding:14px 16px 13px}.knowledge-spark{margin-bottom:10px}.knowledge-card-content h2{margin-bottom:9px;font-size:clamp(20px,5.8vw,24px)}.knowledge-card-content p{font-size:15px;line-height:1.55}.knowledge-card-footer{padding-top:8px}}
 @media(max-width:767px){body:has(.guest-feature-notice) header.public-header :is(.brand,.public-nav a,.secondary-button){display:inline-flex;min-height:44px!important;padding-block:10px!important;align-items:center;box-sizing:border-box}}
 @media(max-width:600px){
  .public-home-hero .public-page-actions{display:grid;grid-template-columns:1fr;width:100%}

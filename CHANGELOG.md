@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.17
+
+- Optimized Knowledge cards for phone screens, removed swipe-redundant action buttons, and show gesture guidance only until the first swipe.
+
 ## 1.10.16
 
 - Replaced the brief LDC syllabus list with the detailed official syllabus for categories 503/2023 and 504/2023, corrected the mark distribution, and linked the source PDF.

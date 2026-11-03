@@ -8,11 +8,12 @@ const dayKey=(d=new Date())=>`${d.getFullYear()}-${String(d.getMonth()+1).padSta
 const groupForToday=()=>{const d=new Date();return Math.floor((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())-Date.UTC(2024,0,1))/86400000)%knowledgeGroups.length};
 
 export default function KnowledgeCards({onExit,onPractice}:{onExit:()=>void;onPractice:()=>void}){
- const reduce=useReducedMotion(),[index,setIndex]=useState(0),[known,setKnown]=useState<number[]>([]),[ready,setReady]=useState(false),[direction,setDirection]=useState(1);
+ const reduce=useReducedMotion(),[index,setIndex]=useState(0),[known,setKnown]=useState<number[]>([]),[ready,setReady]=useState(false),[direction,setDirection]=useState(1),[showSwipeIntro,setShowSwipeIntro]=useState(false);
  const group=useMemo(()=>knowledgeGroups[groupForToday()],[]),key=`ldc-knowledge-v2:${dayKey()}`;
- useEffect(()=>{try{const saved:Saved=JSON.parse(localStorage.getItem(key)||'{"index":0,"known":[]}');setIndex(Math.min(saved.index,group.length));setKnown(saved.known||[])}catch{}setReady(true)},[key,group.length]);
+ const swipeIntroKey='ldc-knowledge-swipe-intro-seen:v1';
+ useEffect(()=>{try{const saved:Saved=JSON.parse(localStorage.getItem(key)||'{"index":0,"known":[]}');setIndex(Math.min(saved.index,group.length));setKnown(saved.known||[]);setShowSwipeIntro(localStorage.getItem(swipeIntroKey)!=='1')}catch{}setReady(true)},[key,group.length]);
  useEffect(()=>{if(ready)localStorage.setItem(key,JSON.stringify({index,known} satisfies Saved))},[index,known,key,ready]);
- const advance=(mark:'known'|'review')=>{if(index>=group.length)return;setDirection(mark==='known'?1:-1);if(mark==='known')setKnown(xs=>[...xs,index]);setIndex(i=>i+1)};
+ const advance=(mark:'known'|'review')=>{if(index>=group.length)return;if(showSwipeIntro){try{localStorage.setItem(swipeIntroKey,'1')}catch{}setShowSwipeIntro(false)}setDirection(mark==='known'?1:-1);if(mark==='known')setKnown(xs=>[...xs,index]);setIndex(i=>i+1)};
  useEffect(()=>{const keydown=(e:KeyboardEvent)=>{if(e.key==='ArrowRight')advance('known');if(e.key==='ArrowLeft')advance('review')};window.addEventListener('keydown',keydown);return()=>window.removeEventListener('keydown',keydown)},[index,group.length]);
  const card=group[index],next=group[index+1];
  if(!ready)return <section className="knowledge-page" aria-busy="true"/>;
@@ -25,8 +26,7 @@ export default function KnowledgeCards({onExit,onPractice}:{onExit:()=>void;onPr
     {card&&<motion.article key={index} className="knowledge-card" drag="x" dragConstraints={{left:0,right:0}} dragElastic={.85} onDrag={(e,info)=>{const target=(e.target as HTMLElement).closest('.knowledge-card');target?.classList.toggle('swipe-known',info.offset.x>45);target?.classList.toggle('swipe-review',info.offset.x< -45)}} onDragEnd={(e,info)=>{const target=(e.target as HTMLElement).closest('.knowledge-card');target?.classList.remove('swipe-known','swipe-review');if(info.offset.x>70||info.velocity.x>450)advance('known');else if(info.offset.x< -70||info.velocity.x< -450)advance('review')}} initial={reduce?{opacity:0}:{x:-direction*42,opacity:0,rotate:-direction*3}} animate={{x:0,opacity:1,rotate:0}} exit={reduce?{opacity:0}:{x:direction*420,opacity:0,rotate:direction*13}} transition={{type:'spring',stiffness:280,damping:25}} whileDrag={{scale:1.025,rotate:0,cursor:'grabbing'}}>
       <div className="knowledge-card-glow"/><div className="knowledge-card-head"><span className="knowledge-topic"><i/> {card.topic}</span><span className="knowledge-card-number">{String(index+1).padStart(2,'0')}</span></div>
       <div className="knowledge-card-content"><div className="knowledge-spark" aria-hidden="true">✳</div><h2>{card.title}</h2><p>{card.body}</p></div>
-      <div className="knowledge-card-actions"><button type="button" className="knowledge-action-review" onClick={()=>advance('review')}>വീണ്ടും പഠിക്കാം</button><button type="button" className="knowledge-action-known" onClick={()=>advance('known')}>അറിയാം ✓</button></div>
-      <div className="knowledge-card-footer"><a href={card.url} target="_blank" rel="noreferrer">ഉറവിടം <span aria-hidden="true">↗</span></a><span className="knowledge-swipe-hint">തുടരാൻ ഇടത്തോട്ടോ വലത്തോട്ടോ സ്വൈപ്പ് ചെയ്യൂ</span></div>
+      <div className="knowledge-card-footer"><a href={card.url} target="_blank" rel="noreferrer">ഉറവിടം <span aria-hidden="true">↗</span></a>{showSwipeIntro&&index===0&&<span className="knowledge-swipe-hint"><span aria-hidden="true">←</span> ടിൻഡർ പോലെ ഇടത്തേക്ക് വീണ്ടും പഠിക്കാം · വലത്തേക്ക് അറിയാം <span aria-hidden="true">→</span></span>}</div>
       <span className="knowledge-stamp stamp-known" aria-hidden="true">അറിയാം</span><span className="knowledge-stamp stamp-review" aria-hidden="true">വീണ്ടും പഠിക്കാം</span>
      </motion.article>}
    </AnimatePresence>

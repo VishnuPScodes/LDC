@@ -112,8 +112,33 @@ test('signed-in mobile navigation has five usable tabs',async({page})=>{
 
 test('visible UI version matches the client package release',async({page})=>{
  await page.goto('/');
- await expect(page.locator('footer.app-version')).toContainText('v1.10.16');
+ await expect(page.locator('footer.app-version')).toContainText('v1.10.17');
 });
+
+for(const [width,height] of [[360,740],[390,844]]){
+ test(`knowledge swipe card fits ${width}×${height} and explains gestures once`,async({page})=>{
+  await page.setViewportSize({width,height});
+  await page.goto('/facts');
+  const card=page.locator('.knowledge-card:not(.knowledge-card-under)').first();
+  await expect(card).toBeVisible();
+  await expect(card.locator('button')).toHaveCount(0);
+  await expect(card.locator('.knowledge-swipe-hint')).toBeVisible();
+  const bounds=await card.boundingBox();
+  expect(bounds).not.toBeNull();
+  expect(bounds!.y).toBeGreaterThanOrEqual(0);
+  expect(bounds!.y+bounds!.height).toBeLessThanOrEqual(height);
+  await assertNoHorizontalOverflow(page);
+  const x=bounds!.x+bounds!.width/2,y=bounds!.y+bounds!.height/2;
+  await page.mouse.move(x,y);
+  await page.mouse.down();
+  await page.mouse.move(x+Math.min(140,bounds!.width*.4),y,{steps:12});
+  await page.mouse.up();
+  await expect(page.locator('.knowledge-card-number').last()).toHaveText('02');
+  await expect(page.locator('.knowledge-swipe-hint')).toHaveCount(0);
+  const nextBounds=await page.locator('.knowledge-card:not(.knowledge-card-under)').last().boundingBox();
+  expect(nextBounds!.y+nextBounds!.height).toBeLessThanOrEqual(height);
+ });
+}
 
 test('public syllabus shows detailed official content and corrected mark distribution',async({page})=>{
  await page.goto('/ldc-syllabus');
