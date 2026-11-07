@@ -19,7 +19,7 @@ export default function PublicHeader(){
   <a className="brand" href={isAccount?'/today':'/'}>LDC<span>.</span> practice</a>
   <PublicNav authenticated={isAccount} language={ml?'ml':'en'}/>
   <div className="public-header-controls">
-   <button type="button" className="public-language-toggle" onClick={toggleLanguage} aria-label={ml?'Switch to English':'മലയാളത്തിലേക്ക് മാറുക'}>{ml?'EN':'മല'}</button>
+   <button type="button" className="public-language-toggle" onClick={toggleLanguage} aria-label={ml?'Switch to English':'മലയാളത്തിലേക്ക് മാറുക'} title={ml?'Switch to English':'മലയാളം'}><svg className="nav-icon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.5 3.5 5.3 3.5 8.5s-1.1 6-3.5 8.5c-2.4-2.5-3.5-5.3-3.5-8.5s1.1-6 3.5-8.5Z"/></svg><span>{ml?'EN':'മല'}</span></button>
    <div className="public-header-actions"><LandingThemeToggle/><a className="secondary-button public-sign-in" href={isAccount?'/today':'/login'}>{isAccount?(ml?'അക്കൗണ്ട്':'Account'):(ml?'സൈൻ ഇൻ':'Sign in')}</a></div>
    <button type="button" className="public-menu-toggle" aria-label={menuOpen?(ml?'മെനു അടയ്ക്കുക':'Close menu'):(ml?'മെനു തുറക്കുക':'Open menu')} aria-expanded={menuOpen} aria-controls="public-mobile-menu" onClick={()=>setMenuOpen(value=>!value)}><span aria-hidden="true">{menuOpen?'×':'☰'}</span></button>
   </div>

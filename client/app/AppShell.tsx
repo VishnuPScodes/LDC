@@ -113,6 +113,7 @@ const ICONS:Record<string,ReactNode>={
   sun:<><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></>,
   moon:<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/>,
   chevron:<path d="m7 10 5 5 5-5"/>,
+  globe:<><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.5 3.5 5.3 3.5 8.5s-1.1 6-3.5 8.5c-2.4-2.5-3.5-5.3-3.5-8.5s1.1-6 3.5-8.5Z"/></>,
 };
 function Icon({name}:{name:string}){return <svg className="nav-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{ICONS[name]}</svg>}
 // Plain left-clicks switch views in place; modified clicks still open the real URL.
@@ -139,7 +140,7 @@ function Header({view,setView,dark,setDark,user,logout,language,setLanguage}:any
         {library.map(([href,label])=><a href={href} key={href}>{label}</a>)}
       </nav>}
       <div className="app-header-controls">
-        <button type="button" className="app-language-toggle" aria-label={ml?'Switch to English':'മലയാളത്തിലേക്ക് മാറുക'} title={ml?'Switch to English':'മലയാളം'} onClick={()=>setLanguage(ml?'en':'ml')}>{ml?'EN':'മല'}</button>
+        <button type="button" className="app-language-toggle" aria-label={ml?'Switch to English':'മലയാളത്തിലേക്ക് മാറുക'} title={ml?'Switch to English':'മലയാളം'} onClick={()=>setLanguage(ml?'en':'ml')}><Icon name="globe"/><span>{ml?'EN':'മല'}</span></button>
         <button type="button" className="app-theme-toggle" aria-label={dark?'Switch to light theme':'Switch to dark theme'} title={dark?'Light theme':'Dark theme'} onClick={()=>setDark(!dark)}><Icon name={dark?'sun':'moon'}/></button>
         <button type="button" data-menu-toggle className={`app-more-toggle${menuOpen||moreActive?' active':''}`} aria-label={menuOpen?(ml?'മെനു അടയ്ക്കുക':'Close menu'):(ml?'മെനു തുറക്കുക':'Open menu')} aria-expanded={menuOpen} aria-controls="app-menu" onClick={()=>setMenuOpen(!menuOpen)}>
           {user?<span className="app-avatar" aria-hidden="true">{initial}</span>:null}<span className="app-more-label">{ml?'കൂടുതൽ':'More'}</span><Icon name="chevron"/>

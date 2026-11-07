@@ -1,5 +1,5 @@
 'use client';
-import {useMemo,useState} from 'react';
+import {useMemo,useState,useEffect} from 'react';
 import {JOURNEY_STOPS,JOURNEY_VIEWBOX} from '../../server/src/journey-config';
 
 type TopicRow={topic:string;attempts:number;accuracy:number;recentAccuracy:number;mastered:boolean;questionsLeft:number;total:number};
@@ -7,6 +7,8 @@ type Props={syllabus:any[];stats:any;loading?:boolean;error?:string;onRetry?:()=
 
 export default function SyllabusJourney({syllabus,stats,loading=false,error='',onRetry,onPracticeTopic,language='en'}:Props){
  const [selected,setSelected]=useState<number|null>(null),[listMode,setListMode]=useState(false),[zoom,setZoom]=useState(1);
+ // The map is hard to read on phones, so start them on the list view.
+ useEffect(()=>{if(window.matchMedia('(max-width: 600px)').matches)setListMode(true)},[]);
  const ml=language==='ml',topicRows:TopicRow[]=stats?.topicStats||[],byTopic=new Map(topicRows.map(row=>[row.topic,row]));
  const topics=syllabus.map(row=>row.topic);
  const recommendedTopic=useMemo(()=>topicRows.filter(row=>!row.mastered).sort((a,b)=>(a.recentAccuracy||0)-(b.recentAccuracy||0)||(b.total||0)-(a.total||0))[0]?.topic||topics[0],[topicRows,syllabus]);
