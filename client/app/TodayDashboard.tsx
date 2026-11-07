@@ -1,11 +1,12 @@
 'use client';
+import {useState} from 'react';
 import {featureFlags} from './feature-flags';
 import {daysUntilExam} from '../../server/src/exam-countdown';
 import MotivationQuoteCard from './MotivationQuoteCard';
 
 type Topic={topic:string;marks:number};
-type Props={name:string;dailyCount:number;dailyGoal:number;streak:number;progress:any;syllabus:Topic[];onStart:(config?:any)=>void;onPracticeTopic:(topic:string)=>void;onContinuePdf:()=>void;onOpenSyllabus:()=>void;reviewDue?:number;reviewTomorrow?:number;weekDays?:boolean[];unfinishedSession?:any;todayCompleted?:boolean;onResume?:(session:any)=>void;language?:'en'|'ml';targetExamDate?:string;onOpenSettings?:()=>void;learnerStats?:any;onOpenReview?:()=>void;onStartMock?:()=>void;loading?:boolean};
-export default function TodayDashboard({name,dailyCount,dailyGoal,streak,unfinishedSession,todayCompleted=false,onResume,language='en',targetExamDate,onOpenSettings,learnerStats,reviewDue=0,reviewTomorrow=0,onOpenReview,onOpenSyllabus,onContinuePdf,loading=false,onStart}:Props){
+type Props={name:string;dailyCount:number;dailyGoal:number;streak:number;progress:any;syllabus:Topic[];onStart:(config?:any)=>void;onPracticeTopic:(topic:string)=>void;onContinuePdf:()=>void;onOpenSyllabus:()=>void;reviewDue?:number;reviewTomorrow?:number;weekDays?:boolean[];unfinishedSession?:any;todayCompleted?:boolean;onResume?:(session:any)=>void;language?:'en'|'ml';targetExamDate?:string;onOpenSettings?:()=>void;learnerStats?:any;onOpenReview?:()=>void;onStartMock?:()=>void;loading?:boolean;onOpenKnowledge?:()=>void;onSetKnowledgeGoal?:(goal:number)=>void};
+export default function TodayDashboard({name,dailyCount,dailyGoal,streak,unfinishedSession,todayCompleted=false,onResume,language='en',targetExamDate,onOpenSettings,learnerStats,reviewDue=0,reviewTomorrow=0,onOpenReview,onOpenSyllabus,onContinuePdf,loading=false,onStart,onOpenKnowledge,onSetKnowledgeGoal}:Props){
  const ml=language==='ml';
  return <section className="today-page">
   <header className="today-heading"><div><h1 className="title">{ml?`നമസ്കാരം, ${name}`:`${greeting()}, ${name}.`}</h1><p className="today-subtitle">{ml?'ഇന്ന് ചെറിയൊരു പരിശീലനം മതി.':'A short, steady session is enough for today.'}</p>{featureFlags.examCountdown&&<p className="exam-countdown">{targetExamDate?countdownText(daysUntilExam(targetExamDate),ml):<button type="button" className="text-button" onClick={onOpenSettings}>{ml?'പരീക്ഷാ തീയതി ചേർക്കുക':'Set your exam date'}</button>}</p>}</div></header>
@@ -17,6 +18,7 @@ export default function TodayDashboard({name,dailyCount,dailyGoal,streak,unfinis
    </div>
   </section>
   <section className={`today-plan today-primary-action${todayCompleted&&!unfinishedSession?' is-complete':''}`}><div className="plan-copy"><div className="eyebrow">{todayCompleted&&!unfinishedSession?(ml?'ഇന്നത്തെ സെഷൻ':'TODAY’S SESSION'):ml?'അടുത്ത ചുവട്':'NEXT STEP'}</div><h2>{unfinishedSession?(ml?'സെഷൻ തുടരുക':'Continue your session'):todayCompleted?(ml?'ഇന്നത്തെ സെഷൻ പൂർത്തിയായി':'Today’s session is done'):(ml?'പരിശീലനം ആരംഭിക്കുക':'Start a practice session')}</h2><p>{unfinishedSession?(ml?'നിങ്ങളുടെ ഉത്തരം നൽകിയ ചോദ്യങ്ങൾ സംരക്ഷിച്ചിട്ടുണ്ട്.':'Your answered questions are saved.'):todayCompleted?(ml?'നന്നായി! നിങ്ങളുടെ സെഷൻ പൂർത്തിയായി.':'Nice work. You completed a practice session today.'):(ml?'ഒരു ചെറിയ സെഷൻ തിരഞ്ഞെടുത്ത് തുടങ്ങാം.':'Choose a short session and begin.')}</p></div>{todayCompleted&&!unfinishedSession?<span className="today-done-mark" role="status">✓ {ml?'പൂർത്തിയായി':'Done'}</span>:<button className="button plan-start" type="button" disabled={loading} onClick={()=>unfinishedSession?onResume?.(unfinishedSession):onStart()}>{unfinishedSession?(ml?'തുടരുക':'Continue'):(ml?'പരിശീലനം തുടങ്ങുക':'Start practice')} <span aria-hidden="true">→</span></button>}</section>
+  <KnowledgeGoalCard stats={learnerStats} loading={loading} ml={ml} onOpen={onOpenKnowledge} onSetGoal={onSetKnowledgeGoal}/>
   <MotivationQuoteCard language={language}/>
   <nav className="today-shortcuts" aria-label={ml?'മറ്റ് പഠന പേജുകൾ':'Other study pages'}>
    {reviewDue>0&&<button type="button" className="today-shortcut is-review" onClick={onOpenReview}><span className="today-shortcut-count">{reviewDue}</span><span><strong>{ml?'ആവർത്തനം':'Review'}</strong><small>{ml?'ഇന്ന് ആവർത്തിക്കാനുള്ളവ':`${plural(reviewDue,'question','questions')} due`}{reviewTomorrow>0?(ml?` · നാളെ ${reviewTomorrow}`:` · ${reviewTomorrow} tomorrow`):''}</small></span></button>}
@@ -28,6 +30,19 @@ export default function TodayDashboard({name,dailyCount,dailyGoal,streak,unfinis
 }
 function countdownText(days:number,ml:boolean){if(days<0)return ml?'പരീക്ഷാ തീയതി കഴിഞ്ഞു · ക്രമീകരണങ്ങളിൽ മാറ്റാം':'Your exam date has passed · edit in settings';if(days===0)return ml?'ഇന്നാണ് പരീക്ഷ! ആശംസകൾ.':'Your exam is today. Good luck!';if(ml)return `${days} ദിവസത്തിനകം പരീക്ഷ${days<30?' · മോക്ക് പരീക്ഷകൾ പരിശീലിക്കൂ':''}`;return `${days} ${days===1?'day':'days'} to your exam${days<30?' · practise a mock exam':''}`}
 
+// Daily reading goal for the Knowledge cards; meeting it earns XP (awarded by the server).
+function KnowledgeGoalCard({stats,loading,ml,onOpen,onSetGoal}:{stats:any;loading:boolean;ml:boolean;onOpen?:()=>void;onSetGoal?:(goal:number)=>void}){
+ const [editing,setEditing]=useState(false);
+ const goal=Number(stats?.knowledgeToday?.goal||stats?.knowledgeGoal||10),read=Number(stats?.knowledgeToday?.read||0),met=!!stats?.knowledgeToday?.goalMet,pct=Math.min(100,goal?read/goal*100:0);
+ return <section className={`knowledge-goal-card${met?' is-met':''}`} aria-label={ml?'അറിവ് ലക്ഷ്യം':'Reading goal'}>
+  <div className="knowledge-goal-top">
+   <div><div className="eyebrow">{ml?'അറിവ് ലക്ഷ്യം':'READING GOAL'}</div><h2>{met?(ml?'ഇന്നത്തെ ലക്ഷ്യം പൂർത്തിയായി':'Goal reached today'):(ml?`ഇന്ന് ${goal} അറിവുകൾ വായിക്കുക`:`Read ${goal} facts today`)}</h2><p>{met?(ml?'+10 XP ലഭിച്ചു · എത്ര വേണമെങ്കിലും വായിക്കാം':'+10 XP earned · keep reading as much as you like'):(ml?'ലക്ഷ്യം പൂർത്തിയാക്കിയാൽ +10 XP':'Reach it to earn +10 XP')}</p></div>
+   <button type="button" className={met?'secondary-button':'button'} onClick={onOpen}>{ml?'വായിക്കുക':'Read'} →</button>
+  </div>
+  <div className="knowledge-goal-bar" role="progressbar" aria-valuemin={0} aria-valuemax={goal} aria-valuenow={Math.min(read,goal)}><span style={{width:`${loading?0:pct}%`}}/></div>
+  <div className="knowledge-goal-foot"><span>{loading?'—':`${read} / ${goal}`} {ml?'വായിച്ചു':'read'}</span>{!met&&onSetGoal&&(editing?<span className="knowledge-goal-options" role="group" aria-label={ml?'ലക്ഷ്യം മാറ്റുക':'Change goal'}>{[5,10,20,30].map(n=><button type="button" key={n} className={n===goal?'is-selected':''} aria-pressed={n===goal} onClick={()=>{onSetGoal(n);setEditing(false)}}>{n}</button>)}</span>:<button type="button" className="text-button" onClick={()=>setEditing(true)}>{ml?'ലക്ഷ്യം മാറ്റുക':'Change goal'}</button>)}</div>
+ </section>;
+}
 function greeting(){const h=new Date().getHours();return h<5?'Good evening':h<12?'Good morning':h<17?'Good afternoon':'Good evening'}
 function GoalRing({done,goal,loading,ml}:{done:number;goal:number;loading:boolean;ml:boolean}){
  const ratio=Math.min(1,goal?done/goal:0),r=26,c=2*Math.PI*r,met=done>=goal&&goal>0;

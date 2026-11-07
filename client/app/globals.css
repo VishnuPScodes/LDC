@@ -1895,3 +1895,26 @@ body:has(.palm-leaf-theme) .public-header, body:has(.palm-leaf-theme) .public-in
 }
 .palm-leaf-theme .knowledge-complete .button { background: #7A4E1D; color: #FBF1DA; }
 .palm-leaf-theme .knowledge-complete .button:hover { background: #643F17; }
+
+/* ── Reading goal (Today) + unlimited Knowledge (v1.19.0) ── */
+.knowledge-goal-card { display: grid; gap: 12px; margin: 14px 0; padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--surface); }
+.knowledge-goal-top { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.knowledge-goal-top h2 { margin: 4px 0 2px; font-size: 1.05rem; }
+.knowledge-goal-top p { margin: 0; color: var(--muted); font-size: 13.5px; }
+.knowledge-goal-top .button, .knowledge-goal-top .secondary-button { flex: none; min-width: 96px; }
+.knowledge-goal-bar { height: 8px; overflow: hidden; border-radius: 999px; background: var(--surface-muted); }
+.knowledge-goal-bar span { display: block; height: 100%; border-radius: inherit; background-color: #9A6A2C; transition: width .5s cubic-bezier(.2,.8,.2,1); }
+.knowledge-goal-card.is-met .knowledge-goal-bar span { background-color: var(--green); }
+.knowledge-goal-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 13px; }
+.knowledge-goal-options { display: inline-flex; gap: 6px; }
+.knowledge-goal-options button { min-width: 40px; min-height: 34px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+.knowledge-goal-options button.is-selected { border-color: var(--green); background: var(--green-soft); color: var(--green); }
+@media (max-width: 560px) { .knowledge-goal-top { align-items: flex-start; flex-direction: column; } .knowledge-goal-top .button, .knowledge-goal-top .secondary-button { width: 100%; } }
+
+.palm-leaf-theme .knowledge-progress.is-met .knowledge-progress-track span { background-image: linear-gradient(90deg, #2E7D52, #4CA36F) !important; }
+.knowledge-nav { display: flex; flex: 0 0 auto; justify-content: center; gap: 12px; margin: 12px auto 0; }
+.knowledge-nav button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 1px solid color-mix(in srgb, var(--leaf-ink, #3A2310) 25%, transparent); border-radius: 999px; background: transparent; color: var(--leaf-ink, var(--ink)); font: inherit; font-size: 14px; font-weight: 650; cursor: pointer; }
+.knowledge-nav button:hover { background: color-mix(in srgb, var(--leaf-mid, #DDBC78) 35%, transparent); }
+@media (hover: none) { .knowledge-nav { display: none; } }
+.knowledge-toast { position: fixed; z-index: 60; left: 0; right: 0; bottom: max(24px, env(safe-area-inset-bottom)); width: fit-content; max-width: calc(100vw - 32px); margin: 0 auto; padding: 12px 18px; border-radius: 999px; background: #3A2310; color: #FBF1DA; font-weight: 700; box-shadow: 0 12px 30px -10px rgba(40,20,5,.5); text-align: center; }
+.palm-leaf-theme .knowledge-date { white-space: nowrap; }

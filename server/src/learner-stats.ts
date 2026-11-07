@@ -1,4 +1,5 @@
-import { Question,TestSession,User } from './models.js';
+import { KnowledgeDay,Question,TestSession,User } from './models.js';
+export const KNOWLEDGE_GOAL_XP=10;
 import {isTopicMastered} from './journey-mastery.js';
 import {dayKey} from './stats-date.js';
 import {computeMilestones} from './milestones.js';
@@ -10,7 +11,7 @@ type Answer={questionId:any;selectedOption?:string;isCorrect?:boolean|null;answe
 type Session={_id?:any;id?:string;settings?:any;answers?:Answer[];status?:string;quitEarly?:boolean;startedAt?:Date|string;completedAt?:Date|string;score?:any};
 type QuestionInfo={_id?:any;id?:string;topic:string;paperNumber?:number;paperCode?:string;correctOption?:string|null;eligibleForPractice?:boolean;needsReview?:boolean};
 
-export function computeLearnerStats(sessions:Session[],questionRows:QuestionInfo[],dailyGoal=20,now=new Date()){
+export function computeLearnerStats(sessions:Session[],questionRows:QuestionInfo[],dailyGoal=20,now=new Date(),knowledgeDays:{date:string;goalMetAt?:Date|string|null}[]=[]){
  const questions=new Map(questionRows.map(question=>[String(question._id||question.id),question]));
  const events=sessions.flatMap(session=>(session.answers||[]).filter(answer=>!!answer.selectedOption&&answer.answeredAt).map(answer=>({session,answer,question:questions.get(String(answer.questionId)),date:new Date(answer.answeredAt as any)}))).filter(event=>event.question);
  events.sort((a,b)=>a.date.getTime()-b.date.getTime());
@@ -32,6 +33,7 @@ export function computeLearnerStats(sessions:Session[],questionRows:QuestionInfo
  const currentDay=dayKey(now),todayCount=answeredByDay.get(currentDay)?.size||0;
  const metDays=[...goalDays].sort();let streak=0,cursor=new Date(now);if(!goalDays.has(currentDay))cursor.setDate(cursor.getDate()-1);while(goalDays.has(dayKey(cursor))){streak++;cursor.setDate(cursor.getDate()-1)}
  let bestStreak=0,run=0,previous:Date|null=null;for(const key of metDays){const [year,month,day]=key.split('-').map(Number),date=new Date(Date.UTC(year,month-1,day));if(previous&&(date.getTime()-previous.getTime())/86400000===1)run++;else run=1;bestStreak=Math.max(bestStreak,run);previous=date}
+ let knowledgePoints=0;for(const day of knowledgeDays){if(!day.goalMetAt)continue;knowledgePoints+=KNOWLEDGE_GOAL_XP;pointsPerDay.set(day.date,(pointsPerDay.get(day.date)||0)+KNOWLEDGE_GOAL_XP)}points+=knowledgePoints;
  const level=levelForPoints(points),nextLevelPoints=pointsForLevel(level+1),currentLevelPoints=pointsForLevel(level),nextPoints=nextLevelPoints-points;
  let runningSessionPoints=0;const sessionAwards:any={};for(const session of [...sessions].sort((a,b)=>new Date(a.completedAt||a.startedAt||now).getTime()-new Date(b.completedAt||b.startedAt||now).getTime())){const id=String(session._id||session.id||'unknown'),earned=sessionPointMap.get(id)||0,before=levelForPoints(runningSessionPoints);runningSessionPoints+=earned;sessionAwards[id]={points:earned,levelBefore:before,levelAfter:levelForPoints(runningSessionPoints),pointsToNextLevel:Math.max(0,pointsForLevel(levelForPoints(runningSessionPoints)+1)-runningSessionPoints)}}
  const totalAnswered=events.length,accuracy=totalAnswered?correct/totalAnswered*100:0;
@@ -44,8 +46,10 @@ export function computeLearnerStats(sessions:Session[],questionRows:QuestionInfo
 }
 
 export async function getLearnerStats(userId:string,now=new Date()){
- const [user,sessions]=await Promise.all([User.findById(userId).select('settings').lean(),TestSession.find({userId}).sort({startedAt:1}).lean()]);
+ const [user,sessions,knowledgeDays]=await Promise.all([User.findById(userId).select('settings').lean(),TestSession.find({userId}).sort({startedAt:1}).lean(),KnowledgeDay.find({userId}).select('date read goal goalMetAt').lean()]);
  const ids=[...new Set(sessions.flatMap((session:any)=>(session.questionIds||[]).map((id:any)=>String(id))))];
  const questionRows=await Question.find({$or:[{_id:{$in:ids}},{eligibleForPractice:true,needsReview:false}]}).select('_id topic paperNumber paperCode correctOption eligibleForPractice needsReview').lean();
- return computeLearnerStats(sessions as any,questionRows as any,(user as any)?.settings?.dailyGoal||20,now);
+ const stats=computeLearnerStats(sessions as any,questionRows as any,(user as any)?.settings?.dailyGoal||20,now,knowledgeDays as any);
+ const knowledgeGoal=(user as any)?.settings?.knowledgeGoal||10,today=(knowledgeDays as any[]).find(day=>day.date===dayKey(now));
+ return {...stats,knowledgeGoal,knowledgeToday:{read:today?.read||0,goal:today?.goalMetAt?today.goal:knowledgeGoal,goalMet:!!today?.goalMetAt},knowledgeXp:(knowledgeDays as any[]).filter(day=>day.goalMetAt).length*KNOWLEDGE_GOAL_XP};
 }
