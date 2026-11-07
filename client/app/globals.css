@@ -1822,3 +1822,76 @@ a, button, [role=button] { touch-action: manipulation; }
  .onboarding { width: 100%; padding: 22px 18px calc(22px + env(safe-area-inset-bottom)); border-radius: 22px 22px 0 0; }
  .onboarding-goals { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── Knowledge: Kerala palm-leaf manuscript (താളിയോല) theme ── */
+.palm-leaf-theme {
+ --leaf-light: #EBD49C; --leaf-mid: #DDBC78; --leaf-deep: #C79B52; --leaf-edge: rgba(110,70,20,.38);
+ --leaf-vein: rgba(120,82,30,.13); --leaf-ink: #3A2310; --leaf-ink-soft: #6B4A26; --leaf-desk: #F2EADA; --leaf-hole: #F2EADA;
+ background-color: var(--leaf-desk) !important; background-image: radial-gradient(ellipse at 50% 0%, #FBF5E8 0%, var(--leaf-desk) 70%) !important;
+}
+.dark .palm-leaf-theme, :root[data-theme-choice="dark"] .palm-leaf-theme {
+ --leaf-light: #5A4524; --leaf-mid: #4A381C; --leaf-deep: #3A2B15; --leaf-edge: rgba(0,0,0,.5);
+ --leaf-vein: rgba(255,225,160,.07); --leaf-ink: #F3DFB2; --leaf-ink-soft: #D2B887; --leaf-desk: #15110B; --leaf-hole: #15110B;
+ background-color: var(--leaf-desk) !important; background-image: radial-gradient(ellipse at 50% 0%, #221B10 0%, var(--leaf-desk) 70%) !important;
+}
+.palm-leaf-theme .knowledge-title .section-title { color: var(--leaf-ink); font-family: var(--font-chilanka), var(--font-anek-malayalam), cursive; font-weight: 400; }
+.palm-leaf-theme .knowledge-title .eyebrow, .palm-leaf-theme .knowledge-back { color: var(--leaf-ink-soft); }
+.palm-leaf-theme .knowledge-date { border-color: var(--leaf-deep); background: transparent; color: var(--leaf-ink); }
+.palm-leaf-theme .knowledge-progress-track { background: color-mix(in srgb, var(--leaf-deep) 30%, transparent); }
+.palm-leaf-theme .knowledge-progress-track span { background-color: #9A6A2C; background-image: linear-gradient(90deg, #8A5A22, #C08A3E) !important; }
+.palm-leaf-theme .knowledge-progress strong { color: var(--leaf-ink); }
+
+/* The leaf itself: horizontal on wide screens, a tall strip on phones. Veins run along the long side. */
+.palm-leaf-theme .knowledge-card, .palm-leaf-theme .knowledge-complete {
+ border: 0; border-radius: 46px / 38px; color: var(--leaf-ink); box-shadow: inset 0 0 0 1px var(--leaf-edge), inset 0 0 42px rgba(110,70,20,.32), 0 18px 34px -18px rgba(60,35,10,.45) !important;
+ background-color: var(--leaf-mid);
+ background-image:
+  repeating-linear-gradient(180deg, transparent 0 7px, var(--leaf-vein) 7px 8px, transparent 8px 19px),
+  linear-gradient(180deg, var(--leaf-light) 0%, var(--leaf-mid) 52%, var(--leaf-deep) 100%) !important;
+}
+.palm-leaf-theme .knowledge-card-under { opacity: .7; filter: brightness(.92); }
+.palm-leaf-theme .knowledge-card-content { padding: 6px clamp(20px, 5vw, 64px); }
+.palm-leaf-theme .knowledge-card-content h2 { color: var(--leaf-ink); font-family: var(--font-chilanka), var(--font-anek-malayalam), cursive; font-weight: 400; font-size: clamp(28px, 4.2vw, 48px); line-height: 1.35; padding-bottom: 12px; margin-bottom: 14px; border-bottom: 1.5px solid color-mix(in srgb, var(--leaf-ink) 28%, transparent); }
+.palm-leaf-theme .knowledge-card-content p { color: var(--leaf-ink); font-family: var(--font-noto-serif-malayalam), serif; }
+.palm-leaf-theme .knowledge-card-head, .palm-leaf-theme .knowledge-card-footer { padding-left: clamp(20px, 5vw, 64px); padding-right: clamp(20px, 5vw, 64px); }
+.palm-leaf-theme .knowledge-card-footer { border-top-color: color-mix(in srgb, var(--leaf-ink) 22%, transparent); color: var(--leaf-ink-soft); }
+.palm-leaf-theme .knowledge-topic { color: var(--leaf-ink-soft); font-family: var(--font-chilanka), var(--font-anek-malayalam), cursive; font-size: 15px; font-weight: 400; }
+.palm-leaf-theme .knowledge-topic i { background: #8A5A22; box-shadow: 0 0 0 3px color-mix(in srgb, #8A5A22 25%, transparent); }
+.palm-leaf-theme .knowledge-card-number { color: var(--leaf-ink-soft); font-family: var(--font-chilanka), cursive; font-size: 16px; font-weight: 400; }
+.palm-leaf-theme .knowledge-card-footer a, .palm-leaf-theme .knowledge-swipe-hint > span { color: var(--leaf-ink); }
+.palm-leaf-theme .knowledge-swipe-hint { color: var(--leaf-ink-soft); }
+.palm-leaf-theme .knowledge-complete h2, .palm-leaf-theme .knowledge-complete-count { color: var(--leaf-ink); font-family: var(--font-chilanka), var(--font-anek-malayalam), cursive; font-weight: 400; }
+.palm-leaf-theme .knowledge-complete p, .palm-leaf-theme .knowledge-complete .eyebrow, .palm-leaf-theme .knowledge-complete-count span { color: var(--leaf-ink-soft); }
+.palm-leaf-theme .knowledge-complete-mark { background: #8A5A22; color: #FBF1DA; }
+
+/* String holes and the binding thread, as on a real manuscript bundle. */
+.leaf-hole { position: absolute; z-index: 2; top: 50%; width: 14px; height: 14px; margin-top: -7px; border-radius: 50%; background: var(--leaf-hole); box-shadow: inset 0 1px 2px rgba(0,0,0,.35), 0 0 0 2px color-mix(in srgb, var(--leaf-deep) 70%, transparent); }
+.leaf-hole.is-start { left: 22px; }
+.leaf-hole.is-end { right: 22px; }
+.leaf-thread { position: absolute; z-index: 1; top: 50%; left: 0; width: 30px; height: 2px; margin-top: -1px; border-radius: 2px; background: #9B2D20; opacity: .75; }
+
+@media (max-width: 760px) {
+ .palm-leaf-theme .knowledge-card, .palm-leaf-theme .knowledge-complete {
+  border-radius: 34px / 46px;
+  background-image:
+   repeating-linear-gradient(90deg, transparent 0 7px, var(--leaf-vein) 7px 8px, transparent 8px 19px),
+   linear-gradient(90deg, var(--leaf-light) 0%, var(--leaf-mid) 52%, var(--leaf-deep) 100%) !important;
+ }
+ .leaf-hole { top: 20px; left: 50% !important; right: auto !important; margin: 0 0 0 -7px; }
+ .leaf-hole.is-end { top: auto; bottom: 20px; }
+ .leaf-thread { top: 0; left: 50%; width: 2px; height: 26px; margin: 0 0 0 -1px; }
+ .palm-leaf-theme .knowledge-card { padding-top: 44px; padding-bottom: 40px; }
+ .palm-leaf-theme .knowledge-card-content, .palm-leaf-theme .knowledge-card-head, .palm-leaf-theme .knowledge-card-footer { padding-left: 4px; padding-right: 4px; }
+ .palm-leaf-theme .knowledge-card-content h2 { font-size: clamp(26px, 7.4vw, 32px); }
+}
+
+/* The public /facts page also renders the site header; hide it behind the full-screen leaf view. */
+body:has(.palm-leaf-theme) .public-header, body:has(.palm-leaf-theme) .public-internal-links, body:has(.palm-leaf-theme) .public-footer { display: none !important; }
+@media (min-width: 761px) {
+ .palm-leaf-theme .knowledge-stage { width: 100%; max-width: 1000px; max-height: 500px; margin: auto; }
+ .palm-leaf-theme .knowledge-progress { width: min(100%, 1000px); }
+ .palm-leaf-theme .knowledge-card, .palm-leaf-theme .knowledge-complete { border-radius: 70px / 56px; padding-left: 64px; padding-right: 64px; }
+ .palm-leaf-theme .knowledge-card-content h2 { font-size: clamp(28px, 3.2vw, 42px); }
+}
+.palm-leaf-theme .knowledge-complete .button { background: #7A4E1D; color: #FBF1DA; }
+.palm-leaf-theme .knowledge-complete .button:hover { background: #643F17; }
