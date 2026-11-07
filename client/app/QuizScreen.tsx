@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import QuestionSource from './QuestionSource';
 import PaperSettings from './PaperSettings';
+import SaveButton from './SaveButton';
 import {topicLabel} from './topic-labels';
 
 type Option = { key: string; text: string };
@@ -26,9 +27,11 @@ type Props = {
   onContinue: () => void;
   onQuit: () => void | Promise<void>;
   onReport: () => void;
+  saved?: boolean;
+  onToggleSave?: () => void;
 };
 
-export default function QuizScreen({ question, index, total, elapsed, picked, feedback, savePending=false, quick, reported, streak, language='en', onChoose, onContinue, onQuit, onReport }: Props) {
+export default function QuizScreen({ question, index, total, elapsed, picked, feedback, savePending=false, quick, reported, streak, language='en', onChoose, onContinue, onQuit, onReport, saved=false, onToggleSave }: Props) {
   const [showQuit, setShowQuit] = useState(false);
   const [quitting, setQuitting] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -90,9 +93,12 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
       </div>}
       <div className="quiz-footer">
         <QuestionSource questionNumber={question.questionNumber} paperCode={question.paperCode} paperNumber={question.paperNumber} examDate={question.examDate} sourcePage={question.sourcePage} text={question.text}/>
-        <button type="button" className={`report-link${reported ? ' reported' : ''}`} onClick={onReport} disabled={reported}>
-          {reported ? '✓ Sent for review' : 'Report a problem'}
-        </button>
+        <div className="quiz-footer-actions">
+          {onToggleSave&&<SaveButton saved={saved} onToggle={onToggleSave}/>}
+          <button type="button" className={`report-link${reported ? ' reported' : ''}`} onClick={onReport} disabled={reported}>
+            {reported ? '✓ Sent for review' : 'Report a problem'}
+          </button>
+        </div>
       </div>
     </div>
 
