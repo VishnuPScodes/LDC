@@ -12,6 +12,8 @@ const links=[
 
 export default function PublicNav({authenticated=false,language='en'}:{authenticated?:boolean;language?:'en'|'ml'}){
  const pathname=usePathname()||'/',ml=language==='ml';
- const items=authenticated?[['/today','Today','ഇന്ന്'],['/practice','Practice','പരിശീലനം'],['/review','Review','ആവർത്തനം'],['/progress','Progress','പുരോഗതി'],...links] as const:links;
+ const appLinks=[['/today','Today','ഇന്ന്'],['/practice','Practice','പരിശീലനം'],['/review','Review','ആവർത്തനം'],['/progress','Progress','പുരോഗതി']] as const;
+ // Signed-in visitors already reach Knowledge from the app menu; keep this row short enough for one line.
+ const items=authenticated?[...appLinks,...links.filter(([href])=>href!=='/facts'&&!appLinks.some(([appHref])=>appHref===href))]:links;
  return <nav className="public-nav" aria-label={ml?'പ്രധാന നാവിഗേഷൻ':'Main navigation'}>{items.map(([href,en,mlLabel])=><a key={href} href={href} aria-current={pathname===href||pathname.startsWith(`${href}/`)?'page':undefined}>{ml?mlLabel:en}</a>)}</nav>;
 }

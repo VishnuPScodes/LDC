@@ -1485,3 +1485,111 @@ body:has(.knowledge-page) .pwa-install{display:none!important}
  .pwa-install{display:none!important}
  .shell:not(.quiz-shell):not(.mock-shell){padding-bottom:calc(78px + env(safe-area-inset-bottom))}
 }
+
+/* ── App navigation (v1.13.1): sticky desktop bar, mobile tab bar, More sheet ── */
+html { -webkit-tap-highlight-color: transparent; }
+body { overflow-x: clip; }
+a, button, [role=button] { touch-action: manipulation; }
+.nav-icon { flex: none; }
+
+.shell>.header.app-header { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: flex-start; gap: 18px; min-height: 64px; margin-bottom: 26px; padding-top: 10px; padding-bottom: 10px; background: transparent; view-transition-name: app-header; }
+.shell>.header.app-header::before { content: ''; position: absolute; z-index: -1; inset: 0 calc(50% - 50vw); background: color-mix(in srgb, var(--bg) 86%, transparent); -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.shell:has(>.header.app-header) { padding-top: 0; }
+.app-header>.brand { order: 0; flex: none; display: inline-flex; align-items: center; min-height: 40px; font-size: 19px; text-decoration: none; }
+.app-nav { flex: 1; display: flex; align-items: center; justify-content: center; gap: 2px; min-width: 0; }
+.app-nav a { position: relative; display: inline-flex; align-items: center; min-height: 38px; padding: 0 13px; border-radius: 999px; color: var(--muted); font-size: 14.5px; font-weight: 600; white-space: nowrap; text-decoration: none; transition: background-color .16s ease, color .16s ease; }
+.app-nav a:hover { background: var(--surface-muted); color: var(--ink); }
+.app-nav a.active { background: var(--green-soft); color: var(--green); }
+.app-nav a:focus-visible, .app-header-controls button:focus-visible, .app-menu :is(a,button):focus-visible, .mobile-bottom-nav :is(a,button):focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.app-nav-divider { width: 1px; height: 18px; margin: 0 8px; background: var(--line); }
+.app-header-controls { order: 2; position: relative; display: flex; flex: none; align-items: center; gap: 8px; margin-left: auto; }
+.app-header-controls>button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 38px; height: 38px; padding: 0 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; transition: background-color .16s ease, border-color .16s ease, color .16s ease; }
+.app-header-controls>button:hover { border-color: color-mix(in srgb, var(--green) 35%, var(--line)); color: var(--green); }
+.app-header-controls>.app-theme-toggle { width: 38px; padding: 0; }
+.app-header-controls>.app-more-toggle { padding: 0 10px 0 4px; }
+.app-header-controls>.app-more-toggle.active { border-color: color-mix(in srgb, var(--green) 40%, var(--line)); background: var(--green-soft); color: var(--green); }
+.app-more-toggle .nav-icon { width: 16px; height: 16px; transition: transform .2s ease; }
+.app-more-toggle[aria-expanded=true] .nav-icon { transform: rotate(180deg); }
+.app-more-toggle .menu-toggle-icon { display: none; }
+.app-avatar { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: var(--on-brand); font-size: 13px; font-weight: 800; line-height: 1; }
+.app-more-label { padding-left: 2px; }
+
+.app-menu-scrim { display: none; }
+.app-menu { position: absolute; z-index: 60; top: calc(100% + 10px); right: 0; display: grid; gap: 4px; width: 290px; max-height: calc(100dvh - 96px); overflow: auto; overscroll-behavior: contain; padding: 8px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: 0 18px 48px -12px rgba(20,30,24,.22), 0 2px 6px rgba(20,30,24,.06); transform-origin: top right; animation: app-menu-in .18s cubic-bezier(.2,.8,.2,1); }
+@keyframes app-menu-in { from { opacity: 0; transform: translateY(-6px) scale(.97); } }
+.app-menu-account { display: flex; align-items: center; gap: 11px; padding: 8px 10px 10px; }
+.app-menu-account+.app-menu-group { border-top: 1px solid var(--line); padding-top: 6px; }
+.app-menu-account .app-avatar { width: 36px; height: 36px; font-size: 15px; }
+.app-menu-account>div { display: grid; min-width: 0; }
+.app-menu-account strong { overflow: hidden; color: var(--ink); font-size: 15px; text-overflow: ellipsis; white-space: nowrap; }
+.app-menu-account small { overflow: hidden; color: var(--muted); font-size: 12.5px; text-overflow: ellipsis; white-space: nowrap; }
+.app-menu-group { display: grid; gap: 1px; padding: 4px 0; }
+.app-menu-group+.app-menu-group { border-top: 1px solid var(--line); padding-top: 6px; }
+.app-menu-library { display: none; }
+.app-menu :is(a,button) { display: flex; align-items: center; gap: 10px; min-height: 42px; padding: 0 12px; border: 0; border-radius: 10px; background: transparent; color: var(--ink); font: inherit; font-size: 14.5px; font-weight: 600; text-align: left; text-decoration: none; cursor: pointer; transition: background-color .14s ease, color .14s ease; }
+.app-menu :is(a,button):hover { background: var(--surface-muted); }
+.app-menu a.active { background: var(--green-soft); color: var(--green); }
+.app-menu .nav-icon { width: 18px; height: 18px; color: var(--muted); }
+.app-menu .app-menu-logout { margin-top: 2px; border-top: 1px solid var(--line); border-radius: 0 0 10px 10px; color: var(--wrong-border); }
+.app-menu .app-menu-logout:hover { background: var(--wrong-bg); }
+.app-menu-version { padding: 6px 12px 4px; color: var(--muted); font-size: 11.5px; }
+.app-menu .mobile-install-guide { margin: 2px 8px 8px; padding: 9px 10px; border-radius: 9px; background: var(--green-soft); color: var(--muted); font-size: 13px; line-height: 1.45; }
+
+/* Public pages: keep the desktop header on one tidy row. */
+@media (min-width: 768px) {
+ .public-site .shell>.public-header { display: flex; flex-wrap: nowrap; align-items: center; gap: 12px; padding-left: 0; padding-right: 0; }
+ .public-header>.brand { flex: none; }
+ .public-header>.public-nav { flex: 1; flex-wrap: nowrap; justify-content: safe center; overflow: hidden; gap: 2px; min-width: 0; }
+ .public-header>.public-nav a { min-height: 38px; padding: 0 10px; border-radius: 999px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+ .public-header>.public-nav a:hover { background: var(--surface-muted); color: var(--ink); }
+ .public-header>.public-nav a[aria-current=page] { background: var(--green-soft); color: var(--green); }
+ .public-header-controls { display: flex; flex: none; align-items: center; gap: 8px; }
+ .public-header-controls .public-language-toggle { min-height: 38px; padding: 0 11px; border-radius: 999px; color: var(--ink); }
+ .public-header-controls .public-sign-in { min-height: 38px; padding: 0 16px; border-radius: 999px; }
+ .public-header-controls .public-menu-toggle { display: none; }
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+ .app-nav a, .public-header>.public-nav a { padding: 0 9px; font-size: 14px; }
+ .app-nav-divider { margin: 0 4px; }
+ .app-more-label { display: none; }
+}
+
+/* Phones and small tablets */
+@media (max-width: 767px) {
+ .shell>.header.app-header { display: flex; gap: 10px; min-height: 0; margin: 0 0 14px; padding: max(8px, env(safe-area-inset-top)) 0 8px; }
+ .shell.dark>.header.app-header { padding-left: 0; padding-right: 0; }
+ .app-header>.brand { font-size: clamp(16px, 4.8vw, 18px); }
+ .app-header>.app-nav { display: none; }
+ .app-header-controls { gap: 8px; }
+ .app-header-controls>button { min-width: 40px; height: 40px; border-radius: 12px; }
+ .app-header-controls>.app-theme-toggle { display: none; }
+ .app-header-controls>.app-more-toggle { width: 40px; padding: 0; }
+ .app-more-toggle :is(.app-avatar, .app-more-label, .nav-icon) { display: none; }
+ .app-more-toggle .menu-toggle-icon { display: grid; gap: 4px; width: 17px; }
+ .app-more-toggle .menu-toggle-icon i { display: block; width: 17px; height: 2px; border-radius: 2px; background: currentColor; transition: transform .2s ease, opacity .2s ease; }
+ .app-more-toggle .menu-toggle-icon.is-open i:first-child { transform: translateY(6px) rotate(45deg); }
+ .app-more-toggle .menu-toggle-icon.is-open i:nth-child(2) { opacity: 0; }
+ .app-more-toggle .menu-toggle-icon.is-open i:last-child { transform: translateY(-6px) rotate(-45deg); }
+ .app-menu-scrim { position: fixed; z-index: 55; inset: 0; display: block; background: rgba(16,24,19,.32); animation: app-fade-in .2s ease; }
+ @keyframes app-fade-in { from { opacity: 0; } }
+ .app-menu { position: fixed; top: auto; right: 8px; bottom: calc(70px + env(safe-area-inset-bottom)); left: 8px; width: auto; max-height: calc(100dvh - 150px - env(safe-area-inset-bottom) - env(safe-area-inset-top)); padding: 10px; border-radius: 22px; transform-origin: bottom center; animation: app-sheet-up .26s cubic-bezier(.2,.9,.25,1); }
+ @keyframes app-sheet-up { from { opacity: 0; transform: translateY(18px); } }
+ .app-menu-library { display: grid; }
+ .app-menu :is(a,button) { min-height: 46px; font-size: 15px; }
+ body:has(.app-menu) .mobile-bottom-nav { z-index: 60; }
+
+ .mobile-bottom-nav { z-index: 40; gap: 0; padding-top: 6px; view-transition-name: app-tabs; box-shadow: 0 -6px 18px -14px rgba(20,30,24,.3); }
+ .mobile-bottom-nav>a, .mobile-bottom-nav>button { gap: 3px; min-height: 52px; border-radius: 12px; background: transparent; color: var(--muted); font-size: clamp(10px, 2.9vw, 11.5px); font-weight: 650; cursor: pointer; }
+ .mobile-bottom-nav .nav-icon { box-sizing: border-box; width: 52px; height: 30px; padding: 5px 16px; border-radius: 999px; transition: background-color .2s ease, transform .15s ease; }
+ .mobile-bottom-nav>a:active .nav-icon, .mobile-bottom-nav>button:active .nav-icon { transform: scale(.92); }
+ .mobile-bottom-nav>a.active, .mobile-bottom-nav>button.active { background: transparent; color: var(--green); }
+ .mobile-bottom-nav>a.active .nav-icon, .mobile-bottom-nav>button.active .nav-icon { background: var(--green-soft); }
+ .mobile-bottom-nav>a>span, .mobile-bottom-nav>button>span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+}
+
+/* Gentle cross-fade between app views (browsers with View Transitions). */
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .18s; animation-timing-function: ease; }
+@media (prefers-reduced-motion: reduce) {
+ ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+ .app-menu, .app-menu-scrim { animation: none; }
+}
