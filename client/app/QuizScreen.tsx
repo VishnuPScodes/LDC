@@ -50,7 +50,11 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
     return () => window.clearTimeout(timer);
   }, [feedback, quick, savePending]);
 
-  return <section className="quiz-page paper-screen" aria-label="Exam practice question">
+  // Swipe left (after the answer is shown) to move on, like turning a page.
+  const swipe=useRef<{x:number;y:number}|null>(null);
+  const onTouchStart=(e:React.TouchEvent)=>{const t=e.touches[0];swipe.current={x:t.clientX,y:t.clientY}};
+  const onTouchEnd=(e:React.TouchEvent)=>{const start=swipe.current;swipe.current=null;if(!start||!feedback)return;const t=e.changedTouches[0],dx=t.clientX-start.x,dy=t.clientY-start.y;if(dx<-70&&Math.abs(dx)>Math.abs(dy)*1.5)onContinue()};
+  return <section className="quiz-page paper-screen" aria-label="Exam practice question" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
     <header className="quiz-topbar">
       <button className="icon-button quit-button" type="button" aria-label="Quit test" onClick={() => setShowQuit(true)}><span aria-hidden="true">×</span></button>
       <div className="quiz-progress-wrap">

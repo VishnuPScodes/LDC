@@ -5,6 +5,7 @@ import {featureFlags} from './feature-flags';
 import RankEstimateCard from './RankEstimateCard';
 import SaveButton from './SaveButton';
 import {topicLabel} from './topic-labels';
+import {rankEstimateConfig} from '../../server/src/rank-estimate/config';
 export default function ReportPage({report,progress,dailyCount=0,dailyGoal=20,onMistakes,onRestart,onToday,learnerStats,language='en',initialDistrict,onStartMock,onPracticeTopic,savedIds,onToggleSave}:{report:any;progress:any;dailyCount?:number;dailyGoal?:number;onMistakes:()=>void;onRestart:()=>void;onToday:()=>void;learnerStats?:any;language?:'en'|'ml';initialDistrict?:string|null;onStartMock?:()=>void;onPracticeTopic?:(topic:string)=>void;savedIds?:Set<string>;onToggleSave?:(questionId:string)=>void}) {
   const s=report.session, answers=s.answers||[], total=s.questionIds?.length||0, elapsed=s.completedAt&&s.startedAt?Math.max(0,new Date(s.completedAt).getTime()-new Date(s.startedAt).getTime()):0, avg=answers.length?answers.reduce((n:any,a:any)=>n+(a.timeTakenMs||0),0)/answers.length:0;
   const [showLevelUp,setShowLevelUp]=useState(false),[teacherFeedback,setTeacherFeedback]=useState(''),[feedbackLoading,setFeedbackLoading]=useState(true),sessionId=String(s._id||s.id),award=learnerStats?.sessionAwards?.[sessionId],earnedMilestones=(learnerStats?.milestones||[]).filter((item:any)=>item.earned&&item.sessionId===sessionId),ml=language==='ml';
@@ -18,6 +19,7 @@ export default function ReportPage({report,progress,dailyCount=0,dailyGoal=20,on
   const orderedReview=[...report.review].sort((a:any,b:any)=>rank(a)-rank(b));
   return <section className="report-page"><div className="eyebrow">{ml?'സെഷൻ റിപ്പോർട്ട്':'SESSION REPORT'}</div><h1 className="section-title">{ml?'നല്ലൊരു മുന്നേറ്റം.':'A little more progress.'}</h1>{featureFlags.rankEstimate&&s.settings?.mode==='mock'&&<RankEstimateCard language={language} mockMetadata={s.mockMetadata} initialDistrict={initialDistrict} onStart={onStartMock} onPracticeTopic={onPracticeTopic}/ >}{featureFlags.points&&award&&<div className="session-points card"><strong>+{award.points} {ml?'പോയിന്റുകൾ':'pts'}</strong><span>{award.pointsToNextLevel} {ml?'പോയിന്റുകൾ കൂടി അടുത്ത ലെവലിലേക്ക്':'pts to next level'} · {ml?'ലെവൽ':'Level'} {learnerStats.level}</span></div>}{featureFlags.milestones&&earnedMilestones.map((item:any)=><div key={item.id} className="milestone-earned-note card" role="status"><span aria-hidden="true">✦</span><div><strong>{ml?item.titleMl:item.title}</strong><p>{ml?'ഈ സെഷനിൽ പുതിയ നേട്ടം നേടി!':'Milestone earned in this session!'}</p></div></div>)}
     <div className="report-score card"><span>{ml?'ശരിയായത് / ഉത്തരം നൽകിയത്':'Correct / attempted'}</span><strong>{s.score?.correct||0} <small>/ {attempted}</small></strong><div className="report-grade" aria-label={`${ml?'ഗ്രേഡ്':'Grade'} ${grade}`}><span>{ml?'ഗ്രേഡ്':'GRADE'}</span><strong>{grade}</strong><small>{gradePercent}%</small></div><div className="report-stats"><span>✓ {s.score?.correct||0} {ml?'ശരി':'correct'}</span><span>✗ {s.score?.wrong||0} {ml?'തെറ്റ്':'wrong'}</span><span>– {s.score?.skipped||0} {ml?'ഒഴിവാക്കി':'skipped'}</span><span>{Math.round(s.score?.accuracy||0)}% {ml?'കൃത്യത':'accuracy'}</span><span>{Math.floor(elapsed/60000)} {ml?'മിനിറ്റ്':'min'} {Math.floor(elapsed/1000)%60} {ml?'സെക്കൻഡ്':'sec'}</span><span>~{Math.round(avg/1000)} {ml?'സെക്കൻഡ് / ചോദ്യം':'sec / question'}</span></div></div>
+    <ExamMarks correct={s.score?.correct||0} wrong={s.score?.wrong||0} ml={ml}/>
     <section className="teacher-note" aria-live="polite"><div className="teacher-note-label">{ml?'അധ്യാപകന്റെ കുറിപ്പ്':'A note from your teacher'}</div>{feedbackLoading?<p>{ml?'നിങ്ങളുടെ സെഷൻ വിലയിരുത്തുന്നു…':'Reviewing your session…'}</p>:<p>{teacherFeedback}</p>}</section>
     {(s.score?.wrong||0)>0&&<p className="review-queue-note" role="status">Wrong answers were added to your Review queue and will be ready tomorrow.</p>}
     <p className="session-goal-note">{goalRemaining?(ml?`ഇന്നത്തെ ലക്ഷ്യം പൂർത്തിയാക്കാൻ ${goalRemaining} ചോദ്യങ്ങൾ കൂടി.`:`${goalRemaining} more question${goalRemaining===1?'':'s'} to complete today’s goal.`):(ml?'ഇന്നത്തെ ലക്ഷ്യം പൂർത്തിയായി. നന്നായി!':'Today’s goal is complete. Great work!')}</p>
@@ -26,4 +28,16 @@ export default function ReportPage({report,progress,dailyCount=0,dailyGoal=20,on
     <div className="report-actions"><button className="button alt" onClick={onMistakes}>{ml?'തെറ്റുകൾ പരിശോധിക്കുക':'Review mistakes'}</button><button className="secondary-button" onClick={onRestart}>{ml?'വീണ്ടും പരിശീലിക്കുക':'Practise again'}</button><button className="button" onClick={onToday}>{ml?'ഇന്നത്തേക്ക് മടങ്ങുക':'Back to Today'}</button></div>
     {showLevelUp&&<div className="level-up-scrim"><section className="level-up-card" role="dialog" aria-modal="true" aria-labelledby="level-up-title"><span className="level-up-mark" aria-hidden="true">✦</span><div className="eyebrow">{ml?'പുതിയ നേട്ടം':'NEW LEVEL'}</div><h2 id="level-up-title">{ml?`ലെവൽ ${award.levelAfter} ആയി!`:`You reached Level ${award.levelAfter}!`}</h2><p>{ml?'നിങ്ങളുടെ സ്ഥിരമായ പരിശീലനത്തിന് അഭിനന്ദനങ്ങൾ.':'Your steady practice is adding up.'}</p><button className="button" onClick={()=>{localStorage.setItem(`ldc-level-up-dismissed-${sessionId}`,'done');setShowLevelUp(false)}}>{ml?'തുടരുക':'Keep going'}</button></section></div>}
   </section>;
+}
+
+// Kerala PSC deducts a fraction of a mark for each wrong answer; show what this session would score.
+function ExamMarks({correct,wrong,ml}:{correct:number;wrong:number;ml:boolean}){
+ if(!wrong)return null;
+ const {correct:plus,wrong:minus}=rankEstimateConfig.marking,lost=wrong*Math.abs(minus),marks=correct*plus-lost;
+ const fmt=(n:number)=>Number.isInteger(n)?String(n):n.toFixed(2);
+ return <section className="exam-marks card" aria-label={ml?'നെഗറ്റീവ് മാർക്ക്':'Negative marking'}>
+  <div className="exam-marks-row"><span>{ml?'യഥാർത്ഥ പരീക്ഷയിൽ ലഭിക്കുന്ന മാർക്ക്':'Marks in the real exam'}</span><strong>{fmt(marks)}</strong></div>
+  <p>{ml?`${wrong} തെറ്റായ ഉത്തരങ്ങൾ കാരണം ${fmt(lost)} മാർക്ക് നഷ്ടമായി (ഓരോ തെറ്റിനും −⅓).`:`${wrong} wrong ${wrong===1?'answer':'answers'} cost you ${fmt(lost)} ${lost===1?'mark':'marks'} (−⅓ each).`}</p>
+  <p className="exam-marks-tip">{ml?'വെറുതെ ഊഹിച്ചാൽ ശരാശരി ലാഭം പൂജ്യമാണ്. ഒരു ഓപ്ഷനെങ്കിലും തെറ്റാണെന്ന് ഉറപ്പുണ്ടെങ്കിൽ മാത്രം ഊഹിക്കുക.':'Blind guessing scores zero on average. Guess only when you can rule out at least one option.'}</p>
+ </section>;
 }
