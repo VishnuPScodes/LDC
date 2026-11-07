@@ -32,7 +32,12 @@ export default function PwaRegistration(){
     window.addEventListener('beforeinstallprompt',handleInstall);
     window.addEventListener('appinstalled',handleInstalled);
     window.addEventListener('ldc:pwa-install',handleMenuInstall);
-    if('serviceWorker' in navigator)void navigator.serviceWorker.register('/sw.js',{scope:'/',updateViaCache:'none'}).catch(error=>console.error('PWA service worker registration failed',error));
+    if('serviceWorker' in navigator){
+      if(process.env.NODE_ENV==='production')void navigator.serviceWorker.register('/sw.js',{scope:'/',updateViaCache:'none'}).catch(error=>console.error('PWA service worker registration failed',error));
+      // Dev chunk URLs are not content-hashed, so a cache-first worker serves stale scripts and breaks the page
+      // ("Cannot read properties of undefined (reading 'call')"). Remove any worker left over and reload once.
+      else void removeDevServiceWorker();
+    }
     return()=>{window.removeEventListener('beforeinstallprompt',handleInstall);window.removeEventListener('appinstalled',handleInstalled);window.removeEventListener('ldc:pwa-install',handleMenuInstall)};
   },[]);
 
@@ -50,4 +55,14 @@ export default function PwaRegistration(){
     {showGuide&&<p className="pwa-install-guide">{/iphone|ipad|ipod/i.test(navigator.userAgent)?'Tap Share, then “Add to Home Screen”.':'Open your browser menu and choose “Install app” or “Add to Home screen”.'}</p>}
     <button type="button" className="pwa-install-button" onClick={()=>void onInstall()}><span aria-hidden="true">↓</span> Install app</button>
   </aside>;
+}
+
+async function removeDevServiceWorker(){
+  try{
+    const registrations=await navigator.serviceWorker.getRegistrations();
+    if(!registrations.length)return;
+    await Promise.all(registrations.map(registration=>registration.unregister()));
+    if('caches' in window){const keys=await caches.keys();await Promise.all(keys.filter(key=>key.startsWith('ldc-practice-')).map(key=>caches.delete(key)))}
+    if(navigator.serviceWorker.controller&&!sessionStorage.getItem('ldc-dev-sw-cleared')){sessionStorage.setItem('ldc-dev-sw-cleared','1');window.location.reload()}
+  }catch(error){console.error('Could not remove the development service worker',error)}
 }
