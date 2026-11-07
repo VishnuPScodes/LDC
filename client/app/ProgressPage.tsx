@@ -1,4 +1,5 @@
 'use client';
+import PageSkeleton from './PageSkeleton';
 import {useMemo,useState} from 'react';
 import {CartesianGrid,Line,LineChart,ResponsiveContainer,Tooltip,XAxis,YAxis,Bar,BarChart} from 'recharts';
 import PointsLevelCard from './PointsLevelCard';
@@ -25,7 +26,7 @@ export default function ProgressPage({progress,history,habitDays={},loading=fals
   {featureFlags.rankEstimate&&<CalibrationPrompt language={language}/>}
   {featureFlags.points&&<PointsLevelCard stats={learnerStats} language={language}/>}
   <div className="progress-range" role="group" aria-label={ml?'സമയപരിധി':'Time range'}>{(['7','30','all'] as Range[]).map((value,index)=><button key={value} type="button" aria-pressed={range===value} className={range===value?'selected':''} onClick={()=>setRange(value)}>{labels[index]}</button>)}</div>
-  {loading&&<div className="progress-loading" role="status">{ml?'പുരോഗതി ലോഡ് ചെയ്യുന്നു…':'Loading your progress…'}</div>}
+  {loading&&<PageSkeleton variant="analytics" language={language} label={ml?'പുരോഗതി ലോഡ് ചെയ്യുന്നു…':'Loading your progress…'}/>}
   {!loading&&error&&<div className="page-load-error" role="alert"><p>{ml?'പുരോഗതി ലഭ്യമാക്കാനായില്ല.':'Couldn’t load your progress.'}</p><button type="button" className="secondary-button" onClick={onRetry}>{ml?'വീണ്ടും ശ്രമിക്കുക':'Retry'}</button></div>}
   {!loading&&!error&&<>
    {!model.questionsAnswered&&<div className="page-empty-state">{ml?'ഇതുവരെ പരിശീലനമില്ല. ആദ്യ സെഷൻ ആരംഭിക്കൂ!':'No practice activity yet. Start your first session.'}</div>}
