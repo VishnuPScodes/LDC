@@ -21,6 +21,7 @@ export default function TodayDashboard({name,dailyCount,dailyGoal,streak,unfinis
   <nav className="today-shortcuts" aria-label={ml?'മറ്റ് പഠന പേജുകൾ':'Other study pages'}>
    {reviewDue>0&&<button type="button" className="today-shortcut is-review" onClick={onOpenReview}><span className="today-shortcut-count">{reviewDue}</span><span><strong>{ml?'ആവർത്തനം':'Review'}</strong><small>{ml?'ഇന്ന് ആവർത്തിക്കാനുള്ളവ':`${plural(reviewDue,'question','questions')} due`}{reviewTomorrow>0?(ml?` · നാളെ ${reviewTomorrow}`:` · ${reviewTomorrow} tomorrow`):''}</small></span></button>}
    <button type="button" className="today-shortcut" onClick={onOpenSyllabus}><span><strong>{ml?'പാഠ്യപദ്ധതി':'Syllabus'}</strong><small>{ml?'വിഷയങ്ങളും പുരോഗതിയും':'Topics and progress'}</small></span></button>
+   <a className="today-shortcut" href="/daily"><span><strong>{ml?'ഡെയ്‌ലി ചലഞ്ച്':'Daily challenge'}</strong><small>{ml?'10 ചോദ്യങ്ങൾ · എല്ലാവർക്കും ഒരേത്':'10 questions · same for everyone'}</small></span></a>
    <a className="today-shortcut" href="/papers"><span><strong>{ml?'ചോദ്യപേപ്പറുകൾ':'Question papers'}</strong><small>{ml?'2013–2023':'Previous years, 2013–2023'}</small></span></a>
   </nav>
  </section>
