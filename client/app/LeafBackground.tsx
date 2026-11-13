@@ -44,7 +44,7 @@ export default function LeafBackground() {
         <use href="#leaf" transform="translate(490 2260) rotate(-145) scale(.62)" />
       </g>
       <style>{`
-        .leaf-art { color: #b4421b; }
+        .leaf-art { color: #1e6b45; }
         .leaf-sprig { opacity: .26; }
         .leaf-stem, .leaf-vein { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; }
         .leaf-stem { stroke-width: 1.8; opacity: .58; }
