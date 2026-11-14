@@ -1,3 +1,5 @@
+import {extraKnowledgeGroups} from './knowledge-data-extra';
+
 export type KnowledgeCard={topic:string;title:string;body:string;source:string;url:string};
 
 type Fact=[title:string,body:string];
@@ -127,5 +129,6 @@ const groups:KnowledgeCard[][]=[
  ]
 ];
 
-export const knowledgeGroups=groups;
+// The original cards come first so existing reading positions (an index into the flat list) stay valid.
+export const knowledgeGroups=[...groups,...extraKnowledgeGroups];
 export const knowledgeCardCount=knowledgeGroups.reduce((total,cards)=>total+cards.length,0);

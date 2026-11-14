@@ -15,7 +15,10 @@ import ReportPage from './ReportPage';
 import MockExam from './MockExam';
 import MockExamSetup from './MockExamSetup';
 import HistoryPage from './HistoryPage';
-import KnowledgeCards from './KnowledgeCards';
+import dynamic from 'next/dynamic';
+import PageSkeleton from './PageSkeleton';
+// Loaded on demand: the card text is large and only needed on the Knowledge screen.
+const KnowledgeCards=dynamic(()=>import('./KnowledgeCards'),{ssr:false,loading:()=><PageSkeleton variant="panel" rows={6} label="Loading cards…"/>});
 import MilestonesPage from './MilestonesPage';
 import SavedPage from './SavedPage';
 import clientPackage from '../package.json';
