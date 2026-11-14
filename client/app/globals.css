@@ -497,7 +497,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .knowledge-back span:first-child { font-family: ui-sans-serif,system-ui,sans-serif; font-size: 22px; }
 .knowledge-stage { width: 100%; height: auto; min-height: 0; flex: 1 1 0; margin: 8px auto 0; }
 .knowledge-card { padding: clamp(24px,5vh,52px) clamp(24px,6vw,80px); border-radius: 28px; }
-.knowledge-card-content { max-width: 900px; align-self: center; width: 100%; }
+.knowledge-card-content { max-width: 900px; align-self: center; width: 100%; min-height: 0; flex: 1 1 auto; display: flex; flex-direction: column; }
+.knowledge-card-content h2 { flex: none; }
+.knowledge-story { min-height: 0; flex: 0 1 auto; overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y; scrollbar-width: thin; padding-bottom: 14px; -webkit-mask-image: linear-gradient(to bottom,#000 calc(100% - 18px),transparent); mask-image: linear-gradient(to bottom,#000 calc(100% - 18px),transparent); }
+.knowledge-card-content .knowledge-story p + p { margin-top: .7em; }
+.knowledge-memo { flex: none; }
+.knowledge-memo { max-width: 780px; margin-top: 18px; padding: 12px 14px; border: 1px solid var(--green-line, var(--line)); border-left: 4px solid var(--green); border-radius: 14px; background: var(--green-soft); }
+.knowledge-memo span { display: block; margin-bottom: 4px; color: var(--green); font-size: 12px; font-weight: 800; }
+.knowledge-card-content .knowledge-memo p { margin: 0; color: var(--ink); font-family: var(--font-anek-malayalam), sans-serif; font-size: 16px; font-weight: 700; line-height: 1.5; }
+@media (max-width: 480px) { .knowledge-card-content .knowledge-story p { font-size: 17px; line-height: 1.55; } .knowledge-card-content .knowledge-memo p { font-size: 15px; } .knowledge-card-content h2 { margin-bottom: 12px; font-size: 24px; } .knowledge-memo { margin-top: 10px; padding: 10px 12px; } }
 .knowledge-card-content h2 { max-width: 780px; font-size: clamp(26px,4vw,46px); }
 .knowledge-card-content p { max-width: 780px; font-size: clamp(17px,2vw,23px); }
 .knowledge-card-footer { font-size: 13px; }
