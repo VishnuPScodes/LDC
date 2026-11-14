@@ -2135,3 +2135,57 @@ h1:not(:lang(ml)), h2:not(:lang(ml)), .title:not(:lang(ml)), .section-title:not(
   .settings-section { padding: 4px 14px; }
   .settings-row { gap: 12px; }
 }
+
+/* Admin dashboard — phone first, widens to a grid on laptops. */
+.admin-shell { max-width: 1080px; margin: 0 auto; min-height: 100vh; padding: 20px 16px 40px; background: var(--bg); color: var(--ink); }
+.admin-login { display: grid; place-items: center; }
+.admin-login-card { width: 100%; max-width: 400px; }
+.admin-wide { width: 100%; }
+.admin-error { margin: 8px 0; padding: 10px 12px; border-radius: 10px; background: var(--wrong-soft); color: var(--wrong); font-size: 14px; }
+.admin-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.admin-header .section-title { margin: 4px 0 0; }
+.admin-signout { min-height: 44px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); font-weight: 650; }
+.admin-range { margin: 16px 0; }
+.admin-range button { flex: 1; }
+.admin-kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; transition: opacity .2s; }
+.admin-loading { opacity: .55; }
+.admin-kpi { display: grid; gap: 2px; align-content: start; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); min-width: 0; }
+.admin-kpi span { font-size: 13px; color: var(--muted); font-weight: 650; }
+.admin-kpi strong { font-size: 26px; letter-spacing: -.03em; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.admin-kpi small { font-size: 12.5px; color: var(--muted); }
+.admin-kpi small a { color: var(--green); font-weight: 650; }
+.admin-kpi-hero { grid-column: 1 / -1; background: var(--green-soft); border-color: var(--green-line); }
+.admin-kpi-hero strong { font-size: 36px; color: var(--green-strong); }
+.admin-kpi em { font-style: normal; font-weight: 700; }
+.admin-kpi em.up { color: var(--correct); }
+.admin-kpi em.down { color: var(--wrong); }
+.admin-card { margin-top: 16px; padding: 16px; }
+.admin-card h2 { font-size: 18px; margin: 0; letter-spacing: -.02em; }
+.admin-card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+.admin-tabs { display: flex; gap: 6px; }
+.admin-tabs button { min-height: 44px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); font-weight: 650; font-size: 14px; }
+.admin-tabs button.selected { border-color: var(--green); background: var(--green-soft); color: var(--green-strong); }
+.admin-chart { width: 100%; height: 240px; }
+.admin-suggestions, .admin-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.admin-suggestions li { padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); }
+.admin-message { margin: 0 0 8px; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.5; }
+.admin-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; font-size: 13px; }
+.admin-email { overflow-wrap: anywhere; }
+.admin-suggestions + .secondary-button { margin-top: 12px; }
+.admin-recent summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; cursor: pointer; list-style: none; }
+.admin-recent summary::-webkit-details-marker { display: none; }
+.admin-recent summary h2::after { content: ' ▾'; color: var(--muted); font-size: 14px; }
+.admin-recent[open] summary h2::after { content: ' ▴'; }
+.admin-recent[open] summary { margin-bottom: 10px; }
+.admin-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 12px; flex-wrap: wrap; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.admin-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.admin-list li div { display: grid; min-width: 0; }
+@media (min-width: 760px) {
+  .admin-shell { padding: 32px 24px 56px; }
+  .admin-range { max-width: 380px; }
+  .admin-kpis { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+  .admin-kpi-hero { grid-column: span 2; grid-row: span 2; align-content: center; }
+  .admin-kpi-hero strong { font-size: 52px; }
+  .admin-card { padding: 22px; }
+  .admin-chart { height: 320px; }
+}
