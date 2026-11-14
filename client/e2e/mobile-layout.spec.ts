@@ -111,8 +111,9 @@ test('signed-in mobile navigation has five usable tabs',async({page})=>{
 });
 
 test('visible UI version matches the client package release',async({page})=>{
+ const {version}=JSON.parse(await fs.readFile('package.json','utf8'));
  await page.goto('/');
- await expect(page.locator('footer.app-version')).toContainText('v1.10.17');
+ await expect(page.locator('footer.app-version')).toContainText(`v${version}`);
 });
 
 for(const [width,height] of [[360,740],[390,844]]){
@@ -120,6 +121,8 @@ for(const [width,height] of [[360,740],[390,844]]){
   await page.setViewportSize({width,height});
   await page.goto('/facts');
   const card=page.locator('.knowledge-card:not(.knowledge-card-under)').first();
+  await expect(card.locator('.knowledge-memo')).toBeVisible();
+  const first=Number((await card.locator('.knowledge-card-number').textContent())!.split('/')[0]);
   await expect(card).toBeVisible();
   await expect(card.locator('button')).toHaveCount(0);
   await expect(card.locator('.knowledge-swipe-hint')).toBeVisible();
@@ -133,7 +136,7 @@ for(const [width,height] of [[360,740],[390,844]]){
   await page.mouse.down();
   await page.mouse.move(x+Math.min(140,bounds!.width*.4),y,{steps:12});
   await page.mouse.up();
-  await expect(page.locator('.knowledge-card-number').last()).toHaveText('02');
+  await expect(page.locator('.knowledge-card-number').last()).toHaveText(new RegExp(`^${first+1} / `));
   await expect(page.locator('.knowledge-swipe-hint')).toHaveCount(0);
   const nextBounds=await page.locator('.knowledge-card:not(.knowledge-card-under)').last().boundingBox();
   expect(nextBounds!.y+nextBounds!.height).toBeLessThanOrEqual(height);
@@ -173,4 +176,67 @@ test('rank estimate changes to a retryable error within ten seconds',async({page
  await expect(page.getByText('The estimate took too long to load. Please retry.')).toBeVisible({timeout:12_000});
  await expect(page.getByRole('button',{name:'Retry'})).toBeVisible();
  await page.unrouteAll({behavior:'ignoreErrors'});
+});
+
+const yesterday=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(Date.now()-86400000));
+const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const shownTitle=(page:any)=>page.locator('.knowledge-card:not(.knowledge-card-under) h2').last();
+async function cardsOf(page:any,blockIndex:number){
+ const index=await (await page.request.get('/knowledge/index.json')).json();
+ const block=index.blocks[blockIndex];
+ return {index,block,cards:await (await page.request.get(`/knowledge/${block.file}`)).json()};
+}
+
+test('knowledge loads only the index and the blocks it needs',async({page})=>{
+ const files:string[]=[];
+ page.on('request',(request:any)=>{const path=new URL(request.url()).pathname;if(path.startsWith('/knowledge/'))files.push(path)});
+ await page.setViewportSize({width:390,height:844});
+ await page.goto('/facts');
+ await expect(shownTitle(page)).toBeVisible();
+ await expect.poll(()=>files.length).toBe(3);
+ expect(files[0]).toBe('/knowledge/index.json');
+});
+
+test('a new day starts the next topic block, not yesterday\'s leftovers',async({page})=>{
+ const {index,block}=await cardsOf(page,4);
+ const next=await cardsOf(page,5);
+ expect(next.block.topic).not.toBe(block.topic);
+ await page.addInitScript(([card,day])=>localStorage.setItem('ldc-knowledge-v4',JSON.stringify({card,day,read:7,known:7})),[block.cards[3],yesterday()]);
+ await page.goto('/facts');
+ await expect(shownTitle(page)).toHaveText(next.cards[0].title);
+ await expect(page.locator('.knowledge-card-number').last()).toHaveText(`${index.blocks.slice(0,5).reduce((n:number,b:any)=>n+b.cards.length,0)+1} / ${index.total}`);
+});
+
+test('a new day that begins exactly at a block start keeps that block',async({page})=>{
+ const {block,cards}=await cardsOf(page,7);
+ await page.addInitScript(([card,day])=>localStorage.setItem('ldc-knowledge-v4',JSON.stringify({card,day,read:10,known:10})),[block.cards[0],yesterday()]);
+ await page.goto('/facts');
+ await expect(shownTitle(page)).toHaveText(cards[0].title);
+});
+
+test('the same day resumes at the saved card, and old saved positions carry over',async({page})=>{
+ const {block,cards}=await cardsOf(page,2);
+ await page.addInitScript(([card,day])=>localStorage.setItem('ldc-knowledge-v4',JSON.stringify({card,day,read:3,known:3})),[block.cards[2],today()]);
+ await page.goto('/facts');
+ await expect(shownTitle(page)).toHaveText(cards[2].title);
+ await expect(page.locator('.knowledge-progress strong')).toContainText('3');
+});
+
+test('a reading position saved by the previous app version is kept',async({page})=>{
+ const index=await (await page.request.get('/knowledge/index.json')).json();
+ const b=index.blocks.findIndex((x:any)=>x.cards.includes('k0101'));
+ const cards=await (await page.request.get(`/knowledge/${index.blocks[b].file}`)).json();
+ await page.addInitScript((day)=>localStorage.setItem('ldc-knowledge-v3',JSON.stringify({cursor:100,day,read:2,known:1})),today());
+ await page.goto('/facts');
+ await expect(shownTitle(page)).toHaveText(cards.find((c:any)=>c.id==='k0101').title);
+});
+
+test('swiping past the end of a block continues into the next block',async({page})=>{
+ const {block}=await cardsOf(page,0);
+ const next=await cardsOf(page,1);
+ await page.addInitScript(([card,day])=>localStorage.setItem('ldc-knowledge-v4',JSON.stringify({card,day,read:0,known:0})),[block.cards[block.cards.length-1],today()]);
+ await page.goto('/facts');
+ await expect(shownTitle(page)).toBeVisible();
+ await page.getByRole('button',{name:/അറിയാം/}).click();
+ await expect(shownTitle(page)).toHaveText(next.cards[0].title);
 });

@@ -47,6 +47,27 @@ self.addEventListener('fetch',event=>{
     return;
   }
 
+  // Knowledge cards: block files are named by their content, so a cached copy is always right; the index is
+  // fetched fresh when online and served from cache offline.
+  if(url.pathname.startsWith('/knowledge/')){
+    event.respondWith(caches.open(CACHE_NAME).then(async cache=>{
+      if(url.pathname!=='/knowledge/index.json'){
+        const cached=await cache.match(request);
+        if(cached)return cached;
+      }
+      try{
+        const response=await fetch(request);
+        if(response.ok)void cache.put(request,response.clone());
+        return response;
+      }catch(error){
+        const cached=await cache.match(request);
+        if(cached)return cached;
+        throw error;
+      }
+    }));
+    return;
+  }
+
   if(request.mode==='navigate'){
     event.respondWith(fetch(request).then(async response=>{
       if(response.ok&&url.pathname==='/'){

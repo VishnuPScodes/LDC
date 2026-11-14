@@ -1,0 +1,165 @@
+{
+ "topic": "General English",
+ "cards": [
+  {
+   "id": "k0152",
+   "title": "Question tags: positive ↔ negative",
+   "body": "ഒരു ചോദ്യത്തിന്റെ വാലിന് (question tag) ഒരു സ്വഭാവമുണ്ട് — അത് എപ്പോഴും വാക്യത്തിന്റെ എതിർദിശയിലേക്ക് തിരിയും!\n\nPositive വാക്യമെങ്കിൽ negative tag: 'She's a doctor, isn't she?'\nNegative വാക്യമെങ്കിൽ positive tag: 'He isn't here, is he?'\n\nവാക്യത്തിൽ auxiliary ഇല്ലെങ്കിലോ? do/does/did വരും: 'Children play football, don't they?' (വാലറ്റ ചോദ്യം)",
+   "memo": "Positive → negative tag · Negative → positive tag · auxiliary ഇല്ലെങ്കിൽ do/does/did",
+   "source": "British Council",
+   "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/question-tags"
+  },
+  {
+   "id": "k0153",
+   "title": "Tags after nobody, never, nothing",
+   "body": "'Nobody has called' — ഇതിൽ 'not' ഇല്ലല്ലോ, അപ്പോൾ tag negative ആകുമോ? ഇല്ല! ഇതാണ് PSC-യുടെ കെണി.\n\nNever, nobody, nothing, none — ഈ വാക്കുകൾ തന്നെ വാക്യത്തെ negative ആക്കുന്നു. അതുകൊണ്ട് tag positive:\n'Nobody has called, have they?'\n'Nobody wants to be poor, do they?'\n'He said nothing, did he?'\n\nശ്രദ്ധിക്കുക: nobody/everyone എന്നിവയ്ക്ക് tag-ൽ 'they' ആണ് വരുന്നത്.",
+   "memo": "never/nobody/nothing/none = negative → positive tag · nobody/everyone → they",
+   "source": "British Council",
+   "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/question-tags"
+  },
+  {
+   "id": "k0154",
+   "title": "Tags with I am, Let's and imperatives",
+   "body": "മൂന്ന് പ്രത്യേക അതിഥികൾ — ഇവർക്ക് സ്വന്തം tag-ഉണ്ട്!\n\n'I am …' → 'aren't I?' (I am elder to you, aren't I?) — 'amn't I' അല്ല.\n\n'Let's …' → എപ്പോഴും 'shall we?' (Let's go for a walk, shall we?)\n\nആജ്ഞാവാക്യം (imperative) → 'will you?' അല്ലെങ്കിൽ 'won't you?' (Open the door, will you?)",
+   "memo": "I am → aren't I? · Let's → shall we? · Imperative → will you?/won't you?",
+   "source": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Tag_question"
+  },
+  {
+   "id": "k0155",
+   "title": "Either…or / Neither…nor: nearer subject",
+   "body": "Either…or / Neither…nor വാക്യത്തിൽ verb ആരെ അനുസരിക്കും? ഉത്തരം ലളിതം — തൊട്ടടുത്തു നിൽക്കുന്നവനെ!\n\n'Neither the girl nor her brothers have passed' — അടുത്തത് brothers (plural) → have.\n'Either the students or their teacher has to come' — അടുത്തത് teacher (singular) → has.\n\nരണ്ടും singular ആണെങ്കിൽ verb-ഉം singular: 'Neither Seena nor Reena swims well.'",
+   "memo": "or/nor → verb അടുത്ത subject-നൊപ്പം · singular + singular → singular verb",
+   "source": "Purdue OWL",
+   "url": "https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html"
+  },
+  {
+   "id": "k0156",
+   "title": "Each, one of, as well as: singular verb",
+   "body": "ഒരു കൂട്ടം ആളുകളെക്കുറിച്ച് പറയുമ്പോഴും verb singular ആകുന്ന സന്ദർഭങ്ങളുണ്ട്!\n\nEach, neither, everyone, no one → singular verb: 'Each of these workers is genial.'\n'One of …' → singular: 'One of the men has reached the top.'\n\n'As well as' വന്നാലും subject മാറില്ല — ആദ്യത്തെ ആൾ തന്നെ നായകൻ:\n'The leader, as well as his brothers, belongs to the tribe.'",
+   "memo": "each/neither/everyone/no one/one of → singular verb · as well as → ആദ്യ subject",
+   "source": "Purdue OWL",
+   "url": "https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html"
+  },
+  {
+   "id": "k0157",
+   "title": "Passive voice: continuous and perfect",
+   "body": "'She is teaching Maths' — ഇതിനെ തിരിച്ചിട്ടാൽ? Maths ആണ് ഇനി നായകൻ!\n\nPassive-ന്റെ അടിസ്ഥാനം: be + past participle (V3).\n\nContinuous: is/was being + V3 → 'Maths is being taught by her.'\nPerfect: has/have been + V3 → 'They have appointed him' → 'He has been appointed.'\nFuture: will be + V3. (കർമണി പ്രയോഗം)",
+   "memo": "Passive = be + V3 · Continuous = being + V3 · Perfect = been + V3 · Future = will be + V3",
+   "source": "British Council",
+   "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/passives"
+  },
+  {
+   "id": "k0158",
+   "title": "Reported speech: tense backshift",
+   "body": "ഇന്നലെ ഒരാൾ പറഞ്ഞത് ഇന്ന് നിങ്ങൾ മറ്റൊരാളോട് പറയുന്നു. അപ്പോൾ tense ഒരു പടി പിന്നോട്ട് നീങ്ങും — ഇതാണ് backshift.\n\nReporting verb past ആണെങ്കിൽ: present → past; past simple/present perfect → past perfect.\n'I bought a house' → He said that he had bought a house.\n\nസമയവാക്കുകളും മാറും: tomorrow → the next day, yesterday → the day before.\n\nപക്ഷേ, ഇന്നും സത്യമായ വസ്തുതയാണെങ്കിൽ present-ൽ തന്നെ നിൽക്കാം.",
+   "memo": "present → past · past/present perfect → past perfect · tomorrow → the next day · yesterday → the day before",
+   "source": "British Council",
+   "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-1-statements"
+  },
+  {
+   "id": "k0159",
+   "title": "Reported questions and requests",
+   "body": "ചോദ്യം റിപ്പോർട്ട് ചെയ്യുമ്പോൾ ചോദ്യചിഹ്നം പോകും, വാക്യം സാധാരണ രൂപത്തിലാകും!\n\nYes/no ചോദ്യം → if/whether: 'Have you read Othello?' → The teacher asked me whether I had read Othello.\n\nWh-ചോദ്യം → wh-വാക്ക് നിലനിൽക്കും, statement order: Priya asked him why he was working so hard.\n\nഅഭ്യർഥന (request) → ask + object + to-infinitive.",
+   "memo": "Yes/No → if/whether · Wh → wh + statement order · Request → ask + object + to + verb",
+   "source": "British Council",
+   "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-2-questions"
+  },
+  {
+   "id": "k0160",
+   "title": "Conditionals: If I were… / If I had…",
+   "body": "'ഞാൻ പണക്കാരനായിരുന്നെങ്കിൽ…' — ഇത് ഇപ്പോഴത്തെ ഒരു സ്വപ്നം. 'നീ നേരത്തെ പുറപ്പെട്ടിരുന്നെങ്കിൽ…' — ഇത് കഴിഞ്ഞുപോയ ഒരു നഷ്ടം.\n\nSecond conditional (സാങ്കൽപ്പിക വർത്തമാനം): If + past simple, would + verb\n'If I were rich, I would help everyone.'\n\nThird conditional (നടക്കാതെപോയ ഭൂതം): If + had + V3, would have + V3\n'If you had started early, you would have reached on time.'",
+   "memo": "2nd: If + past → would + V1 · 3rd: If + had + V3 → would have + V3",
+   "source": "British Council",
+   "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/conditionals-third-mixed"
+  },
+  {
+   "id": "k0161",
+   "title": "A or an? Go by the sound",
+   "body": "'University' തുടങ്ങുന്നത് u എന്ന സ്വരാക്ഷരത്തിൽ. എന്നിട്ടും 'a university'! എന്തുകൊണ്ട്?\n\nകാരണം ഇവിടെ തീരുമാനിക്കുന്നത് spelling അല്ല, ശബ്ദമാണ്. (ഉച്ചാരണം നോക്കി)\n\nവ്യഞ്ജന ശബ്ദം → 'a': a university (yoo- ശബ്ദം).\nസ്വര ശബ്ദം → 'an': an hour, an honest man (h ഉച്ചരിക്കില്ല).\n\nPSC-യുടെ പ്രിയ ചോദ്യം: 'He is ___ honest man' → an.",
+   "memo": "ശബ്ദം നോക്കുക · a university · an hour · an honest man",
+   "source": "British Council",
+   "url": "https://learnenglish.britishcouncil.org/grammar/a1-a2-grammar/articles-a-an-the"
+  },
+  {
+   "id": "k0302",
+   "title": "Collective nouns: pride, herd, shoal",
+   "body": "ഒരു കൂട്ടം സിംഹങ്ങളെ ഇംഗ്ലീഷിൽ എന്തു വിളിക്കും? രാജാവിന് ചേർന്ന പേര് — A pride of lions!\n\nA herd of deer, cattle or elephants — മേയുന്ന മൃഗക്കൂട്ടം herd.\nA shoal (or school) of fish — മീൻകൂട്ടം.\nA swarm of bees or flies — തേനീച്ച/ഈച്ചക്കൂട്ടം.\n\nഇവ സമൂഹനാമങ്ങൾ (collective nouns). PSC ആവർത്തിച്ച് ചോദിക്കുന്നത്: ‘a ___ of lions’ → pride, ‘a ___ of fish’ → shoal.",
+   "memo": "lions = pride · deer/cattle/elephants = herd · fish = shoal/school · bees/flies = swarm",
+   "source": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal"
+  },
+  {
+   "id": "k0303",
+   "title": "Collective nouns: flock, troop, pack",
+   "body": "ആകാശത്തെ രാജാവായ കഴുകന്മാരുടെ കൂട്ടത്തിന് ഒരു ഗംഭീര പേര് — A convocation of eagles!\n\nA flock of sheep — ആട്ടിൻകൂട്ടം.\nA troop of monkeys — കുരങ്ങൻപട.\nA pack of wolves — ചെന്നായ്ക്കൂട്ടം.\nA gaggle of geese — വാത്തക്കൂട്ടം.\n\nPSC ചോദിച്ചിട്ടുണ്ട്: ‘A group of eagles is called’ → a convocation of eagles. (സമൂഹനാമം)",
+   "memo": "sheep = flock · monkeys = troop · wolves = pack · geese = gaggle · eagles = convocation",
+   "source": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal"
+  },
+  {
+   "id": "k0304",
+   "title": "Monogamy, polygyny, polyandry",
+   "body": "ഒരാൾക്ക് എത്ര ജീവിതപങ്കാളി? ഉത്തരം അനുസരിച്ച് വാക്ക് മാറും!\n\nMonogamy – ഒരു സമയം ഒരു പങ്കാളി/ജീവിതപങ്കാളി മാത്രം (ഏകപത്നീവ്രതം). ‘mono’ = ഒന്ന്.\nPolygamy – ഒന്നിലധികം ജീവിതപങ്കാളികൾ.\n\nഇനി വിശദമായി: polygyny – ഒരു പുരുഷന് പല ഭാര്യമാർ. Polyandry – ഒരേ സമയം ഒരു സ്ത്രീക്ക് പല ഭർത്താക്കന്മാർ (ബഹുഭർതൃത്വം). ‘andr’ = പുരുഷൻ എന്ന് ഓർത്താൽ മതി.",
+   "memo": "Monogamy = ഒന്ന് · Polygamy = പല · Polygyny = പല ഭാര്യ · Polyandry = പല ഭർത്താവ്",
+   "source": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Monogamy"
+  },
+  {
+   "id": "k0305",
+   "title": "One word: theist, atheist, misogynist",
+   "body": "ദൈവത്തിൽ വിശ്വസിക്കുന്നയാൾ, വിശ്വസിക്കാത്തയാൾ — ഇംഗ്ലീഷിൽ ഒറ്റവാക്ക് മതി.\n\nTheist – ദൈവത്തിൽ വിശ്വസിക്കുന്നയാൾ (ഈശ്വരവിശ്വാസി). മുന്നിൽ ‘a’ ചേർത്താൽ വിപരീതം: atheist – ദൈവാസ്തിത്വം നിഷേധിക്കുന്നയാൾ.\n\nMisogynist – സ്ത്രീകളെ വെറുക്കുന്നയാൾ. ഗ്രീക്ക് misos ‘വെറുപ്പ്’ + gynē ‘സ്ത്രീ’. ഇതിന്റെ വിപരീതം: philogynist.",
+   "memo": "Theist ↔ Atheist · Misogynist (misos + gynē) ↔ Philogynist",
+   "source": "Wiktionary",
+   "url": "https://en.wiktionary.org/wiki/misogynist"
+  },
+  {
+   "id": "k0306",
+   "title": "Omniscient, omnipotent, omnipresent",
+   "body": "ഒരു ലാറ്റിൻ വാക്ക് — omnis, ‘എല്ലാം’. അതിൽനിന്ന് മൂന്ന് ‘സർവ’ വാക്കുകൾ!\n\nOmniscient – എല്ലാം അറിയുന്ന, സമ്പൂർണ അറിവുള്ള (സർവജ്ഞൻ). science = അറിവ്.\n\nOmnipotent – പരിധിയില്ലാത്ത ശക്തിയുള്ള (സർവശക്തൻ). potent = ശക്തി.\n\nOmnipresent – ഒരേ സമയം എല്ലായിടത്തുമുള്ള (സർവവ്യാപി). present = സാന്നിധ്യം.",
+   "memo": "omnis = എല്ലാം · scient = സർവജ്ഞൻ · potent = സർവശക്തൻ · present = സർവവ്യാപി",
+   "source": "Wiktionary",
+   "url": "https://en.wiktionary.org/wiki/omniscient"
+  },
+  {
+   "id": "k0307",
+   "title": "Pandemonium, vagabond, arsonist",
+   "body": "ബഹളം, അലഞ്ഞുതിരിയൽ, തീവെപ്പ് — ഓരോന്നിനും ഒരു ഇംഗ്ലീഷ് വാക്ക്.\n\nPandemonium – അലങ്കോലമായ വൻ ബഹളം. ഈ വാക്ക് സൃഷ്ടിച്ചത് മിൽട്ടൺ, Paradise Lost-ൽ.\n\nVagabond – സ്ഥിരം വീടില്ലാതെ അലഞ്ഞുതിരിയുന്നയാൾ. Arsonist – മനഃപൂർവം വസ്തുവകകൾക്ക് തീയിടുന്നയാൾ.\n\nAborigines – ഒരു സ്ഥലത്തെ ആദിമനിവാസികൾ.",
+   "memo": "Pandemonium = ബഹളം (Milton) · Vagabond = അലഞ്ഞുതിരിയുന്നയാൾ · Arsonist = തീയിടുന്നയാൾ · Aborigines = ആദിമനിവാസികൾ",
+   "source": "Wiktionary",
+   "url": "https://en.wiktionary.org/wiki/pandemonium"
+  },
+  {
+   "id": "k0308",
+   "title": "Latin: ab initio, status quo, bona fide",
+   "body": "കോടതിയിലും പരീക്ഷയിലും കേൾക്കുന്ന ചില ലാറ്റിൻ വാക്കുകൾ!\n\nAb initio – തുടക്കം മുതൽ. Status quo – നിലവിലുള്ള അവസ്ഥ.\n\nBona fide – യഥാർഥമായ, സദുദ്ദേശ്യത്തോടെ. വിപരീതം: mala fide.\n\nViva voce – വാമൊഴിയായി; വാചാപരീക്ഷയ്ക്കും (oral examination) ഈ പേര് തന്നെ.",
+   "memo": "Ab initio = തുടക്കം മുതൽ · Status quo = നിലവിലെ അവസ്ഥ · Bona fide ↔ Mala fide · Viva voce = വാമൊഴി",
+   "source": "Wiktionary",
+   "url": "https://en.wiktionary.org/wiki/ab_initio"
+  },
+  {
+   "id": "k0309",
+   "title": "Idioms: blue moon, sixes and sevens",
+   "body": "നീല ചന്ദ്രനെ എത്ര തവണ കാണും? വളരെ അപൂർവം! അതാണ് once in a blue moon – വളരെ അപൂർവമായി.\n\nAt sixes and sevens – ആശയക്കുഴപ്പത്തിൽ, അലങ്കോലമായി.\n\nHit the nail on the head – കൃത്യമായ കാര്യം പറയുക. A red-letter day – ഓർമിക്കാവുന്ന സന്തോഷദിനം. (ശൈലികൾ)",
+   "memo": "Blue moon = അപൂർവം · Sixes and sevens = ആശയക്കുഴപ്പം · Nail on the head = കൃത്യം · Red-letter day = സന്തോഷദിനം",
+   "source": "Wiktionary",
+   "url": "https://en.wiktionary.org/wiki/at_sixes_and_sevens"
+  },
+  {
+   "id": "k0310",
+   "title": "Idioms: white elephant, swan song",
+   "body": "ഒരു വെള്ളാന വാങ്ങിയാലോ? തീറ്റിപ്പോറ്റാൻ വൻചെലവ്! A white elephant – ഭാരമായിത്തീരുന്ന ചെലവേറിയ സ്വത്ത്.\n\nSwan song – വിരമിക്കുന്നതിനു മുമ്പുള്ള അവസാന പ്രകടനം.\n\nA fish out of water – പരിചയമില്ലാത്ത ചുറ്റുപാടിൽ അസ്വസ്ഥനായ ആൾ. By fits and starts – ക്രമമില്ലാതെ, നിന്നും തുടങ്ങിയും.",
+   "memo": "White elephant = ഭാരമായ സ്വത്ത് · Swan song = അവസാന പ്രകടനം · Fish out of water = അസ്വസ്ഥൻ · Fits and starts = ക്രമമില്ലാതെ",
+   "source": "Wiktionary",
+   "url": "https://en.wiktionary.org/wiki/white_elephant"
+  },
+  {
+   "id": "k0311",
+   "title": "Licence/license, advice/advise, fewer",
+   "body": "‘c’ വേണോ ‘s’ വേണോ? ഒരു എളുപ്പവഴി: c = noun, s = verb.\n\nബ്രിട്ടീഷ് ഉപയോഗത്തിൽ licence നാമം (‘driving licence’), license ക്രിയ. Advice നാമം (‘the teacher's advice’), advise ക്രിയ.\n\nഇനി fewer/less: എണ്ണാവുന്നവയ്ക്ക് fewer (‘fewer pens’), എണ്ണാനാവാത്തവയ്ക്ക് less (‘less sugar’).",
+   "memo": "licence/advice = noun · license/advise = verb · fewer = countable · less = uncountable",
+   "source": "Wiktionary",
+   "url": "https://en.wiktionary.org/wiki/licence"
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+[
+ {
+  "slug": "kerala-geography",
+  "topic": "കേരള ഭൂമിശാസ്ത്രം"
+ },
+ {
+  "slug": "kerala-renaissance",
+  "topic": "കേരള നവോത്ഥാനം"
+ },
+ {
+  "slug": "indian-constitution",
+  "topic": "ഇന്ത്യൻ ഭരണഘടന"
+ },
+ {
+  "slug": "freedom-struggle",
+  "topic": "ഇന്ത്യൻ സ്വാതന്ത്ര്യസമരം"
+ },
+ {
+  "slug": "india-world-geography",
+  "topic": "ഇന്ത്യൻ-ലോക ഭൂമിശാസ്ത്രം"
+ },
+ {
+  "slug": "biology-health",
+  "topic": "ജീവശാസ്ത്രവും ആരോഗ്യവും"
+ },
+ {
+  "slug": "physics",
+  "topic": "ഭൗതികശാസ്ത്രം"
+ },
+ {
+  "slug": "chemistry",
+  "topic": "രസതന്ത്രം"
+ },
+ {
+  "slug": "environment",
+  "topic": "പരിസ്ഥിതിയും ജൈവവൈവിധ്യവും"
+ },
+ {
+  "slug": "practical-maths",
+  "topic": "സാമ്പത്തികവും പ്രായോഗിക അറിവും"
+ },
+ {
+  "slug": "arts-literature-sports",
+  "topic": "കല, സാഹിത്യം, കായികം"
+ },
+ {
+  "slug": "malayalam",
+  "topic": "മലയാള ഭാഷ"
+ },
+ {
+  "slug": "current-affairs",
+  "topic": "ആനുകാലികം"
+ },
+ {
+  "slug": "general-english",
+  "topic": "General English"
+ },
+ {
+  "slug": "economics",
+  "topic": "സാമ്പത്തികശാസ്ത്രം"
+ },
+ {
+  "slug": "computers",
+  "topic": "കമ്പ്യൂട്ടർ അടിസ്ഥാനങ്ങൾ"
+ },
+ {
+  "slug": "indian-history",
+  "topic": "ഇന്ത്യൻ ചരിത്രം"
+ },
+ {
+  "slug": "kerala-history",
+  "topic": "കേരള ചരിത്രം"
+ },
+ {
+  "slug": "kerala-governance",
+  "topic": "കേരള ഭരണസംവിധാനം"
+ }
+]
