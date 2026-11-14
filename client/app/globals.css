@@ -2059,3 +2059,69 @@ h1:not(:lang(ml)), h2:not(:lang(ml)), .title:not(:lang(ml)), .section-title:not(
 }
 .dark .today-page, :root[data-theme-choice="dark"] .today-page { --rule-color: rgba(190, 210, 240, .06); }
 @media print { .today-page::before { display: none; } }
+
+/* ── Daily to-dos (Today) ── */
+.todo-card { margin: 0 0 14px; padding: 18px 19px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-card, 17px); background: var(--surface); box-shadow: var(--shadow-card); }
+.todo-card h2 { margin: 4px 0 0; font-size: 20px; line-height: 1.25; }
+.todo-card .eyebrow { color: var(--accent); }
+.todo-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.todo-edit { flex: none; margin-top: 2px; font-size: 13.5px; }
+.todo-meter { height: 6px; margin: 12px 0 6px; overflow: hidden; border-radius: 999px; background: var(--surface-muted); }
+.todo-meter span { display: block; height: 100%; border-radius: inherit; background: var(--brand); transition: width .4s ease; }
+.todo-list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.todo-item { display: grid; grid-template-columns: 26px minmax(0,1fr) auto 14px; align-items: center; gap: 11px; width: 100%; min-height: 48px; padding: 8px 6px; border: 0; border-bottom: 1px dashed var(--border); border-radius: 0; background: transparent; color: var(--text); font: inherit; text-align: left; cursor: pointer; transition: background-color .15s ease; }
+.todo-list li:last-child .todo-item { border-bottom: 0; }
+.todo-item:hover:not(:disabled) { background: color-mix(in srgb, var(--selected-bg) 60%, transparent); }
+.todo-item:disabled { cursor: default; }
+.todo-check { display: grid; place-items: center; width: 24px; height: 24px; border: 2px solid color-mix(in srgb, var(--brand) 55%, var(--border)); border-radius: 7px; color: var(--on-brand); transition: background-color .2s ease, border-color .2s ease; }
+.todo-check svg { width: 16px; height: 16px; }
+.todo-item.is-done .todo-check { border-color: var(--brand); background: var(--brand); }
+.todo-text { min-width: 0; font-size: 15.5px; font-weight: 600; line-height: 1.4; overflow-wrap: anywhere; }
+.todo-item.is-done .todo-text { color: var(--text-secondary); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--text-secondary) 60%, transparent); }
+.todo-progress { color: var(--text-secondary); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.todo-item.is-done .todo-progress { color: var(--brand); }
+.todo-go { color: var(--brand); font-weight: 800; }
+.todo-note { margin: 8px 0 0; }
+.todo-card.is-complete { border-color: color-mix(in srgb, var(--brand) 45%, var(--border)); }
+.todo-skeleton { height: 40px; margin-top: 10px; border-radius: 10px; background: var(--surface-muted); animation: todo-pulse 1.4s ease-in-out infinite; }
+@keyframes todo-pulse { 50% { opacity: .55; } }
+.todo-chooser p { margin: 6px 0 14px; color: var(--text-secondary); line-height: 1.55; }
+.todo-count-choices { display: flex; flex-wrap: wrap; gap: 10px; }
+.todo-count-choices > button { min-width: 64px; min-height: 48px; font-size: 18px; }
+.todo-hint { margin: 10px 0 2px; }
+@media (max-width: 600px) {
+  .todo-card { padding: 15px 14px 10px; }
+  .todo-item { grid-template-columns: 24px minmax(0,1fr) auto; gap: 10px; }
+  .todo-go { display: none; }
+  .todo-count-choices > button { flex: 1 1 calc(50% - 10px); }
+}
+
+/* ── Settings page ── */
+.settings-page { max-width: 720px; margin: 0 auto; padding-bottom: 40px; }
+.settings-section { margin: 0 0 16px; padding: 6px 20px; }
+.settings-section h2 { margin: 14px 0 4px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); font-family: inherit; }
+.settings-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.settings-row:last-child { border-bottom: 0; }
+.settings-row strong { display: block; font-size: 15.5px; }
+.settings-row small { display: block; margin-top: 2px; color: var(--text-secondary); font-size: 13px; line-height: 1.45; }
+.settings-stepper { display: inline-flex; flex: none; align-items: center; border: 1.5px solid var(--border); border-radius: 999px; background: var(--surface); }
+.settings-stepper button { width: 44px; height: 44px; border: 0; border-radius: 999px; background: transparent; color: var(--brand); font-size: 22px; font-weight: 700; line-height: 1; }
+.settings-stepper button:disabled { color: var(--text-secondary); opacity: .4; cursor: default; }
+.settings-stepper output { min-width: 34px; font-size: 17px; font-weight: 800; text-align: center; font-variant-numeric: tabular-nums; }
+.settings-date { display: flex; flex: none; align-items: center; gap: 10px; }
+.settings-date input { min-height: 44px; padding: 8px 11px; border: 1.5px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text); font: inherit; }
+.settings-segment { display: inline-flex; flex: none; padding: 3px; border: 1.5px solid var(--border); border-radius: 999px; }
+.settings-segment button { min-height: 38px; padding: 0 14px; border: 0; border-radius: 999px; background: transparent; color: var(--text-secondary); font: inherit; font-weight: 700; }
+.settings-segment button[aria-pressed=true] { background: var(--selected-bg); color: var(--brand); }
+.settings-switch { position: relative; display: inline-block; flex: none; width: 50px; height: 30px; }
+.settings-switch input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.settings-switch span[aria-hidden] { position: absolute; inset: 0; border-radius: 999px; background: var(--surface-muted); border: 1.5px solid var(--border); transition: background-color .2s ease; pointer-events: none; }
+.settings-switch span[aria-hidden]::after { content: ''; position: absolute; top: 3px; left: 3px; width: 21px; height: 21px; border-radius: 50%; background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,.2); transition: transform .2s ease; }
+.settings-switch input:checked + span[aria-hidden] { background: var(--brand); border-color: var(--brand); }
+.settings-switch input:checked + span[aria-hidden]::after { transform: translateX(20px); }
+.settings-switch input:focus-visible + span[aria-hidden] { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.settings-done { margin-top: 6px; }
+@media (max-width: 600px) {
+  .settings-section { padding: 4px 14px; }
+  .settings-row { gap: 12px; }
+}
