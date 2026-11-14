@@ -6,6 +6,7 @@ import QuestionSource from './QuestionSource';
 import PaperSettings from './PaperSettings';
 import SaveButton from './SaveButton';
 import {topicLabel} from './topic-labels';
+import {AUTO_ADVANCE_MS,useAutoAdvance} from './useAutoAdvance';
 
 type Option = { key: string; text: string };
 type Question = { _id: string; questionNumber: number; text: string; options: Option[]; topic: string; paperNumber?: number; paperCode?:string;examDate?:string;sourcePage?: number };
@@ -42,13 +43,8 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
     return () => window.removeEventListener('quiz-escape', openQuit);
   }, []);
 
-  const continueRef=useRef(onContinue);
-  useEffect(()=>{continueRef.current=onContinue},[onContinue]);
-  useEffect(() => {
-    if (!feedback||!quick||savePending) return;
-    const timer = window.setTimeout(() => continueRef.current(), 1200);
-    return () => window.clearTimeout(timer);
-  }, [feedback, quick, savePending]);
+  // Move on by itself after the answer is shown (quick mode is faster); the Next button still skips the wait.
+  const secondsLeft = useAutoAdvance(!!feedback && !savePending && !showQuit, onContinue, quick ? 1200 : AUTO_ADVANCE_MS);
 
   // Swipe left (after the answer is shown) to move on, like turning a page.
   const swipe=useRef<{x:number;y:number}|null>(null);
@@ -93,7 +89,7 @@ export default function QuizScreen({ question, index, total, elapsed, picked, fe
         {!feedback.isCorrect&&<span>Your answer: {picked}</span>}
         {feedback.explanation&&<div className="paper-explanation"><span>Explanation</span><p lang={/[ഀ-ൿ]/u.test(feedback.explanation)?'ml':'en'}>{feedback.explanation}</p></div>}
         {savePending&&<span className="small" role="status">Not saved — retrying</span>}
-        {!quick&&<button type="button" className="button" disabled={savePending} onClick={onContinue}>{savePending?'Saving…':'Next →'}</button>}
+        {!quick&&<button type="button" className="button" disabled={savePending} onClick={onContinue}>{savePending?'Saving…':<>Next →{secondsLeft!==null&&<span className="auto-advance-count" aria-hidden="true">{secondsLeft}</span>}</>}</button>}
       </div>}
       <div className="quiz-footer">
         <QuestionSource questionNumber={question.questionNumber} paperCode={question.paperCode} paperNumber={question.paperNumber} examDate={question.examDate} sourcePage={question.sourcePage} text={question.text}/>

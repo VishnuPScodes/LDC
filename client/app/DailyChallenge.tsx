@@ -3,6 +3,7 @@ import {useCallback,useEffect,useState} from 'react';
 import PageSkeleton from './PageSkeleton';
 import PublicHeader from './PublicHeader';
 import PaperSettings from './PaperSettings';
+import {useAutoAdvance} from './useAutoAdvance';
 
 type Question={_id:string;paperCode?:string;examDate?:string;questionNumber:number;text:string;options:{key:string;text:string}[];correctOption:string;explanation?:string;topic:string};
 type Daily={date:string;number:number;questions:Question[]};
@@ -50,6 +51,7 @@ export default function DailyChallenge(){
   if(index+1>=questions.length){setStreak(dailyStreak(readStore(),today));setPhase('results');return}
   setIndex(index+1);setSelected('');window.scrollTo({top:0});
  };
+ const secondsLeft=useAutoAdvance(phase==='quiz'&&!!selected,advance);
 
  const grid=answers.map(correct=>correct?'🟩':'🟥').join('');
  const shareText=()=>`LDC Daily #${number} · ${record?.score||0}/${total} ✅\n${grid} · 🔥 ${streak}-day streak\n${window.location.origin}/daily`;
@@ -71,7 +73,7 @@ export default function DailyChallenge(){
     <h1 lang={ml(current.text)}>{current.text}</h1>
     <div className="quiz-options guest-options" role="group" aria-label="Answer choices">{current.options.map((option,position)=>{const correct=isAnswered&&option.key===current.correctOption,wrong=isAnswered&&option.key===selected&&!wasCorrect,dim=isAnswered&&!correct&&!wrong;return <button type="button" key={option.key} disabled={isAnswered} aria-pressed={selected===option.key} aria-label={`(${option.key}) ${option.text}${correct?', correct answer':wrong?', your answer, wrong':''}`} className={`quiz-option${correct?' is-correct answer-correct-option':''}${wrong?' is-wrong answer-wrong-option':''}${dim?' is-dimmed':''}`} onClick={()=>choose(option.key)}><span className="option-badge">({option.key})</span><span className="option-copy" lang={ml(option.text)}>{option.text}</span><span className="option-mark" aria-hidden="true">{correct?'✓':wrong?'✗':!isAnswered?<span className="option-shortcut">{position+1}</span>:null}</span></button>})}</div>
     {isAnswered&&<div className={`feedback-verdict ${wasCorrect?'verdict-correct':'verdict-wrong'}`} role="status" aria-live="polite"><strong>{wasCorrect?'✓ Correct':`✗ Wrong — answer is ${current.correctOption}`}</strong>{current.explanation&&<div className="paper-explanation"><span>Explanation</span><p lang={ml(current.explanation)}>{current.explanation}</p></div>}</div>}
-    <div className="guest-question-actions">{isAnswered&&<button className="button" onClick={advance}>{index+1===questions.length?'See results':'Next →'}</button>}</div>
+    <div className="guest-question-actions">{isAnswered&&<button className="button" onClick={advance}>{index+1===questions.length?'See results':'Next →'}{secondsLeft!==null&&<span className="auto-advance-count" aria-hidden="true">{secondsLeft}</span>}</button>}</div>
    </article>
   </section></div></main>;
  }
