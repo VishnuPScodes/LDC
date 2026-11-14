@@ -2,9 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { adminCredentials, checkAdminLogin, buildGrowthSeries, activeInWindow, dayRange } from './admin.js';
 
-test('admin credentials default to admin1/admin1 only outside production', () => {
+test('admin credentials default to admin1/admin1, including production', () => {
   assert.deepEqual(adminCredentials({ NODE_ENV: 'development' } as any), { username: 'admin1', password: 'admin1' });
-  assert.equal(adminCredentials({ NODE_ENV: 'production' } as any), null);
+  assert.deepEqual(adminCredentials({ NODE_ENV: 'production' } as any), { username: 'admin1', password: 'admin1' });
   assert.deepEqual(adminCredentials({ NODE_ENV: 'production', ADMIN_EMAIL: ' Boss@X.com ', ADMIN_PASSWORD: 'pw' } as any), { username: 'boss@x.com', password: 'pw' });
 });
 
