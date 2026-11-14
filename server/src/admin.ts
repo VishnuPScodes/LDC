@@ -9,11 +9,11 @@ const ADMIN_COOKIE = 'ldc_admin';
 const ADMIN_TTL_SECONDS = 12 * 60 * 60;
 const DAY_MS = 86400000;
 
-/** Admin credentials are hardcoded to admin1 / admin1 for now; ADMIN_EMAIL / ADMIN_PASSWORD override them when both are set. */
+/** Admin credentials are hardcoded to psvishnu131@gmail.com / admin1 for now; ADMIN_EMAIL / ADMIN_PASSWORD override them when both are set. */
 export function adminCredentials(env: NodeJS.ProcessEnv = process.env): { username: string; password: string } | null {
   const username = env.ADMIN_EMAIL?.trim(), password = env.ADMIN_PASSWORD;
   if (username && password) return { username: username.toLowerCase(), password };
-  return { username: 'admin1', password: 'admin1' };
+  return { username: 'psvishnu131@gmail.com', password: 'admin1' };
 }
 
 function sameSecret(a: string, b: string) {
