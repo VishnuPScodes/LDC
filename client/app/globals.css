@@ -2041,3 +2041,20 @@ h1:not(:lang(ml)), h2:not(:lang(ml)), .title:not(:lang(ml)), .section-title:not(
 
 /* Auto-advance countdown shown inside the Next button */
 .auto-advance-count { display: inline-grid; place-items: center; min-width: 22px; height: 22px; margin-left: 2px; padding: 0 6px; border-radius: 999px; background: color-mix(in srgb, currentColor 18%, transparent); font-size: 12.5px; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1; }
+
+/* Today: faint notebook ruling behind the page. A pseudo-element is used because
+   the global :where(*) rule strips background-image from real elements. */
+.today-page { position: relative; isolation: isolate; --rule-gap: 34px; --rule-color: rgba(70, 110, 160, .10); }
+.today-page::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, transparent 0 calc(var(--rule-gap) - 1px), var(--rule-color) calc(var(--rule-gap) - 1px) var(--rule-gap));
+}
+.dark .today-page, :root[data-theme-choice="dark"] .today-page { --rule-color: rgba(190, 210, 240, .06); }
+@media print { .today-page::before { display: none; } }
