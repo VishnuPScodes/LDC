@@ -11,7 +11,7 @@ export default function LandingThemeToggle() {
     setDark(storedDark);
     if (theme) document.documentElement.dataset.themeChoice = theme;
     else delete document.documentElement.dataset.themeChoice;
-    document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]').forEach(meta => { meta.content = storedDark ? '#17130E' : '#F4EFD8'; });
+    document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]').forEach(meta => { meta.content = storedDark ? '#121513' : '#FAF8F3'; });
     document.querySelector('.landing-shell')?.classList.toggle('dark', storedDark);
   }, []);
 
@@ -20,7 +20,7 @@ export default function LandingThemeToggle() {
     setDark(nextDark);
     localStorage.setItem('ldc-theme', nextDark ? 'dark' : 'light');
     document.documentElement.dataset.themeChoice = nextDark ? 'dark' : 'light';
-    document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]').forEach(meta => { meta.content = nextDark ? '#17130E' : '#F4EFD8'; });
+    document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]').forEach(meta => { meta.content = nextDark ? '#121513' : '#FAF8F3'; });
     document.querySelector('.landing-shell')?.classList.toggle('dark', nextDark);
   };
 
